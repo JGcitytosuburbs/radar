@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Josh's Buyer Radar</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Buyer Radar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: one centered column; navy header band, sticky step tabs, cards for the things you tap. */
+  --ink:#2c3746; --ink-soft:#46505e; --cream:#f6f2eb; --paper:#fbf9f5; --stone:#6f6a62;
+  --line:rgba(44,55,70,.14); --brass:#b08d57; --brass-dark:#8a6a3b; --sage:#6b8a55;
+  --card:#ffffff; --strong:#2c3746; --on-strong:#f6f2eb; --header:#2c3746; --on-header:#f6f2eb;
+  --ok-bg:#e6eddf; --ok-fg:#4d6a3c; --np-bg:#f3eadb; --np-fg:#8a6a3b; --no-bg:#f4e1db; --no-fg:#93503b;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#ece6dc; --ink-soft:#c4beb4; --cream:#252a32; --paper:#14181e; --stone:#a39d93;
+  --line:rgba(236,230,220,.14); --brass:#c9a46c; --brass-dark:#d6b47f; --sage:#9bb487;
+  --card:#1c2128; --strong:#e9e2d6; --on-strong:#1a1f26; --header:#0d1116; --on-header:#f6f2eb;
+  --ok-bg:#24311e; --ok-fg:#b0cb98; --np-bg:#33291b; --np-fg:#dcb983; --no-bg:#3a231d; --no-fg:#e6a493; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#ece6dc; --ink-soft:#c4beb4; --cream:#252a32; --paper:#14181e; --stone:#a39d93;
+  --line:rgba(236,230,220,.14); --brass:#c9a46c; --brass-dark:#d6b47f; --sage:#9bb487;
+  --card:#1c2128; --strong:#e9e2d6; --on-strong:#1a1f26; --header:#0d1116; --on-header:#f6f2eb;
+  --ok-bg:#24311e; --ok-fg:#b0cb98; --np-bg:#33291b; --np-fg:#dcb983; --no-bg:#3a231d; --no-fg:#e6a493; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--header)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{background:var(--header);color:var(--on-header)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{font-family:"Josefin Sans",var(--sans);letter-spacing:.32em;font-size:13px}
+.private{font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(246,242,235,.35);border-radius:999px;padding:4px 10px}
+.hero{padding:30px 0 6px}
+.kicker{color:var(--brass-dark);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0 0 6px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6.4vw,56px);line-height:1.04;margin:0 0 12px}
+h1 em,h2 em{font-style:italic;font-weight:500}
+.lede{color:var(--ink-soft);max-width:660px;margin:0}
+nav.steps{display:flex;gap:8px;overflow-x:auto;padding:20px 0 4px;scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);z-index:5}
+nav.steps::-webkit-scrollbar{display:none}
+nav.steps a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 14px;font-weight:600;font-size:14px}
+nav.steps a b{color:var(--brass-dark);margin-right:4px}
+section.block{padding:34px 0 10px;scroll-margin-top:60px}
+h2{font-family:var(--serif);font-size:clamp(30px,4.6vw,40px);font-weight:600;line-height:1.08;margin:0 0 6px}
+.sub{color:var(--ink-soft);margin:0 0 18px;max-width:680px}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr}}
+a.spot{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:border-color .2s,box-shadow .2s}
+a.spot:hover{border-color:var(--brass);box-shadow:0 4px 18px rgba(44,55,70,.07)}
+.spot .where{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);display:flex;justify-content:space-between}
+.spot .where i{font-style:normal;color:var(--brass-dark)}
+.spot .what{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.15;margin:4px 0 4px}
+.spot .why{font-size:14px;color:var(--ink-soft);margin:0}
+.spot .see{font-size:12.5px;color:var(--stone);margin:8px 0 0;padding-top:8px;border-top:1px dashed var(--line)}
+.flag{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px}
+.flag.ok{background:var(--ok-bg);color:var(--ok-fg)}.flag.nopitch{background:var(--np-bg);color:var(--np-fg)}.flag.no{background:var(--no-bg);color:var(--no-fg)}
+.tabs{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px;margin:4px 0 2px;max-width:100%;overflow-x:auto}
+.tabs button{border:0;background:transparent;color:var(--ink);border-radius:999px;padding:9px 16px;font:600 14px var(--sans);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--strong);color:var(--on-strong)}
+.group-label{font-size:13px;font-weight:700;color:var(--ink);margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.tip{background:var(--cream);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--ink-soft);margin-top:14px}
+.tip b{color:var(--ink)}
+.alerts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.alerts a{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px}
+/* helper */
+.helper{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.helper{grid-template-columns:360px 1fr;align-items:start}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.field{margin-bottom:16px}
+.field>label,.field>.lbl{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--stone);margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 12px;font:600 14px var(--sans);cursor:pointer}
+.opts button[aria-pressed="true"]{background:var(--strong);color:var(--on-strong);border-color:var(--strong)}
+input[type=text],textarea,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:16px var(--sans);color:var(--ink);background:var(--card)}
+textarea{min-height:90px;resize:vertical}
+.towns{display:grid;gap:8px;margin-bottom:14px}
+.town{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper)}
+.town b{font-family:var(--serif);font-size:21px}
+.town span{display:block;font-size:14px;color:var(--ink-soft)}
+.town .mins{color:var(--brass-dark);font-weight:700;font-size:13px}
+.draft{white-space:pre-wrap;font-size:15px;line-height:1.6;min-height:260px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:1px solid var(--strong);background:var(--strong);color:var(--on-strong);border-radius:10px;padding:11px 16px;font:600 14px var(--sans);cursor:pointer}
+.btn.ghost{background:var(--card);color:var(--ink)}
+.note{font-size:13px;color:var(--stone);margin:8px 0 0}
+.feeds{border-color:var(--brass);box-shadow:0 6px 28px rgba(176,141,87,.12);margin-top:8px}
+.fh{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;margin:0 0 6px}
+.fh em{font-style:italic;font-weight:500}
+.fsteps{margin:0 0 14px;padding-left:20px;color:var(--ink-soft);font-size:15px}
+.fsteps li{margin-bottom:4px}.fsteps a{color:var(--ink);font-weight:700}
+.flist{display:grid;gap:0;border-top:1px solid var(--line)}
+.frow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.frow .fn{font-weight:700}
+.frow .fd{display:block;font-size:13px;color:var(--stone);font-weight:500}
+.frow .flag{margin:4px 0 0}
+.frow .fb{display:flex;gap:6px}
+.frow .fb a,.frow .fb button{font:600 13px var(--sans);border-radius:8px;padding:8px 12px;cursor:pointer;text-decoration:none;border:1px solid var(--strong)}
+.frow .fb a{background:var(--strong);color:var(--on-strong)}
+.frow .fb button{background:var(--card);color:var(--ink)}
+.live{margin:14px 0 4px}
+.livehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.lp{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
+.lp:last-child{border-bottom:0}
+.lp .lt{font-weight:700;color:var(--ink);text-decoration:none;display:block;min-width:0;overflow-wrap:anywhere}
+.lp .lt:hover{text-decoration:underline}
+.lp .lm{font-size:13px;color:var(--stone);margin-top:2px}
+.lp .la{display:flex;gap:6px;flex:0 0 auto}
+.lp .la a,.lp .la button{font:600 13px var(--sans);border-radius:8px;padding:7px 11px;cursor:pointer;text-decoration:none;border:1px solid var(--strong)}
+.lp .la button{background:var(--strong);color:var(--on-strong)}
+.lp .la a{background:var(--card);color:var(--ink)}
+.lp>div:first-child{flex:1 1 260px;min-width:0}
+/* people */
+.addform{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:720px){.addform{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
+.people{margin-top:16px;display:grid;gap:10px}
+.person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.person .top1{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.person .nm{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.1}
+.person .meta{font-size:13px;color:var(--stone)}
+.person select{width:auto;padding:7px 10px;font-size:14px;font-weight:600}
+.person textarea{min-height:56px;margin-top:10px;font-size:15px}
+.person .acts{display:flex;gap:12px;margin-top:8px;font-size:13px}
+.person .acts a,.person .acts button{color:var(--ink-soft);background:none;border:0;padding:0;font:600 13px var(--sans);cursor:pointer;text-decoration:underline}
+.empty{color:var(--stone);font-size:15px;padding:14px 0}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:110px}
+.stat b{display:block;font-family:var(--serif);font-size:28px;line-height:1}
+.stat span{font-size:12px;color:var(--stone);font-weight:600}
+.rules{border-top:1px solid var(--line);margin-top:40px;padding:26px 0 60px}
+.rules ul{margin:0;padding-left:20px;color:var(--ink-soft);max-width:760px}
+.rules li{margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);opacity:0;background:var(--strong);color:var(--on-strong);padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s;pointer-events:none;z-index:20}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+h1,h2,h3{text-wrap:balance}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="brand">GOODKIN</span><span class="private">Private · for Josh</span></div></header>
+
+<main class="wrap" style="padding-bottom:60px">
+  <section class="hero">
+    <p class="kicker">Made for Josh · Buyer Radar</p>
+    <h1>Let's make 2027 a <em>good</em> one.</h1>
+    <p class="lede">Buyers are out there, asking strangers online where to live, how the commute really is, and whether anyone knows a great agent. You're the agent they're hoping for. This is your daily spot to find them, answer them, and keep track of who's ready to tour.</p>
+  </section>
+
+  <nav class="steps" aria-label="Sections">
+    <a href="#find"><b>1</b>Find them</a>
+    <a href="#answer"><b>2</b>Answer them</a>
+    <a href="#people"><b>3</b>Keep track</a>
+  </nav>
+
+  <!-- 1. FIND -->
+  <section class="block" id="find">
+    <h2>Find them.</h2>
+
+
+    <p class="sub">Each card says which site it opens and what you'll see there.</p>
+
+    <div class="tabs" role="tablist">
+      <button role="tab" data-area="nj" aria-selected="true">Moving to New Jersey</button>
+      <button role="tab" data-area="nyc" aria-selected="false">Buying in New York City</button>
+      <button role="tab" data-area="agent" aria-selected="false">Asking for an agent 🔥</button>
+      <button role="tab" data-area="sell" aria-selected="false">Selling</button>
+    </div>
+    <div class="panel live" id="live" hidden>
+      <div class="livehead"><h3 class="fh">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
+      <p class="sub" style="margin:0 0 6px" id="liveSub">Reddit posts from the past week whose titles match this tab, newest first.</p>
+      <div id="liveList"></div>
+    </div>
+    <div id="spots"></div>
+
+    <div class="tip"><b>Let the leads come to you:</b> set up free Google Alerts for these phrases, and Google will email you whenever someone posts them anywhere online.
+      <div class="alerts" id="alerts"></div>
+    </div>
+  </section>
+
+  <!-- 2. ANSWER -->
+  <section class="block" id="answer">
+    <h2>Answer them as <em>the expert.</em></h2>
+    <p class="sub">Tap what the person said in their post, and you'll get a helpful reply with real towns and real commute times, ready to copy. Helpful first, salesy never. That's what makes people message you.</p>
+
+    <div class="helper">
+      <div class="panel">
+        <div class="field"><span class="lbl">What did they ask for?</span>
+          <div class="opts" data-k="ask">
+            <button data-v="place" aria-pressed="true">Where to live</button>
+            <button data-v="agent">An agent recommendation</button>
+            <button data-v="sell">Help selling</button>
+          </div></div>
+        <div class="field"><span class="lbl">Where are you replying?</span>
+          <div class="opts" data-k="style">
+            <button data-v="full" aria-pressed="true">Reddit (full answer)</button>
+            <button data-v="short">Instagram / Facebook (short)</button>
+            <button data-v="nopitch">Strict group (no pitch)</button>
+          </div></div>
+        <div class="field"><span class="lbl" id="vibeLbl">Where are they looking?</span>
+          <div class="opts" data-k="vibe">
+            <button data-v="s" aria-pressed="true">NJ suburbs</button>
+            <button data-v="b">Hoboken / Jersey City</button>
+            <button data-v="c">New York City</button>
+          </div></div>
+        <div class="field"><span class="lbl">Where do they work?</span>
+          <div class="opts" data-k="hub">
+            <button data-v="penn" aria-pressed="true">Penn Station area</button>
+            <button data-v="gct">Grand Central area</button>
+            <button data-v="hy">Hudson Yards</button>
+            <button data-v="fidi">Downtown / FiDi</button>
+            <button data-v="remote">Mostly remote</button>
+          </div></div>
+        <div class="field"><span class="lbl">Budget</span>
+          <div class="opts" data-k="budget">
+            <button data-v="1">Under $600K</button>
+            <button data-v="2" aria-pressed="true">$600K–$900K</button>
+            <button data-v="3">$900K–$1.5M</button>
+            <button data-v="4">$1.5M+</button>
+          </div></div>
+        <div class="field"><span class="lbl">Did they mention…</span>
+          <div class="opts" data-k="extras" data-multi>
+            <button data-v="kids">Kids or schools</button>
+            <button data-v="taxes">Taxes or cost</button>
+            <button data-v="first">First home</button>
+            <button data-v="nervous">Nervous or overwhelmed</button>
+          </div></div>
+        <div class="field"><label for="theirName">Their name or username (optional)</label>
+          <input type="text" id="theirName" placeholder="like u/brooklynmom22"></div>
+      </div>
+
+      <div class="panel">
+        <div class="towns" id="towns"></div>
+        <textarea class="draft" id="draft" aria-label="Draft reply"></textarea>
+        <div class="row">
+          <button class="btn" id="copy">Copy reply</button>
+          <button class="btn ghost" id="again">Another version</button>
+          <button class="btn ghost" id="addFromHelper">Add this person to my list</button>
+        </div>
+        <p class="note">Edit anything before posting, and change a few words each time so no two replies look the same. Commute times are typical rush-hour door-to-desk estimates from the Commute Map. On Facebook, take out the * around <i>good</i> (Reddit turns them into italics).</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 3. PEOPLE -->
+  <section class="block" id="people">
+    <h2>Keep track.</h2>
+    <p class="sub">Everyone you've answered or messaged. When someone writes back, move them along. Saved on this phone or computer.</p>
+    <div class="stats" id="stats"></div>
+
+    <div class="panel" style="margin-top:16px">
+      <div class="addform">
+        <div><label class="lbl" for="pName" style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--stone)">Name or username</label><input type="text" id="pName" placeholder="u/brooklynmom22"></div>
+        <div><label for="pLink" style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--stone)">Link to their post</label><input type="text" id="pLink" placeholder="Paste the link"></div>
+        <div><label for="pNote" style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--stone)">Quick note</label><input type="text" id="pNote" placeholder="Park Slope, 2 kids, $800K, works FiDi"></div>
+        <button class="btn" id="pAdd">Add</button>
+      </div>
+    </div>
+    <div class="people" id="plist"></div>
+    <div class="row"><button class="btn ghost" id="export">Copy my list</button></div>
+  </section>
+
+
+  <section class="block" id="delivered">
+    <div class="panel feeds" id="feeds">
+      <p class="kicker" style="margin:0 0 4px">Optional extra</p>
+      <h3 class="fh">Get new posts sent to <em>one app.</em></h3>
+      <p class="sub" style="margin:0 0 12px">Follow these Reddit feeds once in the free <b>Feedly</b> app, and it lists each new post as it appears: the question, the group, and how long ago. Then come back here to answer.</p>
+      <ol class="fsteps">
+        <li><a href="https://feedly.com" target="_blank" rel="noopener">Get Feedly</a> (free) and sign in.</li>
+        <li>Tap <b>Follow</b> on each feed below. One time only.</li>
+        <li>Open Feedly each morning and scroll. Tap a post that fits, then answer it with the helper below.</li>
+      </ol>
+      <div class="flist" id="flist"></div>
+      <p class="note">Using a different news app? Tap <b>Copy</b> and paste the link into it. Facebook and Instagram don't offer feeds, so check those with the cards below.</p>
+    </div>
+  </section>
+
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+/* Towns, blurbs, commute times and links.
+   Commute times are typical rush-hour estimates copied from the Commute Map. */
+
+/* ===== EDIT HERE: town picks by budget (same as the City or Suburbs quiz) ===== */
+window.PICKS = {
+  s: {1:["Bloomfield","Union","Denville"],2:["Maplewood","South Orange","Cranford"],3:["Montclair","Westfield","Madison"],4:["Summit","Chatham","Short Hills"]},
+  b: {1:["Jersey City","Weehawken","West New York"],2:["Hoboken","Hamilton Park","Weehawken"],3:["Hoboken","Edgewater","Jersey City"],4:["Hoboken","Edgewater","Weehawken"]},
+  c: {1:["Yorkville","Astoria","Washington Heights"],2:["Upper West Side","Park Slope","Long Island City"],3:["Brooklyn Heights","Upper West Side","Carroll Gardens"],4:["West Village","Tribeca","Brooklyn Heights"]}
+};
+
+/* ===== EDIT HERE: one line about each place ===== */
+window.BLURB = {
+  "Bloomfield":"an easy train to Penn Station, with prices that still make sense","Union":"space and value, with a train into the city","Denville":"lakes, a sweet downtown and real value (a longer ride in)",
+  "Maplewood":"a charming village and a one-seat ride to Penn","South Orange":"a lively downtown built right around the train","Cranford":"a riverside village with its own train station",
+  "Montclair":"arts, restaurants and gorgeous older homes. A favorite for Brooklynites who want a backyard","Westfield":"a walkable downtown with shops, cafés and a busy town calendar","Madison":"small-town charm with a direct train",
+  "Summit":"express trains, top-rated schools and an upscale downtown","Chatham":"well-known schools and a one-seat ride to Penn","Short Hills":"classic homes and a direct line to Penn",
+  "Jersey City":"skyline views and the PATH to downtown","Weehawken":"the ferry to Midtown in minutes","West New York":"waterfront value with ferry access",
+  "Hoboken":"a walkable square mile with the PATH to Manhattan","Hamilton Park":"brownstones around a park, minutes from the PATH","Edgewater":"waterfront living with a ferry to Midtown",
+  "Yorkville":"prewar co-ops and some of Manhattan's best values","Astoria":"roomy apartments, great food and a quick ride to Midtown","Washington Heights":"space, parks and river views for the money",
+  "Upper West Side":"classic co-ops between two great parks","Park Slope":"brownstone Brooklyn, steps from Prospect Park","Long Island City":"new condos, one stop from Midtown",
+  "Brooklyn Heights":"brownstones, the Promenade and a short ride to Wall Street","Carroll Gardens":"leafy blocks and front gardens in brownstone Brooklyn",
+  "West Village":"tree-lined Manhattan at its most charming","Tribeca":"lofts, space and quiet cobblestone streets"
+};
+
+/* ===== EDIT HERE: Josh's tip for each place (from the Commute Map where there is one) ===== */
+window.TOWN_TIP = {
+  "Madison":"The station sits right in the college-town downtown.","Chatham":"Small-town feel, one seat to Penn Station.","Summit":"A major stop with some of the fastest express trains on the line.",
+  "Short Hills":"Millburn and Short Hills each have a station, so check which one is closer.","Maplewood":"Many neighborhoods have a jitney shuttle that meets the trains.",
+  "South Orange":"The village is built around the station, so many people walk to the train.","Montclair":"Several stations in town, and rush-hour trains run direct to Penn.",
+  "Westfield":"Most trains change at Newark Penn, and a few run straight through.","Hoboken":"Most of Hoboken is a short walk to the PATH, plus there's the ferry.",
+  "Jersey City":"Downtown Jersey City is minutes from the World Trade Center on the PATH.","Weehawken":"Manhattan skyline views, and the ferry drops you right in Midtown.",
+  "Edgewater":"Waterfront living on the Hudson, with a ferry ride into Midtown.","Upper West Side":"The 2 and 3 express run straight to Penn Station.",
+  "Yorkville":"Grand Central is a few stops on the 4/5 express.","Astoria":"A neighborhood feel and often more space for the money.",
+  "Long Island City":"The 7 gets you to Grand Central in minutes, and on to Hudson Yards.","Park Slope":"Brownstones and Prospect Park, with an easy ride downtown.",
+  "Brooklyn Heights":"Almost every subway line stops nearby, so you're covered wherever you work.","Carroll Gardens":"Tree-lined brownstone blocks and a quick ride downtown.",
+  "Tribeca":"Waterfront parks and a short walk to the Financial District."
+};
+
+/* ===== commute data, copied from the Commute Map ===== */
+const FROM_PENN = { penn: 8, gct: 15, hy: 12, fidi: 22 }, FROM_33 = { penn: 4, gct: 15, hy: 11 };
+const TRIPS = {
+  "Morristown":{line:"nj",access:10,ride:63},"Madison":{line:"nj",access:8,ride:55},"Chatham":{line:"nj",access:8,ride:50},"Summit":{line:"nj",access:8,ride:42},
+  "Short Hills":{line:"nj",access:8,ride:41},"Maplewood":{line:"nj",access:10,ride:35},"South Orange":{line:"nj",access:10,ride:33},"Montclair":{line:"nj",access:8,ride:48},
+  "Westfield":{line:"nj",access:8,ride:50,xfer:8},"Hoboken":{line:"path",access:8,to33:14,toWtc:10},"Jersey City":{line:"path",access:6,to33:22,toWtc:7},
+  "Weehawken":{line:"ferry",access:8,rides:{penn:25,gct:30,hy:18,fidi:25}},"Edgewater":{line:"ferry",access:8,rides:{penn:32,gct:38,hy:26,fidi:35}},
+  "Upper West Side":{line:"sub",access:5,rides:{penn:12,gct:18,hy:15,fidi:25}},"Yorkville":{line:"sub",access:6,rides:{penn:20,gct:10,hy:25,fidi:22}},
+  "Astoria":{line:"sub",access:6,rides:{penn:24,gct:22,hy:30,fidi:34}},"Long Island City":{line:"sub",access:5,rides:{penn:18,gct:6,hy:14,fidi:25}},
+  "Park Slope":{line:"sub",access:6,rides:{penn:24,gct:28,hy:30,fidi:18}},"Brooklyn Heights":{line:"sub",access:5,rides:{penn:18,gct:18,hy:22,fidi:8}},
+  "Carroll Gardens":{line:"sub",access:6,rides:{penn:24,gct:26,hy:28,fidi:14}},"Tribeca":{line:"sub",access:5,rides:{penn:14,gct:20,hy:16,fidi:4}}
+};
+window.doorToDesk = function (town, hub) {
+  const s = TRIPS[town]; if (!s || !hub || hub === "remote") return null;
+  if (s.line === "sub") return s.access + 4 + s.rides[hub] + 5;
+  if (s.line === "ferry") return s.access + 7 + s.rides[hub] + 5;
+  if (s.line === "path") { const down = hub === "fidi"; return s.access + 4 + (down ? s.toWtc : s.to33) + (down ? 5 : FROM_33[hub]); }
+  return s.access + 5 + s.ride + (s.xfer || 0) + FROM_PENN[hub];
+};
+window.HUBNAME = { penn: "near Penn Station", gct: "near Grand Central", hy: "at Hudson Yards", fidi: "downtown", remote: "" };
+window.HUBSHORT = { penn: "Penn Station", gct: "Grand Central", hy: "Hudson Yards", fidi: "the Financial District" };
+window.BUDGET = { 1: "under $600K", 2: "in the $600K–$900K range", 3: "in the $900K–$1.5M range", 4: "of $1.5M and up" };
+window.BUDGET_SHORT = { 1: "Under $600K", 2: "$600K–$900K", 3: "$900K–$1.5M", 4: "$1.5M+" };
+
+/* See homes for sale: NJ through Josh's Weichert search, NYC through StreetEasy (same as the quiz). */
+const NYC_PLACES = ["Yorkville","Astoria","Washington Heights","Upper West Side","Park Slope","Long Island City","Brooklyn Heights","Carroll Gardens","West Village","Tribeca"];
+const WEICHERT_NAMES = { "Short Hills": "Millburn", "Hamilton Park": "Jersey City" };
+window.homesLink = function (name) {
+  if (NYC_PLACES.includes(name)) return "https://streeteasy.com/for-sale/" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const q = new URLSearchParams({ advanced: "1", display: WEICHERT_NAMES[name] || name });
+  return "https://josh-goodkin.weichert.com/index.php?" + q + "#rslt";
+};
+</script>
+<script>
+/* ===== EDIT HERE: places to look. Quotes = exact words, sorted newest first. ===== */
+const R = (sub, q) => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(q) + "&restrict_sr=1&sort=new";
+const RN = sub => "https://www.reddit.com/r/" + sub + "/new/";
+const G = (q, when) => "https://www.google.com/search?q=" + encodeURIComponent(q) + "&tbs=qdr:" + (when || "m");
+const FB = q => "https://www.facebook.com/search/posts/?q=" + encodeURIComponent(q);
+const FBG = q => "https://www.facebook.com/search/groups/?q=" + encodeURIComponent(q);
+const IG = tag => "https://www.instagram.com/explore/tags/" + tag + "/";
+const SPOTS = {
+  nj: [
+    ["Exact posts · past month", [
+      ["Google → Reddit", "“Moving from NYC” + NJ", "Reddit posts with these exact words from the past month. The most precise search there is.", G('site:reddit.com "moving from NYC" (NJ OR "New Jersey") -Philly -Philadelphia -Chicago -Florida')],
+      ["Google → Reddit", "“Which NJ town”", "People asking which town to pick.", G('site:reddit.com "which town" OR "what town" "New Jersey" commute')],
+      ["Google → Reddit", "“Leaving Brooklyn”", "Brooklyn people heading to the suburbs.", G('site:reddit.com "leaving Brooklyn" OR "from Brooklyn to" NJ OR "New Jersey"')],
+      ["Google → Reddit", "Your towns by name", "Montclair, Maplewood, Summit, Morristown and more.", G('site:reddit.com "moving to" Montclair OR Maplewood OR "South Orange" OR Summit OR Morristown OR Westfield OR Madison')]
+    ]],
+    ["Reddit groups made for this move", [
+      ["r/MovingtoNewJersey", "Newest posts", "A whole community of people planning a move to NJ.", RN("MovingtoNewJersey")]
+    ]],
+    ["Facebook · join these groups once, then check posts", [
+      ["Facebook groups", "Moving to NJ groups", "Groups made for people planning the move. Join a few.", FBG("moving to new jersey")],
+      ["Facebook groups", "Your towns' groups", "Montclair, Maplewood, Summit, Morristown and more. Newcomers ask questions here all the time.", FBG("Montclair Maplewood Summit Morristown NJ community")],
+      ["Facebook groups", "Brooklyn & NYC parents", "Parents' groups are full of families thinking about a yard and schools.", FBG("Brooklyn parents")],
+      ["Facebook groups", "NYC-to-NJ support groups", "Groups for people in the middle of the move. Join the ones with recent posts.", FBG("NYC to NJ move")],
+      ["Facebook posts", "“Moving to New Jersey”", "Posts from groups you've joined.", FB("moving to New Jersey")],
+      ["Facebook posts", "“Leaving Brooklyn”", "City families talking about the suburbs.", FB("leaving brooklyn")],
+      ["Facebook posts", "“Which town” NJ", "People comparing towns, schools and commutes.", FB("which town New Jersey commute")]
+    ]],
+    ["Forums · active this month", [
+      ["Blind (via Google)", "“Where to live” + NJ", "Tech and finance workers asking where to live and commute from. Read their questions; posting needs a work email.", G('site:teamblind.com "New Jersey" OR NJ live OR commute OR town Manhattan OR Midtown')],
+      ["City-Data", "New Jersey forum", "Long questions from people planning a move to NJ.", "https://www.city-data.com/forum/new-jersey/"]
+    ]],
+    ["TikTok · search, then sort by newest", [
+      ["TikTok", "“Moving from NYC to NJ”", "Videos about the move. The comments are full of people asking questions.", "https://www.tiktok.com/search?q=" + encodeURIComponent("moving from NYC to NJ")],
+      ["TikTok", "“NJ suburbs”", "People touring and comparing towns.", "https://www.tiktok.com/search?q=" + encodeURIComponent("best NJ suburbs NYC commute")]
+    ]],
+    ["Instagram · hashtags (tap “Recent” if you see it)", [
+      ["#movingtonj", "Moving to NJ", "People posting about their move. Comment with a helpful tip.", IG("movingtonj")],
+      ["#nyctonj", "NYC to NJ", "The exact move you specialize in.", IG("nyctonj")],
+      ["#brooklyntonj", "Brooklyn to NJ", "Brooklynites heading for a backyard.", IG("brooklyntonj")],
+      ["#leavingnyc", "Leaving NYC", "People saying goodbye to the city.", IG("leavingnyc")],
+      ["#montclairnj", "Montclair", "Newcomers and people dreaming about it.", IG("montclairnj")],
+      ["#morristownnj", "Morristown", "Your home turf.", IG("morristownnj")]
+    ]]
+  ],
+  nyc: [
+    ["Exact posts · past month", [
+      ["Google → Reddit", "“First time buying” NYC", "First-time buyers in the city, with these exact words.", G('site:reddit.com "first time" buying apartment NYC OR Manhattan OR Brooklyn OR Queens')],
+      ["Google → Reddit", "“Co-op board”", "People nervous about the board. Your specialty.", G('site:reddit.com "co-op board" OR "board package" NYC')],
+      ["Google → Reddit", "“Moving to NYC” + buy", "Out-of-towners planning to buy in the city.", G('site:reddit.com "moving to NYC" buy OR buying apartment')],
+      ["Google → Reddit", "“Rent or buy” NYC", "Renters doing the math on buying.", G('site:reddit.com "rent or buy" OR "rent vs buy" NYC')]
+    ]],
+    ["Reddit groups made for this move", [
+      ["r/movingtonyc", "Newest posts", "Where r/AskNYC sends everyone moving to the city: neighborhoods, costs, renting vs. buying.", RN("movingtonyc")]
+    ]],
+    ["Facebook · join these groups once, then check posts", [
+      ["Facebook groups", "NYC first-time buyers", "Groups for people buying their first place in the city.", FBG("NYC first time home buyers")],
+      ["Facebook groups", "Moving to NYC groups", "Newcomers looking for apartments and advice.", FBG("moving to NYC")],
+      ["Facebook posts", "“Buying a co-op”", "People asking about boards and co-ops.", FB("buying a co-op NYC")],
+      ["Facebook posts", "“Apartment search” NYC", "Renters and buyers looking right now.", FB("apartment search NYC help")]
+    ]],
+    ["Forums & TikTok · newest first", [
+      ["Blind (via Google)", "“Buying in NYC”", "Tech and finance workers asking about buying in the city. Read only; posting needs a work email.", G('site:teamblind.com buy OR buying apartment OR co-op OR condo NYC OR Manhattan OR Brooklyn')],
+      ["TikTok", "“Buying an apartment NYC”", "First-time buyers asking questions in the comments.", "https://www.tiktok.com/search?q=" + encodeURIComponent("buying an apartment in NYC")]
+    ]],
+    ["Instagram · hashtags (tap “Recent” if you see it)", [
+      ["#movingtonyc", "Moving to NYC", "People about to arrive in the city.", IG("movingtonyc")],
+      ["#nycapartmenthunting", "Apartment hunting", "Renters in the thick of it. Future buyers too.", IG("nycapartmenthunting")],
+      ["#firsttimehomebuyer", "First-time buyers", "Look for NYC and NJ posts and say hello.", IG("firsttimehomebuyer")],
+      ["#brooklynliving", "Brooklyn living", "Brooklyn people, many planning their next move.", IG("brooklynliving")]
+    ]]
+  ],
+  agent: [
+    ["Asking for an agent · past month", [
+      ["Google → Reddit", "“Recommend a realtor” NJ", "People asking Reddit for an agent in New Jersey. The hottest leads there are.", G('site:reddit.com "realtor" OR "real estate agent" recommend OR recommendation NJ OR "New Jersey"')],
+      ["Google → Reddit", "“Recommend a realtor” NYC", "Same thing, for the city.", G('site:reddit.com "realtor" OR "broker" OR "buyer\'s agent" recommend OR recommendation NYC OR Brooklyn OR Manhattan OR Queens')],
+      ["Google · anywhere", "“Looking for a realtor” NJ", "Forums, Q&A sites and more, from the past week.", G('"looking for a realtor" OR "need a realtor" OR "recommend a realtor" "New Jersey" OR Morristown OR Montclair OR Hoboken', "w")]
+    ]],
+    ["Facebook & Nextdoor · neighbors asking for names", [
+      ["Facebook posts", "“Recommend a realtor” Morris County", "Neighbors asking their town groups for an agent.", FB("recommend a realtor Morris County")],
+      ["Facebook posts", "“Recommend a realtor” Essex County", "Montclair, Maplewood, South Orange and nearby.", FB("recommend a realtor Montclair Maplewood")],
+      ["Facebook posts", "“Recommend a realtor” Hoboken / JC", "Waterfront renters ready to buy.", FB("recommend a realtor Hoboken Jersey City")],
+      ["Facebook posts", "“Realtor recommendation” NYC", "City buyers and sellers asking for a name.", FB("realtor recommendation Brooklyn Manhattan")],
+      ["Nextdoor", "“Realtor” recommendations", "Neighbors near you asking for an agent. Needs a Nextdoor account.", "https://nextdoor.com/search/posts/?query=realtor%20recommendation"]
+    ]]
+  ],
+  sell: [
+    ["Thinking of selling · past month", [
+      ["Google → Reddit", "“Selling my house” NJ", "New Jersey homeowners thinking out loud about selling.", G('site:reddit.com "selling my house" OR "sell my house" OR "selling our house" NJ OR "New Jersey"')],
+      ["Google → Reddit", "“Listing agent” NJ or NYC", "People trying to pick an agent to sell. The hottest seller leads there are.", G('site:reddit.com "listing agent" OR "agent to sell" OR "selling agent" NJ OR "New Jersey" OR NYC OR Brooklyn')],
+      ["Google → Reddit", "“Selling my co-op / condo” NYC", "City owners selling, often to move to the suburbs.", G('site:reddit.com "selling my co-op" OR "selling my condo" OR "selling my apartment" NYC OR Manhattan OR Brooklyn OR Queens')],
+      ["Google → Reddit", "“Sell and buy” at the same time", "People juggling a sale and a purchase. Two deals in one.", G('site:reddit.com "sell and buy" OR "buy and sell" "at the same time" house NJ OR NYC')]
+    ]],
+    ["Reddit groups made for this move", [
+    ]],
+    ["Facebook & Nextdoor · neighbors about to list", [
+      ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking for a listing agent in town groups.", FB("recommend realtor to sell our house New Jersey")],
+      ["Facebook posts", "“Thinking of selling” Morris County", "Homeowners near Josh's office.", FB("thinking of selling our house Morris County")],
+      ["Facebook posts", "“Selling our co-op” NYC", "City owners getting ready to sell.", FB("selling our co-op NYC realtor")],
+      ["Nextdoor", "“Realtor to sell”", "Neighbors asking who to list with. Needs a Nextdoor account.", "https://nextdoor.com/search/posts/?query=realtor%20to%20sell%20house"]
+    ]]
+  ]
+};
+const ALERTS = ["moving from NYC to New Jersey", "moving to Morristown NJ", "Brooklyn to Maplewood", "first time buying a co-op NYC", "recommend a realtor New Jersey", "recommend a realtor Brooklyn"];
+
+/* ===== EDIT HERE: Josh's voice. Lines are picked at random so no two replies look the same. ===== */
+const VOICE = {
+  open: {
+    s: ["Hi {n}! This is exactly what I do. A lot of my clients start in Brooklyn or Manhattan and end up in a town like Montclair, Maplewood or Summit, so happy to share my honest take.",
+        "{n}, great question, and you're definitely not alone. City to suburbs is the move I help people make most.",
+        "Hey {n}! I help people go from the city to the suburbs all the time. Here's where I'd start if I were you."],
+    b: ["Hi {n}! Hoboken and Jersey City are a great middle ground: the city stays close, and you get more space for the money. Here's my take.",
+        "{n}, smart move looking across the river. The PATH can get you to Manhattan faster than parts of Brooklyn.",
+        "Hey {n}! I work on both sides of the Hudson, so happy to share what I'd look at."],
+    c: ["Hi {n}! I help people buy in Manhattan, Brooklyn and Queens, so happy to share what I'd look at.",
+        "{n}, great question. Every NYC neighborhood runs on its own rules, so here's my honest take.",
+        "Hey {n}! Buying in the city is a lot less scary once someone walks you through it. Here's where I'd start."]
+  },
+  lead: ["With a budget {b}{h}, here's where I'd look first:", "For a budget {b}{h}, these are the {w} I'd put on your list:", "Budget {b}{h}? I'd start with:"],
+  tips: {
+    s: { base: ["My advice: spend a Saturday in each one. Grab a coffee, walk the downtown, check out the train station. You'll know the town before you pick the house.",
+                "Go on a Saturday morning, walk the downtown and picture your weekends there. One of them will just feel right."],
+         taxes: "One thing that catches New Yorkers off guard: property taxes. Compare the monthly payment with taxes in, not just the price.",
+         kids: "For schools, look up each district's NJ School Performance Report, then talk to parents at the playground. They'll tell you everything.",
+         first: "Buying in NJ is different from NYC: no co-op board, and after you sign there's a three-business-day attorney review where either side can still make changes.",
+         nervous: "Worried you'll miss the city? Pick a town with a real downtown and a direct train. It keeps the city close, and you get the space you want." },
+    b: { base: ["Walk the blocks around the PATH or the ferry at rush hour. A 5-minute walk vs. a 15-minute walk adds up fast.",
+                "Spend a weekend walking the neighborhoods. Every few blocks feels different, so pick the block before you pick the building."],
+         taxes: "Check the property taxes and HOA fees together. That's your real monthly cost, not just the mortgage.",
+         kids: "Look at the parks and schools within a few blocks. In Hoboken and Jersey City, a few blocks can change everything.",
+         first: "It follows New Jersey's rules, so no co-op board, and after you sign there's a three-business-day attorney review where either side can still make changes.",
+         nervous: "It honestly feels like the city, just with more room and the best skyline view around. Most people wonder why they didn't do it sooner." },
+    c: { base: ["My tip: walk the block at night and on a Saturday before you commit.",
+                "Look at the building's finances, not just the apartment. A great unit in a building with money problems is not a great deal."],
+         taxes: "Watch the $1M line: in NYC, buying at $1M or more adds the mansion tax, so sometimes the smartest offer is just under it.",
+         kids: "Check the school zone for the exact address. In NYC, the building can decide the school.",
+         first: "Most apartments are co-ops, so expect a board application and an interview. A clean, complete package is how you get a yes, and it usually takes two to three months.",
+         nervous: "It's a lot at first, but it's very doable one step at a time. Happy to explain any of it in plain English." }
+  },
+  link: { s: "I also made a free commute map that shows door-to-desk times for each town: movinwithgoodkin.com/commute-map",
+          b: "I made a free commute map that shows door-to-desk times from each neighborhood: movinwithgoodkin.com/commute-map",
+          c: "I wrote out every step of buying in NYC in plain English here, if it helps: movinwithgoodkin.com/buying-city",
+          remote: "If it helps, I made a free 1-minute quiz that suggests places based on what you want: movinwithgoodkin.com/city-or-suburbs" },
+  shortOpen: ["Hi {n}! City to suburbs is what I do every day.","{n}, great question!","Hey {n}! Love this move."],
+  shortClose: "I'm Josh, a licensed agent in NY + NJ (Sefirot Real Estate / Weichert Realtors). Happy to help anytime. Free commute map: movinwithgoodkin.com/commute-map",
+  softOpen: ["Hi {n}! A lot of people make this exact move, so here's what I'd look at.","{n}, great question. Here's my honest take.","Hey {n}! Happy to share what I've seen."],
+  softClose: "(For transparency: I'm a licensed agent in NY with Sefirot Real Estate and in NJ with Weichert Realtors. Just sharing what I've seen, not selling anything here.)",
+  agent: {
+    open: ["Hi {n}! I'd love to throw my name in. I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors), and helping people buy in {where} is what I do every day.",
+           "{n}, happy to help! I'm Josh, a licensed agent in both NY (Sefirot Real Estate) and NJ (Weichert Realtors). I work with a lot of buyers in {where}.",
+           "Hey {n}! I'm Josh, an agent licensed in NY and NJ (Sefirot Real Estate / Weichert Realtors). This is right in my wheelhouse, especially {where}."],
+    proof: ["A couple of things my clients have said: “You won't find anyone who works harder for you.” and “He was on top of everything and extremely responsive no matter the time or day.” (5.0 on Google, 21 reviews.)",
+            "From my Google reviews (5.0, 21 reviews): “If you're a first-time homebuyer, I can't recommend Josh Goodkin enough.” and “Josh executed flawlessly and made the entire experience smooth and stress-free.”"],
+    how: "I'm hands-on from start to finish: I'm at the showings, the inspection and the walk-through, and you'll always know what happens next. And because I'm licensed on both sides of the Hudson, your search never has to start over if it crosses the river.",
+    close: ["Happy to do a free, no-pressure strategy call to map out your budget, your towns and your timeline. Message me here or check out movinwithgoodkin.com. *Good* luck either way!",
+            "If you want, message me and we'll set up a quick call, no strings attached. You can see more at movinwithgoodkin.com. Hope you find a *good* one!"],
+    softClose: "Happy to answer any questions right here in the thread."
+  },
+  sell: {
+    open: ["Hi {n}! Selling is a big decision, so happy to share how I'd think about it.",
+           "{n}, great question. Here's my honest take on selling {where} right now.",
+           "Hey {n}! I help people sell {where} all the time. Here's where I'd start."],
+    base: ["Start with a real number. Look at what similar homes nearby sold for in the last few months, not what's listed. That's what buyers and appraisers will look at.",
+           "Small fixes before you list usually pay off: fresh paint, good lighting, a deep clean. Big renovations usually don't."],
+    s: "In New Jersey, many towns require a certificate of occupancy inspection before closing, so it's worth scheduling early.",
+    b: "In Hoboken and Jersey City, great photos and a smart price matter more than anything. Most buyers decide from their phone before they ever visit.",
+    c: "In NYC, co-op sales need the board to approve your buyer, so a well-prepared buyer (and their package) can make or break your timeline.",
+    both: "If you're selling and buying at the same time, timing is everything. You can line up both closings so you're not paying for two homes or left without one.",
+    pitch: "For what it's worth, every listing I take gets professional photos and video, staging is on the table, and I'm at the showings and inspections myself.",
+    link: "If you want a starting point, I made a free \"what's my home worth?\" tool here: movinwithgoodkin.com/home-value",
+    close: ["Full disclosure: I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors). Happy to answer anything here or by message, no pressure. Good luck with the sale!",
+            "Full disclosure, I'm Josh, a licensed agent in both NY (Sefirot Real Estate) and NJ (Weichert Realtors). If you want a second opinion on price, just message me. No strings attached."],
+    soft: "(For transparency: I'm a licensed agent in NY with Sefirot Real Estate and in NJ with Weichert Realtors. Just sharing what I've seen.)"
+  },
+  close: ["Full disclosure: I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors). Feel free to message me anytime. You'll get a real answer from me, fast, in plain English. No pressure either way.",
+          "Full disclosure, I'm Josh, a licensed real estate agent in both NY (Sefirot Real Estate) and NJ (Weichert Realtors). Happy to answer anything here or by message, no pressure. Hope you find a *good* one!",
+          "Full disclosure: I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors). If you want a short list of places that fit, just message me. Happy to help, no strings attached."]
+};
+
+/* ===== page ===== */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+async function copyText(s){try{await navigator.clipboard.writeText(s);return true}catch(e){const ta=document.createElement("textarea");ta.value=s;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand("copy")}catch(_){}ta.remove();return ok}}
+function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("on"),1800)}
+
+/* ===== EDIT HERE: each Reddit group's rules, checked by hand (Nov 2026) =====
+   ok = agents can answer and mention their services · nopitch = helpful answers only, may say "I'm an agent", no links, no DMs · no = no agents */
+const RULES={
+  newjersey:["ok","Agents can answer · no listing posts"],
+  movingtonewjersey:["nopitch","Strict: help only, no links, never DM first"],
+  hoboken:["ok","Agents can answer · no listings · 1 promo post per 6 months"],
+  jerseycity:["ok","Agents can answer · say you're an agent · max 2 promo posts a month"],
+  nycapartments:["nopitch","Strict: advice only · offering services = instant ban · promo only in the monthly thread"],
+  firsttimehomebuyer:["nopitch","Strict: comments only · no links, no \"DM me\" · use your own words"],
+  movingtonyc:["nopitch","Strict: moving advice only · no sales pitch · must sound human"]
+  // r/AskNYC removed: no promotion, and it sends moving questions to r/movingtonyc.
+  // r/Brooklyn removed: bans buying/renting/broker posts, contact info and links to your business.
+  // r/astoria removed: bans apartment, broker and real estate posts.
+  // r/montclair removed: it's the Montclair State University group, and it bans solicitation.
+};
+const subOf=w=>{const m=/^r\/(\w+)/.exec(w);return m?m[1]:null};
+function flag(sub){const r=RULES[sub.toLowerCase()];return r?`<span class="flag ${r[0]}">${r[1]}</span>`:""}
+/* ===== EDIT HERE: Reddit feeds (newest posts first). Feedly or any news app can follow them. ===== */
+const RS=(sub,q)=>"https://www.reddit.com/r/"+sub+"/search.rss?q="+encodeURIComponent(q)+"&restrict_sr=1&sort=new";
+const RNEW=sub=>"https://www.reddit.com/r/"+sub+"/new/.rss";
+const FEEDS=[
+  ["r/MovingtoNewJersey","Every new post","The whole group is people planning a move to NJ.",RNEW("MovingtoNewJersey")],
+  ["r/movingtonyc","Every new post","People moving to the city.",RNEW("movingtonyc")]
+];
+function drawFeeds(){
+  $("flist").innerHTML=FEEDS.map(([where,what,why,url],i)=>{const s=subOf(where);return `<div class="frow"><div><span class="fn">${esc(where)} · ${esc(what)}</span><span class="fd">${esc(why)}</span>${s?flag(s):""}</div>
+    <div class="fb"><a href="https://feedly.com/i/subscription/feed/${encodeURIComponent(url)}" target="_blank" rel="noopener">Follow</a><button data-feed="${i}">Copy</button></div></div>`}).join("");
+}
+$("flist").addEventListener("click",async e=>{const b=e.target.closest("[data-feed]");if(!b)return;const u=FEEDS[+b.dataset.feed][3];toast((await copyText(u))?"Feed link copied.":"Couldn't copy here. Use Follow instead.")});
+/* Live posts: a helper on GitHub checks Reddit twice an hour and saves the on-topic posts to posts.json next to this page.
+   (Inside Claude or opened as a file, posts.json isn't reachable, so this box stays hidden.) */
+function ago(sec){const h=Math.round((Date.now()/1000-sec)/3600);return h<1?"just now":h<24?h+"h ago":Math.round(h/24)+"d ago"}
+let liveArea=null, liveData=null;
+async function loadLive(force){
+  if(liveData&&!force)return liveData;
+  try{const r=await fetch((/demo/.test(location.search)?"posts-demo.json":"posts.json")+"?ts="+Date.now(),{cache:"no-store"});if(!r.ok)return null;liveData=await r.json();return liveData}catch(e){return null}
+}
+async function drawLive(area,force){
+  const box=$("live");if(/nolive/.test(location.search)){box.hidden=true;return}
+  liveArea=area;
+  const d=await loadLive(force);
+  if(!d||!Array.isArray(d.posts)){box.hidden=true;return}
+  const posts=d.posts.filter(p=>(p.lists||[]).includes(area)&&p.t>Date.now()/1000-7*86400).slice(0,20);
+  const checked=d.checked?`Checked ${ago(d.checked).replace(" ago","")==="just now"?"just now":ago(d.checked)}.`:"";
+  $("liveSub").textContent=`Reddit posts from the past week whose titles match this tab, newest first. ${checked}`;
+  if(liveArea!==area)return;
+  box.hidden=false;
+  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a><div class="lm">r/${esc(p.sub)} · ${ago(p.t)}</div>${flag(p.sub)}</div>
+    <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
+  $("liveList").dataset.posts=JSON.stringify(posts.map(p=>p.author));
+}
+$("liveList").addEventListener("click",e=>{const ex=e.target.closest('a[href="#example"]');if(ex){e.preventDefault();toast("This is an example. Real posts open the actual Reddit post.");return}
+  const b=e.target.closest("[data-answer]");if(!b)return;
+  const authors=JSON.parse($("liveList").dataset.posts||"[]");const a=authors[+b.dataset.answer];
+  $("theirName").value=a?"u/"+a:"";
+  const want=liveArea==="sell"?"sell":liveArea==="agent"?"agent":"place";
+  document.querySelector(`[data-k=ask] [data-v="${want}"]`).click();
+  if(liveArea==="nyc")document.querySelector('[data-k=vibe] [data-v="c"]').click();
+  build();location.hash="answer";});
+$("liveRefresh").addEventListener("click",()=>drawLive(liveArea||"nj",true));
+/* What each card opens, in plain words. */
+function dest(url,where){
+  if(/google\.com\/search/.test(url)){
+    if(/site%3Areddit\.com/.test(url))return{site:"Google",place:"Reddit posts",see:"You'll see Google results. Each one is a Reddit post from the past month."};
+    if(/site%3Ateamblind\.com/.test(url))return{site:"Google",place:"Blind posts",see:"You'll see Google results. Each one is a post on Blind from the past month."};
+    return{site:"Google",place:"Anywhere online",see:"You'll see Google results from the past week."};
+  }
+  if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
+  if(/facebook\.com\/search\/groups/.test(url))return{site:"Facebook",place:"Facebook groups",see:"You'll see groups to join. Log in to Facebook first."};
+  if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"You'll see posts with these words from groups you've joined. Log in first."};
+  if(/instagram\.com/.test(url))return{site:"Instagram",place:where,see:"You'll see Instagram posts with this hashtag. Log in first."};
+  if(/tiktok\.com/.test(url))return{site:"TikTok",place:"TikTok videos",see:"You'll see videos on this topic. The questions are in the comments."};
+  if(/nextdoor\.com/.test(url))return{site:"Nextdoor",place:"Nextdoor",see:"You'll see posts from neighbors near you. Needs a Nextdoor account."};
+  if(/city-data\.com/.test(url))return{site:"City-Data",place:"City-Data forum",see:"You'll see the forum's newest discussions."};
+  return{site:"the site",place:where,see:""};
+}
+function drawSpots(area){
+  const subs=[];
+  let h=SPOTS[area].filter(([label,cards])=>cards.length).map(([label,cards])=>`<div class="group-label">${esc(label)}</div><div class="grid">`+
+    cards.filter(([where])=>{const s=subOf(where);return !(s&&RULES[s.toLowerCase()]&&RULES[s.toLowerCase()][0]==="no")}).map(([where,what,why,url])=>{const s=subOf(where);if(s&&!subs.includes(s))subs.push(s);
+      const d=dest(url,where);
+      return `<a class="spot" href="${url}" target="_blank" rel="noopener"><div class="where">${esc(d.place)}<i>Opens ${esc(d.site)} ↗</i></div><div class="what">${esc(what)}</div><p class="why">${esc(why)}</p><p class="see">${esc(d.see)}</p>${s?flag(s):""}</a>`}).join("")+`</div>`).join("");
+  $("spots").innerHTML=h;
+  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.area===area));
+  store.set("radar-area",area);
+  drawLive(area);
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>drawSpots(b.dataset.area)));
+drawSpots(store.get("radar-area","nj"));
+drawFeeds();
+$("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");
+
+const state={ask:"place",style:"full",hub:"penn",budget:"2",vibe:"s",extras:new Set()};
+let rnd={};
+const pick=(arr,key)=>arr[(rnd[key]??=Math.floor(Math.random()*1000))%arr.length];
+document.querySelectorAll(".opts").forEach(box=>{
+  const k=box.dataset.k,multi=box.hasAttribute("data-multi");
+  box.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    if(multi){const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);on?state.extras.add(b.dataset.v):state.extras.delete(b.dataset.v)}
+    else{box.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");state[k]=b.dataset.v}
+    build()});
+});
+$("theirName").addEventListener("input",build);
+$("again").addEventListener("click",()=>{const before=$("draft").value;for(let i=0;i<8;i++){rnd={};build();if($("draft").value!==before)break}toast("Here's another version.")});
+
+function build(){
+  const v=state.vibe, towns=PICKS[v][state.budget], hub=state.hub, ex=state.extras, T=VOICE.tips[v], st=state.style;
+  const agentAsk=state.ask==="agent", sellAsk=state.ask==="sell";
+  $("vibeLbl").textContent=sellAsk?"Where is their home?":"Where are they looking?";
+  document.querySelectorAll('[data-k=budget],[data-k=hub],[data-k=extras]').forEach(b=>b.closest(".field").style.display=(agentAsk||sellAsk)?"none":"");
+  const rows=towns.map(t=>({t,m:doorToDesk(t,hub)}));
+  $("towns").innerHTML=(agentAsk||sellAsk)?"":rows.map(r=>`<div class="town"><b>${esc(r.t)}</b>${r.m?` <span class="mins">about ${r.m} min door to desk</span>`:""}<span>${esc(BLURB[r.t]||"")}</span></div>`).join("");
+  const name=$("theirName").value.trim().replace(/^u\//i,"");
+  const hi=s=>name?s.replace("{n}",name):s.replace(/^Hi \{n\}! |^Hey \{n\}! /,"").replace(/^\{n\}, (\w)/,(m,c)=>c.toUpperCase());
+  const L=[];
+  if(sellAsk){
+    const S=VOICE.sell, where={s:"in New Jersey",b:"in Hoboken and Jersey City",c:"in the city"}[v];
+    L.push(hi(pick(S.open,21)).replace("{where}",where));
+    if(st==="short"){L.push(pick(S.base,22));L.push("");L.push(VOICE.shortClose.replace("Free commute map: movinwithgoodkin.com/commute-map","Free home value tool: movinwithgoodkin.com/home-value"));$("draft").value=L.join("\n");return}
+    L.push("");L.push(pick(S.base,22));L.push(S[v]);L.push(S.both);L.push("");
+    if(st==="nopitch"){L.push(S.soft)}else{L.push(S.pitch);L.push(S.link);L.push("");L.push(pick(S.close,23))}
+    $("draft").value=L.join("\n");return;
+  }
+  if(agentAsk){
+    const A=VOICE.agent;
+    L.push(hi(pick(A.open,11)).replace("{where}",{s:"the NJ suburbs",b:"Hoboken and Jersey City",c:"the city"}[v]));
+    if(st==="full"){L.push("");L.push(pick(A.proof,12));L.push("");L.push(A.how)}
+    L.push("");L.push(st==="nopitch"?A.softClose:pick(A.close,13));
+    $("draft").value=L.join("\n");return;
+  }
+  const lead=pick(VOICE.lead,2).replace("{b}",BUDGET[state.budget]).replace("{h}",hub!=="remote"?` and work ${HUBNAME[hub]}`:"").replace("{w}",v==="s"?"towns":"neighborhoods");
+  if(st==="short"){
+    L.push(hi(pick(VOICE.shortOpen,5)));
+    L.push(`${lead} ${rows.map(r=>r.t+(r.m?` (~${r.m} min door to desk)`:"")).join(", ")}.`);
+    L.push(pick(T.base,3));
+    L.push("");
+    L.push(VOICE.shortClose);
+    $("draft").value=L.join("\n");return;
+  }
+  L.push(hi(st==="nopitch"?pick(VOICE.softOpen,6):pick(VOICE.open[v],1)),"",lead);
+  rows.forEach(r=>L.push(`• ${r.t}: ${BLURB[r.t]||""}${r.m?`. About ${r.m} minutes door to desk at rush hour.`:"."}`));
+  L.push("");
+  const tips=[pick(T.base,3)];
+  ["first","taxes","kids","nervous"].forEach(x=>{if(ex.has(x))tips.push(T[x])});
+  if(tips.length===1)tips.push(v==="c"?T.first:T.taxes);
+  L.push(...tips.slice(0,3));
+  L.push("");
+  if(st==="nopitch"){L.push(VOICE.softClose)}
+  else{L.push(hub==="remote"&&v!=="c"?VOICE.link.remote:VOICE.link[v]);L.push("");L.push(pick(VOICE.close,4))}
+  $("draft").value=L.join("\n");
+}
+build();
+$("copy").addEventListener("click",async()=>{const t=$("draft").value;try{await navigator.clipboard.writeText(t)}catch(e){$("draft").select();document.execCommand("copy")}toast("Copied. Paste it as your reply.")});
+
+/* people list */
+const STAGES=["Answered","They replied","Talking","Call or meeting set","Client!"];
+let people=store.get("radar-people",[]);
+function save(){store.set("radar-people",people);drawPeople()}
+function addPerson(name,link,note){if(!name&&!link)return toast("Add a name or a link first.");people.unshift({id:Date.now(),name:name||"Someone",link,note,stage:0,at:new Date().toISOString().slice(0,10)});save();toast("Added to your list.")}
+function drawPeople(){
+  const c=STAGES.map((s,i)=>people.filter(p=>p.stage===i).length);
+  $("stats").innerHTML=`<div class="stat"><b>${people.length}</b><span>People reached</span></div><div class="stat"><b>${c[1]+c[2]+c[3]+c[4]}</b><span>Wrote back</span></div><div class="stat"><b>${c[3]+c[4]}</b><span>Calls or meetings</span></div><div class="stat"><b>${c[4]}</b><span>Clients</span></div>`;
+  $("plist").innerHTML=people.length?people.map(p=>`<div class="person" data-id="${p.id}">
+    <div class="top1"><div><div class="nm">${esc(p.name)}</div><div class="meta">Added ${esc(p.at)}</div></div>
+      <select data-act="stage" aria-label="Where things stand">${STAGES.map((s,i)=>`<option value="${i}" ${p.stage===i?"selected":""}>${s}</option>`).join("")}</select></div>
+    <textarea data-act="note" placeholder="Notes: where they live now, budget, kids, timing…">${esc(p.note||"")}</textarea>
+    <div class="acts">${p.link?`<a href="${esc(p.link)}" target="_blank" rel="noopener">Open their post ↗</a>`:""}<button data-act="del">Remove</button></div>
+  </div>`).join(""):'<p class="empty">No one yet. Answer your first post above, then add them here.</p>';
+}
+$("plist").addEventListener("change",e=>{const el=e.target.closest("[data-act]");if(!el)return;const p=people.find(x=>x.id==el.closest(".person").dataset.id);
+  if(el.dataset.act==="stage"){p.stage=+el.value;save();if(p.stage===4)toast("A new client! 🎉")}
+  if(el.dataset.act==="note"){p.note=el.value;store.set("radar-people",people)}});
+$("plist").addEventListener("click",e=>{const el=e.target.closest("[data-act=del]");if(!el)return;if(el.dataset.sure!=="1"){el.dataset.sure="1";el.textContent="Tap again to remove";setTimeout(()=>{el.dataset.sure="";el.textContent="Remove"},3000);return}
+  people=people.filter(x=>x.id!=el.closest(".person").dataset.id);save()});
+$("pAdd").addEventListener("click",()=>{addPerson($("pName").value.trim(),$("pLink").value.trim(),$("pNote").value.trim());["pName","pLink","pNote"].forEach(i=>$(i).value="")});
+$("addFromHelper").addEventListener("click",()=>{
+  const where={s:"NJ suburbs",b:"Hoboken / Jersey City",c:"NYC"}[state.vibe];
+  if(state.ask==="sell"){addPerson($("theirName").value.trim(),"",`Seller: home in ${where}.`);location.hash="people";return}
+  addPerson($("theirName").value.trim(),"",`Looking in ${where}, budget ${BUDGET[state.budget].replace(/^(in the|of) /,"")}. Suggested ${PICKS[state.vibe][state.budget].join(", ")}.`);
+  location.hash="people"});
+$("export").addEventListener("click",()=>{
+  const lines=[["Name","Stage","Added","Link","Notes"]].concat(people.map(p=>[p.name,STAGES[p.stage],p.at,p.link||"",p.note||""]));
+  const csv=lines.map(l=>l.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
+  copyText(csv).then(ok=>toast(ok?"Copied. Paste it into a spreadsheet or a note.":"Couldn't copy here."))});
+drawPeople();
+</script>
+</body>
+</html>
