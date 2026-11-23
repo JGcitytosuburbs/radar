@@ -494,13 +494,13 @@ function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");cl
 /* ===== EDIT HERE: each Reddit group's rules, checked by hand (Nov 2026) =====
    ok = agents can answer and mention their services · nopitch = helpful answers only, may say "I'm an agent", no links, no DMs · no = no agents */
 const RULES={
-  newjersey:["ok","Links OK"],
-  movingtonewjersey:["nopitch","No links allowed here"],
-  hoboken:["ok","Links OK"],
-  jerseycity:["ok","Links OK"],
-  nycapartments:["nopitch","No links allowed here"],
-  firsttimehomebuyer:["nopitch","No links allowed here"],
-  movingtonyc:["nopitch","No links allowed here"]
+  newjersey:["ok","Links OK in replies"],
+  movingtonewjersey:["nopitch","Reply without a link"],
+  hoboken:["ok","Links OK in replies"],
+  jerseycity:["ok","Links OK in replies"],
+  nycapartments:["nopitch","Reply without a link"],
+  firsttimehomebuyer:["nopitch","Reply without a link"],
+  movingtonyc:["nopitch","Reply without a link"]
   // r/AskNYC removed: no promotion, and it sends moving questions to r/movingtonyc.
   // r/Brooklyn removed: bans buying/renting/broker posts, contact info and links to your business.
   // r/astoria removed: bans apartment, broker and real estate posts.
@@ -512,7 +512,7 @@ const SHARE={nj:["Commute map","movinwithgoodkin.com/commute-map"],nyc:["NYC buy
 function flag(sub,list){const r=RULES[(sub||"").toLowerCase()];if(!r)return"";
   if(!list)return`<span class="flag ${r[0]}">${r[1]}</span>`;
   const s=SHARE[list]||SHARE.nj;
-  return r[0]==="ok"?`<span class="flag ok">Link to share: ${s[0]}</span>`:`<span class="flag ${r[0]}">No links allowed here</span>`}
+  return r[0]==="ok"?`<span class="flag ok">Link to include: ${s[0]}</span>`:`<span class="flag ${r[0]}">Reply without a link</span>`}
 /* ===== EDIT HERE: Reddit feeds (newest posts first). Feedly or any news app can follow them. ===== */
 const RS=(sub,q)=>"https://www.reddit.com/r/"+sub+"/search.rss?q="+encodeURIComponent(q)+"&restrict_sr=1&sort=new";
 const RNEW=sub=>"https://www.reddit.com/r/"+sub+"/new/.rss";
