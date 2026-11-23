@@ -490,7 +490,12 @@ const RULES={
   // r/montclair removed: it's the Montclair State University group, and it bans solicitation.
 };
 const subOf=w=>{const m=/^r\/(\w+)/.exec(w);return m?m[1]:null};
-function flag(sub){const r=RULES[sub.toLowerCase()];return r?`<span class="flag ${r[0]}">${r[1]}</span>`:""}
+/* ===== EDIT HERE: the best page of Josh's site to share, by tab ===== */
+const SHARE={nj:["the commute map","movinwithgoodkin.com/commute-map"],nyc:["the NYC buying guide","movinwithgoodkin.com/buying-city"],sell:["the home value page","movinwithgoodkin.com/home-value"],agent:["his website","movinwithgoodkin.com"]};
+function flag(sub,list){const r=RULES[(sub||"").toLowerCase()];if(!r)return"";
+  if(!list)return`<span class="flag ${r[0]}">${r[1]}</span>`;
+  const s=SHARE[list]||SHARE.nj;
+  return r[0]==="ok"?`<span class="flag ok">Links OK · share ${s[0]}</span>`:`<span class="flag ${r[0]}">Strict: no links · his profile link does the work</span>`}
 /* ===== EDIT HERE: Reddit feeds (newest posts first). Feedly or any news app can follow them. ===== */
 const RS=(sub,q)=>"https://www.reddit.com/r/"+sub+"/search.rss?q="+encodeURIComponent(q)+"&restrict_sr=1&sort=new";
 const RNEW=sub=>"https://www.reddit.com/r/"+sub+"/new/.rss";
@@ -521,7 +526,7 @@ async function drawLive(area,force){
   $("liveSub").textContent=`New posts from Reddit and forums this week that match this tab, newest first. ${checked}`;
   if(liveArea!==area)return;
   box.hidden=false;
-  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub):""}</div>
+  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub,liveArea):""}</div>
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
   livePosts=posts;
 }
