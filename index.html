@@ -573,6 +573,11 @@ const SWEEP = [
   ["r-mtnyc", "Reddit · r/movingtonyc", "Every new post, newest first.", "https://www.reddit.com/r/movingtonyc/new/"],
   ["quora", "Quora · “Moving to New Jersey”", "Questions from this week.", "https://www.quora.com/search?q=" + encodeURIComponent("moving to New Jersey") + "&type=question&time=week"]
 ];
+/* ===== EDIT HERE: Facebook groups built into the page (show on every device) ===== */
+const SWEEP_GROUPS = [
+  {url: "https://www.facebook.com/groups/937546385499376/", name: "Relocating to New Jersey", note: "Public group · 744 members"},
+  {url: "https://www.facebook.com/groups/1583888768982494/", name: "Moving to New Jersey and Living in New Jersey", note: "Public group · 483 members"}
+];
 const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
 const swDone = () => { const v = store.get("sweep-done", {}); return v.day === today() ? new Set(v.ids || []) : new Set(); };
 function swMark(id){ const s = swDone(); s.add(id); store.set("sweep-done", {day: today(), ids: [...s]}); drawSweep(); }
@@ -580,20 +585,25 @@ function groupName(u){ const m = u.match(/groups\/([^/?#]+)/); const slug = m ? 
   return /^\d+$/.test(slug) ? "Facebook group " + slug.slice(-4) : slug.replace(/[-_.]+/g, " ").replace(/\b\w/g, c => c.toUpperCase()); }
 function drawSweep(){
   if(!$("swList"))return;
-  const done = swDone(), groups = store.get("sweep-groups", []);
+  const done = swDone(), mine = store.get("sweep-groups", []), groups = SWEEP_GROUPS.map(g => ({...g, builtIn: true})).concat(mine);
   $("swList").innerHTML = SWEEP.map(([id, where, why, url]) => `<div class="swr${done.has(id) ? " done" : ""}"><span class="ck" aria-hidden="true">✓</span><div class="swt"><b>${esc(where)}</b><span>${esc(why)}</span></div><div class="swb"><a class="go" href="${esc(url)}" target="_blank" rel="noopener" data-sw="${id}">Open ↗</a></div></div>`).join("");
-  $("swGroups").innerHTML = groups.map((g, i) => { const id = "g:" + g.url; return `<div class="swr${done.has(id) ? " done" : ""}"><span class="ck" aria-hidden="true">✓</span><div class="swt"><b>${esc(g.name)}</b><span>Facebook group</span></div><div class="swb"><a class="go" href="${esc(g.url)}?sorting_setting=CHRONOLOGICAL" target="_blank" rel="noopener" data-sw="${esc(id)}">Newest posts ↗</a><a href="${esc(g.url)}search/?q=realtor" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “realtor” ↗</a><a href="${esc(g.url)}search/?q=moving" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “moving” ↗</a><button type="button" data-rmg="${i}" aria-label="Remove ${esc(g.name)}">Remove</button></div></div>`; }).join("");
+  $("swGroups").innerHTML = groups.map(g => { const id = "g:" + g.url, share = /\/share\//.test(g.url), i = mine.indexOf(g);
+    const btns = share
+      ? `<a class="go" href="${esc(g.url)}" target="_blank" rel="noopener" data-sw="${esc(id)}">Open group ↗</a>`
+      : `<a class="go" href="${esc(g.url)}?sorting_setting=CHRONOLOGICAL" target="_blank" rel="noopener" data-sw="${esc(id)}">Newest posts ↗</a><a href="${esc(g.url)}search/?q=realtor" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “realtor” ↗</a><a href="${esc(g.url)}search/?q=moving" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “moving” ↗</a>`;
+    return `<div class="swr${done.has(id) ? " done" : ""}"><span class="ck" aria-hidden="true">✓</span><div class="swt"><b>${esc(g.name)}</b><span>${esc(g.note || "Facebook group")}</span></div><div class="swb">${btns}${g.builtIn ? "" : `<button type="button" data-rmg="${i}" aria-label="Remove ${esc(g.name)}">Remove</button>`}</div></div>`; }).join("");
   const total = SWEEP.length + groups.length, n = SWEEP.filter(x => done.has(x[0])).length + groups.filter(g => done.has("g:" + g.url)).length;
   $("swCount").textContent = n === total ? "All checked today ✓" : `${n} of ${total} checked today`;
   $("swFind").innerHTML = (groups.length ? "Find more groups: " : "Find town groups to join: ") + ["Morristown NJ","Montclair NJ","Maplewood NJ","Hoboken","Jersey City","Brooklyn moving to NJ"].map(t => `<a href="${FBG(t)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(" · ");
 }
 document.addEventListener("click", e => { const a = e.target.closest("[data-sw]"); if(a) swMark(a.dataset.sw);
   const r = e.target.closest("[data-rmg]"); if(r){ const g = store.get("sweep-groups", []); g.splice(+r.dataset.rmg, 1); store.set("sweep-groups", g); drawSweep(); } });
-function addGroup(){ const v = ($("swGroupIn").value || "").trim(); const m = v.match(/facebook\.com\/groups\/([^/?#\s]+)/i);
-  if(!m){ toast("Paste a link that has facebook.com/groups/ in it."); return; }
-  const url = "https://www.facebook.com/groups/" + m[1] + "/", g = store.get("sweep-groups", []);
-  if(g.some(x => x.url === url)){ toast("That group is already here."); return; }
-  g.push({url, name: groupName(url)}); store.set("sweep-groups", g); $("swGroupIn").value = ""; drawSweep(); toast("Group added."); }
+function addGroup(){ const v = ($("swGroupIn").value || "").trim();
+  const m = v.match(/facebook\.com\/groups\/([^/?#\s]+)/i), sh = v.match(/facebook\.com\/share\/g\/([^/?#\s]+)/i);
+  if(!m && !sh){ toast("Paste a Facebook group link (facebook.com/groups/… or facebook.com/share/g/…)."); return; }
+  const url = m ? "https://www.facebook.com/groups/" + m[1] + "/" : "https://www.facebook.com/share/g/" + sh[1] + "/", g = store.get("sweep-groups", []);
+  if(g.some(x => x.url === url) || SWEEP_GROUPS.some(x => x.url === url)){ toast("That group is already here."); return; }
+  g.push(m ? {url, name: groupName(url)} : {url, name: "Shared Facebook group", note: "Opens the group (search works from the full group link)"}); store.set("sweep-groups", g); $("swGroupIn").value = ""; drawSweep(); toast("Group added."); }
 async function copyText(s){try{await navigator.clipboard.writeText(s);return true}catch(e){const ta=document.createElement("textarea");ta.value=s;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand("copy")}catch(_){}ta.remove();return ok}}
 function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("on"),1800)}
 
