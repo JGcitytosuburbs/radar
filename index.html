@@ -206,7 +206,6 @@ h1,h2,h3{text-wrap:balance}
       <button role="tab" data-area="agent" aria-selected="false">Asking for an agent 🔥</button>
       <button role="tab" data-area="sell" aria-selected="false">Selling</button>
       <button role="tab" data-area="rent" aria-selected="false">Renting</button>
-      <button role="tab" data-area="moves" aria-selected="false">Companies moving in 🏢</button>
     </div>
     <div class="panel live" id="live" hidden>
       <div class="livehead"><h3 class="fh" id="liveTitle">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
@@ -392,6 +391,8 @@ const R = (sub, q) => "https://www.reddit.com/r/" + sub + "/search/?q=" + encode
 const RN = sub => "https://www.reddit.com/r/" + sub + "/new/";
 /* Reddit search for people asking for an agent: exact phrases only, one group, newest first, past year */
 const ASK_AGENT = '"recommend a realtor" OR "realtor recommendation" OR "realtor recommendations" OR "recommend an agent" OR "looking for a realtor" OR "real estate agent recommendation"';
+const ASK_MOVE = '"moving to NJ" OR "moving to New Jersey" OR "relocating to NJ" OR "relocating to New Jersey" OR "which town" OR "where should we live" OR "best town"';
+const RM = (sub, q) => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(q || ASK_MOVE) + "&restrict_sr=1&sort=new&t=year";
 const RA = sub => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(ASK_AGENT) + "&restrict_sr=1&sort=new&t=year";
 const G = (q, when) => "https://www.google.com/search?q=" + encodeURIComponent(q) + "&tbs=qdr:" + (when || "m");
 /* Facebook post search, set to "Recent posts" from the last 3 months so old posts drop out */
@@ -407,8 +408,19 @@ const IG = tag => "https://www.instagram.com/explore/tags/" + tag + "/";
 const LI = q => "https://www.linkedin.com/search/results/content/?keywords=" + encodeURIComponent(q) + "&sortBy=%22date_posted%22";
 const SPOTS = {
   nj: [
-    ["Worth a look", [
-      ["r/MovingtoNewJersey", "Every new post", "A whole Reddit group of people planning a move to NJ.", RN("MovingtoNewJersey")]
+    ["On Reddit", [
+      ["r/MovingtoNewJersey", "Every new post", "A whole Reddit group of people planning a move to NJ.", RN("MovingtoNewJersey")],
+      ["r/newjersey", "“Moving to NJ” or “which town”", "People asking where to live in NJ.", RM("newjersey")],
+      ["r/movingtonyc", "Asking about New Jersey", "People moving to the city who are also looking at NJ.", RM("movingtonyc", '"New Jersey" OR "NJ" OR "Hoboken" OR "Jersey City" OR "Montclair" OR "Maplewood"')]
+    ]],
+    ["On Facebook", [
+      ["Facebook posts", "“Moving from the city to NJ”", "People in NYC planning the move, asking which town.", FB("moving from NYC to New Jersey which town")],
+      ["Facebook posts", "“We're moving to” Morristown", "New arrivals asking Morristown groups for advice.", FB("we are moving to Morristown any advice")],
+      ["Facebook posts", "“We're moving to” Montclair", "New arrivals asking Montclair groups for advice.", FB("we are moving to Montclair any advice")],
+      ["Facebook posts", "“We're moving to” Maplewood", "New arrivals asking Maplewood groups for advice.", FB("we are moving to Maplewood any advice")],
+      ["Facebook posts", "“We're moving to” Summit", "New arrivals asking Summit groups for advice.", FB("we are moving to Summit NJ any advice")],
+      ["Facebook posts", "“We're moving to” Westfield", "New arrivals asking Westfield groups for advice.", FB("we are moving to Westfield NJ any advice")],
+      ["Facebook posts", "“We're moving to” Hoboken", "New arrivals asking Hoboken groups for advice.", FB("we are moving to Hoboken any advice")]
     ]]
   ],
   nyc: [
@@ -736,7 +748,7 @@ function dest(url,where){
     if(/site%3Ateamblind\.com/.test(url))return{site:"Google",place:"Blind posts",see:"You'll see Google results. Each one is a post on Blind from the past month."};
     return{site:"Google",place:"Anywhere online",see:"You'll see Google results from the past week."};
   }
-  if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:/t=year/.test(url)?"Shows posts from the past year that ask for an agent, newest first.":"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
+  if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:/t=year/.test(url)?(/realtor/.test(decodeURIComponent(url))?"Shows posts from the past year that ask for an agent, newest first.":"Shows posts from the past year with these words, newest first."):"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
   if(/facebook\.com\/search\/groups/.test(url))return{site:"Facebook",place:"Facebook groups",see:"You'll see groups to join. Log in to Facebook first."};
   if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"Shows recent posts (last 3 months) from public pages and groups you've joined. Log in first."};
   if(/linkedin\.com/.test(url))return{site:"LinkedIn",place:"LinkedIn posts",see:"You'll see the newest LinkedIn posts with these words. Log in first."};
@@ -758,13 +770,13 @@ function drawSpots(area){
   drawLive(area);
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>drawSpots(b.dataset.area)));
-drawSpots(store.get("radar-area","nj"));
+drawSpots(SPOTS[store.get("radar-area","nj")]&&store.get("radar-area","nj")!=="moves"?store.get("radar-area","nj"):"nj");
 /* Show how many new posts each tab has, and open on a tab that has some */
 if(!/nolive/.test(location.search))loadLive().then(d=>{
   if(!d||!Array.isArray(d.posts)||!d.groups_ok)return;
   const wk=Date.now()/1000-7*86400, n=a=>a==="moves"?(d.moves||[]).length:d.posts.filter(p=>(p.lists||[]).includes(a)&&p.t>wk).length;
   document.querySelectorAll(".tabs button").forEach(b=>{const c=n(b.dataset.area);let t=b.querySelector(".tc");if(!t){t=document.createElement("span");t.className="tc";b.append(t)}t.textContent=c;t.hidden=!c;t.setAttribute("aria-label",c+" new posts")});
-  if(!n(liveArea||"nj")){const best=["agent","sell","nj","nyc","rent","moves"].find(n);if(best)drawSpots(best)}
+  if(!n(liveArea||"nj")){const best=["agent","sell","nj","nyc","rent"].find(n);if(best)drawSpots(best)}
 });
 if($("flist"))drawFeeds();
 if($("alerts"))$("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");

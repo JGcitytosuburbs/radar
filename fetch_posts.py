@@ -305,7 +305,8 @@ def main(out="posts.json"):
     checked_today = sum(1 for s in seen if s["t"] >= day_ago)
     # Companies moving in: news check about once an hour (see moves.py)
     moves, moves_checked = old.get("moves", []), old.get("moves_checked", 0)
-    if time.time() - moves_checked > 55 * 60:
+    CHECK_COMPANIES = False   # "Companies moving in" tab is off; set True to bring it back
+    if CHECK_COMPANIES and time.time() - moves_checked > 55 * 60:
         try:
             from moves import update_moves
             moves, m_err = update_moves(moves)
