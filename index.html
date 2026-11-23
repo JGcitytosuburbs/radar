@@ -272,30 +272,6 @@ h1,h2,h3{text-wrap:balance}
   </section>
 
 
-  <section class="block" id="delivered">
-    <div class="panel feeds" id="feeds">
-      <p class="kicker" style="margin:0 0 4px">Optional extra</p>
-      <h3 class="fh">Get new posts sent to <em>one app.</em></h3>
-      <p class="sub" style="margin:0 0 12px">Follow these Reddit feeds once in the free <b>Feedly</b> app, and it lists each new post as it appears: the question, the group, and how long ago. Then come back here to answer.</p>
-      <ol class="fsteps">
-        <li><a href="https://feedly.com" target="_blank" rel="noopener">Get Feedly</a> (free) and sign in.</li>
-        <li>Tap <b>Follow</b> on each feed below. One time only.</li>
-        <li>Open Feedly each morning and scroll. Tap a post that fits, then answer it with the helper below.</li>
-      </ol>
-      <div class="flist" id="flist"></div>
-      <p class="note">Using a different news app? Tap <b>Copy</b> and paste the link into it. Facebook and Instagram don't offer feeds, so check those with the cards below.</p>
-    </div>
-    <div class="panel fbtip" id="fbtip">
-      <p class="kicker" style="margin:0 0 4px">Optional extra</p>
-      <h3 class="fh">Let Facebook groups <em>ping you.</em></h3>
-      <p class="sub" style="margin:0 0 12px">Facebook doesn't let any outside tool read group posts, but each group can send a notification when someone posts.</p>
-      <ol class="fsteps">
-        <li>Open a group you've joined.</li>
-        <li>Tap <b>…</b> (or the bell) and choose <b>Notifications</b>.</li>
-        <li>Pick <b>All posts</b>. Three to five busy groups is plenty.</li>
-      </ol>
-    </div>
-  </section>
 
 </main>
 <div class="toast" id="toast"></div>
@@ -597,7 +573,7 @@ function drawFeeds(){
   $("flist").innerHTML=FEEDS.map(([where,what,why,url],i)=>{const s=subOf(where);return `<div class="frow"><div><span class="fn">${esc(where)} · ${esc(what)}</span><span class="fd">${esc(why)}</span>${s?flag(s):""}</div>
     <div class="fb"><a href="https://feedly.com/i/subscription/feed/${encodeURIComponent(url)}" target="_blank" rel="noopener">Follow</a><button data-feed="${i}">Copy</button></div></div>`}).join("");
 }
-$("flist").addEventListener("click",async e=>{const b=e.target.closest("[data-feed]");if(!b)return;const u=FEEDS[+b.dataset.feed][3];toast((await copyText(u))?"Feed link copied.":"Couldn't copy here. Use Follow instead.")});
+if($("flist"))$("flist").addEventListener("click",async e=>{const b=e.target.closest("[data-feed]");if(!b)return;const u=FEEDS[+b.dataset.feed][3];toast((await copyText(u))?"Feed link copied.":"Couldn't copy here. Use Follow instead.")});
 /* Live posts: a helper on GitHub checks Reddit twice an hour and saves the on-topic posts to posts.json next to this page.
    (Inside Claude or opened as a file, posts.json isn't reachable, so this box stays hidden.) */
 function ago(sec){const h=Math.round((Date.now()/1000-sec)/3600);return h<1?"just now":h<24?h+"h ago":Math.round(h/24)+"d ago"}
@@ -659,7 +635,7 @@ function drawSpots(area){
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>drawSpots(b.dataset.area)));
 drawSpots(store.get("radar-area","nj"));
-drawFeeds();
+if($("flist"))drawFeeds();
 $("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");
 
 const state={ask:"place",style:"full",hub:"penn",budget:"2",vibe:"s",extras:new Set()};
