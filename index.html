@@ -390,6 +390,9 @@ window.homesLink = function (name) {
 /* ===== EDIT HERE: places to look. Quotes = exact words, sorted newest first. ===== */
 const R = (sub, q) => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(q) + "&restrict_sr=1&sort=new";
 const RN = sub => "https://www.reddit.com/r/" + sub + "/new/";
+/* Reddit search for people asking for an agent: exact phrases only, one group, newest first, past year */
+const ASK_AGENT = '"recommend a realtor" OR "realtor recommendation" OR "realtor recommendations" OR "recommend an agent" OR "looking for a realtor" OR "real estate agent recommendation"';
+const RA = sub => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(ASK_AGENT) + "&restrict_sr=1&sort=new&t=year";
 const G = (q, when) => "https://www.google.com/search?q=" + encodeURIComponent(q) + "&tbs=qdr:" + (when || "m");
 /* Facebook post search, set to "Recent posts" from the last 3 months so old posts drop out */
 const FB_RECENT = (() => { try {
@@ -425,6 +428,13 @@ const SPOTS = {
       ["Facebook posts", "“Recommend a realtor” Westfield", "Westfield groups asking for an agent.", FB("can anyone recommend a realtor Westfield NJ")],
       ["Facebook posts", "“Recommend a realtor” Hoboken", "Hoboken groups asking for an agent.", FB("can anyone recommend a realtor Hoboken")],
       ["Facebook posts", "“Recommend a realtor” Brooklyn", "Brooklyn groups asking for an agent.", FB("can anyone recommend a realtor Brooklyn")]
+    ]],
+    ["On Reddit", [
+      ["r/newjersey", "“Recommend a realtor”", "People across NJ asking who to use.", RA("newjersey")],
+      ["r/MovingtoNewJersey", "“Recommend a realtor”", "People moving to NJ asking for an agent.", RA("MovingtoNewJersey")],
+      ["r/Hoboken", "“Recommend a realtor”", "Hoboken locals asking for an agent.", RA("Hoboken")],
+      ["r/jerseycity", "“Recommend a realtor”", "Jersey City locals asking for an agent.", RA("jerseycity")],
+      ["r/movingtonyc", "“Recommend a realtor”", "People moving to NYC asking for an agent.", RA("movingtonyc")]
     ]]
   ],
   rent: [
@@ -726,7 +736,7 @@ function dest(url,where){
     if(/site%3Ateamblind\.com/.test(url))return{site:"Google",place:"Blind posts",see:"You'll see Google results. Each one is a post on Blind from the past month."};
     return{site:"Google",place:"Anywhere online",see:"You'll see Google results from the past week."};
   }
-  if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
+  if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:/t=year/.test(url)?"Shows posts from the past year that ask for an agent, newest first.":"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
   if(/facebook\.com\/search\/groups/.test(url))return{site:"Facebook",place:"Facebook groups",see:"You'll see groups to join. Log in to Facebook first."};
   if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"Shows recent posts (last 3 months) from public pages and groups you've joined. Log in first."};
   if(/linkedin\.com/.test(url))return{site:"LinkedIn",place:"LinkedIn posts",see:"You'll see the newest LinkedIn posts with these words. Log in first."};
