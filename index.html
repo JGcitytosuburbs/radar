@@ -85,12 +85,13 @@ a.spot:hover{border-color:var(--brass);box-shadow:0 4px 18px rgba(44,55,70,.07)}
 .opts button[aria-pressed="true"]{background:var(--strong);color:var(--on-strong);border-color:var(--strong)}
 input[type=text],textarea,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:16px var(--sans);color:var(--ink);background:var(--card)}
 textarea{min-height:90px;resize:vertical}
-.towns{display:grid;gap:8px;margin-bottom:14px}
-.town{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper)}
-.town b{font-family:var(--serif);font-size:21px}
-.town span{display:block;font-size:14px;color:var(--ink-soft)}
-.town .mins{color:var(--brass-dark);font-weight:700;font-size:13px}
-.draft{white-space:pre-wrap;font-size:15px;line-height:1.6;min-height:260px}
+.towns{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:12px}
+.towns:empty{display:none}
+.town{border:1px solid var(--line);border-radius:12px;padding:9px 12px;background:var(--paper);min-width:0}
+.town b{display:block;font-family:var(--serif);font-size:19px;line-height:1.2}
+.town span{display:block;font-size:13px;line-height:1.4;color:var(--ink-soft)}
+.town .mins{color:var(--brass-dark);font-weight:700;font-size:12px;margin:2px 0}
+.draft{white-space:pre-wrap;font-size:15px;line-height:1.6;min-height:160px;overflow:hidden;resize:none}
 .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .btn{border:1px solid var(--strong);background:var(--strong);color:var(--on-strong);border-radius:10px;padding:11px 16px;font:600 14px var(--sans);cursor:pointer}
 .btn.ghost{background:var(--card);color:var(--ink)}
@@ -684,7 +685,11 @@ $("theirName").addEventListener("input",build);
 document.querySelectorAll(".opts").forEach(box=>box.addEventListener("click",e=>{if(!e.isTrusted)return;$("prefill").hidden=true;state.mentioned=[];if(box.dataset.k==="budget"){state.budgetUnknown=false;build()}}));
 $("again").addEventListener("click",()=>{const before=$("draft").value;for(let i=0;i<8;i++){rnd={};build();if($("draft").value!==before)break}toast("Here's another version.")});
 
-function build(){
+function fitDraft(){const d=$("draft");d.style.height="auto";d.style.height=(d.scrollHeight+2)+"px"}
+$("draft").addEventListener("input",fitDraft);
+addEventListener("resize",fitDraft);
+function build(){buildDraft();fitDraft()}
+function buildDraft(){
   const v=state.vibe, towns=[...new Set([...(state.mentioned||[]),...PICKS[v][state.budget]])].slice(0,3), hub=state.hub, ex=state.extras, T=VOICE.tips[v], st=state.style;
   const agentAsk=state.ask==="agent", sellAsk=state.ask==="sell", rentAsk=state.ask==="rent";
   $("vibeLbl").textContent=sellAsk?"Where is their home?":"Where are they looking?";
