@@ -18,9 +18,9 @@ GROUPS = ["MovingtoNewJersey", "newjersey", "Hoboken", "jerseycity", "NYCapartme
           "FirstTimeHomeBuyer", "movingtonyc"]
 
 # ===== EDIT HERE: rules. A post matches a list when its title fits. =====
-NJ_PLACES = r"(nj|new jersey|jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?)"
+NJ_PLACES = r"(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?)"
 NYC_PLACES = r"(nyc|new york|manhattan|brooklyn|queens|the city|astoria|park slope|upper west side|uws|upper east side|ues|harlem|lic|long island city)"
-NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam)"
+NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|fossil|climate|election|senate|congress)"
 
 RULES = {
     # People moving to New Jersey
@@ -63,6 +63,14 @@ GROUP_LISTS = {
     "NYCapartments": ["nj", "nyc"], "FirstTimeHomeBuyer": ["nj", "nyc", "agent"],
     "MovingtoNewJersey": ["nj", "agent", "sell"], "movingtonyc": ["nyc", "agent"],
 }
+# A post only counts when it's clearly about New Jersey or New York City:
+# a strong place name in the title, or it was posted in a local group.
+NJ_STRONG = r"\b(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county)\b"
+NJ_MAYBE = r"\b(summit|madison|westfield|chatham|suburbs?)\b"   # also common words, so only with other NJ clues
+NYC_STRONG = r"\b(nyc|new york|manhattan|brooklyn|queens|astoria|park slope|upper west side|upper east side|harlem|long island city)\b"
+NJ_SUBS = {"newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood", "morristown", "southorange", "westfieldnj", "summitnj", "montclairnj"}
+NYC_SUBS = {"nyc", "asknyc", "nycapartments", "movingtonyc", "brooklyn", "astoria", "queens", "manhattan"}
+
 KEEP_DAYS = 14
 READ_REDDIT_DIRECTLY = False
 UA = "BuyerRadar/1.0 (personal feed reader for one real estate agent; reads public RSS twice an hour)"
@@ -84,6 +92,29 @@ def lists_for(title, group):
         hits.remove("nyc")
     allowed = GROUP_LISTS.get(group, list(RULES))
     return [h for h in hits if h in allowed]
+
+
+def keep_lists(title, sub):
+    """Which of Josh's lists a post belongs in, or [] to skip it."""
+    t = title.lower()
+    s = (sub or "").lower()
+    if re.search(NEVER, t):
+        return []
+    nj = bool(re.search(NJ_STRONG, t)) or s in NJ_SUBS or (bool(re.search(NJ_MAYBE, t)) and s in NJ_SUBS)
+    nyc = bool(re.search(NYC_STRONG, t)) or s in NYC_SUBS
+    hits = [name for name, pats in RULES.items() if any(re.search(p, t) for p in pats)]
+    out = []
+    if "nj" in hits and nj:
+        out.append("nj")
+    if "nyc" in hits and nyc and not (nj and not re.search(NYC_STRONG, t)):
+        out.append("nyc")
+    for name in ("agent", "sell"):
+        if name in hits and (nj or nyc):
+            out.append(name)
+    whole = {"movingtonewjersey": "nj", "movingtonyc": "nyc"}.get(s)
+    if whole and whole not in out:
+        out.insert(0, whole)
+    return out
 
 
 def parse_feed(xml_text, group):
@@ -131,13 +162,16 @@ def parse_alerts(xml_text, list_name):
             ts = int(datetime.fromisoformat(when.replace("Z", "+00:00")).timestamp())
         except ValueError:
             continue
-        if not url or not title or re.search(NEVER, title.lower()):
+        if not url or not title:
             continue
         m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
         sub = m.group(1) if m else ""
+        lists = keep_lists(title, sub)
+        if not lists:
+            continue
         where = "r/" + sub if sub else urllib.parse.urlparse(url).netloc.replace("www.", "")
         pid = ("t3_" + m.group(2)) if m else url
-        posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": [list_name]})
+        posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": lists})
     return posts
 
 
@@ -158,7 +192,11 @@ def main(out="posts.json"):
         old = json.load(open(out))
     except (OSError, ValueError):
         old = {"posts": []}
-    by_id = {p["id"]: p for p in old.get("posts", [])}
+    by_id = {}
+    for p in old.get("posts", []):        # re-check older posts with today's rules
+        p["lists"] = keep_lists(p["title"], p.get("sub", ""))
+        if p["lists"]:
+            by_id[p["id"]] = p
     ok, errors = 0, []
     try:
         feeds = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "alerts.json"))).get("feeds", [])
@@ -168,8 +206,7 @@ def main(out="posts.json"):
         try:
             for p in parse_alerts(fetch_url(f["url"]), f["list"]):
                 if p["id"] in by_id:
-                    if f["list"] not in by_id[p["id"]]["lists"]:
-                        by_id[p["id"]]["lists"].append(f["list"])
+                    by_id[p["id"]]["lists"] = sorted(set(by_id[p["id"]]["lists"]) | set(p["lists"]))
                 else:
                     by_id[p["id"]] = p
             ok += 1
