@@ -209,11 +209,11 @@ h1,h2,h3{text-wrap:balance}
             <button data-v="agent">An agent recommendation</button>
             <button data-v="sell">Help selling</button>
           </div></div>
-        <div class="field"><span class="lbl">Where are you replying?</span>
+        <div class="field"><span class="lbl">Reply style</span>
           <div class="opts" data-k="style">
-            <button data-v="full" aria-pressed="true">Reddit (full answer)</button>
-            <button data-v="short">Instagram / Facebook (short)</button>
-            <button data-v="nopitch">Strict group (no pitch)</button>
+            <button data-v="full" aria-pressed="true">With a helpful link</button>
+            <button data-v="short">Short comment</button>
+            <button data-v="nopitch">No links (strict group)</button>
           </div></div>
         <div class="field"><span class="lbl" id="vibeLbl">Where are they looking?</span>
           <div class="opts" data-k="vibe">
@@ -477,13 +477,13 @@ function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");cl
 /* ===== EDIT HERE: each Reddit group's rules, checked by hand (Nov 2026) =====
    ok = agents can answer and mention their services · nopitch = helpful answers only, may say "I'm an agent", no links, no DMs · no = no agents */
 const RULES={
-  newjersey:["ok","Agents can answer · no listing posts"],
-  movingtonewjersey:["nopitch","Strict: help only, no links, never DM first"],
-  hoboken:["ok","Agents can answer · no listings · 1 promo post per 6 months"],
-  jerseycity:["ok","Agents can answer · say you're an agent · max 2 promo posts a month"],
-  nycapartments:["nopitch","Strict: advice only · offering services = instant ban · promo only in the monthly thread"],
-  firsttimehomebuyer:["nopitch","Strict: comments only · no links, no \"DM me\" · use your own words"],
-  movingtonyc:["nopitch","Strict: moving advice only · no sales pitch · must sound human"]
+  newjersey:["ok","Links OK · no listing posts"],
+  movingtonewjersey:["nopitch","Strict: no links, never DM first"],
+  hoboken:["ok","Links OK · no listing posts"],
+  jerseycity:["ok","Links OK · say you're an agent"],
+  nycapartments:["nopitch","Strict: no links, never offer services"],
+  firsttimehomebuyer:["nopitch","Strict: no links, no \"DM me\""],
+  movingtonyc:["nopitch","Strict: no links, no sales pitch"]
   // r/AskNYC removed: no promotion, and it sends moving questions to r/movingtonyc.
   // r/Brooklyn removed: bans buying/renting/broker posts, contact info and links to your business.
   // r/astoria removed: bans apartment, broker and real estate posts.
@@ -574,12 +574,17 @@ function smartFill(p,area){
   const r=readPost(p,area);
   $("theirName").value=p.author?"u/"+p.author:"";
   setOpt("ask",r.ask);setOpt("vibe",r.vibe);
+  // pick the reply style from the group's rules, so Josh never has to remember them
+  const rule=p.sub?RULES[p.sub.toLowerCase()]:null;
+  const style=rule&&rule[0]==="ok"?"full":rule?"nopitch":(p.sub?"nopitch":"short");
+  setOpt("style",style);
   state.budgetUnknown=!r.budget; if(r.budget)setOpt("budget",r.budget); else document.querySelectorAll('.opts[data-k="budget"] button').forEach(x=>x.setAttribute("aria-pressed","false"));
   setOpt("hub",r.hub||"remote");   // no work info in the post: leave the commute out of the reply
   state.extras=new Set(r.extras);
   document.querySelectorAll('.opts[data-k="extras"] button').forEach(x=>x.setAttribute("aria-pressed",String(state.extras.has(x.dataset.v))));
   const askWord={place:"Where to live",agent:"Asking for an agent",sell:"Selling"}[r.ask];
-  $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}. Change anything that's off.`;
+  const styleNote={full:"With a helpful link (this group allows it)",nopitch:"No links (this group doesn't allow them)",short:"Short comment"}[style];
+  $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}.<br><b>Reply style:</b> ${esc(styleNote)}. Change anything that's off.`;
   $("prefill").hidden=false;
   const x=((p.title||"")+" "+(p.snippet||"")).toLowerCase();
   state.mentioned=Object.keys(BLURB).filter(n=>x.includes(n.toLowerCase())&&(PICKS[r.vibe][1].concat(PICKS[r.vibe][2],PICKS[r.vibe][3],PICKS[r.vibe][4]).includes(n)));
