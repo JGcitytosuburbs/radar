@@ -89,6 +89,11 @@
       "list": "nyc",
       "name": "City-Data NYC forum",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/13704585410874709452"
+    },
+    {
+      "list": "nj",
+      "name": "Quora: moving to NJ",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/9863219512002939815"
     }
   ]
 }
