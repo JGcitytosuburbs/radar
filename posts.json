@@ -1,8 +1,47 @@
 {
-"checked": 1795475226,
-"groups_ok": 27,
+"checked": 1795475654,
+"groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y3mqao",
+"title": "Leasing Agent",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3mqao/leasing_agent/",
+"t": 1795475648,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "Good morning, I'm a leasing agent in East Orange NJ. If you are currently looking for apartments message me. We are pretty flexible with credit ..."
+},
+{
+"id": "t3_1y3txfd",
+"title": "Help Filtering Down the towns - Moving from CA to Morris/Essex County",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3txfd/help_filtering_down_the_towns_moving_from_ca_to/",
+"t": 1795475648,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "Hi all, Excited to post on here as I'm looking to move my family across country from San Diego to North NJ to be closer to family (they live in\u2026"
+},
+{
+"id": "t3_1y3l1b1",
+"title": "Where would you live in NYC area as a single 30M making $250k?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3l1b1/where_would_you_live_in_nyc_area_as_a_single_30m/",
+"t": 1795475648,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "Jersey City also seems appealing because of the tax savings, but I'm wondering if living there would hurt my dating/social life compared to NYC proper ..."
+},
 {
 "id": "t3_1y313nw",
 "title": "UWS now, work in Westchester, and thinking about Queens. Has anyone made this move?",
@@ -590,6 +629,21 @@
 {
 "id": "https://fan.hudl.com/usa/il/cambridge/organization/39366/ridgewood-spartans-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjAzYjA1NDIzMGUzOGJiY2M3MjhlY2M%3D&ot=TEAM&oi=300136",
 "t": 1795438042,
+"topics": []
+},
+{
+"id": "t3_1y3mqao",
+"t": 1795475648,
+"topics": []
+},
+{
+"id": "t3_1y3txfd",
+"t": 1795475648,
+"topics": []
+},
+{
+"id": "t3_1y3l1b1",
+"t": 1795475648,
 "topics": []
 }
 ],
@@ -2003,6 +2057,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 86,
-"checked_today": 84
+"checked_week": 89,
+"checked_today": 87
 }

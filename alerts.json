@@ -134,6 +134,21 @@
       "list": "nyc",
       "name": "City-Data: buying a co-op or condo in NYC",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/5465795492803289489"
+    },
+    {
+      "list": "nj",
+      "name": "Reddit: r/MovingtoNewJersey (every post Google finds)",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/4290865883240110234"
+    },
+    {
+      "list": "nj",
+      "name": "Reddit: r/NJParents",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/4290865883240109760"
+    },
+    {
+      "list": "nj",
+      "name": "Reddit: r/Hoboken buyers",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/13486947269582788335"
     }
   ]
 }
