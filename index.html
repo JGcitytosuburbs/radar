@@ -588,7 +588,7 @@ async function drawLive(area,force){
   const box=$("live");if(/nolive/.test(location.search)){box.hidden=true;return}
   liveArea=area;
   const d=await loadLive(force);
-  if(!d||!Array.isArray(d.posts)){box.hidden=true;return}
+  if(!d||!Array.isArray(d.posts)||!d.checked||!d.groups_ok){box.hidden=true;return}
   const posts=d.posts.filter(p=>(p.lists||[]).includes(area)&&p.t>Date.now()/1000-7*86400).slice(0,20);
   const checked=d.checked?`Checked ${ago(d.checked).replace(" ago","")==="just now"?"just now":ago(d.checked)}.`:"";
   $("liveSub").textContent=`Reddit posts from the past week whose titles match this tab, newest first. ${checked}`;
