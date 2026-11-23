@@ -219,8 +219,8 @@ h1,h2,h3{text-wrap:balance}
     <p class="sub">New posts show up in the box below as they're found. The links under it are the few places worth checking by hand.</p>
 
     <div class="panel sweep" id="sweep">
-      <div class="livehead"><h3 class="fh">Morning <em>sweep.</em></h3><span class="swc" id="swCount"></span></div>
-      <p class="sub" style="margin:0 0 10px">The places new posts can't come in on their own. One tap each, newest first. Each one gets a ✓ once it's been checked today.</p>
+      <h3 class="fh">Morning <em>sweep.</em></h3>
+      <p class="sub" style="margin:0 0 10px">The places new posts can't come in on their own. One tap each, newest first.</p>
       <div class="swl" id="swList"></div>
       <div class="swg">
         <div class="swh">Your Facebook town groups</div>
@@ -588,14 +588,12 @@ function groupName(u){ const m = u.match(/groups\/([^/?#]+)/); const slug = m ? 
 function drawSweep(){
   if(!$("swList"))return;
   const done = swDone(), mine = store.get("sweep-groups", []), groups = SWEEP_GROUPS.map(g => ({...g, builtIn: true})).concat(mine);
-  $("swList").innerHTML = SWEEP.map(([id, where, why, url]) => `<div class="swr${done.has(id) ? " done" : ""}"><span class="ck" aria-hidden="true">✓</span><div class="swt"><b>${esc(where)}</b><span>${esc(why)}</span></div><div class="swb"><a class="go" href="${esc(url)}" target="_blank" rel="noopener" data-sw="${id}">Open ↗</a></div></div>`).join("");
+  $("swList").innerHTML = SWEEP.map(([id, where, why, url]) => `<div class="swr"><div class="swt"><b>${esc(where)}</b><span>${esc(why)}</span></div><div class="swb"><a class="go" href="${esc(url)}" target="_blank" rel="noopener" data-sw="${id}">Open ↗</a></div></div>`).join("");
   $("swGroups").innerHTML = groups.map(g => { const id = "g:" + g.url, share = /\/share\//.test(g.url), i = mine.indexOf(g);
     const btns = share
       ? `<a class="go" href="${esc(g.url)}" target="_blank" rel="noopener" data-sw="${esc(id)}">Open group ↗</a>`
       : `<a class="go" href="${esc(g.url)}?sorting_setting=CHRONOLOGICAL" target="_blank" rel="noopener" data-sw="${esc(id)}">Newest posts ↗</a><a href="${esc(g.url)}search/?q=realtor" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “realtor” ↗</a><a href="${esc(g.url)}search/?q=moving" target="_blank" rel="noopener" data-sw="${esc(id)}">Search “moving” ↗</a>`;
-    return `<div class="swr${done.has(id) ? " done" : ""}"><span class="ck" aria-hidden="true">✓</span><div class="swt"><b>${esc(g.name)}</b><span>${esc(g.note || "Facebook group")}</span></div><div class="swb">${btns}${g.builtIn ? "" : `<button type="button" data-rmg="${i}" aria-label="Remove ${esc(g.name)}">Remove</button>`}</div></div>`; }).join("");
-  const total = SWEEP.length + groups.length, n = SWEEP.filter(x => done.has(x[0])).length + groups.filter(g => done.has("g:" + g.url)).length;
-  $("swCount").textContent = n === total ? "All checked today ✓" : `${n} of ${total} checked today`;
+    return `<div class="swr"><div class="swt"><b>${esc(g.name)}</b><span>${esc(g.note || "Facebook group")}</span></div><div class="swb">${btns}${g.builtIn ? "" : `<button type="button" data-rmg="${i}" aria-label="Remove ${esc(g.name)}">Remove</button>`}</div></div>`; }).join("");
   $("swFind").innerHTML = (groups.length ? "Find more groups: " : "Find town groups to join: ") + ["Morristown NJ","Montclair NJ","Maplewood NJ","Hoboken","Jersey City","Brooklyn moving to NJ"].map(t => `<a href="${FBG(t)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(" · ");
 }
 document.addEventListener("click", e => { const a = e.target.closest("[data-sw]"); if(a) swMark(a.dataset.sw);
