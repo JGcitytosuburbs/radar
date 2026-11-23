@@ -297,7 +297,18 @@ def main(out="posts.json"):
     day_ago = time.time() - 86400
     checked_week = len(seen)
     checked_today = sum(1 for s in seen if s["t"] >= day_ago)
+    # Companies moving in: news check about once an hour (see moves.py)
+    moves, moves_checked = old.get("moves", []), old.get("moves_checked", 0)
+    if time.time() - moves_checked > 55 * 60:
+        try:
+            from moves import update_moves
+            moves, m_err = update_moves(moves)
+            errors += m_err
+            moves_checked = int(time.time())
+        except Exception as e:
+            errors.append(f"news: {e}")
     json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts,
+               "moves": moves, "moves_checked": moves_checked,
                "topics": topics, "seen": seen, "held": held, "checked_week": checked_week, "checked_today": checked_today}, open(out, "w"), indent=0)
     print(f"{ok} feeds read, {len(posts)} posts kept, {checked_week} local posts checked this week, topics: {topics[:5]}")
     for e in errors:

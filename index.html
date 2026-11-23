@@ -114,6 +114,12 @@ textarea{min-height:90px;resize:vertical}
 .livehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .lp{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
 .lp:last-child{border-bottom:0}
+.mv .lm b{color:var(--brass-dark);font-weight:700}
+.mv .la{flex-wrap:wrap;flex:0 1 auto}
+.mv .la a.ghost{background:var(--card);color:var(--ink)}
+.mvd{flex:1 0 100%;display:grid;gap:8px}
+.mvd textarea{font-size:14px;line-height:1.55;min-height:120px;overflow:hidden;resize:none}
+.mvd .row{margin-top:0}
 .lp .lt{font-weight:700;color:var(--ink);text-decoration:none;display:block;min-width:0;overflow-wrap:anywhere}
 .lp .lt:hover{text-decoration:underline}
 .lp .lm{font-size:13px;color:var(--stone);margin-top:2px}
@@ -200,9 +206,10 @@ h1,h2,h3{text-wrap:balance}
       <button role="tab" data-area="agent" aria-selected="false">Asking for an agent 🔥</button>
       <button role="tab" data-area="sell" aria-selected="false">Selling</button>
       <button role="tab" data-area="rent" aria-selected="false">Renting</button>
+      <button role="tab" data-area="moves" aria-selected="false">Companies moving in 🏢</button>
     </div>
     <div class="panel live" id="live" hidden>
-      <div class="livehead"><h3 class="fh">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
+      <div class="livehead"><h3 class="fh" id="liveTitle">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
       <p class="sub" style="margin:0 0 6px" id="liveSub">New posts from Reddit and forums this week that match this tab, newest first.</p>
       <div id="liveList"></div>
     </div>
@@ -405,7 +412,8 @@ const SPOTS = {
       ["r/NYCapartments", "Every new post", "People looking for apartments in the city (and some in NJ).", RN("NYCapartments")]
     ]]
   ],
-  sell: []   /* Facebook search cards removed: results were unreliable */
+  sell: [],   /* Facebook search cards removed: results were unreliable */
+  moves: []
 };
 
 const ALERTS = ["moving from NYC to New Jersey", "moving to Morristown NJ", "Brooklyn to Maplewood", "first time buying a co-op NYC", "recommend a realtor New Jersey", "recommend a realtor Brooklyn"];
@@ -553,6 +561,8 @@ async function drawLive(area,force){
   liveArea=area;
   const d=await loadLive(force);
   if(!d||!Array.isArray(d.posts)||!d.checked||!d.groups_ok){box.hidden=true;return}
+  $("liveTitle").innerHTML=area==="moves"?"Companies <em>moving in.</em>":"New posts <em>right now.</em>";
+  if(area==="moves"){drawMoves(d);return}
   const posts=d.posts.filter(p=>(p.lists||[]).includes(area)&&p.t>Date.now()/1000-7*86400).slice(0,20);
   const checked=d.checked?`Checked ${ago(d.checked).replace(" ago","")==="just now"?"just now":ago(d.checked)}.`:"";
   $("liveSub").textContent=`New posts from Reddit and forums this week that match this tab, newest first. ${checked}`;
@@ -562,6 +572,46 @@ async function drawLive(area,force){
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):`<p class="empty">Checked ${(d.checked_week||0).toLocaleString()} local posts this week. No ${{nj:"one moving to NJ",nyc:"NYC buyers",agent:"one asking for an agent",sell:"sellers",rent:"one looking for a rental"}[area]||"matches"} yet. They'll show up here within about 15 minutes of posting.</p>`;
   livePosts=posts;
 }
+/* Companies moving in: offices opening near Josh. Their people need homes. */
+const NEAR={morris:"Morristown, Madison, Chatham and Morris Township",hudson:"Hoboken and Jersey City, plus Maplewood, South Orange and Montclair (a direct train ride away)",essex:"Montclair, Maplewood and South Orange",nyc:"Manhattan and Brooklyn, or Hoboken, Jersey City and Maplewood, NJ for more space"};
+let liveMoves=[];
+function moveNote(m){const co=m.company?` for ${m.company}`:"";
+  return `Hi! Congratulations on the new ${m.place} office${co}.
+
+I'm Josh Goodkin, a local real estate agent with Weichert Realtors in New Jersey and Sefirot Real Estate in New York.
+
+When a team moves here, people usually ask the same three things: which towns make the commute easy, what homes really cost, and where to rent while they look. I'd be glad to help your team with that, free. I can send a short relocation guide, or do a 20-minute lunch-and-learn (in person or on Zoom) for anyone moving.
+
+Here's my commute map so you can see what it's like: movinwithgoodkin.com/commute-map
+
+Welcome to the area!
+Josh Goodkin
+movinwithgoodkin.com`}
+function movePost(m){const co=m.company?` for ${m.company}'s new office`:"";
+  return `Moving to ${m.place}${co}? Welcome! 👋
+
+Here's where people who work in ${m.place} love to live:
+${NEAR[m.area]||NEAR.hudson}.
+
+Every town has a different commute, price point and vibe, and I'm happy to walk you through them. DM me and I'll send my free commute map.`+SIGN+TAGS}
+function drawMoves(d){
+  const ms=(d.moves||[]).slice(0,20);liveMoves=ms;
+  const when=d.moves_checked?ago(d.moves_checked):"";
+  $("liveSub").textContent=`Companies opening or moving offices near you this month, from the news. When a company moves in, its people need homes.${when?` Checked ${when}.`:""}`;
+  $("live").hidden=false;
+  $("liveList").innerHTML=ms.length?ms.map((m,i)=>`<div class="lp mv"><div style="min-width:0;flex:1 1 300px"><a class="lt" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.title)}</a><div class="lm"><b>${esc(m.place)}</b> · ${esc(m.source||"News")} · ${ago(m.t)}</div></div>
+    <div class="la"><a class="ghost" href="${esc(m.url)}" target="_blank" rel="noopener">Read it ↗</a>${m.company?`<a class="ghost" href="https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(m.company+" recruiter")}" target="_blank" rel="noopener">Find their team ↗</a>`:""}<button type="button" data-mv="note" data-i="${i}">Note to their team</button><button type="button" data-mv="post" data-i="${i}">Post idea</button></div>
+    <div class="mvd" hidden></div></div>`).join(""):`<p class="empty">Checking the news about once an hour. No companies moving in yet this month.</p>`;
+}
+function fitTa(t){t.style.height="auto";t.style.height=(t.scrollHeight+2)+"px"}
+$("liveList").addEventListener("click",async e=>{const b=e.target.closest("[data-mv]");if(!b)return;
+  const card=b.closest(".mv"),box=card.querySelector(".mvd"),m=liveMoves[+b.dataset.i];if(!m)return;
+  if(!box.hidden&&box.dataset.kind===b.dataset.mv){box.hidden=true;return}
+  box.dataset.kind=b.dataset.mv;box.hidden=false;
+  box.innerHTML=`<textarea aria-label="${b.dataset.mv==="note"?"Note to their team":"Post idea"}"></textarea><div class="row"><button class="btn" type="button" data-mvcopy>Copy</button></div>`;
+  const ta=box.querySelector("textarea");ta.value=b.dataset.mv==="note"?moveNote(m):movePost(m);fitTa(ta);ta.addEventListener("input",()=>fitTa(ta));
+  box.querySelector("[data-mvcopy]").addEventListener("click",async()=>toast((await copyText(ta.value))?"Copied.":"Select the text and copy it."));
+});
 $("liveList").addEventListener("click",e=>{const ex=e.target.closest('a[href="#example"]');if(ex){e.preventDefault();toast("This is an example. Real posts open the actual Reddit post.");return}
   const b=e.target.closest("[data-answer]");if(!b)return;
   smartFill(livePosts[+b.dataset.answer]||{},liveArea);location.hash="answer";});
@@ -664,9 +714,9 @@ drawSpots(store.get("radar-area","nj"));
 /* Show how many new posts each tab has, and open on a tab that has some */
 if(!/nolive/.test(location.search))loadLive().then(d=>{
   if(!d||!Array.isArray(d.posts)||!d.groups_ok)return;
-  const wk=Date.now()/1000-7*86400, n=a=>d.posts.filter(p=>(p.lists||[]).includes(a)&&p.t>wk).length;
+  const wk=Date.now()/1000-7*86400, n=a=>a==="moves"?(d.moves||[]).length:d.posts.filter(p=>(p.lists||[]).includes(a)&&p.t>wk).length;
   document.querySelectorAll(".tabs button").forEach(b=>{const c=n(b.dataset.area);let t=b.querySelector(".tc");if(!t){t=document.createElement("span");t.className="tc";b.append(t)}t.textContent=c;t.hidden=!c;t.setAttribute("aria-label",c+" new posts")});
-  if(!n(liveArea||"nj")){const best=["agent","sell","nj","nyc","rent"].find(n);if(best)drawSpots(best)}
+  if(!n(liveArea||"nj")){const best=["agent","sell","nj","nyc","rent","moves"].find(n);if(best)drawSpots(best)}
 });
 if($("flist"))drawFeeds();
 if($("alerts"))$("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");

@@ -43,6 +43,79 @@
 "snippet": "I know this isn't on anyone's list of most desirable areas of Brooklyn, but this is where I can realistically afford something with my current salary."
 }
 ],
+"moves": [
+{
+"key": "ddn|new york city",
+"title": "Empire State Development Announces California-Based AI Infrastructure Company DDN to Establish Flagship New York City Office, Creating 233 New Jobs",
+"source": "Empire State Development (.gov)",
+"url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1JYMFFuZlFhbDR6ZVo4MzBvdnhYektNUGlISWROQ0x6aVBzNWpYbEhoWFJyVWhiR3ZrZFBGMTRScVRPcW81cHdLTER3ZC1vdkZlNnd5anBwM2txdXQwcXhJN3MzV2wwZkdrVlN4R2lPU2VXMzA4THR5QjZRWVFxd050RXNRVEVTQlZINkNUZ0gxR285WExzOEFjbktwZVlHckNiWk94MTU?oc=5",
+"t": 1794941618,
+"company": "DDN",
+"place": "New York City",
+"area": "nyc"
+},
+{
+"key": "aaru|new york city",
+"title": "Governor Hochul Announces Cutting Edge AI Company Aaru Will Expand in New York City, Creating Over 650 New Jobs",
+"source": "Empire State Development (.gov)",
+"url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSklGYWNXal9CRFQtaGV0Y21MdlcyUzYtenRZcU00U29NVDBqTnBBdHEtSEZZNEhVMGFJYkt4b2pDekV2c0ctZGxvNWJNeVFtMlFENXVKaXZsaFVHRktSZ21hQUR1NzRiaEltRjQtQ1ZlRGZjQjctNVlFSTJpZ0RueTM5S21GQ3ZGZmtWZEpfbVhDaXFwWDRmOFNRNGJzX2JRSXlhYnRHa01ORG96S0drYXlnN3Z6cHNl?oc=5",
+"t": 1794556800,
+"company": "Aaru",
+"place": "New York City",
+"area": "nyc"
+},
+{
+"key": "gradbridge|newark",
+"title": "GradBridge opens Newark headquarters as hiring advances",
+"source": "Delaware Business Times",
+"url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2cGpZTlpGNmNTWnZxazJhNWc2a0c5Y18ydEJLSUpaOWpSY3JiWlR0ZzFRZi0tSTZvMTFLWjA5djU5dzRtYzctUU9EdGdQZDRhTEZHSG9QWWtKZml6cndlNlhSTzZ3ZjRyQ1VmdHJtMHE?oc=5",
+"t": 1793952000,
+"company": "GradBridge",
+"place": "Newark",
+"area": "hudson"
+},
+{
+"key": "semperis|hoboken",
+"title": "Semperis Opens New Global Headquarters in Hoboken, New Jersey, Following 40% Revenue Growth",
+"source": "citybiz",
+"url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVEh6TU5Yd3BrVUZ6cDRfdHRxeVVFZ29fNVhrdFFlMHd4TVBKRlFvVThVQTRoMmtVRFA3NDBNSTQ4ZGRpU2tjSHRfdExuV1lmb3dLMEhsblU0bDFVN3YyLXlLQmFfSF9zenJJbTdaMFNHOE43ZExrMHRGMTVFVG53Z0IteHNobm1lU3lRQkJZTUp3bmlZSEJzS0JhRTdxeTFycDBpazgzRlA5ZlRkeHUxVEU1VU16WnJYcTZ4MzdqTXFZMFF6NFE?oc=5",
+"t": 1793865600,
+"company": "Semperis",
+"place": "Hoboken",
+"area": "hudson"
+},
+{
+"key": "grow therapy|new york city",
+"title": "Governor Hochul Announces Grow Therapy\u2019s Continued New York City Expansion, Creating 123 New Jobs and Investing $9.9 Million in Research and Development",
+"source": "Empire State Development (.gov)",
+"url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUExpTFJnenVKNEFoMVVFdlJucm5kM2RBWC1FdHQ3N1p6OFRndTJMU2lmRVNocFFFMTVXR045NnJSbENuclhBU0d1b2tLcUwzWUR3cmMyekxzVXpheFFfaFp2Nlp0VGp1c0hmR1dNc0xJUjd4TEhFMmlscmVOeV9IQXBueXBiWnM1WDVTNzlNUTdhdDRyT3lOeWkxaW1LTWNaeExkT19Tci1mR3N0SUZPREJFamE?oc=5",
+"t": 1793779200,
+"company": "Grow Therapy",
+"place": "New York City",
+"area": "nyc"
+},
+{
+"key": "compass pathways|jersey city",
+"title": "Psychedelic Drug Developer Compass Pathways Opens New Office in Jersey City",
+"source": "Jersey Digs",
+"url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBMdVo3eU1LcFJLM3BQYXA3QUVYeGJDX0xpZU1TbTRocFE3WW03X05qTmVfZWZCd3pkeXNlVVpBRDFjSmVJdW0xTlBpMlB5QXpqa2FfVkc3V1E1OV9TcjFCYVNHaEdndVhvNVdwRVMzakE2VjQ?oc=5",
+"t": 1793692800,
+"company": "Compass Pathways",
+"place": "Jersey City",
+"area": "hudson"
+},
+{
+"key": "alluel acquires 19,900-square-foot newark facility,|newark",
+"title": "Alluel Acquires 19,900-Square-Foot Newark Facility, Establishes Headquarters in the City",
+"source": "PR Underground",
+"url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPREpqZUdvbnBYMkpBNW5DaU1hVGRjcGxOeUgwMkdCMEp5a3RPYlBGSVpGQ3lTdElnWlBpS3YzcldJV1ZKaXU5RVlSUjVWYWp3WmhfMGN0Mkgyd3FJUDJmUE16dUNKa2hkaVpWdVlybkh5TmNBSXdMRmdlbTNEZlAybXEtYVNCU25xa1ltclJMX3g4ekVUbC15d3daX1ZUNjZjV0NKRG00VzYtU1drMmdNSF9nbkJxeXExQXdPUTJQWDY4Ml9iUWoxeWZ2NHU?oc=5",
+"t": 1793111782,
+"company": "Alluel Acquires 19,900-Square-Foot Newark Facility,",
+"place": "Newark",
+"area": "hudson"
+}
+],
+"moves_checked": 1795469933,
 "topics": [
 {
 "key": "afford",
