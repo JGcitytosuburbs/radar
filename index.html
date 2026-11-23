@@ -621,7 +621,8 @@ function smartFill(p,area){
   setOpt("ask",r.ask);setOpt("vibe",r.vibe);
   // pick the reply style from the group's rules, so Josh never has to remember them
   const rule=p.sub?RULES[p.sub.toLowerCase()]:null;
-  const style=rule&&rule[0]==="ok"?"full":rule?"nopitch":(p.sub?"nopitch":"short");
+  const forum=/city-data|quora/.test(p.where||"");   // forums: answer fully, but without a link to be safe
+  const style=rule&&rule[0]==="ok"?"full":(rule||p.sub||forum)?"nopitch":"short";
   setOpt("style",style);
   state.budgetUnknown=!r.budget; if(r.budget)setOpt("budget",r.budget); else document.querySelectorAll('.opts[data-k="budget"] button').forEach(x=>x.setAttribute("aria-pressed","false"));
   setOpt("hub",r.hub||"remote");   // no work info in the post: leave the commute out of the reply
