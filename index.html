@@ -121,6 +121,7 @@ textarea{min-height:90px;resize:vertical}
 .lp .la a{background:var(--card);color:var(--ink)}
 .lp>div:first-child{flex:1 1 260px;min-width:0}
 .fbtip{margin-top:14px}
+.prefill{background:var(--np-bg);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
 /* people */
 .addform{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.addform{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
@@ -238,6 +239,7 @@ h1,h2,h3{text-wrap:balance}
       </div>
 
       <div class="panel">
+        <p class="prefill" id="prefill" hidden></p>
         <div class="towns" id="towns"></div>
         <textarea class="draft" id="draft" aria-label="Draft reply"></textarea>
         <div class="row">
@@ -495,7 +497,7 @@ if($("flist"))$("flist").addEventListener("click",async e=>{const b=e.target.clo
 /* Live posts: a helper on GitHub checks Reddit twice an hour and saves the on-topic posts to posts.json next to this page.
    (Inside Claude or opened as a file, posts.json isn't reachable, so this box stays hidden.) */
 function ago(sec){const h=Math.round((Date.now()/1000-sec)/3600);return h<1?"just now":h<24?h+"h ago":Math.round(h/24)+"d ago"}
-let liveArea=null, liveData=null;
+let liveArea=null, liveData=null, livePosts=[];
 async function loadLive(force){
   if(liveData&&!force)return liveData;
   try{const r=await fetch((/demo/.test(location.search)?"posts-demo.json":"posts.json")+"?ts="+Date.now(),{cache:"no-store"});if(!r.ok)return null;liveData=await r.json();return liveData}catch(e){return null}
@@ -512,16 +514,69 @@ async function drawLive(area,force){
   box.hidden=false;
   $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub):""}</div>
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
-  $("liveList").dataset.posts=JSON.stringify(posts.map(p=>p.author));
+  livePosts=posts;
 }
 $("liveList").addEventListener("click",e=>{const ex=e.target.closest('a[href="#example"]');if(ex){e.preventDefault();toast("This is an example. Real posts open the actual Reddit post.");return}
   const b=e.target.closest("[data-answer]");if(!b)return;
-  const authors=JSON.parse($("liveList").dataset.posts||"[]");const a=authors[+b.dataset.answer];
-  $("theirName").value=a?"u/"+a:"";
-  const want=liveArea==="sell"?"sell":liveArea==="agent"?"agent":"place";
-  document.querySelector(`[data-k=ask] [data-v="${want}"]`).click();
-  if(liveArea==="nyc")document.querySelector('[data-k=vibe] [data-v="c"]').click();
-  build();location.hash="answer";});
+  smartFill(livePosts[+b.dataset.answer]||{},liveArea);location.hash="answer";});
+
+/* Smart "Answer it": reads the post and sets the reply helper for Josh. */
+function readPost(p,area){
+  const x=((p.title||"")+" "+(p.snippet||"")).toLowerCase();
+  const has=r=>r.test(x);
+  const out={ask:"place",vibe:"s",budget:null,hub:null,extras:[],found:[]};
+  // what they want
+  if(area==="agent"||has(/\b(recommend\w*|suggest\w*|looking for|need|good|great)\b.{0,40}\b(realtor|real estate agent|buyer'?s agent|listing agent|broker)\b|\b(realtor|agent|broker)\b.{0,20}\brecommend/))out.ask="agent";
+  if(area==="sell"||has(/\b(selling|sell) (my|our)\b|\blisting agent\b|\bthinking (of|about) selling\b|\blist (my|our) (house|home|condo|apartment)/))out.ask="sell";
+  // where
+  const jc=has(/\b(hoboken|jersey city|weehawken|edgewater|west new york|waterfront|path train)\b/);
+  const nyc=has(/\b(nyc|manhattan|brooklyn|queens|co-?op|upper west side|upper east side|harlem|astoria|park slope)\b/);
+  const leaving=has(/\b(leav\w*|moving (out of|from)|get out of|outgrow\w*)\b.{0,30}\b(nyc|the city|manhattan|brooklyn|queens|new york)\b/);
+  const nj=has(/\b(nj|new jersey|suburbs?|montclair|maplewood|south orange|summit|westfield|morristown|madison|chatham|short hills|millburn|yard|backyard)\b/);
+  if(jc)out.vibe="b"; else if(area==="nyc"||(nyc&&!leaving&&!nj))out.vibe="c"; else out.vibe="s";
+  out.found.push({s:"NJ suburbs",b:"Hoboken / Jersey City",c:"New York City"}[out.vibe]);
+  // budget
+  let best=null;
+  for(const m of x.matchAll(/\$\s?(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s?(k|m|mil|million)?\b|\b(\d+(?:\.\d+)?)\s?(k|m|mil|million)\b/g)){
+    let n=parseFloat((m[1]||m[3]).replace(/,/g,""));const u=(m[2]||m[4]||"");
+    if(/^k/.test(u))n*=1e3; else if(/^m/.test(u))n*=1e6;
+    if(n>=150000&&n<=10000000)best=Math.max(best||0,n);
+  }
+  if(best){out.budget=best<600000?"1":best<900000?"2":best<1500000?"3":"4";out.found.push(BUDGET_SHORT[out.budget])}
+  // work
+  if(has(/\b(fidi|financial district|wall st(reet)?|downtown manhattan|world trade|wtc|lower manhattan)\b/))out.hub="fidi";
+  else if(has(/\bhudson yards\b/))out.hub="hy";
+  else if(has(/\b(grand central|midtown east|42nd)\b/))out.hub="gct";
+  else if(has(/\b(penn station|penn|midtown|34th|herald square)\b/))out.hub="penn";
+  else if(has(/\b(remote|wfh|work from home|working from home)\b/))out.hub="remote";
+  if(out.hub)out.found.push(out.hub==="remote"?"Mostly remote":"Works near "+HUBSHORT[out.hub]);
+  // extras
+  if(has(/\b(kids?|children|child|school|schools|baby|toddler|family)\b/))out.extras.push("kids");
+  if(has(/\b(tax|taxes|property tax)\b/))out.extras.push("taxes");
+  if(has(/\b(first[- ]time|first home|first house|first apartment|never bought)\b/))out.extras.push("first");
+  if(has(/\b(nervous|anxious|anxiety|scared|overwhelm\w*)\b/))out.extras.push("nervous");
+  const words={kids:"Kids or schools",taxes:"Taxes",first:"First home",nervous:"Nervous"};
+  out.extras.forEach(e=>out.found.push(words[e]));
+  return out;
+}
+function setOpt(k,v){const box=document.querySelector(`.opts[data-k="${k}"]`);if(!box)return;
+  box.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.v===v)));state[k]=v}
+function smartFill(p,area){
+  const r=readPost(p,area);
+  $("theirName").value=p.author?"u/"+p.author:"";
+  setOpt("ask",r.ask);setOpt("vibe",r.vibe);
+  state.budgetUnknown=!r.budget; if(r.budget)setOpt("budget",r.budget); else document.querySelectorAll('.opts[data-k="budget"] button').forEach(x=>x.setAttribute("aria-pressed","false"));
+  setOpt("hub",r.hub||"remote");   // no work info in the post: leave the commute out of the reply
+  state.extras=new Set(r.extras);
+  document.querySelectorAll('.opts[data-k="extras"] button').forEach(x=>x.setAttribute("aria-pressed",String(state.extras.has(x.dataset.v))));
+  const askWord={place:"Where to live",agent:"Asking for an agent",sell:"Selling"}[r.ask];
+  $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}. Change anything that's off.`;
+  $("prefill").hidden=false;
+  const x=((p.title||"")+" "+(p.snippet||"")).toLowerCase();
+  state.mentioned=Object.keys(BLURB).filter(n=>x.includes(n.toLowerCase())&&(PICKS[r.vibe][1].concat(PICKS[r.vibe][2],PICKS[r.vibe][3],PICKS[r.vibe][4]).includes(n)));
+  rnd={};build();
+}
+
 $("liveRefresh").addEventListener("click",()=>drawLive(liveArea||"nj",true));
 /* What each card opens, in plain words. */
 function dest(url,where){
@@ -567,10 +622,11 @@ document.querySelectorAll(".opts").forEach(box=>{
     build()});
 });
 $("theirName").addEventListener("input",build);
+document.querySelectorAll(".opts").forEach(box=>box.addEventListener("click",e=>{if(!e.isTrusted)return;$("prefill").hidden=true;state.mentioned=[];if(box.dataset.k==="budget"){state.budgetUnknown=false;build()}}));
 $("again").addEventListener("click",()=>{const before=$("draft").value;for(let i=0;i<8;i++){rnd={};build();if($("draft").value!==before)break}toast("Here's another version.")});
 
 function build(){
-  const v=state.vibe, towns=PICKS[v][state.budget], hub=state.hub, ex=state.extras, T=VOICE.tips[v], st=state.style;
+  const v=state.vibe, towns=[...new Set([...(state.mentioned||[]),...PICKS[v][state.budget]])].slice(0,3), hub=state.hub, ex=state.extras, T=VOICE.tips[v], st=state.style;
   const agentAsk=state.ask==="agent", sellAsk=state.ask==="sell";
   $("vibeLbl").textContent=sellAsk?"Where is their home?":"Where are they looking?";
   document.querySelectorAll('[data-k=budget],[data-k=hub],[data-k=extras]').forEach(b=>b.closest(".field").style.display=(agentAsk||sellAsk)?"none":"");
@@ -594,7 +650,9 @@ function build(){
     L.push("");L.push(st==="nopitch"?A.softClose:pick(A.close,13));
     $("draft").value=L.join("\n");return;
   }
-  const lead=pick(VOICE.lead,2).replace("{b}",BUDGET[state.budget]).replace("{h}",hub!=="remote"?` and work ${HUBNAME[hub]}`:"").replace("{w}",v==="s"?"towns":"neighborhoods");
+  const lead=state.budgetUnknown
+    ? (hub!=="remote"?`Since you work ${HUBNAME[hub]}, here's where I'd look first:`:`Here's where I'd look first:`)
+    : pick(VOICE.lead,2).replace("{b}",BUDGET[state.budget]).replace("{h}",hub!=="remote"?` and work ${HUBNAME[hub]}`:"").replace("{w}",v==="s"?"towns":"neighborhoods");
   if(st==="short"){
     L.push(hi(pick(VOICE.shortOpen,5)));
     L.push(`${lead} ${rows.map(r=>r.t+(r.m?` (~${r.m} min door to desk)`:"")).join(", ")}.`);
