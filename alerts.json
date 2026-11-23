@@ -1,5 +1,14 @@
 {
   "feeds": [
-    {"list": "nj", "name": "Moving to NJ", "url": "https://www.google.com/alerts/feeds/03361734590919155594/16800794010120971274"}
+    {
+      "list": "nj",
+      "name": "Moving to NJ",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/16800794010120971274"
+    },
+    {
+      "list": "nyc",
+      "name": "Buying in NYC",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/8571747191542372974"
+    }
   ]
 }
