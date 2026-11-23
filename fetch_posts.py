@@ -1,13 +1,16 @@
-"""Buyer Radar post checker.
+"""Lead Tracker post checker.
 
-Runs on GitHub every 30 minutes. Reads the public "newest posts" feed of a few
-Reddit groups (the same feeds a news app like Feedly reads), keeps only posts
-whose TITLE fits one of Josh's four lists, and saves them to posts.json.
-The radar page then shows them under "New posts right now".
+Runs on GitHub twice an hour. Reads Google Alerts feeds (listed in alerts.json),
+which Google fills with new Reddit and forum posts that use the alert's words.
+Keeps the ones that fit Josh's four lists and saves them to posts.json.
+The page then shows them under "New posts right now".
+
+Reading Reddit directly from GitHub doesn't work (Reddit blocks GitHub's servers),
+so READ_REDDIT_DIRECTLY is off.
 
 To change what counts as a match, edit the RULES section below.
 """
-import json, os, re, sys, time, urllib.request, xml.etree.ElementTree as ET
+import html, json, os, re, sys, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 # ===== EDIT HERE: groups to read (only groups whose rules allow agents to help) =====
@@ -61,6 +64,7 @@ GROUP_LISTS = {
     "MovingtoNewJersey": ["nj", "agent", "sell"], "movingtonyc": ["nyc", "agent"],
 }
 KEEP_DAYS = 14
+READ_REDDIT_DIRECTLY = False
 UA = "BuyerRadar/1.0 (personal feed reader for one real estate agent; reads public RSS twice an hour)"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
@@ -102,6 +106,47 @@ def parse_feed(xml_text, group):
     return posts
 
 
+def real_url(u):
+    """Google Alerts links go through google.com/url?...&url=REAL; return REAL."""
+    q = urllib.parse.parse_qs(urllib.parse.urlparse(u).query)
+    return q.get("url", [u])[0]
+
+
+def clean(s):
+    s = html.unescape(re.sub(r"<[^>]+>", "", s or ""))
+    s = re.sub(r"\s*[:|\-–]\s*r/\w+\s*$", "", s)          # drop " : r/newjersey" at the end
+    s = re.sub(r"\s*[-|]\s*Reddit\s*$", "", s, flags=re.I)  # drop " - Reddit"
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def parse_alerts(xml_text, list_name):
+    root = ET.fromstring(xml_text)
+    posts = []
+    for e in root.findall(ATOM + "entry"):
+        link_el = e.find(ATOM + "link")
+        url = real_url(link_el.get("href")) if link_el is not None else ""
+        title = clean(e.findtext(ATOM + "title"))
+        when = e.findtext(ATOM + "published") or e.findtext(ATOM + "updated") or ""
+        try:
+            ts = int(datetime.fromisoformat(when.replace("Z", "+00:00")).timestamp())
+        except ValueError:
+            continue
+        if not url or not title or re.search(NEVER, title.lower()):
+            continue
+        m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
+        sub = m.group(1) if m else ""
+        where = "r/" + sub if sub else urllib.parse.urlparse(url).netloc.replace("www.", "")
+        pid = ("t3_" + m.group(2)) if m else url
+        posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": [list_name]})
+    return posts
+
+
+def fetch_url(url):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8", "replace")
+
+
 def fetch(group):
     req = urllib.request.Request(f"https://www.reddit.com/r/{group}/new/.rss?limit=50", headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -115,7 +160,23 @@ def main(out="posts.json"):
         old = {"posts": []}
     by_id = {p["id"]: p for p in old.get("posts", [])}
     ok, errors = 0, []
-    for g in GROUPS:
+    try:
+        feeds = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "alerts.json"))).get("feeds", [])
+    except (OSError, ValueError):
+        feeds = []
+    for f in feeds:
+        try:
+            for p in parse_alerts(fetch_url(f["url"]), f["list"]):
+                if p["id"] in by_id:
+                    if f["list"] not in by_id[p["id"]]["lists"]:
+                        by_id[p["id"]]["lists"].append(f["list"])
+                else:
+                    by_id[p["id"]] = p
+            ok += 1
+        except Exception as e:
+            errors.append(f"alert {f.get('list')}: {e}")
+        time.sleep(2)
+    for g in (GROUPS if READ_REDDIT_DIRECTLY else []):
         try:
             for p in parse_feed(fetch(g), g):
                 by_id[p["id"]] = p
@@ -126,7 +187,7 @@ def main(out="posts.json"):
     cutoff = time.time() - KEEP_DAYS * 86400
     posts = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])[:300]
     json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts}, open(out, "w"), indent=0)
-    print(f"{ok}/{len(GROUPS)} groups read, {len(posts)} posts kept")
+    print(f"{ok} feeds read, {len(posts)} posts kept")
     for e in errors:
         print("error:", e)
     if ok == 0:

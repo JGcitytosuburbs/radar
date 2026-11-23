@@ -177,7 +177,7 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <div class="panel live" id="live" hidden>
       <div class="livehead"><h3 class="fh">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
-      <p class="sub" style="margin:0 0 6px" id="liveSub">Reddit posts from the past week whose titles match this tab, newest first.</p>
+      <p class="sub" style="margin:0 0 6px" id="liveSub">New posts from Reddit and forums this week that match this tab, newest first.</p>
       <div id="liveList"></div>
     </div>
     <div id="spots"></div>
@@ -591,10 +591,10 @@ async function drawLive(area,force){
   if(!d||!Array.isArray(d.posts)||!d.checked||!d.groups_ok){box.hidden=true;return}
   const posts=d.posts.filter(p=>(p.lists||[]).includes(area)&&p.t>Date.now()/1000-7*86400).slice(0,20);
   const checked=d.checked?`Checked ${ago(d.checked).replace(" ago","")==="just now"?"just now":ago(d.checked)}.`:"";
-  $("liveSub").textContent=`Reddit posts from the past week whose titles match this tab, newest first. ${checked}`;
+  $("liveSub").textContent=`New posts from Reddit and forums this week that match this tab, newest first. ${checked}`;
   if(liveArea!==area)return;
   box.hidden=false;
-  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a><div class="lm">r/${esc(p.sub)} · ${ago(p.t)}</div>${flag(p.sub)}</div>
+  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a><div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub):""}</div>
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
   $("liveList").dataset.posts=JSON.stringify(posts.map(p=>p.author));
 }
