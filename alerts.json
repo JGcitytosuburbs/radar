@@ -19,6 +19,11 @@
       "list": "sell",
       "name": "Selling",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/9709499140110041146"
+    },
+    {
+      "list": "agent",
+      "name": "Facebook: asking for a realtor",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/4429762367281031092"
     }
   ]
 }
