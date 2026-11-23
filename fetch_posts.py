@@ -20,7 +20,7 @@ GROUPS = ["MovingtoNewJersey", "newjersey", "Hoboken", "jerseycity", "NYCapartme
 # ===== EDIT HERE: rules. A post matches a list when its title fits. =====
 NJ_PLACES = r"(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?)"
 NYC_PLACES = r"(nyc|new york|manhattan|brooklyn|queens|the city|astoria|park slope|upper west side|uws|upper east side|ues|harlem|lic|long island city)"
-NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|fossil|climate|election|senate|congress)"
+NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|fossil|climate|election|senate|congress|inspector|inspection|contractor|plumber|electrician|roofer|hvac|handyman|landscap\w*|painter|movers|moving company|attorney|lawyer|exterminator|pest|daycare|babysitter|dentist|doctor|pediatrician|vet\b|gym|restaurant)"
 
 RULES = {
     # People moving to New Jersey
