@@ -85,7 +85,8 @@ KEEP_DAYS = 14
 HIDE = {
     "t3_1y37bj8",   # "Where would you live in NYC area as a single 30M making $250k?"
 }
-HIDE_TITLES = {"where would you live in nyc area as a single 30m making $250k?"}   # hides cross-posts of the same post
+HIDE_TITLES = {"where would you live in nyc area as a single 30m making $250k?",
+               "how is it living in this area in flatbush (little haiti) for a single male?"}   # hides cross-posts of the same post
 READ_REDDIT_DIRECTLY = False
 UA = "BuyerRadar/1.0 (personal feed reader for one real estate agent; reads public RSS twice an hour)"
 ATOM = "{http://www.w3.org/2005/Atom}"
