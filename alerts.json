@@ -99,6 +99,41 @@
       "list": "agent",
       "name": "Reddit: realtor (broad)",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/7860342566128055227"
+    },
+    {
+      "list": "nj",
+      "name": "City-Data: Josh's NJ towns (Essex, Union, Morris)",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/16865933687346274914"
+    },
+    {
+      "list": "nj",
+      "name": "City-Data: Josh's NJ towns (Hudson, Bergen, more)",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/1799464357288555883"
+    },
+    {
+      "list": "nj",
+      "name": "City-Data: relocating from the city",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/4577206491990936388"
+    },
+    {
+      "list": "nj",
+      "name": "Town comparisons (Montclair vs\u2026)",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/15200600593750792903"
+    },
+    {
+      "list": "nj",
+      "name": "Reddit: leaving the city for NJ",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/14267911266656737373"
+    },
+    {
+      "list": "nj",
+      "name": "Reddit: Midtown Direct",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/5465795492803290266"
+    },
+    {
+      "list": "nyc",
+      "name": "City-Data: buying a co-op or condo in NYC",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/5465795492803289489"
     }
   ]
 }

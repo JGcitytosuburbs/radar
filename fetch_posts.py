@@ -25,6 +25,8 @@ NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insuranc
 RULES = {
     # People moving to New Jersey
     "nj": [
+        r"\bmidtown direct\b.*\b(towns?|which|best|looking|moving|move|buy\w*|live|living|family)\b|\b(towns?|which|best|looking|moving|move|buy\w*|live|living)\b.*\bmidtown direct\b",
+        r"\b(leaving|moving out of|moving from|getting out of) (brooklyn|manhattan|queens|nyc|new york|the city)\b",
         r"\b(moving|move|relocating|relocate|relocation)\b.*\b" + NJ_PLACES + r"\b",
         r"\b(leave|leaving|moving out of|moving from|get out of)\b.*\b" + NYC_PLACES + r"\b",
         r"\b(buy|buying|purchase|purchasing|first home|first house)\b.*\b" + NJ_PLACES + r"\b",
@@ -71,7 +73,7 @@ GROUP_LISTS = {
 }
 # A post only counts when it's clearly about New Jersey or New York City:
 # a strong place name in the title, or it was posted in a local group.
-NJ_STRONG = r"\b(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county|weehawken|edgewater|west new york|glen ridge|bloomfield|millburn|short hills|morris township|morris plains|cranford|ridgewood|west orange|denville|boonton|mountain lakes|livingston|caldwell|verona|nutley|berkeley heights|new providence|florham park|basking ridge|bernardsville|upper montclair|hamilton park|downtown jersey city|paulus hook)\b"
+NJ_STRONG = r"\b(nj|midtown direct|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county|weehawken|edgewater|west new york|glen ridge|bloomfield|millburn|short hills|morris township|morris plains|cranford|ridgewood|west orange|denville|boonton|mountain lakes|livingston|caldwell|verona|nutley|berkeley heights|new providence|florham park|basking ridge|bernardsville|upper montclair|hamilton park|downtown jersey city|paulus hook)\b"
 NJ_MAYBE = r"\b(summit|madison|westfield|chatham|suburbs?)\b"   # also common words, so only with other NJ clues
 NYC_STRONG = r"\b(nyc|new york|manhattan|brooklyn|queens|astoria|park slope|upper west side|upper east side|harlem|long island city|williamsburg|greenpoint|brooklyn heights|carroll gardens|cobble hill|fort greene|prospect heights|bushwick|bed-?stuy|ditmas park|bay ridge|sunnyside|forest hills|jackson heights|ridgewood queens|tribeca|west village|east village|greenwich village|chelsea|murray hill|upper manhattan|washington heights|inwood|yorkville|fidi|financial district|battery park|lower east side|soho)\b"
 NJ_SUBS = {"newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood", "morristown", "southorange", "westfieldnj", "summitnj", "montclairnj"}
@@ -136,6 +138,10 @@ def keep_lists(title, sub, snippet=""):
     offering = r"\b(available|for rent|for lease|take over my lease|i am offering|we have|move-in ready|dm for details|price drop|\$\d[\d,]* ?/ ?(mo|month))\b"
     if (nj or nyc) and (re.search(seeking, t + " " + x) or re.search(moving_need, t + " " + x)) and not re.search(offering, t):
         out.append("rent")
+    # Comparing two of Josh's towns ("Maplewood vs South Orange") = actively choosing where to live
+    towns = r"(hoboken|jersey city|weehawken|edgewater|west new york|montclair|upper montclair|glen ridge|bloomfield|maplewood|south orange|millburn|short hills|summit|chatham|madison|morristown|morris township|westfield|cranford|ridgewood|west orange|denville|boonton|livingston|caldwell|new providence|berkeley heights|mountain lakes|florham park|verona|nutley)"
+    if re.search(r"\b" + towns + r"\b\s*(,\s*\w[\w ]*\s*)?(vs\.?|versus|or)\s+\b" + towns + r"\b", t) and "nj" not in out:
+        out.insert(0, "nj")
     # In the "moving to" groups, a post still needs to be about finding a home, not dating, jobs or nightlife
     whole = {"movingtonewjersey": "nj", "movingtonyc": "nyc"}.get(s)
     buy_words = r"\b(buy|buying|bought|purchas\w*|mortgage|down payment|pre-?approv\w*|co-?ops?|condos?|closing costs?|realtor|real estate|broker|agent|house|home ?buyer|first home|sell|selling)\b"

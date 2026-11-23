@@ -1,6 +1,6 @@
 {
-"checked": 1795473748,
-"groups_ok": 20,
+"checked": 1795474060,
+"groups_ok": 27,
 "errors": [],
 "posts": [
 {
@@ -135,6 +135,10 @@
 },
 {
 "key": "commute",
+"count": 1
+},
+{
+"key": "schools",
 "count": 1
 }
 ],
@@ -565,9 +569,75 @@
 "id": "t3_1y39nmf",
 "t": 1795454160,
 "topics": []
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-hockey-assist-leaders-in-2026-27.html",
+"t": 1795473104,
+"topics": []
+},
+{
+"id": "https://x.com/NJ_Sports/status/2124865719196094479",
+"t": 1795468905,
+"topics": [
+"schools"
+]
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/girls-basketball-preview-2025-26-returning-all-state-players.html",
+"t": 1795468554,
+"topics": []
+},
+{
+"id": "https://fan.hudl.com/usa/il/cambridge/organization/39366/ridgewood-spartans-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjAzYjA1NDIzMGUzOGJiY2M3MjhlY2M%3D&ot=TEAM&oi=300136",
+"t": 1795438042,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y3qskb",
+"title": "Madison vs Milwaukee",
+"sub": "SameGrassButGreener",
+"where": "r/SameGrassButGreener",
+"url": "https://www.reddit.com/r/SameGrassButGreener/comments/1y3qskb/madison_vs_milwaukee/",
+"t": 1795473311,
+"author": "",
+"lists": [],
+"snippet": "Madison vs Milwaukee. My spouse and I are moving to WI from the ... We have similar job offers in both places- combined income would be $275k in Madison ..."
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-hockey-assist-leaders-in-2026-27.html",
+"title": "Who are the top returning statewide girls hockey assist leaders in 2026-27? - NJ.com",
+"sub": "",
+"where": "nj.com",
+"url": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-hockey-assist-leaders-in-2026-27.html",
+"t": 1795473104,
+"author": "",
+"lists": [],
+"snippet": "Published: Nov. 23, 2026, 6:50 a.m.. Girls Ice Hockey: Summit vs. Chatham, February 3, 2026 Simone Claps (12) of Chatham celebrates after scoring ..."
+},
+{
+"id": "https://x.com/NJ_Sports/status/2124865719196094479",
+"title": "NJ.com Sports on X: \"Westfield vs. Eastern girls soccer in the NJSIAA Group 4 Final at ...",
+"sub": "",
+"where": "x.com",
+"url": "https://x.com/NJ_Sports/status/2124865719196094479",
+"t": 1795468905,
+"author": "",
+"lists": [],
+"snippet": "Westfield vs. Eastern girls soccer in the NJSIAA Group 4 Final at Franklin High School in Somerset, N.J. on Saturday, November 21, 2026."
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/girls-basketball-preview-2025-26-returning-all-state-players.html",
+"title": "Returning All-State girls basketball players for 2026-27 - NJ.com",
+"sub": "",
+"where": "nj.com",
+"url": "https://www.nj.com/highschoolsports/2026/11/girls-basketball-preview-2025-26-returning-all-state-players.html",
+"t": 1795468554,
+"author": "",
+"lists": [],
+"snippet": "Revisit their standout seasons below. Girls Basketball: NJSIAA Group 4 Final - Westfield vs. Lenape, March 14, El-Anita Joe-Samuel (21) of Lenape ..."
+},
 {
 "id": "t3_1y2yh1s",
 "title": "Homes are much cheaper in 2026 vs 1980",
@@ -1636,6 +1706,61 @@
 "snippet": "9.9K subscribers in the MovingtoNewJersey community. Subreddit for people interested in moving to the Garden State who want to hear from NJ ..."
 },
 {
+"id": "t3_1y3qpoy",
+"title": "Madison vs Milwaukee",
+"sub": "wisconsin",
+"where": "r/wisconsin",
+"url": "https://www.reddit.com/r/wisconsin/comments/1y3qpoy/madison_vs_milwaukee/",
+"t": 1795462782,
+"author": "",
+"lists": [],
+"snippet": "We have similar job offers in both places- combined income would be $275k in Madison vs $205k in MKE. We don't have any ties to either area, so if ..."
+},
+{
+"id": "https://www.si.com/high-school/stats/illinois/basketball/games/7037082-caseywestfield-vs-arthurlovingtonatwoodhammond",
+"title": "Casey-Westfield vs Arthur-Lovington/Atwood-Hammond Boys Basketball - Nov 23, 2026",
+"sub": "",
+"where": "si.com",
+"url": "https://www.si.com/high-school/stats/illinois/basketball/games/7037082-caseywestfield-vs-arthurlovingtonatwoodhammond",
+"t": 1795454569,
+"author": "",
+"lists": [],
+"snippet": "View pregame, live and post-game details from the Casey-Westfield vs Arthur-Lovington/Atwood-Hammond Illinois game on Nov 23, 2026."
+},
+{
+"id": "https://www.maxpreps.com/il/basketball/game/glenwood-chatham-vs-mahomet-seymour/jv/11-24-2026/?c=4ca647bc-5dcb-4409-ab96-18aada65eb9e",
+"title": "Mahomet-Seymour vs Glenwood | Basketball | 11/24/2026 - MaxPreps",
+"sub": "",
+"where": "maxpreps.com",
+"url": "https://www.maxpreps.com/il/basketball/game/glenwood-chatham-vs-mahomet-seymour/jv/11-24-2026/?c=4ca647bc-5dcb-4409-ab96-18aada65eb9e",
+"t": 1795454310,
+"author": "",
+"lists": [],
+"snippet": "The Mahomet-Seymour JV basketball team has an away non-conference game @ Glenwood (Chatham, IL) on Tuesday, November 24 @ 5:25p."
+},
+{
+"id": "https://robinhood.com/us/en/prediction-markets/college-basketball/events/951675be-c537-45bb-ace3-ebe5b1a46793/",
+"title": "James Madison vs William & Mary: Second Half Prediction Market - Robinhood",
+"sub": "",
+"where": "robinhood.com",
+"url": "https://robinhood.com/us/en/prediction-markets/college-basketball/events/951675be-c537-45bb-ace3-ebe5b1a46793/",
+"t": 1795452603,
+"author": "",
+"lists": [],
+"snippet": "Who will win the Second Half of the James Madison vs William & Mary college basketball game originally scheduled for Nov 29, 2026?"
+},
+{
+"id": "https://www.tiktok.com/discover/madison-vs-hudson-michigan",
+"title": "Madison Vs Hudson Michigan | TikTok",
+"sub": "",
+"where": "tiktok.com",
+"url": "https://www.tiktok.com/discover/madison-vs-hudson-michigan",
+"t": 1795448795,
+"author": "",
+"lists": [],
+"snippet": "Discover videos related to Madison Vs Hudson Michigan on TikTok. Last updated 2026-11-23. 1 Likes, 0 Comments. TikTok video from djdetroitredd ..."
+},
+{
 "id": "t3_1y38kli",
 "title": "LIC vs Ktown",
 "sub": "movingtoNYC",
@@ -1645,6 +1770,17 @@
 "author": "",
 "lists": [],
 "snippet": "For dating as an East Asian male professional in late twenties. Korean working professionals preferred."
+},
+{
+"id": "https://www.si.com/high-school/stats/illinois/basketball/games/7037705-madison-vs-roxana/preview",
+"title": "Preview - Madison vs Roxana Boys Basketball - Nov 23, 2026 - High School On SI",
+"sub": "",
+"where": "si.com",
+"url": "https://www.si.com/high-school/stats/illinois/basketball/games/7037705-madison-vs-roxana/preview",
+"t": 1795440403,
+"author": "",
+"lists": [],
+"snippet": "View the preview from the Madison vs Roxana Illinois game on Nov 23, 2026."
 },
 {
 "id": "t3_1y340k5",
@@ -1658,6 +1794,17 @@
 "snippet": "hey y'all. I live in the NorCal area and I have seen some co-ops in my budget. my realtor says absolutely don't buy it but my dad says we should ..."
 },
 {
+"id": "https://fan.hudl.com/usa/il/cambridge/organization/39366/ridgewood-spartans-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjAzYjA1NDIzMGUzOGJiY2M3MjhlY2M%3D&ot=TEAM&oi=300136",
+"title": "Highlight - Watch - Ridgewood vs Knoxville \u2022 Game Recap \u2022 Nov 20, 2026 - Hudl - Fan",
+"sub": "",
+"where": "fan.hudl.com",
+"url": "https://fan.hudl.com/usa/il/cambridge/organization/39366/ridgewood-spartans-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjAzYjA1NDIzMGUzOGJiY2M3MjhlY2M%3D&ot=TEAM&oi=300136",
+"t": 1795438042,
+"author": "",
+"lists": [],
+"snippet": "Watch - Ridgewood vs Knoxville \u2022 Game Recap \u2022 Nov 20, 2026 on - Fri, Nov 20, 2026 @ 6:15 PM. Located in Cambridge, IL."
+},
+{
 "id": "t3_1y2ebyi",
 "title": "Need a Meticulous Home Inspector for a 100 Year Old Home in Rutherford",
 "sub": "MovingtoNewJersey",
@@ -1667,6 +1814,105 @@
 "author": "",
 "lists": [],
 "snippet": "Also looking to have radon testing, thermal imaging, and a sewer scope done, either directly through the inspector or someone they can coordinate with ..."
+},
+{
+"id": "https://www.fubo.tv/welcome/matches/cc170989-1226-4f0f-90ca-c893c0fce004",
+"title": "Watch James Madison vs Charleston Southern - Fubo",
+"sub": "",
+"where": "fubo.tv",
+"url": "https://www.fubo.tv/welcome/matches/cc170989-1226-4f0f-90ca-c893c0fce004",
+"t": 1795428532,
+"author": "",
+"lists": [],
+"snippet": "Watch the James Madison vs Charleston Southern game on Fubo live. Start your free trial today! Watch your local teams with Regional Sports ..."
+},
+{
+"id": "https://www.on3.com/college/basketball/scoreboard/1937873/plays/",
+"title": "College Basketball Plays - James Madison vs Southern Miss - On3",
+"sub": "",
+"where": "on3.com",
+"url": "https://www.on3.com/college/basketball/scoreboard/1937873/plays/",
+"t": 1795426493,
+"author": "",
+"lists": [],
+"snippet": "Box score, team stats and play-by-play for James Madison vs Southern Miss."
+},
+{
+"id": "https://www.flohockey.tv/collections/6752010-continue-watching?playing=16457642",
+"title": "Replay: Home - 2026 Chatham vs St. Thomas | Nov 22 @ 7 PM - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/collections/6752010-continue-watching?playing=16457642",
+"t": 1795416121,
+"author": "",
+"lists": [],
+"snippet": "Watch the Home - 2026 Chatham vs St. Thomas replay on FloHockey, where every live and on-demand game is at your fingertips."
+},
+{
+"id": "https://www.on3.com/college/basketball/scoreboard/1677307/",
+"title": "College Basketball - James Madison vs Arkansas - On3",
+"sub": "",
+"where": "on3.com",
+"url": "https://www.on3.com/college/basketball/scoreboard/1677307/",
+"t": 1795410501,
+"author": "",
+"lists": [],
+"snippet": "Preview, tip-off time and TV info for James Madison vs Arkansas."
+},
+{
+"id": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457927",
+"title": "Replay: Home - 2026 Edmon. MLAC vs Edmon. CAC | Nov 22 @ 6 PM - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457927",
+"t": 1795407757,
+"author": "",
+"lists": [],
+"snippet": "Replay: Home - 2026 Chatham vs St. Thomas | Nov 22 @ 7 PM. 2:53:18. Replay: Home - 2026 Chatham vs St. Thomas | Nov 22 @ 7 PM. Nov 22, 2026 \u00b7 Replay ..."
+},
+{
+"id": "https://www.flohockey.tv/teams/7971120-bakersfield-condors/videos?playing=16457883",
+"title": "Replay: Away - 2026 Coachella Valley vs Bakersfield | Nov 22 @ 5 PM - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/teams/7971120-bakersfield-condors/videos?playing=16457883",
+"t": 1795407717,
+"author": "",
+"lists": [],
+"snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 4:30 PM PST. Coastal vs Chilliwack \u00b7 Today \u00b7 4:30 PM PST. Smiths Falls vs Brockville \u00b7 Today \u00b7 4:45 PM PST. Langley vs ..."
+},
+{
+"id": "https://www.nfhsnetwork.com/events/dave-campbells-texas-sports/gamd9e1893cc8?maxpreps=maxpreps&utm_campaign=school-home&utm_medium=referral&utm_source=maxpreps&utm_content=pre",
+"title": "Klein Forest vs Westfield - Boys Varsity Basketball 11/24/2026 | Live & On Demand",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/dave-campbells-texas-sports/gamd9e1893cc8?maxpreps=maxpreps&utm_campaign=school-home&utm_medium=referral&utm_source=maxpreps&utm_content=pre",
+"t": 1795405071,
+"author": "",
+"lists": [],
+"snippet": "Westfield vs Klein Forest. Tue, Nov 24, 2026 \u00b7 1:00 PM CST. Houston, TX. Unlock this matchup, plus every game from your favorite teams all season ..."
+},
+{
+"id": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457551",
+"title": "Replay: Home - 2026 Henderson vs Ontario | Nov 22 @ 2 PM - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457551",
+"t": 1795400344,
+"author": "",
+"lists": [],
+"snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 12:30 AM UTC. Coastal vs Chilliwack \u00b7 Today \u00b7 12:45 AM UTC. Langley vs Richmond \u00b7 Today \u00b7 12:30 AM UTC. Smiths Falls ..."
+},
+{
+"id": "https://www.flohockey.tv/teams/10277102-rockland-nationals/videos?playing=16456871",
+"title": "Rockland Nationals - Videos - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/teams/10277102-rockland-nationals/videos?playing=16456871",
+"t": 1795399775,
+"author": "",
+"lists": [],
+"snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 4:00 PM PST. Navan vs Pembroke \u00b7 Today \u00b7 4:30 PM PST. Coastal vs Chilliwack \u00b7 Today \u00b7 4:00 PM PST. Warriors vs Dukes."
 },
 {
 "id": "t3_1y2qios",
@@ -1757,6 +2003,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 82,
-"checked_today": 80
+"checked_week": 86,
+"checked_today": 84
 }
