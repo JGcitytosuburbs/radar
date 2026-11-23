@@ -24,6 +24,11 @@
       "list": "agent",
       "name": "Facebook: asking for a realtor",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/4429762367281031092"
+    },
+    {
+      "list": "nj",
+      "name": "LinkedIn: relocating to NJ",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/11801276621840573610"
     }
   ]
 }
