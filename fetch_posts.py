@@ -157,11 +157,16 @@ def parse_alerts(xml_text, list_name):
         link_el = e.find(ATOM + "link")
         url = real_url(link_el.get("href")) if link_el is not None else ""
         title = clean(e.findtext(ATOM + "title"))
-        when = e.findtext(ATOM + "published") or e.findtext(ATOM + "updated") or ""
-        try:
-            ts = int(datetime.fromisoformat(when.replace("Z", "+00:00")).timestamp())
-        except ValueError:
-            continue
+        ts = 0
+        for tag in ("published", "updated"):   # Google sometimes sends 1970 here; fall back to the next date, then to now
+            try:
+                ts = int(datetime.fromisoformat((e.findtext(ATOM + tag) or "").replace("Z", "+00:00")).timestamp())
+            except ValueError:
+                ts = 0
+            if ts > 1_000_000_000:
+                break
+        if ts <= 1_000_000_000:
+            ts = int(time.time())
         if not url or not title:
             continue
         m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
