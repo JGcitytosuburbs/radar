@@ -114,6 +114,7 @@ textarea{min-height:90px;resize:vertical}
 .lp .lt{font-weight:700;color:var(--ink);text-decoration:none;display:block;min-width:0;overflow-wrap:anywhere}
 .lp .lt:hover{text-decoration:underline}
 .lp .lm{font-size:13px;color:var(--stone);margin-top:2px}
+.lp .ls{font-size:14px;color:var(--ink-soft);margin-top:4px;overflow-wrap:anywhere}
 .lp .la{display:flex;gap:6px;flex:0 0 auto}
 .lp .la a,.lp .la button{font:600 13px var(--sans);border-radius:8px;padding:7px 11px;cursor:pointer;text-decoration:none;border:1px solid var(--strong)}
 .lp .la button{background:var(--strong);color:var(--on-strong)}
@@ -514,7 +515,7 @@ async function drawLive(area,force){
   $("liveSub").textContent=`New posts from Reddit and forums this week that match this tab, newest first. ${checked}`;
   if(liveArea!==area)return;
   box.hidden=false;
-  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a><div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub):""}</div>
+  $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub):""}</div>
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
   $("liveList").dataset.posts=JSON.stringify(posts.map(p=>p.author));
 }

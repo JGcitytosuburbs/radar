@@ -145,8 +145,8 @@ def real_url(u):
 
 def clean(s):
     s = html.unescape(re.sub(r"<[^>]+>", "", s or ""))
-    s = re.sub(r"\s*[:|\-–]\s*r/\w+\s*$", "", s)          # drop " : r/newjersey" at the end
     s = re.sub(r"\s*[-|]\s*Reddit\s*$", "", s, flags=re.I)  # drop " - Reddit"
+    s = re.sub(r"\s*[:|\-–]\s*r/\w+\s*$", "", s)          # then drop " : r/newjersey"
     return re.sub(r"\s+", " ", s).strip()
 
 
@@ -157,6 +157,7 @@ def parse_alerts(xml_text, list_name):
         link_el = e.find(ATOM + "link")
         url = real_url(link_el.get("href")) if link_el is not None else ""
         title = clean(e.findtext(ATOM + "title"))
+        snippet = clean(e.findtext(ATOM + "content"))[:220]
         ts = 0
         for tag in ("published", "updated"):   # Google sometimes sends 1970 here; fall back to the next date, then to now
             try:
@@ -176,7 +177,7 @@ def parse_alerts(xml_text, list_name):
             continue
         where = "r/" + sub if sub else urllib.parse.urlparse(url).netloc.replace("www.", "")
         pid = ("t3_" + m.group(2)) if m else url
-        posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": lists})
+        posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": lists, "snippet": snippet})
     return posts
 
 
@@ -211,7 +212,10 @@ def main(out="posts.json"):
         try:
             for p in parse_alerts(fetch_url(f["url"]), f["list"]):
                 if p["id"] in by_id:
-                    by_id[p["id"]]["lists"] = sorted(set(by_id[p["id"]]["lists"]) | set(p["lists"]))
+                    old_p = by_id[p["id"]]
+                    p["lists"] = sorted(set(old_p["lists"]) | set(p["lists"]))
+                    p["t"] = old_p["t"]            # keep when it was first found
+                    by_id[p["id"]] = p
                 else:
                     by_id[p["id"]] = p
             ok += 1
