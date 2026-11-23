@@ -76,7 +76,7 @@ GROUP_LISTS = {
 NJ_STRONG = r"\b(nj|midtown direct|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county|weehawken|edgewater|west new york|glen ridge|bloomfield|millburn|short hills|morris township|morris plains|cranford|ridgewood|west orange|denville|boonton|mountain lakes|livingston|caldwell|verona|nutley|berkeley heights|new providence|florham park|basking ridge|bernardsville|upper montclair|hamilton park|downtown jersey city|paulus hook)\b"
 NJ_MAYBE = r"\b(summit|madison|westfield|chatham|suburbs?)\b"   # also common words, so only with other NJ clues
 NYC_STRONG = r"\b(nyc|new york|manhattan|brooklyn|queens|astoria|park slope|upper west side|upper east side|harlem|long island city|williamsburg|greenpoint|brooklyn heights|carroll gardens|cobble hill|fort greene|prospect heights|bushwick|bed-?stuy|ditmas park|bay ridge|sunnyside|forest hills|jackson heights|ridgewood queens|tribeca|west village|east village|greenwich village|chelsea|murray hill|upper manhattan|washington heights|inwood|yorkville|fidi|financial district|battery park|lower east side|soho)\b"
-NJ_SUBS = {"newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood", "morristown", "southorange", "westfieldnj", "summitnj", "montclairnj"}
+NJ_SUBS = {"njparents", "newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood", "morristown", "southorange", "westfieldnj", "summitnj", "montclairnj"}
 NYC_SUBS = {"nyc", "asknyc", "nycapartments", "movingtonyc", "brooklyn", "astoria", "queens", "manhattan"}
 
 KEEP_DAYS = 14
