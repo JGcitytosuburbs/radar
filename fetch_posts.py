@@ -18,8 +18,8 @@ GROUPS = ["MovingtoNewJersey", "newjersey", "Hoboken", "jerseycity", "NYCapartme
           "FirstTimeHomeBuyer", "movingtonyc"]
 
 # ===== EDIT HERE: rules. A post matches a list when its title fits. =====
-NJ_PLACES = r"(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?)"
-NYC_PLACES = r"(nyc|new york|manhattan|brooklyn|queens|the city|astoria|park slope|upper west side|uws|upper east side|ues|harlem|lic|long island city)"
+NJ_PLACES = r"(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?|weehawken|edgewater|west new york|glen ridge|bloomfield|millburn|short hills|morris township|morris plains|cranford|ridgewood|west orange|denville|boonton|mountain lakes|livingston|caldwell|verona|nutley|berkeley heights|new providence|florham park|basking ridge|bernardsville|upper montclair|hamilton park|downtown jersey city|paulus hook)"
+NYC_PLACES = r"(nyc|new york|manhattan|brooklyn|queens|the city|astoria|park slope|upper west side|uws|upper east side|ues|harlem|lic|long island city|williamsburg|greenpoint|brooklyn heights|carroll gardens|cobble hill|fort greene|prospect heights|bushwick|bed-?stuy|ditmas park|bay ridge|sunnyside|forest hills|jackson heights|ridgewood queens|tribeca|west village|east village|greenwich village|chelsea|murray hill|upper manhattan|washington heights|inwood|yorkville|fidi|financial district|battery park|lower east side|soho)"
 NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|\(originally|\bobo\b|ac unit|air conditioner|fossil|climate|election|senate|congress|inspector|inspection|contractor|plumber|electrician|roofer|hvac|handyman|landscap\w*|painter|movers|moving company|attorney|lawyer|exterminator|pest|daycare|babysitter|dentist|doctor|pediatrician|vet\b|gym|restaurant)"
 
 RULES = {
@@ -71,9 +71,9 @@ GROUP_LISTS = {
 }
 # A post only counts when it's clearly about New Jersey or New York City:
 # a strong place name in the title, or it was posted in a local group.
-NJ_STRONG = r"\b(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county)\b"
+NJ_STRONG = r"\b(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|short hills|millburn|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen county|union county|weehawken|edgewater|west new york|glen ridge|bloomfield|millburn|short hills|morris township|morris plains|cranford|ridgewood|west orange|denville|boonton|mountain lakes|livingston|caldwell|verona|nutley|berkeley heights|new providence|florham park|basking ridge|bernardsville|upper montclair|hamilton park|downtown jersey city|paulus hook)\b"
 NJ_MAYBE = r"\b(summit|madison|westfield|chatham|suburbs?)\b"   # also common words, so only with other NJ clues
-NYC_STRONG = r"\b(nyc|new york|manhattan|brooklyn|queens|astoria|park slope|upper west side|upper east side|harlem|long island city)\b"
+NYC_STRONG = r"\b(nyc|new york|manhattan|brooklyn|queens|astoria|park slope|upper west side|upper east side|harlem|long island city|williamsburg|greenpoint|brooklyn heights|carroll gardens|cobble hill|fort greene|prospect heights|bushwick|bed-?stuy|ditmas park|bay ridge|sunnyside|forest hills|jackson heights|ridgewood queens|tribeca|west village|east village|greenwich village|chelsea|murray hill|upper manhattan|washington heights|inwood|yorkville|fidi|financial district|battery park|lower east side|soho)\b"
 NJ_SUBS = {"newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood", "morristown", "southorange", "westfieldnj", "summitnj", "montclairnj"}
 NYC_SUBS = {"nyc", "asknyc", "nycapartments", "movingtonyc", "brooklyn", "astoria", "queens", "manhattan"}
 
