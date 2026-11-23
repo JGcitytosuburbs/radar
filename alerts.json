@@ -9,6 +9,11 @@
       "list": "nyc",
       "name": "Buying in NYC",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/8571747191542372974"
+    },
+    {
+      "list": "agent",
+      "name": "Asking for an agent",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/10430148552393895686"
     }
   ]
 }
