@@ -477,13 +477,13 @@ function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");cl
 /* ===== EDIT HERE: each Reddit group's rules, checked by hand (Nov 2026) =====
    ok = agents can answer and mention their services · nopitch = helpful answers only, may say "I'm an agent", no links, no DMs · no = no agents */
 const RULES={
-  newjersey:["ok","Links OK · no listing posts"],
-  movingtonewjersey:["nopitch","Strict: no links, never DM first"],
-  hoboken:["ok","Links OK · no listing posts"],
-  jerseycity:["ok","Links OK · say you're an agent"],
-  nycapartments:["nopitch","Strict: no links, never offer services"],
-  firsttimehomebuyer:["nopitch","Strict: no links, no \"DM me\""],
-  movingtonyc:["nopitch","Strict: no links, no sales pitch"]
+  newjersey:["ok","Links OK"],
+  movingtonewjersey:["nopitch","No links allowed here"],
+  hoboken:["ok","Links OK"],
+  jerseycity:["ok","Links OK"],
+  nycapartments:["nopitch","No links allowed here"],
+  firsttimehomebuyer:["nopitch","No links allowed here"],
+  movingtonyc:["nopitch","No links allowed here"]
   // r/AskNYC removed: no promotion, and it sends moving questions to r/movingtonyc.
   // r/Brooklyn removed: bans buying/renting/broker posts, contact info and links to your business.
   // r/astoria removed: bans apartment, broker and real estate posts.
@@ -491,11 +491,11 @@ const RULES={
 };
 const subOf=w=>{const m=/^r\/(\w+)/.exec(w);return m?m[1]:null};
 /* ===== EDIT HERE: the best page of Josh's site to share, by tab ===== */
-const SHARE={nj:["the commute map","movinwithgoodkin.com/commute-map"],nyc:["the NYC buying guide","movinwithgoodkin.com/buying-city"],sell:["the home value page","movinwithgoodkin.com/home-value"],agent:["his website","movinwithgoodkin.com"]};
+const SHARE={nj:["Commute map","movinwithgoodkin.com/commute-map"],nyc:["NYC buying guide","movinwithgoodkin.com/buying-city"],sell:["Home value page","movinwithgoodkin.com/home-value"],agent:["Your website","movinwithgoodkin.com"]};
 function flag(sub,list){const r=RULES[(sub||"").toLowerCase()];if(!r)return"";
   if(!list)return`<span class="flag ${r[0]}">${r[1]}</span>`;
   const s=SHARE[list]||SHARE.nj;
-  return r[0]==="ok"?`<span class="flag ok">Links OK · share ${s[0]}</span>`:`<span class="flag ${r[0]}">Strict: no links · his profile link does the work</span>`}
+  return r[0]==="ok"?`<span class="flag ok">Link to share: ${s[0]}</span>`:`<span class="flag ${r[0]}">No links allowed here</span>`}
 /* ===== EDIT HERE: Reddit feeds (newest posts first). Feedly or any news app can follow them. ===== */
 const RS=(sub,q)=>"https://www.reddit.com/r/"+sub+"/search.rss?q="+encodeURIComponent(q)+"&restrict_sr=1&sort=new";
 const RNEW=sub=>"https://www.reddit.com/r/"+sub+"/new/.rss";
