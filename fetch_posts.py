@@ -53,6 +53,12 @@ RULES = {
         r"\blisting agent\b",
         r"\b(sell|selling) (and|then|before) (buy|buying)\b",
         r"\bthinking (of|about) selling\b",
+        r"\b(what('?s| is) (my|our) (house|home|condo|place) worth|home value|how much (can|could|would) (i|we) (get|sell)|price (my|our) (house|home|condo))\b",
+        r"\b(downsiz\w*|empty nest\w*)\b",
+        r"\b(need|have|going) to sell\b|\bsell(ing)? (fast|quickly|before)\b",
+        r"\b(for sale by owner|fsbo)\b",
+        r"\b(should (i|we) sell|sell or rent (out )?(my|our)|rent (out )?or sell)\b",
+        r"\b(estate|inherited) (house|home|property)\b|\binherited a (house|home)\b",
     ],
 }
 # Groups where every post is on-topic for a list, even without a matching title
