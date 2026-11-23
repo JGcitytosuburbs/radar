@@ -1,6 +1,87 @@
 {
-"checked": 1795448583,
+"checked": 1795449368,
 "groups_ok": 16,
 "errors": [],
-"posts": []
+"posts": [],
+"topics": [
+{
+"key": "afford",
+"count": 4
+},
+{
+"key": "selling",
+"count": 2
+},
+{
+"key": "towns",
+"count": 1
+},
+{
+"key": "family",
+"count": 1
+},
+{
+"key": "commute",
+"count": 1
+}
+],
+"seen": [
+{
+"id": "t3_1y31ncy",
+"t": 1795389425,
+"topics": [
+"towns",
+"afford"
+]
+},
+{
+"id": "t3_1y2g4bl",
+"t": 1795330843,
+"topics": [
+"selling"
+]
+},
+{
+"id": "t3_1y2sken",
+"t": 1795449351,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y2ut2x",
+"t": 1795449353,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y2z5k7",
+"t": 1795449355,
+"topics": [
+"selling"
+]
+},
+{
+"id": "t3_1y313nw",
+"t": 1795449358,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y37rzq",
+"t": 1795449358,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y36hmv",
+"t": 1795449362,
+"topics": [
+"afford"
+]
+}
+]
 }
