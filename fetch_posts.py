@@ -101,7 +101,7 @@ def keep_lists(title, sub):
     if re.search(NEVER, t):
         return []
     nj = bool(re.search(NJ_STRONG, t)) or s in NJ_SUBS or (bool(re.search(NJ_MAYBE, t)) and s in NJ_SUBS)
-    nyc = bool(re.search(NYC_STRONG, t)) or s in NYC_SUBS
+    nyc = bool(re.search(NYC_STRONG, t)) or s in NYC_SUBS or bool(re.search(r"\bco-?ops?\b", t))  # co-ops are mostly an NYC thing
     hits = [name for name, pats in RULES.items() if any(re.search(p, t) for p in pats)]
     out = []
     if "nj" in hits and nj:
