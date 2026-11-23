@@ -131,6 +131,15 @@ textarea{min-height:90px;resize:vertical}
 .nextpick{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink-soft)}
 .nextpick input{border:1px solid var(--line);border-radius:8px;padding:4px 6px;font:13px var(--sans);color:var(--ink);background:var(--card)}
 .person .acts{flex-wrap:wrap;align-items:center}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.topics span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:600}
+.topics span b{color:var(--brass-dark);margin-left:4px}
+.ideas{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.ideas{grid-template-columns:1fr 1fr 1fr}}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.idea .why{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin:0}
+.idea pre{white-space:pre-wrap;font:15px/1.55 var(--sans);color:var(--ink);margin:0;flex:1}
+.idea .btn{align-self:flex-start}
 /* people */
 .addform{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.addform{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
@@ -172,6 +181,7 @@ h1,h2,h3{text-wrap:balance}
     <a href="#find"><b>1</b>Find them</a>
     <a href="#answer"><b>2</b>Answer them</a>
     <a href="#people"><b>3</b>Keep track</a>
+    <a href="#ideas"><b>4</b>Post ideas</a>
   </nav>
 
   <!-- 1. FIND -->
@@ -282,6 +292,13 @@ h1,h2,h3{text-wrap:balance}
 
 
 
+  <section class="block" id="ideas">
+    <h2>Post <em>ideas.</em></h2>
+    <p class="kicker" style="margin:14px 0 4px">What people are asking this week</p>
+    <p class="sub" id="ideasSub" style="margin:0 0 12px">Based on this week's Reddit posts about moving to NJ and buying in NYC.</p>
+    <div class="topics" id="topicChips"></div>
+    <div class="ideas" id="ideaList"></div>
+  </section>
 </main>
 <div class="toast" id="toast"></div>
 
@@ -746,6 +763,50 @@ $("export").addEventListener("click",()=>{
   const csv=lines.map(l=>l.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
   copyText(csv).then(ok=>toast(ok?"Copied. Paste it into a spreadsheet or a note.":"Couldn't copy here."))});
 drawPeople();
+
+/* ===== Post ideas: captions written from what local posts are asking about this week ===== */
+const SIGN="\n\nJosh Goodkin, Licensed Real Estate Salesperson · Weichert Realtors (NJ) · Sefirot Real Estate (NY)";
+const TAGS="\n\n#movingtonj #nyctonj #njrealestate #nycrealestate #citytosuburbs";
+const TOPIC_INFO={
+  commute:["🚆","Commutes"],schools:["🏫","Schools"],taxes:["💸","Property taxes"],towns:["📍","Which town"],
+  coop:["🏢","Co-ops & condos"],rentbuy:["🔑","Rent vs. buy"],afford:["💵","What you can afford"],selling:["🏡","Selling"],family:["👨‍👩‍👧","Moving with kids"]
+};
+function caption(key){
+  const m=t=>doorToDesk(t,"penn");
+  switch(key){
+    case "commute": return `Everyone's asking about the commute, so here are real door-to-desk times to Penn Station at rush hour:\n\n🚆 South Orange: about ${m("South Orange")} min\n🚆 Maplewood: about ${m("Maplewood")} min\n🚆 Summit: about ${m("Summit")} min\n🚆 Montclair: about ${m("Montclair")} min\n\nWork somewhere else in the city? My commute map shows it for your office. Link in bio.`;
+    case "schools": return `Moving for the schools? Here's how I'd compare NJ districts:\n\n1. Look up each district's NJ School Performance Report.\n2. Visit on a weekday and walk the neighborhood around the school.\n3. Talk to parents at the playground. They'll tell you everything.\n\nWhich towns are on your list? Tell me below 👇`;
+    case "taxes": return `The number that surprises New Yorkers most in New Jersey: property taxes.\n\nTwo homes with the same price can have very different monthly costs once taxes are in. So compare the monthly payment, not just the price.\n\nWant the real monthly number for a town you're eyeing? Send me a message.`;
+    case "towns": return `Leaving the city? Here's where I'd start in NJ, by budget:\n\nUnder $600K: ${PICKS.s[1].join(", ")}\n$600K–$900K: ${PICKS.s[2].join(", ")}\n$900K–$1.5M: ${PICKS.s[3].join(", ")}\n$1.5M+: ${PICKS.s[4].join(", ")}\n\nNot sure which fits? My 1-minute quiz picks for you. Link in bio.`;
+    case "coop": return `Co-op or condo? The 30-second version:\n\n🏢 Co-op: you buy shares in the building, the board approves you, and prices are often lower.\n🏢 Condo: you own the apartment, fewer rules, usually a higher price.\n\nThe right one depends on your budget, your timeline and how much paperwork you're up for. Questions? Ask below.`;
+    case "rentbuy": return `Rent or buy? The question I hear most right now.\n\nA few things to weigh:\n• How long you'll stay (buying usually makes sense at 5+ years)\n• Your real monthly cost to own, with taxes and fees\n• What your rent buys just across the river\n\nWant me to run the numbers for you? Send me a message.`;
+    case "afford": return `"Can I actually afford it?" Before you look at a single listing, know your real monthly number: mortgage, taxes, insurance and any HOA.\n\nMy free "Can I swing it?" calculator shows what's comfortable, what's a stretch and what's the max, in about a minute. Link in bio.`;
+    case "selling": return `Thinking about selling this spring?\n\nSmall fixes before you list usually pay off: fresh paint, good lighting, a deep clean. Big renovations usually don't.\n\nCurious what your home is worth right now? My free home value tool is in my bio.`;
+    case "family": return `Leaving the city with kids? What families tell me matters most:\n\n🏫 Schools you can walk to\n🌳 A yard (finally!)\n🚆 A train that still gets you to work on time\n\nThe good news: you don't have to pick just one. Tell me what matters most and I'll send you a few towns that fit.`;
+  }
+}
+const ALWAYS=["towns","commute","afford"];
+async function drawIdeas(){
+  const d=await loadLive(false);
+  const topics=(d&&Array.isArray(d.topics)?d.topics:[]).filter(x=>TOPIC_INFO[x.key]);
+  const total=topics.reduce((a,x)=>a+x.count,0);
+  let keys;
+  if(total>=3){
+    $("ideasSub").textContent="Based on this week's Reddit posts about moving to NJ and buying in NYC.";
+    $("topicChips").innerHTML=topics.slice(0,6).map(x=>`<span>${TOPIC_INFO[x.key][0]} ${esc(TOPIC_INFO[x.key][1])}<b>${x.count}</b></span>`).join("");
+    keys=topics.slice(0,3).map(x=>x.key);
+    for(const k of ALWAYS)if(keys.length<3&&!keys.includes(k))keys.push(k);
+  }else{
+    $("ideasSub").textContent="Not enough posts yet this week, so here are a few ideas that always work.";
+    $("topicChips").innerHTML="";
+    keys=ALWAYS;
+  }
+  $("ideaList").innerHTML=keys.map(k=>{const top=topics.find(x=>x.key===k);
+    return `<div class="idea"><p class="why">${TOPIC_INFO[k][0]} ${esc(TOPIC_INFO[k][1])}${top?` · ${top.count} post${top.count===1?"":"s"} this week`:""}</p><pre>${esc(caption(k)+SIGN+TAGS)}</pre><button class="btn" type="button" data-cap="${k}">Copy caption</button></div>`}).join("");
+}
+$("ideaList").addEventListener("click",async e=>{const b=e.target.closest("[data-cap]");if(!b)return;
+  toast((await copyText(caption(b.dataset.cap)+SIGN+TAGS))?"Caption copied. Paste it into Instagram.":"Couldn't copy here.")});
+drawIdeas();
 </script>
 </body>
 </html>

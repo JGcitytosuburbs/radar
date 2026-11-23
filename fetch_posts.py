@@ -130,6 +130,32 @@ def keep_lists(title, sub, snippet=""):
     return out
 
 
+# ===== EDIT HERE: topics for "What people are asking this week" (counted from all local posts, not just leads) =====
+TOPICS = {
+    "commute": r"\b(commut\w*|nj transit|path train|the path|penn station|midtown|train to)\b",
+    "schools": r"\b(schools?|school district|kindergarten|pre-?k)\b",
+    "taxes": r"\b(property tax\w*|taxes)\b",
+    "towns": r"\b(which|what|best|good|favorite) (town|towns|neighborhood|neighborhoods|area)\b|\bwhere (to|should (i|we)) (live|move)\b",
+    "coop": r"\b(co-?ops?|condos?|board (package|interview|approval))\b",
+    "rentbuy": r"\b(rent (vs\.?|or|versus) buy|renting (vs\.?|or) buying|keep renting)\b",
+    "afford": r"\b(afford\w*|budget|down payment|mortgage|interest rates?|closing costs?)\b",
+    "selling": r"\b(selling|sell (my|our)|listing (my|our)|list (my|our))\b",
+    "family": r"\b(kids?|children|baby|toddler|growing family)\b",
+}
+SEEN = []   # local posts seen this run, for topic counts
+
+
+def note_topics(pid, title, sub, snippet, ts):
+    t = (title + " " + snippet).lower()
+    s = (sub or "").lower()
+    here = re.search(NJ_STRONG, t) or re.search(NYC_STRONG, t) or s in NJ_SUBS or s in NYC_SUBS
+    if not here or (re.search(ELSEWHERE, t) and not (re.search(NJ_STRONG, t) or re.search(NYC_STRONG, t))):
+        return
+    found = [k for k, rx in TOPICS.items() if re.search(rx, t)]
+    if found:
+        SEEN.append({"id": pid, "t": ts, "topics": found})
+
+
 def parse_feed(xml_text, group):
     root = ET.fromstring(xml_text)
     posts = []
@@ -185,6 +211,7 @@ def parse_alerts(xml_text, list_name):
             continue
         m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
         sub = m.group(1) if m else ""
+        note_topics(("t3_" + m.group(2)) if m else url, title, sub, snippet, ts)
         lists = keep_lists(title, sub, snippet)
         if not lists:
             continue
@@ -245,8 +272,20 @@ def main(out="posts.json"):
         time.sleep(3)  # be gentle
     cutoff = time.time() - KEEP_DAYS * 86400
     posts = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])[:300]
-    json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts}, open(out, "w"), indent=0)
-    print(f"{ok} feeds read, {len(posts)} posts kept")
+    # topics: remember what local posts were about for 7 days, then count
+    seen = {s["id"]: s for s in old.get("seen", [])}
+    for s in SEEN:
+        seen.setdefault(s["id"], s)
+    week = time.time() - 7 * 86400
+    seen = [s for s in seen.values() if s["t"] >= week][-800:]
+    counts = {}
+    for s in seen:
+        for k in s["topics"]:
+            counts[k] = counts.get(k, 0) + 1
+    topics = sorted(({"key": k, "count": c} for k, c in counts.items()), key=lambda x: -x["count"])
+    json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts,
+               "topics": topics, "seen": seen}, open(out, "w"), indent=0)
+    print(f"{ok} feeds read, {len(posts)} posts kept, topics: {topics[:5]}")
     for e in errors:
         print("error:", e)
     if ok == 0:
