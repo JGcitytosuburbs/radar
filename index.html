@@ -565,9 +565,11 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 
 /* ===== Morning sweep: one-tap checks for places that can't be read automatically ===== */
+/* City-Data forum search: titles only, newest activity first (34 = New Jersey forum, 55 = New York City forum) */
+const CD = (forum, words) => "https://www.city-data.com/forum/search.php?do=process&query=" + encodeURIComponent(words) + "&titleonly=1&forumchoice[]=" + forum + "&childforums=1&sortby=lastpost&order=descending&showposts=0";
 const SWEEP = [
-  ["cd-nj", "City-Data · New Jersey forum", "Newest threads. People asking which town, schools, commutes.", "https://www.city-data.com/forum/new-jersey/"],
-  ["cd-nyc", "City-Data · New York City forum", "Newest threads from people moving to or around the city.", "https://www.city-data.com/forum/new-york-city/"],
+  ["cd-nj", "City-Data · New Jersey forum", "Threads with these words in the title, most recent activity first.", [["Moving to", CD(34, "moving to")], ["Relocating", CD(34, "relocating")], ["Buying", CD(34, "buying")], ["Selling", CD(34, "selling")], ["Realtor", CD(34, "realtor")]]],
+  ["cd-nyc", "City-Data · New York City forum", "Threads with these words in the title, most recent activity first.", [["Relocating", CD(55, "relocating")], ["Buying", CD(55, "buying")], ["Realtor", CD(55, "realtor")]]],
   ["r-mtnj", "Reddit · r/MovingtoNewJersey", "Every new post, newest first. A whole group planning a move to NJ.", "https://www.reddit.com/r/MovingtoNewJersey/new/"],
   ["r-mtnyc", "Reddit · r/movingtonyc", "Every new post, newest first.", "https://www.reddit.com/r/movingtonyc/new/"],
   ["quora", "Quora · “Moving to New Jersey”", "Questions from this week.", "https://www.quora.com/search?q=" + encodeURIComponent("moving to New Jersey") + "&type=question&time=week"]
@@ -587,7 +589,7 @@ function groupName(u){ const m = u.match(/groups\/([^/?#]+)/); const slug = m ? 
 function drawSweep(){
   if(!$("swList"))return;
   const done = swDone(), mine = store.get("sweep-groups", []), groups = SWEEP_GROUPS.map(g => ({...g, builtIn: true})).concat(mine);
-  $("swList").innerHTML = SWEEP.map(([id, where, why, url]) => `<div class="swr"><div class="swt"><b>${esc(where)}</b><span>${esc(why)}</span></div><div class="swb"><a class="go" href="${esc(url)}" target="_blank" rel="noopener" data-sw="${id}">Open ↗</a></div></div>`).join("");
+  $("swList").innerHTML = SWEEP.map(([id, where, why, url]) => `<div class="swr"><div class="swt"><b>${esc(where)}</b><span>${esc(why)}</span></div><div class="swb">${Array.isArray(url) ? url.map(([label, u], k) => `<a${k ? "" : ' class="go"'} href="${esc(u)}" target="_blank" rel="noopener" data-sw="${id}">${esc(label)} ↗</a>`).join("") : `<a class="go" href="${esc(url)}" target="_blank" rel="noopener" data-sw="${id}">Open ↗</a>`}</div></div>`).join("");
   $("swGroups").innerHTML = groups.map(g => { const id = "g:" + g.url, share = /\/share\//.test(g.url), i = mine.indexOf(g);
     const btns = share
       ? `<a class="go" href="${esc(g.url)}" target="_blank" rel="noopener" data-sw="${esc(id)}">Open group ↗</a>`
