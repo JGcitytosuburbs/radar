@@ -264,7 +264,7 @@ h1,h2,h3{text-wrap:balance}
           <div class="opts" data-k="style">
             <button data-v="full" aria-pressed="true">With a helpful link</button>
             <button data-v="short">Short comment</button>
-            <button data-v="nopitch">No links (strict group)</button>
+            <button data-v="nopitch">No link in first reply</button>
           </div></div>
         <div class="field"><span class="lbl" id="vibeLbl">Where are they looking?</span>
           <div class="opts" data-k="vibe">
@@ -612,12 +612,12 @@ function toast(t){const el=$("toast");el.textContent=t;el.classList.add("on");cl
    ok = agents can answer and mention their services · nopitch = helpful answers only, may say "I'm an agent", no links, no DMs · no = no agents */
 const RULES={
   newjersey:["ok","Links OK in replies"],
-  movingtonewjersey:["nopitch","Reply without a link"],
+  movingtonewjersey:["nopitch","No link in first reply · Share the map if they message you"],
   hoboken:["ok","Links OK in replies"],
   jerseycity:["ok","Links OK in replies"],
-  nycapartments:["nopitch","Reply without a link"],
-  firsttimehomebuyer:["nopitch","Reply without a link"],
-  movingtonyc:["nopitch","Reply without a link"]
+  nycapartments:["nopitch","No link in first reply · Share the map if they message you"],
+  firsttimehomebuyer:["nopitch","No link in first reply · Share the map if they message you"],
+  movingtonyc:["nopitch","No link in first reply · Share the map if they message you"]
   // r/AskNYC removed: no promotion, and it sends moving questions to r/movingtonyc.
   // r/Brooklyn removed: bans buying/renting/broker posts, contact info and links to your business.
   // r/astoria removed: bans apartment, broker and real estate posts.
@@ -629,7 +629,7 @@ const SHARE={nj:["Commute map","movinwithgoodkin.com/commute-map"],nyc:["NYC buy
 function flag(sub,list){const r=RULES[(sub||"").toLowerCase()];if(!r)return"";
   if(!list)return`<span class="flag ${r[0]}">${r[1]}</span>`;
   const s=SHARE[list]||SHARE.nj;
-  return r[0]==="ok"?`<span class="flag ok">Link to include: ${s[0]}</span>`:`<span class="flag ${r[0]}">Reply without a link</span>`}
+  return r[0]==="ok"?`<span class="flag ok">Link to include: ${s[0]}</span>`:`<span class="flag ${r[0]}">No link in first reply · Share the map if they message you</span>`}
 /* ===== EDIT HERE: Reddit feeds (newest posts first). Feedly or any news app can follow them. ===== */
 const RS=(sub,q)=>"https://www.reddit.com/r/"+sub+"/search.rss?q="+encodeURIComponent(q)+"&restrict_sr=1&sort=new";
 const RNEW=sub=>"https://www.reddit.com/r/"+sub+"/new/.rss";
@@ -766,7 +766,7 @@ function smartFill(p,area){
   state.extras=new Set(r.extras);
   document.querySelectorAll('.opts[data-k="extras"] button').forEach(x=>x.setAttribute("aria-pressed",String(state.extras.has(x.dataset.v))));
   const askWord={place:"Where to live",agent:"Asking for an agent",sell:"Selling",rent:"Looking to rent"}[r.ask];
-  const styleNote={full:"With a helpful link (this group allows it)",nopitch:"No links (this group doesn't allow them)",short:"Short comment"}[style];
+  const styleNote={full:"With a helpful link (this group allows it)",nopitch:"No link in your first reply (this group's rule). If they reply or message you, share the commute map there",short:"Short comment"}[style];
   $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}.<br><b>Reply style:</b> ${esc(styleNote)}. Change anything that's off.`;
   $("prefill").hidden=false;
   const x=((p.title||"")+" "+(p.snippet||"")).toLowerCase();
