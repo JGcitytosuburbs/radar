@@ -39,6 +39,11 @@
       "list": "nj",
       "name": "Every new r/MovingtoNewJersey post",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/16669041155099366741"
+    },
+    {
+      "list": "nj",
+      "name": "Every new r/newjersey post",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/8440940286874892995"
     }
   ]
 }
