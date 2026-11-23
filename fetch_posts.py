@@ -94,14 +94,22 @@ def lists_for(title, group):
     return [h for h in hits if h in allowed]
 
 
-def keep_lists(title, sub):
-    """Which of Josh's lists a post belongs in, or [] to skip it."""
+ELSEWHERE = r"\b(california|norcal|socal|bay area|los angeles|san diego|texas|austin|dallas|houston|florida|miami|tampa|orlando|chicago|illinois|seattle|bellevue|washington state|colorado|denver|arizona|phoenix|ohio|georgia|atlanta|carolina|charlotte|raleigh|kansas|missouri|michigan|minnesota|wisconsin|indiana|tennessee|nashville|virginia|maryland|massachusetts|boston|pennsylvania|philly|philadelphia|pittsburgh|oregon|portland|utah|nevada|las vegas|canada|ontario|uk|london|australia)\b"
+
+
+def keep_lists(title, sub, snippet=""):
+    """Which of Josh's lists a post belongs in, or [] to skip it.
+    The title decides the topic; the title or the preview text can show the place."""
     t = title.lower()
+    x = (snippet or "").lower()
     s = (sub or "").lower()
     if re.search(NEVER, t):
         return []
-    nj = bool(re.search(NJ_STRONG, t)) or s in NJ_SUBS or (bool(re.search(NJ_MAYBE, t)) and s in NJ_SUBS)
-    nyc = bool(re.search(NYC_STRONG, t)) or s in NYC_SUBS or bool(re.search(r"\bco-?ops?\b", t))  # co-ops are mostly an NYC thing
+    here = re.search(NJ_STRONG, t + " " + x) or re.search(NYC_STRONG, t + " " + x)
+    if re.search(ELSEWHERE, t + " " + x) and not here:
+        return []      # clearly about another place
+    nj = bool(re.search(NJ_STRONG, t + " " + x)) or s in NJ_SUBS or (bool(re.search(NJ_MAYBE, t)) and s in NJ_SUBS)
+    nyc = bool(re.search(NYC_STRONG, t + " " + x)) or s in NYC_SUBS
     hits = [name for name, pats in RULES.items() if any(re.search(p, t) for p in pats)]
     out = []
     if "nj" in hits and nj:
@@ -172,7 +180,7 @@ def parse_alerts(xml_text, list_name):
             continue
         m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
         sub = m.group(1) if m else ""
-        lists = keep_lists(title, sub)
+        lists = keep_lists(title, sub, snippet)
         if not lists:
             continue
         where = "r/" + sub if sub else urllib.parse.urlparse(url).netloc.replace("www.", "")
@@ -200,7 +208,7 @@ def main(out="posts.json"):
         old = {"posts": []}
     by_id = {}
     for p in old.get("posts", []):        # re-check older posts with today's rules
-        p["lists"] = keep_lists(p["title"], p.get("sub", ""))
+        p["lists"] = keep_lists(p["title"], p.get("sub", ""), p.get("snippet", ""))
         if p["lists"]:
             by_id[p["id"]] = p
     ok, errors = 0, []
