@@ -94,6 +94,11 @@
       "list": "nj",
       "name": "Quora: moving to NJ",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/9863219512002939815"
+    },
+    {
+      "list": "agent",
+      "name": "Reddit: realtor (broad)",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/7860342566128055227"
     }
   ]
 }
