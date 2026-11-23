@@ -119,9 +119,14 @@ def keep_lists(title, sub, snippet=""):
     for name in ("agent", "sell"):
         if name in hits and (nj or nyc):
             out.append(name)
+    # In the "moving to" groups, a post still needs to be about finding a home, not dating, jobs or nightlife
     whole = {"movingtonewjersey": "nj", "movingtonyc": "nyc"}.get(s)
+    buy_words = r"\b(buy|buying|bought|purchas\w*|mortgage|down payment|pre-?approv\w*|co-?ops?|condos?|closing costs?|realtor|real estate|broker|agent|house|home ?buyer|first home|sell|selling)\b"
+    nj_words = buy_words[:-3] + r"|towns?|schools?|school district|commut\w*|relocat\w*|neighborhoods?|where (to|should we) live|family|kids)\b"
     if whole and whole not in out:
-        out.insert(0, whole)
+        need = nj_words if whole == "nj" else buy_words
+        if re.search(need, t + " " + x):
+            out.insert(0, whole)
     return out
 
 
