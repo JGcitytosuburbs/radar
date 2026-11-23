@@ -196,6 +196,7 @@ h1,h2,h3{text-wrap:balance}
       <button role="tab" data-area="nyc" aria-selected="false">Buying in New York City</button>
       <button role="tab" data-area="agent" aria-selected="false">Asking for an agent 🔥</button>
       <button role="tab" data-area="sell" aria-selected="false">Selling</button>
+      <button role="tab" data-area="rent" aria-selected="false">Renting</button>
     </div>
     <div class="panel live" id="live" hidden>
       <div class="livehead"><h3 class="fh">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
@@ -218,6 +219,7 @@ h1,h2,h3{text-wrap:balance}
             <button data-v="place" aria-pressed="true">Where to live</button>
             <button data-v="agent">An agent recommendation</button>
             <button data-v="sell">Help selling</button>
+            <button data-v="rent">Help renting</button>
           </div></div>
         <div class="field"><span class="lbl">Reply style</span>
           <div class="opts" data-k="style">
@@ -401,6 +403,11 @@ const SPOTS = {
       ["Facebook posts", "“Recommend a realtor” Hoboken / JC", "Waterfront renters ready to buy.", FB("recommend a realtor Hoboken Jersey City")]
     ]]
   ],
+  rent: [
+    ["Worth a look", [
+      ["r/NYCapartments", "Every new post", "People looking for apartments in the city (and some in NJ).", RN("NYCapartments")]
+    ]]
+  ],
   sell: [
     ["Worth a look", [
       ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking who to list with.", FB("recommend realtor to sell our house New Jersey")]
@@ -463,6 +470,21 @@ const VOICE = {
             "If you want, message me and we'll set up a quick call, no strings attached. You can see more at movinwithgoodkin.com. Hope you find a *good* one!"],
     softClose: "Happy to answer any questions right here in the thread."
   },
+  rent: {
+    open: ["Hi {n}! Happy to help. I help people find apartments {where} all the time.",
+           "{n}, great question. Here's what I'd keep in mind looking {where}.",
+           "Hey {n}! Renting {where} moves fast, so here's my honest take."],
+    base: ["Have your paperwork ready before you tour: ID, recent pay stubs, a bank statement and last year's tax return. Good places go to whoever applies first.",
+           "Start looking about 30 days before your move-in date. Most listings go up a month out, and the best ones go quickly."],
+    c: "In NYC, many landlords want your yearly income to be about 40 times the monthly rent, or a guarantor. And under the city's FARE Act, you usually don't pay the broker fee when the landlord hired the agent.",
+    b: "In Hoboken and Jersey City, check how far the building is from the PATH or ferry, and ask what's included. Heat, water and parking can change your real monthly cost a lot.",
+    s: "In the suburbs, rentals are fewer and go fast, so it helps to know your top 2 or 3 towns before you start looking.",
+    future: "And if buying is on your mind down the road, renting in the town first is a great way to test it out.",
+    link: "If it helps, my website has a free renter consultation: movinwithgoodkin.com",
+    close: ["Full disclosure: I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors). Happy to answer anything here or by message. Good luck with the search!",
+            "Full disclosure, I'm Josh, a licensed agent in NY (Sefirot Real Estate) and NJ (Weichert Realtors). If you want help with the search, just message me. No pressure."],
+    soft: "(For transparency: I'm a licensed agent in NY with Sefirot Real Estate and in NJ with Weichert Realtors. Just sharing what I've seen.)"
+  },
   sell: {
     open: ["Hi {n}! Selling is a big decision, so happy to share how I'd think about it.",
            "{n}, great question. Here's my honest take on selling {where} right now.",
@@ -508,7 +530,7 @@ const RULES={
 };
 const subOf=w=>{const m=/^r\/(\w+)/.exec(w);return m?m[1]:null};
 /* ===== EDIT HERE: the best page of Josh's site to share, by tab ===== */
-const SHARE={nj:["Commute map","movinwithgoodkin.com/commute-map"],nyc:["NYC buying guide","movinwithgoodkin.com/buying-city"],sell:["Home value page","movinwithgoodkin.com/home-value"],agent:["Your website","movinwithgoodkin.com"]};
+const SHARE={nj:["Commute map","movinwithgoodkin.com/commute-map"],nyc:["NYC buying guide","movinwithgoodkin.com/buying-city"],sell:["Home value page","movinwithgoodkin.com/home-value"],agent:["Your website","movinwithgoodkin.com"],rent:["Your website","movinwithgoodkin.com"]};
 function flag(sub,list){const r=RULES[(sub||"").toLowerCase()];if(!r)return"";
   if(!list)return`<span class="flag ${r[0]}">${r[1]}</span>`;
   const s=SHARE[list]||SHARE.nj;
@@ -544,7 +566,7 @@ async function drawLive(area,force){
   if(liveArea!==area)return;
   box.hidden=false;
   $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub,liveArea):""}</div>
-    <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):'<p class="empty">Nothing new this week for this tab yet. The cards below still work.</p>';
+    <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):`<p class="empty">Checked ${(d.checked_week||0).toLocaleString()} local posts this week. No ${{nj:"one moving to NJ",nyc:"NYC buyers",agent:"one asking for an agent",sell:"sellers",rent:"one looking for a rental"}[area]||"matches"} yet. They'll show up here within about 15 minutes of posting.</p>`;
   livePosts=posts;
 }
 $("liveList").addEventListener("click",e=>{const ex=e.target.closest('a[href="#example"]');if(ex){e.preventDefault();toast("This is an example. Real posts open the actual Reddit post.");return}
@@ -558,6 +580,7 @@ function readPost(p,area){
   const out={ask:"place",vibe:"s",budget:null,hub:null,extras:[],found:[]};
   // what they want
   if(area==="agent"||has(/\b(recommend\w*|suggest\w*|looking for|need|good|great)\b.{0,40}\b(realtor|real estate agent|buyer'?s agent|listing agent|broker)\b|\b(realtor|agent|broker)\b.{0,20}\brecommend/))out.ask="agent";
+  if(area==="rent")out.ask="rent";
   if(area==="sell"||has(/\b(selling|sell) (my|our)\b|\blisting agent\b|\bthinking (of|about) selling\b|\blist (my|our) (house|home|condo|apartment)/))out.ask="sell";
   // where
   const jc=has(/\b(hoboken|jersey city|weehawken|edgewater|west new york|waterfront|path train)\b/);
@@ -604,7 +627,7 @@ function smartFill(p,area){
   setOpt("hub",r.hub||"remote");   // no work info in the post: leave the commute out of the reply
   state.extras=new Set(r.extras);
   document.querySelectorAll('.opts[data-k="extras"] button').forEach(x=>x.setAttribute("aria-pressed",String(state.extras.has(x.dataset.v))));
-  const askWord={place:"Where to live",agent:"Asking for an agent",sell:"Selling"}[r.ask];
+  const askWord={place:"Where to live",agent:"Asking for an agent",sell:"Selling",rent:"Looking to rent"}[r.ask];
   const styleNote={full:"With a helpful link (this group allows it)",nopitch:"No links (this group doesn't allow them)",short:"Short comment"}[style];
   $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}.<br><b>Reply style:</b> ${esc(styleNote)}. Change anything that's off.`;
   $("prefill").hidden=false;
@@ -663,14 +686,22 @@ $("again").addEventListener("click",()=>{const before=$("draft").value;for(let i
 
 function build(){
   const v=state.vibe, towns=[...new Set([...(state.mentioned||[]),...PICKS[v][state.budget]])].slice(0,3), hub=state.hub, ex=state.extras, T=VOICE.tips[v], st=state.style;
-  const agentAsk=state.ask==="agent", sellAsk=state.ask==="sell";
+  const agentAsk=state.ask==="agent", sellAsk=state.ask==="sell", rentAsk=state.ask==="rent";
   $("vibeLbl").textContent=sellAsk?"Where is their home?":"Where are they looking?";
-  document.querySelectorAll('[data-k=budget],[data-k=hub],[data-k=extras]').forEach(b=>b.closest(".field").style.display=(agentAsk||sellAsk)?"none":"");
+  document.querySelectorAll('[data-k=budget],[data-k=hub],[data-k=extras]').forEach(b=>b.closest(".field").style.display=(agentAsk||sellAsk||rentAsk)?"none":"");
   const rows=towns.map(t=>({t,m:doorToDesk(t,hub)}));
-  $("towns").innerHTML=(agentAsk||sellAsk)?"":rows.map(r=>`<div class="town"><b>${esc(r.t)}</b>${r.m?` <span class="mins">about ${r.m} min door to desk</span>`:""}<span>${esc(BLURB[r.t]||"")}</span></div>`).join("");
+  $("towns").innerHTML=(agentAsk||sellAsk||rentAsk)?"":rows.map(r=>`<div class="town"><b>${esc(r.t)}</b>${r.m?` <span class="mins">about ${r.m} min door to desk</span>`:""}<span>${esc(BLURB[r.t]||"")}</span></div>`).join("");
   const name=$("theirName").value.trim().replace(/^u\//i,"");
   const hi=s=>name?s.replace("{n}",name):s.replace(/^Hi \{n\}! |^Hey \{n\}! /,"").replace(/^\{n\}, (\w)/,(m,c)=>c.toUpperCase());
   const L=[];
+  if(state.ask==="rent"){
+    const S=VOICE.rent, where={s:"in the NJ suburbs",b:"in Hoboken and Jersey City",c:"in the city"}[v];
+    L.push(hi(pick(S.open,31)).replace("{where}",where));
+    if(st==="short"){L.push(pick(S.base,32));L.push("");L.push(VOICE.shortClose.replace("Free commute map: movinwithgoodkin.com/commute-map","movinwithgoodkin.com"));$("draft").value=L.join("\n");return}
+    L.push("");L.push(pick(S.base,32));L.push(S[v]);L.push(S.future.replace("the town",v==="s"?"the town":"the neighborhood"));L.push("");
+    if(st==="nopitch"){L.push(S.soft)}else{L.push(S.link);L.push("");L.push(pick(S.close,33))}
+    $("draft").value=L.join("\n");return;
+  }
   if(sellAsk){
     const S=VOICE.sell, where={s:"in New Jersey",b:"in Hoboken and Jersey City",c:"in the city"}[v];
     L.push(hi(pick(S.open,21)).replace("{where}",where));
@@ -756,6 +787,7 @@ $("pAdd").addEventListener("click",()=>{addPerson($("pName").value.trim(),$("pLi
 $("addFromHelper").addEventListener("click",()=>{
   const where={s:"NJ suburbs",b:"Hoboken / Jersey City",c:"NYC"}[state.vibe];
   if(state.ask==="sell"){addPerson($("theirName").value.trim(),"",`Seller: home in ${where}.`);location.hash="people";return}
+  if(state.ask==="rent"){addPerson($("theirName").value.trim(),"",`Renter: looking in ${where}.`);location.hash="people";return}
   addPerson($("theirName").value.trim(),"",`Looking in ${where}, budget ${BUDGET[state.budget].replace(/^(in the|of) /,"")}. Suggested ${PICKS[state.vibe][state.budget].join(", ")}.`);
   location.hash="people"});
 $("export").addEventListener("click",()=>{

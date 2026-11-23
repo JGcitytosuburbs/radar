@@ -119,6 +119,12 @@ def keep_lists(title, sub, snippet=""):
     for name in ("agent", "sell"):
         if name in hits and (nj or nyc):
             out.append(name)
+    # People LOOKING for a rental (not offering rooms, sublets or lease takeovers; NEVER already drops those)
+    seeking = r"\b(looking for|iso|in search of|searching for|need|needs|help (me )?find(ing)?|hunting for|trying to find)\b.{0,40}\b(apartment|apt|1 ?br|2 ?br|3 ?br|one bedroom|two bedroom|studio|place to (live|rent)|rental|a place)\b"
+    moving_need = r"\b(moving|relocating) to (nyc|new york|the city|nj|new jersey|hoboken|jersey city|brooklyn|queens|manhattan)\b.{0,80}\b(apartment|place|rental|lease|neighborhood)\b"
+    offering = r"\b(available|for rent|for lease|take over my lease|i am offering|we have|move-in ready|dm for details|price drop|\$\d[\d,]* ?/ ?(mo|month))\b"
+    if (nj or nyc) and (re.search(seeking, t + " " + x) or re.search(moving_need, t + " " + x)) and not re.search(offering, t):
+        out.append("rent")
     # In the "moving to" groups, a post still needs to be about finding a home, not dating, jobs or nightlife
     whole = {"movingtonewjersey": "nj", "movingtonyc": "nyc"}.get(s)
     buy_words = r"\b(buy|buying|bought|purchas\w*|mortgage|down payment|pre-?approv\w*|co-?ops?|condos?|closing costs?|realtor|real estate|broker|agent|house|home ?buyer|first home|sell|selling)\b"
@@ -152,8 +158,7 @@ def note_topics(pid, title, sub, snippet, ts):
     if not here or (re.search(ELSEWHERE, t) and not (re.search(NJ_STRONG, t) or re.search(NYC_STRONG, t))):
         return
     found = [k for k, rx in TOPICS.items() if re.search(rx, t)]
-    if found:
-        SEEN.append({"id": pid, "t": ts, "topics": found})
+    SEEN.append({"id": pid, "t": ts, "topics": found})
 
 
 def parse_feed(xml_text, group):
@@ -283,9 +288,12 @@ def main(out="posts.json"):
         for k in s["topics"]:
             counts[k] = counts.get(k, 0) + 1
     topics = sorted(({"key": k, "count": c} for k, c in counts.items()), key=lambda x: -x["count"])
+    day_ago = time.time() - 86400
+    checked_week = len(seen)
+    checked_today = sum(1 for s in seen if s["t"] >= day_ago)
     json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts,
-               "topics": topics, "seen": seen}, open(out, "w"), indent=0)
-    print(f"{ok} feeds read, {len(posts)} posts kept, topics: {topics[:5]}")
+               "topics": topics, "seen": seen, "checked_week": checked_week, "checked_today": checked_today}, open(out, "w"), indent=0)
+    print(f"{ok} feeds read, {len(posts)} posts kept, {checked_week} local posts checked this week, topics: {topics[:5]}")
     for e in errors:
         print("error:", e)
     if ok == 0:
