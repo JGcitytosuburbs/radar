@@ -391,7 +391,14 @@ window.homesLink = function (name) {
 const R = (sub, q) => "https://www.reddit.com/r/" + sub + "/search/?q=" + encodeURIComponent(q) + "&restrict_sr=1&sort=new";
 const RN = sub => "https://www.reddit.com/r/" + sub + "/new/";
 const G = (q, when) => "https://www.google.com/search?q=" + encodeURIComponent(q) + "&tbs=qdr:" + (when || "m");
-const FB = q => "https://www.facebook.com/search/posts/?q=" + encodeURIComponent(q);
+/* Facebook post search, set to "Recent posts" from the last 3 months so old posts drop out */
+const FB_RECENT = (() => { try {
+  const now = new Date(), end = new Date(now.getFullYear(), now.getMonth() + 1, 0), st = new Date(now.getFullYear(), now.getMonth() - 2, 1);
+  const ym = d => d.getFullYear() + "-" + (d.getMonth() + 1), ymd = d => ym(d) + "-" + d.getDate();
+  const args = JSON.stringify({start_year: String(st.getFullYear()), start_month: ym(st), end_year: String(end.getFullYear()), end_month: ym(end), start_day: ymd(st), end_day: ymd(end)});
+  return "&filters=" + encodeURIComponent(btoa(JSON.stringify({"recent_posts:0": JSON.stringify({name: "recent_posts", args: ""}), "rp_creation_time:0": JSON.stringify({name: "creation_time", args})})));
+} catch (e) { return ""; } })();
+const FB = q => "https://www.facebook.com/search/posts/?q=" + encodeURIComponent(q) + FB_RECENT;
 const FBG = q => "https://www.facebook.com/search/groups/?q=" + encodeURIComponent(q);
 const IG = tag => "https://www.instagram.com/explore/tags/" + tag + "/";
 const LI = q => "https://www.linkedin.com/search/results/content/?keywords=" + encodeURIComponent(q) + "&sortBy=%22date_posted%22";
@@ -408,16 +415,16 @@ const SPOTS = {
   ],
   agent: [
     ["Worth a look", [
-      ["Facebook posts", "“Recommend a realtor” Morris County", "Neighbors asking their town groups for an agent.", FB("recommend a realtor Morris County")],
-      ["Facebook posts", "“Recommend a realtor” Montclair", "Neighbors in Montclair groups asking for an agent.", FB("recommend a realtor Montclair")],
-      ["Facebook posts", "“Recommend a realtor” Jersey City", "Neighbors in Jersey City groups asking for an agent.", FB("recommend a realtor Jersey City")],
-      ["Facebook posts", "“Recommend a realtor” Morristown", "Your home base. Morristown groups asking for an agent.", FB("recommend a realtor Morristown")],
-      ["Facebook posts", "“Recommend a realtor” Maplewood", "Maplewood and South Orange groups asking for an agent.", FB("recommend a realtor Maplewood")],
-      ["Facebook posts", "“Recommend a realtor” Summit", "Summit groups asking for an agent.", FB("recommend a realtor Summit NJ")],
-      ["Facebook posts", "“Recommend a realtor” Chatham", "Chatham groups asking for an agent.", FB("recommend a realtor Chatham NJ")],
-      ["Facebook posts", "“Recommend a realtor” Westfield", "Westfield groups asking for an agent.", FB("recommend a realtor Westfield NJ")],
-      ["Facebook posts", "“Recommend a realtor” Hoboken", "Hoboken groups asking for an agent.", FB("recommend a realtor Hoboken")],
-      ["Facebook posts", "“Recommend a realtor” Brooklyn", "Brooklyn groups asking for an agent.", FB("recommend a realtor Brooklyn")]
+      ["Facebook posts", "“Recommend a realtor” Morris County", "Neighbors asking their town groups for an agent.", FB("can anyone recommend a realtor Morris County")],
+      ["Facebook posts", "“Recommend a realtor” Montclair", "Neighbors in Montclair groups asking for an agent.", FB("can anyone recommend a realtor Montclair")],
+      ["Facebook posts", "“Recommend a realtor” Jersey City", "Neighbors in Jersey City groups asking for an agent.", FB("can anyone recommend a realtor Jersey City")],
+      ["Facebook posts", "“Recommend a realtor” Morristown", "Your home base. Morristown groups asking for an agent.", FB("can anyone recommend a realtor Morristown")],
+      ["Facebook posts", "“Recommend a realtor” Maplewood", "Maplewood and South Orange groups asking for an agent.", FB("can anyone recommend a realtor Maplewood")],
+      ["Facebook posts", "“Recommend a realtor” Summit", "Summit groups asking for an agent.", FB("can anyone recommend a realtor Summit NJ")],
+      ["Facebook posts", "“Recommend a realtor” Chatham", "Chatham groups asking for an agent.", FB("can anyone recommend a realtor Chatham NJ")],
+      ["Facebook posts", "“Recommend a realtor” Westfield", "Westfield groups asking for an agent.", FB("can anyone recommend a realtor Westfield NJ")],
+      ["Facebook posts", "“Recommend a realtor” Hoboken", "Hoboken groups asking for an agent.", FB("can anyone recommend a realtor Hoboken")],
+      ["Facebook posts", "“Recommend a realtor” Brooklyn", "Brooklyn groups asking for an agent.", FB("can anyone recommend a realtor Brooklyn")]
     ]]
   ],
   rent: [
@@ -427,21 +434,21 @@ const SPOTS = {
   ],
   sell: [
     ["By town", [
-      ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking who to list with.", FB("recommend realtor to sell our house New Jersey")],
-      ["Facebook posts", "“Selling our house” Morristown", "Morristown neighbors getting ready to sell.", FB("selling our house Morristown realtor")],
-      ["Facebook posts", "“Selling our house” Montclair", "Montclair neighbors getting ready to sell.", FB("selling our house Montclair realtor")],
-      ["Facebook posts", "“Selling our house” Maplewood", "Maplewood and South Orange neighbors getting ready to sell.", FB("selling our house Maplewood realtor")],
-      ["Facebook posts", "“Selling our house” Summit", "Summit neighbors getting ready to sell.", FB("selling our house Summit NJ realtor")],
-      ["Facebook posts", "“Selling our house” Chatham", "Chatham neighbors getting ready to sell.", FB("selling our house Chatham NJ realtor")],
-      ["Facebook posts", "“Selling our house” Westfield", "Westfield neighbors getting ready to sell.", FB("selling our house Westfield NJ realtor")],
-      ["Facebook posts", "“Selling our condo” Hoboken", "Hoboken owners getting ready to sell.", FB("selling our condo Hoboken realtor")],
-      ["Facebook posts", "“Selling our condo” Jersey City", "Jersey City owners getting ready to sell.", FB("selling our condo Jersey City realtor")]
+      ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking who to list with.", FB("can anyone recommend a realtor to sell our house NJ")],
+      ["Facebook posts", "“Selling our house” Morristown", "Morristown neighbors getting ready to sell.", FB("we are selling our house Morristown any realtor recommendations")],
+      ["Facebook posts", "“Selling our house” Montclair", "Montclair neighbors getting ready to sell.", FB("we are selling our house Montclair any realtor recommendations")],
+      ["Facebook posts", "“Selling our house” Maplewood", "Maplewood and South Orange neighbors getting ready to sell.", FB("we are selling our house Maplewood any realtor recommendations")],
+      ["Facebook posts", "“Selling our house” Summit", "Summit neighbors getting ready to sell.", FB("we are selling our house Summit NJ any realtor recommendations")],
+      ["Facebook posts", "“Selling our house” Chatham", "Chatham neighbors getting ready to sell.", FB("we are selling our house Chatham NJ any realtor recommendations")],
+      ["Facebook posts", "“Selling our house” Westfield", "Westfield neighbors getting ready to sell.", FB("we are selling our house Westfield NJ any realtor recommendations")],
+      ["Facebook posts", "“Selling our condo” Hoboken", "Hoboken owners getting ready to sell.", FB("we are selling our condo Hoboken any realtor recommendations")],
+      ["Facebook posts", "“Selling our condo” Jersey City", "Jersey City owners getting ready to sell.", FB("we are selling our condo Jersey City any realtor recommendations")]
     ]],
     ["By what they say", [
-      ["Facebook posts", "“Thinking of selling” NJ", "People still deciding, before they've picked an agent.", FB("thinking of selling our house NJ")],
-      ["Facebook posts", "“What's my house worth” NJ", "Owners checking their home's value, often the first step.", FB("what is my house worth NJ")],
-      ["Facebook posts", "“Downsizing” NJ", "Empty nesters ready for something smaller.", FB("downsizing selling our house NJ")],
-      ["Facebook posts", "“Relocating, need to sell” NJ", "People moving away who need to sell fast.", FB("relocating need to sell our house NJ")]
+      ["Facebook posts", "“We're thinking of selling” NJ", "People still deciding, before they've picked an agent.", FB("we are thinking of selling our house NJ any advice")],
+      ["Facebook posts", "“How did you pick a listing agent” NJ", "Owners comparing agents before they sell.", FB("how did you pick your listing agent NJ")],
+      ["Facebook posts", "“Downsizing” NJ", "Empty nesters ready for something smaller.", FB("we are downsizing need to sell our house NJ any recommendations")],
+      ["Facebook posts", "“Relocating, need to sell” NJ", "People moving away who need to sell fast.", FB("we are relocating and need to sell our house NJ any recommendations")]
     ]]
   ],
   moves: []
@@ -721,7 +728,7 @@ function dest(url,where){
   }
   if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
   if(/facebook\.com\/search\/groups/.test(url))return{site:"Facebook",place:"Facebook groups",see:"You'll see groups to join. Log in to Facebook first."};
-  if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"You'll see posts with these words from groups you've joined. Log in first."};
+  if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"Shows recent posts (last 3 months) from public pages and groups you've joined. Log in first."};
   if(/linkedin\.com/.test(url))return{site:"LinkedIn",place:"LinkedIn posts",see:"You'll see the newest LinkedIn posts with these words. Log in first."};
   if(/instagram\.com/.test(url))return{site:"Instagram",place:where,see:"You'll see Instagram posts with this hashtag. Log in first."};
   if(/tiktok\.com/.test(url))return{site:"TikTok",place:"TikTok videos",see:"You'll see videos on this topic. The questions are in the comments."};
