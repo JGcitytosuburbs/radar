@@ -59,6 +59,11 @@
       "list": "nyc",
       "name": "Every new r/movingtonyc post",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/3836653632170851997"
+    },
+    {
+      "list": "nyc",
+      "name": "Every new r/FirstTimeHomeBuyer post",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/3836653632170851832"
     }
   ]
 }
