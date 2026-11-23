@@ -1,21 +1,8 @@
 {
-"checked": 1795475654,
+"checked": 1795475895,
 "groups_ok": 30,
 "errors": [],
 "posts": [
-{
-"id": "t3_1y3mqao",
-"title": "Leasing Agent",
-"sub": "MovingtoNewJersey",
-"where": "r/MovingtoNewJersey",
-"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3mqao/leasing_agent/",
-"t": 1795475648,
-"author": "",
-"lists": [
-"nj"
-],
-"snippet": "Good morning, I'm a leasing agent in East Orange NJ. If you are currently looking for apartments message me. We are pretty flexible with credit ..."
-},
 {
 "id": "t3_1y3txfd",
 "title": "Help Filtering Down the towns - Moving from CA to Morris/Essex County",
@@ -28,19 +15,6 @@
 "nj"
 ],
 "snippet": "Hi all, Excited to post on here as I'm looking to move my family across country from San Diego to North NJ to be closer to family (they live in\u2026"
-},
-{
-"id": "t3_1y3l1b1",
-"title": "Where would you live in NYC area as a single 30M making $250k?",
-"sub": "MovingtoNewJersey",
-"where": "r/MovingtoNewJersey",
-"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3l1b1/where_would_you_live_in_nyc_area_as_a_single_30m/",
-"t": 1795475648,
-"author": "",
-"lists": [
-"nj"
-],
-"snippet": "Jersey City also seems appealing because of the tax savings, but I'm wondering if living there would hurt my dating/social life compared to NYC proper ..."
 },
 {
 "id": "t3_1y313nw",
@@ -648,6 +622,17 @@
 }
 ],
 "held": [
+{
+"id": "t3_1y3mqao",
+"title": "Leasing Agent",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y3mqao/leasing_agent/",
+"t": 1795475648,
+"author": "",
+"lists": [],
+"snippet": "Good morning, I'm a leasing agent in East Orange NJ. If you are currently looking for apartments message me. We are pretty flexible with credit ..."
+},
 {
 "id": "t3_1y3qskb",
 "title": "Madison vs Milwaukee",
@@ -2058,5 +2043,5 @@
 }
 ],
 "checked_week": 89,
-"checked_today": 87
+"checked_today": 86
 }

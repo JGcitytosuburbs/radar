@@ -85,6 +85,7 @@ KEEP_DAYS = 14
 HIDE = {
     "t3_1y37bj8",   # "Where would you live in NYC area as a single 30M making $250k?"
 }
+HIDE_TITLES = {"where would you live in nyc area as a single 30m making $250k?"}   # hides cross-posts of the same post
 READ_REDDIT_DIRECTLY = False
 UA = "BuyerRadar/1.0 (personal feed reader for one real estate agent; reads public RSS twice an hour)"
 ATOM = "{http://www.w3.org/2005/Atom}"
@@ -117,6 +118,9 @@ def keep_lists(title, sub, snippet=""):
     x = (snippet or "").lower()
     s = (sub or "").lower()
     if re.search(NEVER, t):
+        return []
+    # Agents and landlords advertising themselves, not people looking for help
+    if re.search(r"\b(i'?m|i am|we are|we're) an? (licensed |local |nj |new jersey |nyc )?(leasing agent|realtor|real estate agent|real estate broker|broker|agent|landlord|property manager)\b|\bleasing agent\b", t + " " + x):
         return []
     here = re.search(NJ_STRONG, t + " " + x) or re.search(NYC_STRONG, t + " " + x)
     if re.search(ELSEWHERE, t + " " + x) and not here:
@@ -293,7 +297,7 @@ def main(out="posts.json"):
         time.sleep(3)  # be gentle
     cutoff = time.time() - KEEP_DAYS * 86400
     recent = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])
-    posts = [p for p in recent if p["lists"] and p["id"] not in HIDE][:300]
+    posts = [p for p in recent if p["lists"] and p["id"] not in HIDE and p["title"].strip().lower() not in HIDE_TITLES][:300]
     held = [p for p in recent if not p["lists"]][:600]
     # topics: remember what local posts were about for 7 days, then count
     seen = {s["id"]: s for s in old.get("seen", [])}
