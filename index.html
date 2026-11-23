@@ -216,7 +216,7 @@ h1,h2,h3{text-wrap:balance}
     <h2>Find them.</h2>
 
 
-    <p class="sub">New posts show up in the box below as they're found. The links under it are the few places worth checking by hand.</p>
+    <p class="sub">The Morning sweep covers the places to check by hand. New posts that are found automatically show up under the tabs.</p>
 
     <div class="panel sweep" id="sweep">
       <h3 class="fh">Morning <em>sweep.</em></h3>
@@ -356,6 +356,7 @@ window.PICKS = {
 
 /* ===== EDIT HERE: one line about each place ===== */
 window.BLURB = {
+  "Morristown":"a lively town green, great restaurants and a direct train to Penn",
   "Bloomfield":"an easy train to Penn Station, with prices that still make sense","Union":"space and value, with a train into the city","Denville":"lakes, a sweet downtown and real value (a longer ride in)",
   "Maplewood":"a charming village and a one-seat ride to Penn","South Orange":"a lively downtown built right around the train","Cranford":"a riverside village with its own train station",
   "Montclair":"arts, restaurants and gorgeous older homes. A favorite for Brooklynites who want a backyard","Westfield":"a walkable downtown with shops, cafés and a busy town calendar","Madison":"small-town charm with a direct train",
@@ -769,7 +770,11 @@ function smartFill(p,area){
   $("prefill").innerHTML=`<b>Filled in from their post:</b> ${esc([askWord].concat(r.found).join(" · "))}.<br><b>Reply style:</b> ${esc(styleNote)}. Change anything that's off.`;
   $("prefill").hidden=false;
   const x=((p.title||"")+" "+(p.snippet||"")).toLowerCase();
-  state.mentioned=Object.keys(BLURB).filter(n=>x.includes(n.toLowerCase())&&(PICKS[r.vibe][1].concat(PICKS[r.vibe][2],PICKS[r.vibe][3],PICKS[r.vibe][4]).includes(n)));
+  state.mentioned=Object.keys(BLURB).filter(n=>x.includes(n.toLowerCase())&&(PICKS[r.vibe][1].concat(PICKS[r.vibe][2],PICKS[r.vibe][3],PICKS[r.vibe][4],["Morristown"]).includes(n)));
+  /* They named a county ("Morris/Essex County"): suggest towns from those counties, taking turns */
+  const COUNTY={morris:["Morristown","Madison","Chatham"],essex:["Montclair","Maplewood","South Orange"],union:["Westfield","Summit","Cranford"],hudson:["Hoboken","Jersey City","Weehawken"]};
+  const named=Object.keys(COUNTY).filter(c=>new RegExp("\\b"+c+"\\b").test(x)&&(/count(y|ies)/.test(x)||/morris\/essex|essex\/morris/.test(x)));
+  if(named.length&&r.vibe!=="c"){const lists=named.map(c=>COUNTY[c]);for(let i=0;i<3;i++)lists.forEach(l=>{if(l[i]&&!state.mentioned.includes(l[i]))state.mentioned.push(l[i])})}
   rnd={};build();
 }
 
