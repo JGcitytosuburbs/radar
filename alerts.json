@@ -54,6 +54,11 @@
       "list": "nj",
       "name": "Every new r/jerseycity post",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/17554461688122502713"
+    },
+    {
+      "list": "nyc",
+      "name": "Every new r/movingtonyc post",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/3836653632170851997"
     }
   ]
 }
