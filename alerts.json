@@ -69,6 +69,11 @@
       "list": "nyc",
       "name": "Every new r/NYCapartments post",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/11477004417068638444"
+    },
+    {
+      "list": "nj",
+      "name": "Every new r/RealEstate post",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/12231068333927043287"
     }
   ]
 }
