@@ -119,6 +119,7 @@ textarea{min-height:90px;resize:vertical}
 .lp .la button{background:var(--strong);color:var(--on-strong)}
 .lp .la a{background:var(--card);color:var(--ink)}
 .lp>div:first-child{flex:1 1 260px;min-width:0}
+.fbtip{margin-top:14px}
 /* people */
 .addform{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.addform{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
@@ -284,6 +285,16 @@ h1,h2,h3{text-wrap:balance}
       <div class="flist" id="flist"></div>
       <p class="note">Using a different news app? Tap <b>Copy</b> and paste the link into it. Facebook and Instagram don't offer feeds, so check those with the cards below.</p>
     </div>
+    <div class="panel fbtip" id="fbtip">
+      <p class="kicker" style="margin:0 0 4px">Optional extra</p>
+      <h3 class="fh">Let Facebook groups <em>ping you.</em></h3>
+      <p class="sub" style="margin:0 0 12px">Facebook doesn't let any outside tool read group posts, but each group can send a notification when someone posts.</p>
+      <ol class="fsteps">
+        <li>Open a group you've joined.</li>
+        <li>Tap <b>…</b> (or the bell) and choose <b>Notifications</b>.</li>
+        <li>Pick <b>All posts</b>. Three to five busy groups is plenty.</li>
+      </ol>
+    </div>
   </section>
 
 </main>
@@ -369,6 +380,7 @@ const G = (q, when) => "https://www.google.com/search?q=" + encodeURIComponent(q
 const FB = q => "https://www.facebook.com/search/posts/?q=" + encodeURIComponent(q);
 const FBG = q => "https://www.facebook.com/search/groups/?q=" + encodeURIComponent(q);
 const IG = tag => "https://www.instagram.com/explore/tags/" + tag + "/";
+const LI = q => "https://www.linkedin.com/search/results/content/?keywords=" + encodeURIComponent(q) + "&sortBy=%22date_posted%22";
 const SPOTS = {
   nj: [
     ["Exact posts · past month", [
@@ -388,6 +400,12 @@ const SPOTS = {
       ["Facebook posts", "“Moving to New Jersey”", "Posts from groups you've joined.", FB("moving to New Jersey")],
       ["Facebook posts", "“Leaving Brooklyn”", "City families talking about the suburbs.", FB("leaving brooklyn")],
       ["Facebook posts", "“Which town” NJ", "People comparing towns, schools and commutes.", FB("which town New Jersey commute")]
+    ]],
+    ["LinkedIn · people announcing a move or a new job", [
+      ["LinkedIn posts", "“Relocating to New Jersey”", "People sharing that they're moving to NJ.", LI('"relocating to New Jersey"')],
+      ["LinkedIn posts", "“Moving to New Jersey”", "Families and professionals heading to NJ.", LI('"moving to New Jersey"')],
+      ["LinkedIn posts", "New job in Morristown", "New hires near Josh's office, often new to the area.", LI('"new role" Morristown')],
+      ["LinkedIn posts", "New job in Jersey City or Hoboken", "New hires on the waterfront.", LI('"new role" "Jersey City" OR Hoboken')]
     ]],
     ["Forums · active this month", [
       ["Blind (via Google)", "“Where to live” + NJ", "Tech and finance workers asking where to live and commute from. Read their questions; posting needs a work email.", G('site:teamblind.com "New Jersey" OR NJ live OR commute OR town Manhattan OR Midtown')],
@@ -421,6 +439,10 @@ const SPOTS = {
       ["Facebook groups", "Moving to NYC groups", "Newcomers looking for apartments and advice.", FBG("moving to NYC")],
       ["Facebook posts", "“Buying a co-op”", "People asking about boards and co-ops.", FB("buying a co-op NYC")],
       ["Facebook posts", "“Apartment search” NYC", "Renters and buyers looking right now.", FB("apartment search NYC help")]
+    ]],
+    ["LinkedIn · people announcing a move or a new job", [
+      ["LinkedIn posts", "“Relocating to NYC”", "People sharing that they're moving to the city.", LI('"relocating to NYC" OR "relocating to New York"')],
+      ["LinkedIn posts", "New job in Manhattan", "New hires who may need a place to live.", LI('"new role" Manhattan OR NYC')]
     ]],
     ["Forums & TikTok · newest first", [
       ["Blind (via Google)", "“Buying in NYC”", "Tech and finance workers asking about buying in the city. Read only; posting needs a work email.", G('site:teamblind.com buy OR buying apartment OR co-op OR condo NYC OR Manhattan OR Brooklyn')],
@@ -617,6 +639,7 @@ function dest(url,where){
   if(/reddit\.com/.test(url))return /\/new\/$/.test(url)?{site:"Reddit",place:where,see:"You'll see every new post in this group, newest first."}:{site:"Reddit",place:where,see:"You'll see posts in this group with these words in the title, newest first. Older ones show up too when it's been quiet."};
   if(/facebook\.com\/search\/groups/.test(url))return{site:"Facebook",place:"Facebook groups",see:"You'll see groups to join. Log in to Facebook first."};
   if(/facebook\.com/.test(url))return{site:"Facebook",place:"Facebook posts",see:"You'll see posts with these words from groups you've joined. Log in first."};
+  if(/linkedin\.com/.test(url))return{site:"LinkedIn",place:"LinkedIn posts",see:"You'll see the newest LinkedIn posts with these words. Log in first."};
   if(/instagram\.com/.test(url))return{site:"Instagram",place:where,see:"You'll see Instagram posts with this hashtag. Log in first."};
   if(/tiktok\.com/.test(url))return{site:"TikTok",place:"TikTok videos",see:"You'll see videos on this topic. The questions are in the comments."};
   if(/nextdoor\.com/.test(url))return{site:"Nextdoor",place:"Nextdoor",see:"You'll see posts from neighbors near you. Needs a Nextdoor account."};
