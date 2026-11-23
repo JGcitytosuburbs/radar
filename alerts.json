@@ -84,6 +84,11 @@
       "list": "nj",
       "name": "City-Data NJ forum",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/8298058232684848362"
+    },
+    {
+      "list": "nyc",
+      "name": "City-Data NYC forum",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/13704585410874709452"
     }
   ]
 }
