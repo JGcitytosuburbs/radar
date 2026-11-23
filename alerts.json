@@ -1,3 +1,5 @@
 {
-  "feeds": []
+  "feeds": [
+    {"list": "nj", "name": "Moving to NJ", "url": "https://www.google.com/alerts/feeds/03361734590919155594/16800794010120971274"}
+  ]
 }
