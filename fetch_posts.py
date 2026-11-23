@@ -72,6 +72,11 @@ NJ_SUBS = {"newjersey", "movingtonewjersey", "hoboken", "jerseycity", "maplewood
 NYC_SUBS = {"nyc", "asknyc", "nycapartments", "movingtonyc", "brooklyn", "astoria", "queens", "manhattan"}
 
 KEEP_DAYS = 14
+
+# ===== EDIT HERE: specific posts to never show (paste the t3_ id from posts.json) =====
+HIDE = {
+    "t3_1y37bj8",   # "Where would you live in NYC area as a single 30M making $250k?"
+}
 READ_REDDIT_DIRECTLY = False
 UA = "BuyerRadar/1.0 (personal feed reader for one real estate agent; reads public RSS twice an hour)"
 ATOM = "{http://www.w3.org/2005/Atom}"
@@ -276,7 +281,7 @@ def main(out="posts.json"):
         time.sleep(3)  # be gentle
     cutoff = time.time() - KEEP_DAYS * 86400
     recent = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])
-    posts = [p for p in recent if p["lists"]][:300]
+    posts = [p for p in recent if p["lists"] and p["id"] not in HIDE][:300]
     held = [p for p in recent if not p["lists"]][:600]
     # topics: remember what local posts were about for 7 days, then count
     seen = {s["id"]: s for s in old.get("seen", [])}
