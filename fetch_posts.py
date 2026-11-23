@@ -129,9 +129,10 @@ def keep_lists(title, sub, snippet=""):
     whole = {"movingtonewjersey": "nj", "movingtonyc": "nyc"}.get(s)
     buy_words = r"\b(buy|buying|bought|purchas\w*|mortgage|down payment|pre-?approv\w*|co-?ops?|condos?|closing costs?|realtor|real estate|broker|agent|house|home ?buyer|first home|sell|selling)\b"
     nj_words = buy_words[:-3] + r"|towns?|schools?|school district|commut\w*|relocat\w*|neighborhoods?|where (to|should we) live|family|kids)\b"
-    if whole and whole not in out:
-        need = nj_words if whole == "nj" else buy_words
-        if re.search(need, t + " " + x):
+    home_words = nj_words[:-3] + r"|live|living|move|moving|relocat\w*|apartment|apt|area|budget|afford\w*|lease|rent|renting)\b"
+    social = r"\b(dating|date|nightlife|bars?|clubs?|make friends|meet people|friends|singles|gym|restaurants?)\b"
+    if whole and whole not in out and not re.search(social, t + " " + x[:80]):
+        if re.search(home_words, t + " " + x):
             out.insert(0, whole)
     return out
 
@@ -217,9 +218,7 @@ def parse_alerts(xml_text, list_name):
         m = re.search(r"reddit\.com/r/(\w+)/comments/(\w+)", url)
         sub = m.group(1) if m else ""
         note_topics(("t3_" + m.group(2)) if m else url, title, sub, snippet, ts)
-        lists = keep_lists(title, sub, snippet)
-        if not lists:
-            continue
+        lists = keep_lists(title, sub, snippet)   # [] = skipped for now, but held so later rule changes can bring it back
         where = "r/" + sub if sub else urllib.parse.urlparse(url).netloc.replace("www.", "")
         pid = ("t3_" + m.group(2)) if m else url
         posts.append({"id": pid, "title": title, "sub": sub, "where": where, "url": url, "t": ts, "author": "", "lists": lists, "snippet": snippet})
@@ -244,10 +243,10 @@ def main(out="posts.json"):
     except (OSError, ValueError):
         old = {"posts": []}
     by_id = {}
-    for p in old.get("posts", []):        # re-check older posts with today's rules
+    # re-check older posts AND skipped ("held") posts with today's rules, so a rule change never loses a real post
+    for p in old.get("held", []) + old.get("posts", []):
         p["lists"] = keep_lists(p["title"], p.get("sub", ""), p.get("snippet", ""))
-        if p["lists"]:
-            by_id[p["id"]] = p
+        by_id[p["id"]] = p
     ok, errors = 0, []
     try:
         feeds = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "alerts.json"))).get("feeds", [])
@@ -258,7 +257,7 @@ def main(out="posts.json"):
             for p in parse_alerts(fetch_url(f["url"]), f["list"]):
                 if p["id"] in by_id:
                     old_p = by_id[p["id"]]
-                    p["lists"] = sorted(set(old_p["lists"]) | set(p["lists"]))
+                    p["lists"] = sorted(set(old_p["lists"]) | set(p["lists"])) if p["lists"] else []
                     p["t"] = old_p["t"]            # keep when it was first found
                     by_id[p["id"]] = p
                 else:
@@ -276,7 +275,9 @@ def main(out="posts.json"):
             errors.append(f"{g}: {e}")
         time.sleep(3)  # be gentle
     cutoff = time.time() - KEEP_DAYS * 86400
-    posts = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])[:300]
+    recent = sorted((p for p in by_id.values() if p["t"] >= cutoff), key=lambda p: -p["t"])
+    posts = [p for p in recent if p["lists"]][:300]
+    held = [p for p in recent if not p["lists"]][:600]
     # topics: remember what local posts were about for 7 days, then count
     seen = {s["id"]: s for s in old.get("seen", [])}
     for s in SEEN:
@@ -292,7 +293,7 @@ def main(out="posts.json"):
     checked_week = len(seen)
     checked_today = sum(1 for s in seen if s["t"] >= day_ago)
     json.dump({"checked": int(time.time()), "groups_ok": ok, "errors": errors, "posts": posts,
-               "topics": topics, "seen": seen, "checked_week": checked_week, "checked_today": checked_today}, open(out, "w"), indent=0)
+               "topics": topics, "seen": seen, "held": held, "checked_week": checked_week, "checked_today": checked_today}, open(out, "w"), indent=0)
     print(f"{ok} feeds read, {len(posts)} posts kept, {checked_week} local posts checked this week, topics: {topics[:5]}")
     for e in errors:
         print("error:", e)
