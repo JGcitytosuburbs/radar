@@ -122,6 +122,15 @@ textarea{min-height:90px;resize:vertical}
 .lp>div:first-child{flex:1 1 260px;min-width:0}
 .fbtip{margin-top:14px}
 .prefill{background:var(--np-bg);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.due{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px}
+.due.now,.due.late{background:var(--np-bg);color:var(--np-fg)}
+.due.late{background:var(--no-bg);color:var(--no-fg)}
+.due.soon,.due.later{background:var(--cream);color:var(--stone)}
+.person.isdue{border-color:var(--brass)}
+.stat.hot{border-color:var(--brass);background:var(--np-bg)}
+.nextpick{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink-soft)}
+.nextpick input{border:1px solid var(--line);border-radius:8px;padding:4px 6px;font:13px var(--sans);color:var(--ink);background:var(--card)}
+.person .acts{flex-wrap:wrap;align-items:center}
 /* people */
 .addform{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.addform{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
@@ -256,7 +265,7 @@ h1,h2,h3{text-wrap:balance}
   <!-- 3. PEOPLE -->
   <section class="block" id="people">
     <h2>Keep track.</h2>
-    <p class="sub">Everyone you've answered or messaged. When someone writes back, move them along. Saved on this phone or computer.</p>
+    <p class="sub">Everyone you've answered or messaged, each with a follow-up date. Whoever's due rises to the top. Saved on this phone or computer.</p>
     <div class="stats" id="stats"></div>
 
     <div class="panel" style="margin-top:16px">
@@ -676,25 +685,45 @@ function build(){
 build();
 $("copy").addEventListener("click",async()=>{const t=$("draft").value;try{await navigator.clipboard.writeText(t)}catch(e){$("draft").select();document.execCommand("copy")}toast("Copied. Paste it as your reply.")});
 
-/* people list */
+/* people list, with follow-up reminders */
 const STAGES=["Answered","They replied","Talking","Call or meeting set","Client!"];
+const NEXT_DAYS=[3,1,3,1,null];   // when to check in next, by stage
+const day=(n=0)=>{const d=new Date();d.setDate(d.getDate()+n);return d.toLocaleDateString("en-CA")}; // YYYY-MM-DD, local time
+const nice=s=>{if(!s)return"";const d=new Date(s+"T12:00:00");return d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})};
 let people=store.get("radar-people",[]);
+people.forEach(p=>{if(p.next===undefined&&p.stage<4)p.next=day(NEXT_DAYS[p.stage])});
 function save(){store.set("radar-people",people);drawPeople()}
-function addPerson(name,link,note){if(!name&&!link)return toast("Add a name or a link first.");people.unshift({id:Date.now(),name:name||"Someone",link,note,stage:0,at:new Date().toISOString().slice(0,10)});save();toast("Added to your list.")}
+function addPerson(name,link,note){if(!name&&!link)return toast("Add a name or a link first.");people.unshift({id:Date.now(),name:name||"Someone",link,note,stage:0,at:day(),next:day(NEXT_DAYS[0])});save();toast("Added. Follow-up set for "+nice(day(NEXT_DAYS[0]))+".")}
+function dueLabel(p){
+  if(p.stage===4||!p.next)return"";
+  const today=day();
+  if(p.next<today)return'<span class="due late">Follow up: overdue</span>';
+  if(p.next===today)return'<span class="due now">Follow up today</span>';
+  if(p.next===day(1))return'<span class="due soon">Follow up tomorrow</span>';
+  return`<span class="due later">Follow up ${esc(nice(p.next))}</span>`;
+}
 function drawPeople(){
+  const today=day();
   const c=STAGES.map((s,i)=>people.filter(p=>p.stage===i).length);
-  $("stats").innerHTML=`<div class="stat"><b>${people.length}</b><span>People reached</span></div><div class="stat"><b>${c[1]+c[2]+c[3]+c[4]}</b><span>Wrote back</span></div><div class="stat"><b>${c[3]+c[4]}</b><span>Calls or meetings</span></div><div class="stat"><b>${c[4]}</b><span>Clients</span></div>`;
-  $("plist").innerHTML=people.length?people.map(p=>`<div class="person" data-id="${p.id}">
-    <div class="top1"><div><div class="nm">${esc(p.name)}</div><div class="meta">Added ${esc(p.at)}</div></div>
+  const due=people.filter(p=>p.stage<4&&p.next&&p.next<=today).length;
+  $("stats").innerHTML=`<div class="stat${due?" hot":""}"><b>${due}</b><span>Follow up today</span></div><div class="stat"><b>${people.length}</b><span>People reached</span></div><div class="stat"><b>${c[1]+c[2]+c[3]+c[4]}</b><span>Wrote back</span></div><div class="stat"><b>${c[3]+c[4]}</b><span>Calls or meetings</span></div><div class="stat"><b>${c[4]}</b><span>Clients</span></div>`;
+  const order=p=>p.stage===4?"9":(p.next||"8");
+  const list=[...people].sort((a,b)=>order(a)<order(b)?-1:order(a)>order(b)?1:b.id-a.id);
+  $("plist").innerHTML=list.length?list.map(p=>`<div class="person${p.stage<4&&p.next&&p.next<=today?" isdue":""}" data-id="${p.id}">
+    <div class="top1"><div><div class="nm">${esc(p.name)}</div><div class="meta">Added ${esc(nice(p.at)||p.at)}</div>${dueLabel(p)}</div>
       <select data-act="stage" aria-label="Where things stand">${STAGES.map((s,i)=>`<option value="${i}" ${p.stage===i?"selected":""}>${s}</option>`).join("")}</select></div>
     <textarea data-act="note" placeholder="Notes: where they live now, budget, kids, timing…">${esc(p.note||"")}</textarea>
-    <div class="acts">${p.link?`<a href="${esc(p.link)}" target="_blank" rel="noopener">Open their post ↗</a>`:""}<button data-act="del">Remove</button></div>
+    <div class="acts">${p.stage<4?`<button data-act="checked">Checked in today ✓</button><label class="nextpick">Next follow-up <input type="date" data-act="next" value="${esc(p.next||"")}"></label>`:""}${p.link?`<a href="${esc(p.link)}" target="_blank" rel="noopener">Open their post ↗</a>`:""}<button data-act="del">Remove</button></div>
   </div>`).join(""):'<p class="empty">No one yet. Answer your first post above, then add them here.</p>';
 }
 $("plist").addEventListener("change",e=>{const el=e.target.closest("[data-act]");if(!el)return;const p=people.find(x=>x.id==el.closest(".person").dataset.id);
-  if(el.dataset.act==="stage"){p.stage=+el.value;save();if(p.stage===4)toast("A new client! 🎉")}
+  if(el.dataset.act==="stage"){p.stage=+el.value;p.next=NEXT_DAYS[p.stage]===null?null:day(NEXT_DAYS[p.stage]);save();if(p.stage===4)toast("A new client! 🎉");else toast("Next follow-up: "+nice(p.next)+".")}
+  if(el.dataset.act==="next"){p.next=el.value||null;save()}
   if(el.dataset.act==="note"){p.note=el.value;store.set("radar-people",people)}});
-$("plist").addEventListener("click",e=>{const el=e.target.closest("[data-act=del]");if(!el)return;if(el.dataset.sure!=="1"){el.dataset.sure="1";el.textContent="Tap again to remove";setTimeout(()=>{el.dataset.sure="";el.textContent="Remove"},3000);return}
+$("plist").addEventListener("click",e=>{
+  const chk=e.target.closest("[data-act=checked]");
+  if(chk){const p=people.find(x=>x.id==chk.closest(".person").dataset.id);p.next=day(p.stage>=2?7:4);p.last=day();save();toast("Nice. Next follow-up: "+nice(p.next)+".");return}
+  const el=e.target.closest("[data-act=del]");if(!el)return;if(el.dataset.sure!=="1"){el.dataset.sure="1";el.textContent="Tap again to remove";setTimeout(()=>{el.dataset.sure="";el.textContent="Remove"},3000);return}
   people=people.filter(x=>x.id!=el.closest(".person").dataset.id);save()});
 $("pAdd").addEventListener("click",()=>{addPerson($("pName").value.trim(),$("pLink").value.trim(),$("pNote").value.trim());["pName","pLink","pNote"].forEach(i=>$(i).value="")});
 $("addFromHelper").addEventListener("click",()=>{
@@ -703,7 +732,7 @@ $("addFromHelper").addEventListener("click",()=>{
   addPerson($("theirName").value.trim(),"",`Looking in ${where}, budget ${BUDGET[state.budget].replace(/^(in the|of) /,"")}. Suggested ${PICKS[state.vibe][state.budget].join(", ")}.`);
   location.hash="people"});
 $("export").addEventListener("click",()=>{
-  const lines=[["Name","Stage","Added","Link","Notes"]].concat(people.map(p=>[p.name,STAGES[p.stage],p.at,p.link||"",p.note||""]));
+  const lines=[["Name","Stage","Added","Next follow-up","Link","Notes"]].concat(people.map(p=>[p.name,STAGES[p.stage],p.at,p.next||"",p.link||"",p.note||""]));
   const csv=lines.map(l=>l.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
   copyText(csv).then(ok=>toast(ok?"Copied. Paste it into a spreadsheet or a note.":"Couldn't copy here."))});
 drawPeople();
