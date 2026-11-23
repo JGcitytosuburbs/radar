@@ -49,6 +49,11 @@
       "list": "nj",
       "name": "Every new r/Hoboken post",
       "url": "https://www.google.com/alerts/feeds/03361734590919155594/10568633616896195906"
+    },
+    {
+      "list": "nj",
+      "name": "Every new r/jerseycity post",
+      "url": "https://www.google.com/alerts/feeds/03361734590919155594/17554461688122502713"
     }
   ]
 }
