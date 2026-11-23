@@ -20,7 +20,7 @@ GROUPS = ["MovingtoNewJersey", "newjersey", "Hoboken", "jerseycity", "NYCapartme
 # ===== EDIT HERE: rules. A post matches a list when its title fits. =====
 NJ_PLACES = r"(nj|new jersey|hoboken|jersey city|montclair|maplewood|south orange|summit|short hills|millburn|westfield|madison|chatham|morristown|morris county|cranford|bloomfield|denville|weehawken|edgewater|ridgewood|glen ridge|essex county|bergen|union county|suburbs?)"
 NYC_PLACES = r"(nyc|new york|manhattan|brooklyn|queens|the city|astoria|park slope|upper west side|uws|upper east side|ues|harlem|lic|long island city)"
-NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|fossil|climate|election|senate|congress|inspector|inspection|contractor|plumber|electrician|roofer|hvac|handyman|landscap\w*|painter|movers|moving company|attorney|lawyer|exterminator|pest|daycare|babysitter|dentist|doctor|pediatrician|vet\b|gym|restaurant)"
+NEVER = r"(roommate|sublet|sublease|lease takeover|furniture|ticket|car insurance|auto insurance|\bcar\b|cars|dealer|vehicle|truck|parking|job|hiring|for rent:|\[for rent\]|giveaway|lost|found|scam|free |boxes|packing|nintendo|playstation|xbox|for sale|\(originally|\bobo\b|ac unit|air conditioner|fossil|climate|election|senate|congress|inspector|inspection|contractor|plumber|electrician|roofer|hvac|handyman|landscap\w*|painter|movers|moving company|attorney|lawyer|exterminator|pest|daycare|babysitter|dentist|doctor|pediatrician|vet\b|gym|restaurant)"
 
 RULES = {
     # People moving to New Jersey
@@ -94,7 +94,7 @@ def lists_for(title, group):
     return [h for h in hits if h in allowed]
 
 
-ELSEWHERE = r"\b(california|norcal|socal|bay area|los angeles|san diego|texas|austin|dallas|houston|florida|miami|tampa|orlando|chicago|illinois|seattle|bellevue|washington state|colorado|denver|arizona|phoenix|ohio|georgia|atlanta|carolina|charlotte|raleigh|kansas|missouri|michigan|minnesota|wisconsin|indiana|tennessee|nashville|virginia|maryland|massachusetts|boston|pennsylvania|philly|philadelphia|pittsburgh|oregon|portland|utah|nevada|las vegas|canada|ontario|uk|london|australia)\b"
+ELSEWHERE = r"\b(california|norcal|socal|bay area|los angeles|san diego|texas|austin|dallas|houston|florida|miami|tampa|orlando|chicago|illinois|seattle|bellevue|washington state|washington,? dc|d\.c\.|\bdc\b|colorado|denver|arizona|phoenix|ohio|georgia|atlanta|carolina|charlotte|raleigh|kansas|missouri|michigan|minnesota|wisconsin|indiana|tennessee|nashville|virginia|maryland|massachusetts|boston|pennsylvania|philly|philadelphia|pittsburgh|oregon|portland|utah|nevada|las vegas|canada|ontario|uk|london|australia)\b"
 
 
 def keep_lists(title, sub, snippet=""):
