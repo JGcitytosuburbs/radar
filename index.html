@@ -168,7 +168,7 @@ h1,h2,h3{text-wrap:balance}
     <h2>Find them.</h2>
 
 
-    <p class="sub">Each card says which site it opens and what you'll see there.</p>
+    <p class="sub">New posts show up in the box below as they're found. The links under it are the few places worth checking by hand.</p>
 
     <div class="tabs" role="tablist">
       <button role="tab" data-area="nj" aria-selected="true">Moving to New Jersey</button>
@@ -183,9 +183,6 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <div id="spots"></div>
 
-    <div class="tip"><b>Let the leads come to you:</b> set up free Google Alerts for these phrases, and Google will email you whenever someone posts them anywhere online.
-      <div class="alerts" id="alerts"></div>
-    </div>
   </section>
 
   <!-- 2. ANSWER -->
@@ -359,109 +356,34 @@ const IG = tag => "https://www.instagram.com/explore/tags/" + tag + "/";
 const LI = q => "https://www.linkedin.com/search/results/content/?keywords=" + encodeURIComponent(q) + "&sortBy=%22date_posted%22";
 const SPOTS = {
   nj: [
-    ["Exact posts · past month", [
-      ["Google → Reddit", "“Moving from NYC” + NJ", "Reddit posts with these exact words from the past month. The most precise search there is.", G('site:reddit.com "moving from NYC" (NJ OR "New Jersey") -Philly -Philadelphia -Chicago -Florida')],
-      ["Google → Reddit", "“Which NJ town”", "People asking which town to pick.", G('site:reddit.com "which town" OR "what town" "New Jersey" commute')],
-      ["Google → Reddit", "“Leaving Brooklyn”", "Brooklyn people heading to the suburbs.", G('site:reddit.com "leaving Brooklyn" OR "from Brooklyn to" NJ OR "New Jersey"')],
-      ["Google → Reddit", "Your towns by name", "Montclair, Maplewood, Summit, Morristown and more.", G('site:reddit.com "moving to" Montclair OR Maplewood OR "South Orange" OR Summit OR Morristown OR Westfield OR Madison')]
-    ]],
-    ["Reddit groups made for this move", [
-      ["r/MovingtoNewJersey", "Newest posts", "A whole community of people planning a move to NJ.", RN("MovingtoNewJersey")]
-    ]],
-    ["Facebook · join these groups once, then check posts", [
-      ["Facebook groups", "Moving to NJ groups", "Groups made for people planning the move. Join a few.", FBG("moving to new jersey")],
-      ["Facebook groups", "Your towns' groups", "Montclair, Maplewood, Summit, Morristown and more. Newcomers ask questions here all the time.", FBG("Montclair Maplewood Summit Morristown NJ community")],
-      ["Facebook groups", "Brooklyn & NYC parents", "Parents' groups are full of families thinking about a yard and schools.", FBG("Brooklyn parents")],
-      ["Facebook groups", "NYC-to-NJ support groups", "Groups for people in the middle of the move. Join the ones with recent posts.", FBG("NYC to NJ move")],
-      ["Facebook posts", "“Moving to New Jersey”", "Posts from groups you've joined.", FB("moving to New Jersey")],
-      ["Facebook posts", "“Leaving Brooklyn”", "City families talking about the suburbs.", FB("leaving brooklyn")],
-      ["Facebook posts", "“Which town” NJ", "People comparing towns, schools and commutes.", FB("which town New Jersey commute")]
-    ]],
-    ["LinkedIn · people announcing a move or a new job", [
-      ["LinkedIn posts", "“Relocating to New Jersey”", "People sharing that they're moving to NJ.", LI('"relocating to New Jersey"')],
-      ["LinkedIn posts", "“Moving to New Jersey”", "Families and professionals heading to NJ.", LI('"moving to New Jersey"')],
-      ["LinkedIn posts", "New job in Morristown", "New hires near Josh's office, often new to the area.", LI('"new role" Morristown')],
-      ["LinkedIn posts", "New job in Jersey City or Hoboken", "New hires on the waterfront.", LI('"new role" "Jersey City" OR Hoboken')]
-    ]],
-    ["Forums · active this month", [
-      ["Blind (via Google)", "“Where to live” + NJ", "Tech and finance workers asking where to live and commute from. Read their questions; posting needs a work email.", G('site:teamblind.com "New Jersey" OR NJ live OR commute OR town Manhattan OR Midtown')],
-      ["City-Data", "New Jersey forum", "Long questions from people planning a move to NJ.", "https://www.city-data.com/forum/new-jersey/"]
-    ]],
-    ["TikTok · search, then sort by newest", [
-      ["TikTok", "“Moving from NYC to NJ”", "Videos about the move. The comments are full of people asking questions.", "https://www.tiktok.com/search?q=" + encodeURIComponent("moving from NYC to NJ")],
-      ["TikTok", "“NJ suburbs”", "People touring and comparing towns.", "https://www.tiktok.com/search?q=" + encodeURIComponent("best NJ suburbs NYC commute")]
-    ]],
-    ["Instagram · hashtags (tap “Recent” if you see it)", [
-      ["#movingtonj", "Moving to NJ", "People posting about their move. Comment with a helpful tip.", IG("movingtonj")],
-      ["#nyctonj", "NYC to NJ", "The exact move you specialize in.", IG("nyctonj")],
-      ["#brooklyntonj", "Brooklyn to NJ", "Brooklynites heading for a backyard.", IG("brooklyntonj")],
-      ["#leavingnyc", "Leaving NYC", "People saying goodbye to the city.", IG("leavingnyc")],
-      ["#montclairnj", "Montclair", "Newcomers and people dreaming about it.", IG("montclairnj")],
-      ["#morristownnj", "Morristown", "Your home turf.", IG("morristownnj")]
+    ["Worth a look", [
+      ["r/MovingtoNewJersey", "Every new post", "A whole Reddit group of people planning a move to NJ.", RN("MovingtoNewJersey")],
+      ["LinkedIn posts", "“Relocating to New Jersey”", "People sharing that they're moving to NJ, newest first.", LI('"relocating to New Jersey"')],
+      ["LinkedIn posts", "“Moving to New Jersey”", "Families and professionals heading to NJ, newest first.", LI('"moving to New Jersey"')]
     ]]
   ],
   nyc: [
-    ["Exact posts · past month", [
-      ["Google → Reddit", "“First time buying” NYC", "First-time buyers in the city, with these exact words.", G('site:reddit.com "first time" buying apartment NYC OR Manhattan OR Brooklyn OR Queens')],
-      ["Google → Reddit", "“Co-op board”", "People nervous about the board. Your specialty.", G('site:reddit.com "co-op board" OR "board package" NYC')],
-      ["Google → Reddit", "“Moving to NYC” + buy", "Out-of-towners planning to buy in the city.", G('site:reddit.com "moving to NYC" buy OR buying apartment')],
-      ["Google → Reddit", "“Rent or buy” NYC", "Renters doing the math on buying.", G('site:reddit.com "rent or buy" OR "rent vs buy" NYC')]
-    ]],
-    ["Reddit groups made for this move", [
-      ["r/movingtonyc", "Newest posts", "Where r/AskNYC sends everyone moving to the city: neighborhoods, costs, renting vs. buying.", RN("movingtonyc")]
-    ]],
-    ["Facebook · join these groups once, then check posts", [
-      ["Facebook groups", "NYC first-time buyers", "Groups for people buying their first place in the city.", FBG("NYC first time home buyers")],
-      ["Facebook groups", "Moving to NYC groups", "Newcomers looking for apartments and advice.", FBG("moving to NYC")],
-      ["Facebook posts", "“Buying a co-op”", "People asking about boards and co-ops.", FB("buying a co-op NYC")],
-      ["Facebook posts", "“Apartment search” NYC", "Renters and buyers looking right now.", FB("apartment search NYC help")]
-    ]],
-    ["LinkedIn · people announcing a move or a new job", [
-      ["LinkedIn posts", "“Relocating to NYC”", "People sharing that they're moving to the city.", LI('"relocating to NYC" OR "relocating to New York"')],
-      ["LinkedIn posts", "New job in Manhattan", "New hires who may need a place to live.", LI('"new role" Manhattan OR NYC')]
-    ]],
-    ["Forums & TikTok · newest first", [
-      ["Blind (via Google)", "“Buying in NYC”", "Tech and finance workers asking about buying in the city. Read only; posting needs a work email.", G('site:teamblind.com buy OR buying apartment OR co-op OR condo NYC OR Manhattan OR Brooklyn')],
-      ["TikTok", "“Buying an apartment NYC”", "First-time buyers asking questions in the comments.", "https://www.tiktok.com/search?q=" + encodeURIComponent("buying an apartment in NYC")]
-    ]],
-    ["Instagram · hashtags (tap “Recent” if you see it)", [
-      ["#movingtonyc", "Moving to NYC", "People about to arrive in the city.", IG("movingtonyc")],
-      ["#nycapartmenthunting", "Apartment hunting", "Renters in the thick of it. Future buyers too.", IG("nycapartmenthunting")],
-      ["#firsttimehomebuyer", "First-time buyers", "Look for NYC and NJ posts and say hello.", IG("firsttimehomebuyer")],
-      ["#brooklynliving", "Brooklyn living", "Brooklyn people, many planning their next move.", IG("brooklynliving")]
+    ["Worth a look", [
+      ["r/movingtonyc", "Every new post", "A whole Reddit group of people moving to the city.", RN("movingtonyc")],
+      ["LinkedIn posts", "“Relocating to NYC”", "People sharing that they're moving to the city, newest first.", LI('"relocating to NYC" OR "relocating to New York"')]
     ]]
   ],
   agent: [
-    ["Asking for an agent · past month", [
-      ["Google → Reddit", "“Recommend a realtor” NJ", "People asking Reddit for an agent in New Jersey. The hottest leads there are.", G('site:reddit.com "realtor" OR "real estate agent" recommend OR recommendation NJ OR "New Jersey"')],
-      ["Google → Reddit", "“Recommend a realtor” NYC", "Same thing, for the city.", G('site:reddit.com "realtor" OR "broker" OR "buyer\'s agent" recommend OR recommendation NYC OR Brooklyn OR Manhattan OR Queens')],
-      ["Google · anywhere", "“Looking for a realtor” NJ", "Forums, Q&A sites and more, from the past week.", G('"looking for a realtor" OR "need a realtor" OR "recommend a realtor" "New Jersey" OR Morristown OR Montclair OR Hoboken', "w")]
-    ]],
-    ["Facebook & Nextdoor · neighbors asking for names", [
+    ["Worth a look", [
       ["Facebook posts", "“Recommend a realtor” Morris County", "Neighbors asking their town groups for an agent.", FB("recommend a realtor Morris County")],
       ["Facebook posts", "“Recommend a realtor” Essex County", "Montclair, Maplewood, South Orange and nearby.", FB("recommend a realtor Montclair Maplewood")],
       ["Facebook posts", "“Recommend a realtor” Hoboken / JC", "Waterfront renters ready to buy.", FB("recommend a realtor Hoboken Jersey City")],
-      ["Facebook posts", "“Realtor recommendation” NYC", "City buyers and sellers asking for a name.", FB("realtor recommendation Brooklyn Manhattan")],
-      ["Nextdoor", "“Realtor” recommendations", "Neighbors near you asking for an agent. Needs a Nextdoor account.", "https://nextdoor.com/search/posts/?query=realtor%20recommendation"]
+      ["Nextdoor", "“Realtor” recommendations", "Neighbors near you asking for an agent.", "https://nextdoor.com/search/posts/?query=realtor%20recommendation"]
     ]]
   ],
   sell: [
-    ["Thinking of selling · past month", [
-      ["Google → Reddit", "“Selling my house” NJ", "New Jersey homeowners thinking out loud about selling.", G('site:reddit.com "selling my house" OR "sell my house" OR "selling our house" NJ OR "New Jersey"')],
-      ["Google → Reddit", "“Listing agent” NJ or NYC", "People trying to pick an agent to sell. The hottest seller leads there are.", G('site:reddit.com "listing agent" OR "agent to sell" OR "selling agent" NJ OR "New Jersey" OR NYC OR Brooklyn')],
-      ["Google → Reddit", "“Selling my co-op / condo” NYC", "City owners selling, often to move to the suburbs.", G('site:reddit.com "selling my co-op" OR "selling my condo" OR "selling my apartment" NYC OR Manhattan OR Brooklyn OR Queens')],
-      ["Google → Reddit", "“Sell and buy” at the same time", "People juggling a sale and a purchase. Two deals in one.", G('site:reddit.com "sell and buy" OR "buy and sell" "at the same time" house NJ OR NYC')]
-    ]],
-    ["Reddit groups made for this move", [
-    ]],
-    ["Facebook & Nextdoor · neighbors about to list", [
-      ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking for a listing agent in town groups.", FB("recommend realtor to sell our house New Jersey")],
-      ["Facebook posts", "“Thinking of selling” Morris County", "Homeowners near Josh's office.", FB("thinking of selling our house Morris County")],
-      ["Facebook posts", "“Selling our co-op” NYC", "City owners getting ready to sell.", FB("selling our co-op NYC realtor")],
-      ["Nextdoor", "“Realtor to sell”", "Neighbors asking who to list with. Needs a Nextdoor account.", "https://nextdoor.com/search/posts/?query=realtor%20to%20sell%20house"]
+    ["Worth a look", [
+      ["Facebook posts", "“Recommend a realtor to sell” NJ", "Neighbors asking who to list with.", FB("recommend realtor to sell our house New Jersey")],
+      ["Nextdoor", "“Realtor to sell”", "Neighbors near you asking who to list with.", "https://nextdoor.com/search/posts/?query=realtor%20to%20sell%20house"]
     ]]
   ]
 };
+
 const ALERTS = ["moving from NYC to New Jersey", "moving to Morristown NJ", "Brooklyn to Maplewood", "first time buying a co-op NYC", "recommend a realtor New Jersey", "recommend a realtor Brooklyn"];
 
 /* ===== EDIT HERE: Josh's voice. Lines are picked at random so no two replies look the same. ===== */
@@ -636,7 +558,7 @@ function drawSpots(area){
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>drawSpots(b.dataset.area)));
 drawSpots(store.get("radar-area","nj"));
 if($("flist"))drawFeeds();
-$("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");
+if($("alerts"))$("alerts").innerHTML=ALERTS.map(a=>`<a href="https://www.google.com/alerts?q=${encodeURIComponent('"'+a+'"')}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join("");
 
 const state={ask:"place",style:"full",hub:"penn",budget:"2",vibe:"s",extras:new Set()};
 let rnd={};
