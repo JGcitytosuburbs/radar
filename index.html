@@ -576,7 +576,8 @@ const SWEEP = [
 /* ===== EDIT HERE: Facebook groups built into the page (show on every device) ===== */
 const SWEEP_GROUPS = [
   {url: "https://www.facebook.com/groups/937546385499376/", name: "Relocating to New Jersey", note: "Public group · 744 members"},
-  {url: "https://www.facebook.com/groups/1583888768982494/", name: "Moving to New Jersey and Living in New Jersey", note: "Public group · 483 members"}
+  {url: "https://www.facebook.com/groups/1583888768982494/", name: "Moving to New Jersey and Living in New Jersey", note: "Public group · 483 members"},
+  {url: "https://www.facebook.com/groups/newyorkrelocation/", name: "Moving to New York! 🌆", note: "Public group · 504 members"}
 ];
 const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
 const swDone = () => { const v = store.get("sweep-done", {}); return v.day === today() ? new Set(v.ids || []) : new Set(); };
