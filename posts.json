@@ -1,5 +1,5 @@
 {
-"checked": 1795506993,
+"checked": 1795507893,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -723,9 +723,153 @@
 "topics": [
 "family"
 ]
+},
+{
+"id": "t3_1y3xsrw",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3xyq7",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3sm53",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3ox23",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y43eep",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3q8ks",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3uzg8",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3r3tl",
+"t": 1795507846,
+"topics": []
+},
+{
+"id": "t3_1y3mxjg",
+"t": 1795507846,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y3xsrw",
+"title": "Last minute Catering recommendation - Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3xsrw/last_minute_catering_recommendation/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Hi all My office is having a little potluck on Wednesday and I was gonna make a tray of baked ziti. Unfortunately I had the flu last week and ..."
+},
+{
+"id": "t3_1y3xyq7",
+"title": "Bozzuto - Breaking Lease?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3xyq7/bozzuto_breaking_lease/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone! I'd love some advice - after a year of searching & dealing with the outbidding wars in the suburbs we finally got a house!"
+},
+{
+"id": "t3_1y3sm53",
+"title": "Making friends",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3sm53/making_friends/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Hey! I'm Ahmed, 29. I've been living in Jersey City for about 8 months now. I have lots of friends back home, but ever since I moved here, ..."
+},
+{
+"id": "t3_1y3ox23",
+"title": "Breaded eggplant",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3ox23/breaded_eggplant/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Anyone know a deli that sells thin sliced, breaded eggplant? Upvote 1. Downvote 1 Go to comments. Share. Comments Section."
+},
+{
+"id": "t3_1y43eep",
+"title": "Dog trainer recommendations?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y43eep/dog_trainer_recommendations/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Hoping someone can help with some advice or direction here My dog is usually super well behaved at home and generally great with interacting with\u2026"
+},
+{
+"id": "t3_1y3q8ks",
+"title": "How do yall feel about Joe Quintero? - Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3q8ks/how_do_yall_feel_about_joe_quintero/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Now that I see hes running with Brennan for state assembly how do you good people of Hoboken feel about him? How would you compare him to Mr Ravi\u2026"
+},
+{
+"id": "t3_1y3uzg8",
+"title": "Keys found",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3uzg8/keys_found/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "I will drop off the keys with the Hoboken Police Department tonight - apologies as I'm unable to do so earlier."
+},
+{
+"id": "t3_1y3r3tl",
+"title": "So many violations",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3r3tl/so_many_violations/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "Wow this is incredible! Not one person tied off, not one harness in sight!!! The BOOM is less than 10 feet from a high voltage power line!"
+},
+{
+"id": "t3_1y3mxjg",
+"title": "Where does everyone get their Christmas trees in Hoboken?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y3mxjg/where_does_everyone_get_their_christmas_trees_in/",
+"t": 1795507846,
+"author": "",
+"lists": [],
+"snippet": "This year is the first time we're getting a Christmas tree in Hoboken. Wanted to see where everyone recommends as the best option both selection ..."
+},
 {
 "id": "t3_1y3r80f",
 "title": "Moving from nyc \u2014> out west maybe Bend Oregon or southern California",
@@ -2355,6 +2499,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 109,
-"checked_today": 106
+"checked_week": 118,
+"checked_today": 115
 }
