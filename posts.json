@@ -1,5 +1,5 @@
 {
-"checked": 1795501574,
+"checked": 1795502474,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -139,15 +139,15 @@
 "count": 2
 },
 {
+"key": "family",
+"count": 2
+},
+{
 "key": "schools",
 "count": 2
 },
 {
 "key": "towns",
-"count": 1
-},
-{
-"key": "family",
 "count": 1
 },
 {
@@ -716,9 +716,27 @@
 "topics": [
 "schools"
 ]
+},
+{
+"id": "t3_1y3r80f",
+"t": 1795496802,
+"topics": [
+"family"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y3r80f",
+"title": "Moving from nyc \u2014> out west maybe Bend Oregon or southern California",
+"sub": "SameGrassButGreener",
+"where": "r/SameGrassButGreener",
+"url": "https://www.reddit.com/r/SameGrassButGreener/comments/1y3r80f/moving_from_nyc_out_west_maybe_bend_oregon_or/",
+"t": 1795496802,
+"author": "",
+"lists": [],
+"snippet": "Moving from nyc \u2014> out west maybe Bend Oregon or southern California. Me and my bf have been in nyc for about 6 years ! But we're having a baby and ..."
+},
 {
 "id": "t3_1y3jj0r",
 "title": "No recycling in our schools?!",
@@ -2337,6 +2355,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 108,
-"checked_today": 105
+"checked_week": 109,
+"checked_today": 106
 }
