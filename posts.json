@@ -1,5 +1,5 @@
 {
-"checked": 1795484962,
+"checked": 1795485865,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -139,6 +139,10 @@
 "count": 2
 },
 {
+"key": "schools",
+"count": 2
+},
+{
 "key": "towns",
 "count": 1
 },
@@ -148,10 +152,6 @@
 },
 {
 "key": "commute",
-"count": 1
-},
-{
-"key": "schools",
 "count": 1
 }
 ],
@@ -709,9 +709,27 @@
 "id": "t3_1y3u4hk",
 "t": 1795480106,
 "topics": []
+},
+{
+"id": "t3_1y3jj0r",
+"t": 1795485832,
+"topics": [
+"schools"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y3jj0r",
+"title": "No recycling in our schools?!",
+"sub": "Maplewood",
+"where": "r/Maplewood",
+"url": "https://www.reddit.com/r/Maplewood/comments/1y3jj0r/no_recycling_in_our_schools/",
+"t": 1795485832,
+"author": "",
+"lists": [],
+"snippet": "Did you know that SOMSD doesn't have district-wide recycling? My daughter has been trying to start a grassroots recycling campaign at SOMS, to no\u2026"
+},
 {
 "id": "t3_1y3xrub",
 "title": "any PC gamers?",
@@ -2319,6 +2337,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 107,
-"checked_today": 104
+"checked_week": 108,
+"checked_today": 105
 }
