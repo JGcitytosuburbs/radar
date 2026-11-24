@@ -54,10 +54,6 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;p
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6.4vw,56px);line-height:1.04;margin:0 0 12px}
 h1 em,h2 em{font-style:italic;font-weight:500}
 .lede{color:var(--ink-soft);max-width:660px;margin:0}
-nav.steps{display:flex;gap:8px;overflow-x:auto;padding:20px 0 4px;scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);z-index:5}
-nav.steps::-webkit-scrollbar{display:none}
-nav.steps a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 14px;font-weight:600;font-size:14px}
-nav.steps a b{color:var(--brass-dark);margin-right:4px}
 section.block{padding:34px 0 10px;scroll-margin-top:60px}
 h2{font-family:var(--serif);font-size:clamp(30px,4.6vw,40px);font-weight:600;line-height:1.08;margin:0 0 6px}
 .sub{color:var(--ink-soft);margin:0 0 18px;max-width:680px}
@@ -143,7 +139,9 @@ textarea{min-height:90px;resize:vertical}
 .frow .fb a{background:var(--strong);color:var(--on-strong)}
 .frow .fb button{background:var(--card);color:var(--ink)}
 .live{margin:14px 0 4px}
-.livehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.livehead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.livehead .btn{padding:8px 12px;flex:0 0 auto}
+@media(max-width:720px){.live .fh{font-size:25px}}
 .lp{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
 .lp:last-child{border-bottom:0}
 .mv .lm b{color:var(--brass-dark);font-weight:700}
@@ -206,6 +204,35 @@ textarea{min-height:90px;resize:vertical}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
 h1,h2,h3{text-wrap:balance}
+/* Simple layout: leads on top, everything else folded */
+.hero{padding:22px 0 0}
+.hero h1{font-size:clamp(34px,5.4vw,46px);margin:0 0 6px}
+section.leads{padding-top:16px}
+section.more{padding-top:22px;display:grid;gap:10px}
+details.fold{background:var(--card);border:1px solid var(--line);border-radius:16px}
+details.fold>summary{list-style:none;cursor:pointer;padding:14px 44px 14px 18px;position:relative;display:block}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:"";position:absolute;right:20px;top:50%;width:9px;height:9px;border-right:2px solid var(--brass-dark);border-bottom:2px solid var(--brass-dark);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details.fold[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
+details.fold .ft{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15;color:var(--ink)}
+details.fold .fs{display:block;font-size:14px;color:var(--stone);margin-top:2px}
+details.fold .fc{display:inline-block;vertical-align:middle;margin-left:8px;font:700 12px var(--sans);background:var(--np-bg);color:var(--np-fg);border-radius:999px;padding:3px 9px}
+details.fold .fc[hidden]{display:none}
+details.fold>.fbody{padding:0 18px 18px}
+details.fold>.fbody>.panel{border:0;padding:0;background:transparent}
+details.fold.slim{margin-top:10px;background:transparent}
+details.fold.slim .ft{font:600 15px var(--sans)}
+details.fold.slim>summary{padding:11px 44px 11px 16px}
+.helper{display:block}
+.helpslot>.panel{border:0;padding:0;background:transparent}
+details.adjust{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+details.adjust>summary{cursor:pointer;font:600 14px var(--sans);color:var(--brass-dark);list-style:none}
+details.adjust>summary::-webkit-details-marker{display:none}
+details.adjust>summary::before{content:"+ "}
+details.adjust[open]>summary::before{content:"− "}
+details.adjust>.panel{border:0;padding:12px 0 0;background:transparent}
+.lp .ans{flex:1 0 100%;background:var(--paper);border:1px solid var(--brass);border-radius:14px;padding:14px 16px;min-width:0}
+.lp .la button[aria-expanded="true"]{background:var(--card);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -213,37 +240,11 @@ h1,h2,h3{text-wrap:balance}
 
 <main class="wrap" style="padding-bottom:60px">
   <section class="hero">
-    <p class="kicker">Made for Josh</p>
-    <h1>Buying and Selling <em>Lead Tracker.</em></h1>
-    <p class="lede">Buyers are out there, asking strangers online where to live, how the commute really is, and whether anyone knows a great agent. You're the agent they're hoping for. This is your daily spot to find them, answer them, and keep track of who's ready to tour.</p>
+    <h1>Lead <em>Tracker.</em></h1>
+    <p class="lede">People online asking for help buying, selling or moving, found for you all day. Tap <b>Answer it</b> on any post for a reply that's ready to copy.</p>
   </section>
 
-  <nav class="steps" aria-label="Sections">
-    <a href="#find"><b>1</b>Find them</a>
-    <a href="#answer"><b>2</b>Answer them</a>
-    <a href="#people"><b>3</b>Keep track</a>
-    <a href="#ideas"><b>4</b>Post ideas</a>
-  </nav>
-
-  <!-- 1. FIND -->
-  <section class="block" id="find">
-    <h2>Find them.</h2>
-
-
-    <p class="sub">The Morning sweep covers the places to check by hand. New posts that are found automatically show up under the tabs.</p>
-
-    <div class="panel sweep" id="sweep">
-      <h3 class="fh">Morning <em>sweep.</em></h3>
-      <p class="sub" style="margin:0 0 10px">The places new posts can't come in on their own. One tap each, newest first.</p>
-      <div class="swl" id="swList"></div>
-      <div class="swg">
-        <div class="swh">Facebook town groups worth watching</div>
-        <div class="swl" id="swGroups"></div>
-        <div class="swa"><input type="text" id="swGroupIn" placeholder="Paste a Facebook group link, like facebook.com/groups/…" aria-label="Facebook group link"><button class="btn" id="swGroupAdd" type="button">Add group</button></div>
-        <p class="note" id="swFind"></p>
-      </div>
-    </div>
-
+  <section class="block leads" id="find">
     <div class="tabs" role="tablist">
       <button role="tab" data-area="nj" aria-selected="true">Moving to New Jersey</button>
       <button role="tab" data-area="nyc" aria-selected="false">Buying in New York City</button>
@@ -253,20 +254,30 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <div class="panel live" id="live" hidden>
       <div class="livehead"><h3 class="fh" id="liveTitle">New posts <em>right now.</em></h3><button class="btn ghost" id="liveRefresh" type="button">Refresh</button></div>
-      <p class="sub" style="margin:0 0 6px" id="liveSub">New posts from Reddit and forums this week that match this tab, newest first.</p>
+      <p class="sub" style="margin:0 0 6px" id="liveSub">From this week, newest first.</p>
       <div id="liveList"></div>
     </div>
-    <div id="spots"></div>
-
+    <details class="fold slim" id="spotsFold"><summary><span class="ft">More places to look for this tab</span></summary><div class="fbody"><div id="spots"></div></div></details>
   </section>
 
-  <!-- 2. ANSWER -->
-  <section class="block" id="answer">
-    <h2>Answer them as <em>the expert.</em></h2>
-    <p class="sub">Tap what the person said in their post, and you'll get a helpful reply with real towns and real commute times, ready to copy. Helpful first, salesy never. That's what makes people message you.</p>
-
-    <div class="helper">
-      <div class="panel">
+  <section class="block more" aria-label="More tools">
+  <details class="fold" id="answerFold">
+    <summary><span class="ft">Write a reply</span><span class="fs">For a post you found yourself. Pick what they asked, then copy the reply.</span></summary>
+    <div class="fbody">
+<div class="helper" id="helper"><div class="helpslot" id="helpslot">
+<div class="panel">
+        <p class="prefill" id="prefill" hidden></p>
+        <div class="towns" id="towns"></div>
+        <textarea class="draft" id="draft" aria-label="Draft reply"></textarea>
+        <div class="row">
+          <button class="btn" id="copy">Copy reply</button>
+          <button class="btn ghost" id="again">Another version</button>
+          <button class="btn ghost" id="addFromHelper">Add this person to my list</button>
+        </div>
+        <p class="note">Edit anything before posting, and change a few words each time so no two replies look the same. Commute times are typical rush-hour door-to-desk estimates from the Commute Map. On Facebook, take out the * around <i>good</i> (Reddit turns them into italics).</p>
+      </div>
+<details class="adjust" id="adjust"><summary>Adjust the reply</summary>
+<div class="panel">
         <div class="field"><span class="lbl">What did they ask for?</span>
           <div class="opts" data-k="ask">
             <button data-v="place" aria-pressed="true">Where to live</button>
@@ -311,27 +322,28 @@ h1,h2,h3{text-wrap:balance}
         <div class="field"><label for="theirName">Their name or username (optional)</label>
           <input type="text" id="theirName" placeholder="like u/brooklynmom22"></div>
       </div>
-
-      <div class="panel">
-        <p class="prefill" id="prefill" hidden></p>
-        <div class="towns" id="towns"></div>
-        <textarea class="draft" id="draft" aria-label="Draft reply"></textarea>
-        <div class="row">
-          <button class="btn" id="copy">Copy reply</button>
-          <button class="btn ghost" id="again">Another version</button>
-          <button class="btn ghost" id="addFromHelper">Add this person to my list</button>
-        </div>
-        <p class="note">Edit anything before posting, and change a few words each time so no two replies look the same. Commute times are typical rush-hour door-to-desk estimates from the Commute Map. On Facebook, take out the * around <i>good</i> (Reddit turns them into italics).</p>
+</details>
+</div></div>
+    </div>
+  </details>
+<details class="fold" id="sweepFold">
+    <summary><span class="ft">Places to check by hand</span><span class="fs">City-Data, Reddit, Quora and Facebook groups. One tap each, newest first.</span></summary>
+    <div class="fbody">
+<div class="panel sweep" id="sweep">
+      <div class="swl" id="swList"></div>
+      <div class="swg">
+        <div class="swh">Facebook town groups worth watching</div>
+        <div class="swl" id="swGroups"></div>
+        <div class="swa"><input type="text" id="swGroupIn" placeholder="Paste a Facebook group link, like facebook.com/groups/…" aria-label="Facebook group link"><button class="btn" id="swGroupAdd" type="button">Add group</button></div>
+        <p class="note" id="swFind"></p>
       </div>
     </div>
-
-  </section>
-
-  <!-- 3. PEOPLE -->
-  <section class="block" id="people">
-    <h2>Keep track.</h2>
-    <p class="sub">Everyone you've answered or messaged, each with a follow-up date. Whoever's due rises to the top. Saved on this phone or computer.</p>
-    <div class="stats" id="stats"></div>
+    </div>
+  </details>
+<details class="fold" id="people">
+    <summary><span class="ft">Keep track <b class="fc" id="peopleDue" hidden></b></span><span class="fs">Everyone you've answered, with a follow-up date. Saved on this device.</span></summary>
+    <div class="fbody">
+<div class="stats" id="stats"></div>
 
     <div class="panel" style="margin-top:16px">
       <div class="addform">
@@ -343,16 +355,17 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <div class="people" id="plist"></div>
     <div class="row"><button class="btn ghost" id="export">Copy my list</button></div>
-  </section>
-
-
-
-  <section class="block" id="ideas">
-    <h2>Post <em>ideas.</em></h2>
-    <p class="kicker" style="margin:14px 0 4px">What people are asking this week</p>
-    <p class="sub" id="ideasSub" style="margin:0 0 12px">Based on this week's Reddit posts about moving to NJ and buying in NYC.</p>
+  
+    </div>
+  </details>
+<details class="fold" id="ideas">
+    <summary><span class="ft">Post ideas</span><span class="fs">Captions written from what people are asking this week.</span></summary>
+    <div class="fbody">
+<p class="sub" id="ideasSub" style="margin:0 0 12px">Based on this week's Reddit posts about moving to NJ and buying in NYC.</p>
     <div class="topics" id="topicChips"></div>
     <div class="ideas" id="ideaList"></div>
+    </div>
+  </details>
   </section>
 </main>
 <div class="toast" id="toast"></div>
@@ -673,9 +686,9 @@ async function drawLive(area,force){
   if(area==="moves"){drawMoves(d);return}
   const posts=d.posts.filter(p=>(p.lists||[]).includes(area)&&p.t>Date.now()/1000-7*86400).slice(0,20);
   const checked=d.checked?`Checked ${ago(d.checked).replace(" ago","")==="just now"?"just now":ago(d.checked)}.`:"";
-  $("liveSub").textContent=`New posts from Reddit and forums this week that match this tab, newest first. ${checked}`;
+  $("liveSub").textContent=`From this week, newest first. ${checked}`;
   if(liveArea!==area)return;
-  box.hidden=false;
+  box.hidden=false;parkHelper();
   $("liveList").innerHTML=posts.length?posts.map((p,i)=>`<div class="lp"><div><a class="lt" href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>${esc(p.title)}</a>${p.snippet?`<div class="ls">${esc(p.snippet)}…</div>`:""}<div class="lm">${esc(p.where||("r/"+p.sub))} · ${ago(p.t)}</div>${p.sub?flag(p.sub,liveArea):""}</div>
     <div class="la"><a href="${esc(p.url)}"${p.url==="#example"?"":' target="_blank" rel="noopener"'}>Open ↗</a><button type="button" data-answer="${i}">Answer it</button></div></div>`).join(""):`<p class="empty">Checked ${(d.checked_week||0).toLocaleString()} local posts this week. No ${{nj:"one moving to NJ",nyc:"NYC buyers",agent:"one asking for an agent",sell:"sellers",rent:"one looking for a rental"}[area]||"matches"} yet. They'll show up here within about 15 minutes of posting.</p>`;
   livePosts=posts;
@@ -722,7 +735,19 @@ $("liveList").addEventListener("click",async e=>{const b=e.target.closest("[data
 });
 $("liveList").addEventListener("click",e=>{const ex=e.target.closest('a[href="#example"]');if(ex){e.preventDefault();toast("This is an example. Real posts open the actual Reddit post.");return}
   const b=e.target.closest("[data-answer]");if(!b)return;
-  smartFill(livePosts[+b.dataset.answer]||{},liveArea);location.hash="answer";});
+  const row=b.closest(".lp"),open=row.querySelector(".ans");
+  parkHelper();if(open)return;          // second tap closes it
+  smartFill(livePosts[+b.dataset.answer]||{},liveArea);
+  const slot=document.createElement("div");slot.className="ans";row.appendChild(slot);slot.appendChild($("helpslot"));
+  b.textContent="Close";b.setAttribute("aria-expanded","true");
+  fitDraft();row.scrollIntoView({behavior:"smooth",block:"start"});});
+function showFold(id){const d=$(id);d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"})}
+/* Put the reply box back in "Write a reply" (before the list redraws, or when closed) */
+function parkHelper(){const hs=$("helpslot");if(hs.parentElement.id==="helper")return;
+  const slot=hs.parentElement,btn=slot.closest(".lp")&&slot.closest(".lp").querySelector("[data-answer]");
+  $("helper").appendChild(hs);slot.remove();$("prefill").hidden=true;
+  if(btn){btn.textContent="Answer it";btn.setAttribute("aria-expanded","false")}}
+$("answerFold").addEventListener("toggle",()=>{if($("answerFold").open){parkHelper();fitDraft()}});
 
 /* Smart "Answer it": reads the post and sets the reply helper for Josh. */
 function readPost(p,area){
@@ -816,7 +841,7 @@ function drawSpots(area){
     cards.filter(([where])=>{const s=subOf(where);return !(s&&RULES[s.toLowerCase()]&&RULES[s.toLowerCase()][0]==="no")}).map(([where,what,why,url])=>{const s=subOf(where);if(s&&!subs.includes(s))subs.push(s);
       const d=dest(url,where);
       return `<a class="spot" href="${url}" target="_blank" rel="noopener"><div class="where">${esc(d.place)}<i>Opens ${esc(d.site)} ↗</i></div><div class="what">${esc(what)}</div><p class="why">${esc(why)}</p><p class="see">${esc(d.see)}</p>${s?flag(s):""}</a>`}).join("")+`</div>`).join("");
-  $("spots").innerHTML=h;
+  $("spots").innerHTML=h;$("spotsFold").hidden=!h;
   document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.area===area));
   store.set("radar-area",area);
   drawLive(area);
@@ -934,6 +959,7 @@ function drawPeople(){
   const today=day();
   const c=STAGES.map((s,i)=>people.filter(p=>p.stage===i).length);
   const due=people.filter(p=>p.stage<4&&p.next&&p.next<=today).length;
+  $("peopleDue").hidden=!due;$("peopleDue").textContent=due+" to follow up today";
   $("stats").innerHTML=`<div class="stat${due?" hot":""}"><b>${due}</b><span>Follow up today</span></div><div class="stat"><b>${people.length}</b><span>People reached</span></div><div class="stat"><b>${c[1]+c[2]+c[3]+c[4]}</b><span>Wrote back</span></div><div class="stat"><b>${c[3]+c[4]}</b><span>Calls or meetings</span></div><div class="stat"><b>${c[4]}</b><span>Clients</span></div>`;
   const order=p=>p.stage===4?"9":(p.next||"8");
   const list=[...people].sort((a,b)=>order(a)<order(b)?-1:order(a)>order(b)?1:b.id-a.id);
@@ -956,10 +982,10 @@ $("plist").addEventListener("click",e=>{
 $("pAdd").addEventListener("click",()=>{addPerson($("pName").value.trim(),$("pLink").value.trim(),$("pNote").value.trim());["pName","pLink","pNote"].forEach(i=>$(i).value="")});
 $("addFromHelper").addEventListener("click",()=>{
   const where={s:"NJ suburbs",b:"Hoboken / Jersey City",c:"NYC"}[state.vibe];
-  if(state.ask==="sell"){addPerson($("theirName").value.trim(),"",`Seller: home in ${where}.`);location.hash="people";return}
-  if(state.ask==="rent"){addPerson($("theirName").value.trim(),"",`Renter: looking in ${where}.`);location.hash="people";return}
+  if(state.ask==="sell"){addPerson($("theirName").value.trim(),"",`Seller: home in ${where}.`);showFold("people");return}
+  if(state.ask==="rent"){addPerson($("theirName").value.trim(),"",`Renter: looking in ${where}.`);showFold("people");return}
   addPerson($("theirName").value.trim(),"",`Looking in ${where}, budget ${BUDGET[state.budget].replace(/^(in the|of) /,"")}. Suggested ${PICKS[state.vibe][state.budget].join(", ")}.`);
-  location.hash="people"});
+  showFold("people")});
 $("export").addEventListener("click",()=>{
   const lines=[["Name","Stage","Added","Next follow-up","Link","Notes"]].concat(people.map(p=>[p.name,STAGES[p.stage],p.at,p.next||"",p.link||"",p.note||""]));
   const csv=lines.map(l=>l.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
