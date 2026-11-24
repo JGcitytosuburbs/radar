@@ -78,6 +78,10 @@ a.spot:hover{border-color:var(--brass);box-shadow:0 4px 18px rgba(44,55,70,.07)}
 .tabs button[aria-selected="true"]{background:var(--strong);color:var(--on-strong)}
 .tabs .tc{display:inline-block;min-width:20px;margin-left:6px;padding:0 6px;border-radius:999px;background:var(--brass);color:var(--on-strong);font-size:12px;line-height:20px;text-align:center}
 .tabs .tc[hidden]{display:none}
+@media(max-width:720px){
+  .tabs{display:flex;flex-wrap:wrap;overflow:visible;border-radius:16px;gap:6px;padding:6px}
+  .tabs button{flex:1 1 auto;padding:9px 12px;font-size:13.5px;white-space:nowrap}
+}
 .sweep{margin:0 0 18px}
 .swc{font:700 13px var(--sans);color:var(--brass-dark)}
 .swl{display:grid;gap:6px}
