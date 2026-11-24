@@ -1,5 +1,5 @@
 {
-"checked": 1795524236,
+"checked": 1795524714,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -172,19 +172,6 @@
 "nyc"
 ],
 "snippet": "Hi everyone, I'm relocating to NYC from VA for a new job and will be bringing my 6-year-old rescue dog with me. He's around 48 lbs, ..."
-},
-{
-"id": "t3_1y3x8xx",
-"title": "Looking for CBD-only gummies I can buy in Jersey City",
-"sub": "jerseycity",
-"where": "r/jerseycity",
-"url": "https://www.reddit.com/r/jerseycity/comments/1y3x8xx/looking_for_cbdonly_gummies_i_can_buy_in_jersey/",
-"t": 1795480106,
-"author": "",
-"lists": [
-"nj"
-],
-"snippet": "Looking for some CBD gummy recommendations in/around Jersey City/NYC! I'm visiting my grandma and my parents asked me to find her some CBD gummies ..."
 },
 {
 "id": "t3_1y3txfd",
@@ -1586,6 +1573,17 @@
 "author": "",
 "lists": [],
 "snippet": "It's bad enough that we have helicopters flying over the city at all, but now I've got this guy who's been hovering for the last 10 minutes."
+},
+{
+"id": "t3_1y3x8xx",
+"title": "Looking for CBD-only gummies I can buy in Jersey City",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y3x8xx/looking_for_cbdonly_gummies_i_can_buy_in_jersey/",
+"t": 1795480106,
+"author": "",
+"lists": [],
+"snippet": "Looking for some CBD gummy recommendations in/around Jersey City/NYC! I'm visiting my grandma and my parents asked me to find her some CBD gummies ..."
 },
 {
 "id": "t3_1y3mqao",
@@ -3008,5 +3006,5 @@
 }
 ],
 "checked_week": 134,
-"checked_today": 131
+"checked_today": 130
 }
