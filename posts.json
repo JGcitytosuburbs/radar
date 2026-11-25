@@ -1,8 +1,21 @@
 {
-"checked": 1795591871,
+"checked": 1795592774,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y4muzh",
+"title": "What's it like living in Teaneck as a conservative Jewish family?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y4muzh/whats_it_like_living_in_teaneck_as_a_conservative/",
+"t": 1795592767,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "Keeps kosher but not Shabbat, young kids. Is it possible to live in Teaneck and build community or would we be more on the outs?"
+},
 {
 "id": "t3_1y4e7vu",
 "title": "ISO: Williamsburg 1BR ideally Rent stabilized",
@@ -358,7 +371,7 @@
 },
 {
 "key": "family",
-"count": 4
+"count": 5
 },
 {
 "key": "commute",
@@ -1409,9 +1422,32 @@
 "topics": [
 "commute"
 ]
+},
+{
+"id": "t3_1y4zv4p",
+"t": 1795590799,
+"topics": []
+},
+{
+"id": "t3_1y4muzh",
+"t": 1795592767,
+"topics": [
+"family"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y4zv4p",
+"title": "Apartment hunting in LA - moving from NYC",
+"sub": "MovingToLosAngeles",
+"where": "r/MovingToLosAngeles",
+"url": "https://www.reddit.com/r/MovingToLosAngeles/comments/1y4zv4p/apartment_hunting_in_la_moving_from_nyc/",
+"t": 1795590799,
+"author": "",
+"lists": [],
+"snippet": "Apartment hunting in LA - moving from NYC ... Hi all - I'm looking at a potential relocation from NYC to LA. Im interested in 2 bed apartments up to ..."
+},
 {
 "id": "t3_1y4yb92",
 "title": "Raising Kids in Hoboken",
@@ -4163,6 +4199,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 198,
-"checked_today": 89
+"checked_week": 200,
+"checked_today": 91
 }
