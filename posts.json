@@ -1,5 +1,5 @@
 {
-"checked": 1795587179,
+"checked": 1795588079,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -358,11 +358,11 @@
 },
 {
 "key": "family",
-"count": 3
+"count": 4
 },
 {
 "key": "commute",
-"count": 3
+"count": 4
 },
 {
 "key": "selling",
@@ -1385,9 +1385,66 @@
 "topics": [
 "afford"
 ]
+},
+{
+"id": "t3_1y4yb92",
+"t": 1795582385,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y4khtc",
+"t": 1795577366,
+"topics": []
+},
+{
+"id": "t3_1y4w18b",
+"t": 1795576805,
+"topics": []
+},
+{
+"id": "t3_1y4s5nf",
+"t": 1795563725,
+"topics": [
+"commute"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y4yb92",
+"title": "Raising Kids in Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4yb92/raising_kids_in_hoboken/",
+"t": 1795582385,
+"author": "",
+"lists": [],
+"snippet": "Trying to picture what life could be like if we don't move because we've been loving it for the baby & toddler phases. e.g. For those of us not in ..."
+},
+{
+"id": "t3_1y4khtc",
+"title": "What's it like living in Hoboken New Jersey?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4khtc/whats_it_like_living_in_hoboken_new_jersey/",
+"t": 1795577366,
+"author": "",
+"lists": [],
+"snippet": "lol picture showing the one part of town that isn't chain stores."
+},
+{
+"id": "t3_1y4w18b",
+"title": "Looking to rent a 2B/1B place anywhere in Hoboken!",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4w18b/looking_to_rent_a_2b1b_place_anywhere_in_hoboken/",
+"t": 1795576805,
+"author": "",
+"lists": [],
+"snippet": "Hello! Me (25/F) and my boyfriend (25/M) are planning to move together and are looking for 2 bed/1bath units starting March 2027. Would highly\u2026"
+},
 {
 "id": "t3_1y3vbhe",
 "title": "FSBO pending, waiting on appraisal",
@@ -1882,6 +1939,17 @@
 "author": "",
 "lists": [],
 "snippet": "I was running near Van Vorst park and saw a dog running west without an owner or leash about 20 mins ago. Tried to keep up with him but he was ..."
+},
+{
+"id": "t3_1y4s5nf",
+"title": "PABT buses - 11/24",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4s5nf/pabt_buses_1124/",
+"t": 1795563725,
+"author": "",
+"lists": [],
+"snippet": "according to the NJ transit app, buses are subject to an up to 60 minute delay due to heavy volume on 495. did overhear one of the nj transit ..."
 },
 {
 "id": "t3_1y4dmif",
@@ -4095,6 +4163,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 194,
-"checked_today": 85
+"checked_week": 198,
+"checked_today": 89
 }
