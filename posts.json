@@ -1,8 +1,21 @@
 {
-"checked": 1795625638,
+"checked": 1795626542,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y573s6",
+"title": "Best way to approach the process of buying a co-op, condo, or house in the five boroughs ...",
+"sub": "AskNYC",
+"where": "r/AskNYC",
+"url": "https://www.reddit.com/r/AskNYC/comments/1y573s6/best_way_to_approach_the_process_of_buying_a_coop/",
+"t": 1795623618,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Best way to approach the process of buying a co-op, condo, or house in the five boroughs? How long did you go to open houses before landing on ..."
+},
 {
 "id": "t3_1y4t7hf",
 "title": "Deciding between Astoria or Manhattan?",
@@ -504,6 +517,10 @@
 },
 {
 "key": "towns",
+"count": 1
+},
+{
+"key": "coop",
 "count": 1
 }
 ],
@@ -1754,6 +1771,13 @@
 "id": "t3_1y4bhzv",
 "t": 1795606276,
 "topics": []
+},
+{
+"id": "t3_1y573s6",
+"t": 1795623618,
+"topics": [
+"coop"
+]
 }
 ],
 "held": [
@@ -5080,6 +5104,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 239,
-"checked_today": 84
+"checked_week": 240,
+"checked_today": 85
 }
