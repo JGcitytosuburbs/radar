@@ -1,8 +1,112 @@
 {
-"checked": 1795605418,
+"checked": 1795606315,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y4t7hf",
+"title": "Deciding between Astoria or Manhattan?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4t7hf/deciding_between_astoria_or_manhattan/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Looking for some neighborhood advice, as I've visited both in daytime but would love some insight from people who actually live there."
+},
+{
+"id": "t3_1y4l1qt",
+"title": "Brooklyn",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4l1qt/brooklyn/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Husband recently got a job offer, we were considering possibly making the move and living in Brooklyn. We will have a 6th grader, 4th grader (IEP\u2026"
+},
+{
+"id": "t3_1y4e1wo",
+"title": "24yo commuting from Westchester",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4e1wo/24yo_commuting_from_westchester/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Hi folks, getting a little lost on my search and looking for some advice. I'm a young gent from Westchester and just got my first gig in NYC (was\u2026"
+},
+{
+"id": "t3_1y4sgqy",
+"title": "How hard is it to get an apartment with a bad credit score?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4sgqy/how_hard_is_it_to_get_an_apartment_with_a_bad/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "I've had great credit for 20+ years. However, to move to NYC, that'll involve selling my home at a loss (the market is just... bad-bad.)"
+},
+{
+"id": "t3_1y4fuds",
+"title": "Moving to Marcy / BQE, thoughts?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4fuds/moving_to_marcy_bqe_thoughts/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "10 votes, 19 comments. Some emergencies the past couple months, so my credit took a really bad hit. This is essentially our only well priced ..."
+},
+{
+"id": "t3_1y4xg2d",
+"title": "If you enjoy visiting NY how much will you like living there?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4xg2d/if_you_enjoy_visiting_ny_how_much_will_you_like/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "The amount of people, things going on, the pace, density, skyscrapers, 4 seasons, and subway, seems like my kind of thing actually. I'm definitely ..."
+},
+{
+"id": "t3_1y4rd02",
+"title": "How is this area?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4rd02/how_is_this_area/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "previous comment about it being a joke because the entire neighborhood is generally upscale with most people making and paying good money."
+},
+{
+"id": "t3_1y4bhzv",
+"title": "Best way to research an NYC landlord or management company before signing a lease?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4bhzv/best_way_to_research_an_nyc_landlord_or/",
+"t": 1795606276,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "How are you guys checking a landlord's track record on repairs, heat, and security deposit returns before handing over an application fee?"
+},
 {
 "id": "t3_1y4ul8b",
 "title": "Looking for 2 or 3 br preferably rent stabilized in BK, pet friendly, for me and my partner Feb 1",
@@ -383,16 +487,16 @@
 "count": 10
 },
 {
+"key": "commute",
+"count": 6
+},
+{
 "key": "family",
 "count": 5
 },
 {
-"key": "commute",
-"count": 4
-},
-{
 "key": "selling",
-"count": 2
+"count": 3
 },
 {
 "key": "schools",
@@ -1569,9 +1673,167 @@
 "id": "t3_1y4rnax",
 "t": 1795604474,
 "topics": []
+},
+{
+"id": "t3_1y4t7hf",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y508ky",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4vkcm",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4l1qt",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4e1wo",
+"t": 1795606276,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y4sgqy",
+"t": 1795606276,
+"topics": [
+"selling"
+]
+},
+{
+"id": "t3_1y4fuds",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y53m6o",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4xg2d",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4vk4g",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4s7q9",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4x37t",
+"t": 1795606276,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y4rd02",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4opsv",
+"t": 1795606276,
+"topics": []
+},
+{
+"id": "t3_1y4bhzv",
+"t": 1795606276,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y508ky",
+"title": "Wheelchair transportation",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y508ky/wheelchair_transportation/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "Not to mention the broken elevators, I had to go across the Harlem Bridge in 90 degree heat one time because the Yankee Stadium Subway elevator was ..."
+},
+{
+"id": "t3_1y4vkcm",
+"title": "Astoria or Sunnyside?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4vkcm/astoria_or_sunnyside/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "I am concerned that Sunnyside is going to be less transit friendly, and I will not have a car while I'm there. What do you all think?"
+},
+{
+"id": "t3_1y53m6o",
+"title": "Am I being irrational?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y53m6o/am_i_being_irrational/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "London to NYC - am i jumping the gun? I moved to London from another country (think Aus, NZ, etc), and am now hitting the 18month mark here."
+},
+{
+"id": "t3_1y4vk4g",
+"title": "Friends",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4vk4g/friends/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "Hello! Argentino here!! I'm in nyc until 1 december, looking for someone to make activitys or clubbing/bar whatever, all activities are open."
+},
+{
+"id": "t3_1y4s7q9",
+"title": "Why do people like manhattan so much?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4s7q9/why_do_people_like_manhattan_so_much/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "I'm a native new yorker, born and raised, grew up in bensonhurst and sheepshead bay, atttended a CUNY, and eventually moved to downtown JC."
+},
+{
+"id": "t3_1y4x37t",
+"title": "Would it be dumb to move to NYC at 25 while keeping my job in South Jersey?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4x37t/would_it_be_dumb_to_move_to_nyc_at_25_while/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "Late Sunday/Monday morning: NJ Transit back to NJ, then drive to work. Monday\u2013Wednesday nights: Stay at my parents' house. Thursday after work(Can ..."
+},
+{
+"id": "t3_1y4opsv",
+"title": "Just launched an enclosed vintage inspired photobooth. Are there any businesses you think ...",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y4opsv/just_launched_an_enclosed_vintage_inspired/",
+"t": 1795606276,
+"author": "",
+"lists": [],
+"snippet": "Ipad, dslr, and prints 6x20 panoramic strips but can do 2x6 or 4x6 traditional strips. Any businesses you know that could use a booth?"
+},
 {
 "id": "t3_1y4tyj8",
 "title": "any tips on mitigating weed smell from stairwell?",
@@ -4818,6 +5080,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 224,
-"checked_today": 89
+"checked_week": 239,
+"checked_today": 104
 }
