@@ -1,8 +1,73 @@
 {
-"checked": 1795564218,
+"checked": 1795573749,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y4e7vu",
+"title": "ISO: Williamsburg 1BR ideally Rent stabilized",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4e7vu/iso_williamsburg_1br_ideally_rent_stabilized/",
+"t": 1795573714,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Looking for a one-bedroom apartment in Williamsburg or Greenpoint border. Below $3500 but potential flexibility for the right place."
+},
+{
+"id": "t3_1y4myyc",
+"title": "Looking for an Apartment in Brooklyn or Lower East Side \u2013 Budget $2600",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4myyc/looking_for_an_apartment_in_brooklyn_or_lower/",
+"t": 1795573714,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "I'm hoping to find a place soon, so if anyone knows of any available apartments, upcoming vacancies, or private landlords renting directly, I'd really ..."
+},
+{
+"id": "t3_1y3tasg",
+"title": "In search of Studio/1br or 2br apt in either Brooklyn or Manhattan/Harlem. $3200 budget",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3tasg/in_search_of_studio1br_or_2br_apt_in_either/",
+"t": 1795573714,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Hello, l am in need of housing with a $3200 budget. Anything less is welcome! I make $175k but my credit is not the greatest due to past\u2026"
+},
+{
+"id": "t3_1y3kszl",
+"title": "Lease take over for Winter/flexible with dates",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3kszl/lease_take_over_for_winterflexible_with_dates/",
+"t": 1795573714,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Hi! Looking for someone to take over my studio apartment (500sqr ft) while I travel throughout the winter. Flexible on dates."
+},
+{
+"id": "t3_1y4m47t",
+"title": "No idea how to find a place in NYC....What do I need to do???",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4m47t/no_idea_how_to_find_a_place_in_nycwhat_do_i_need/",
+"t": 1795573714,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Me and my partner have been trying to find a 2 Bedroom apartment in the $2k and below range in Manhattan or Astoria or Downtown Brooklyn."
+},
 {
 "id": "t3_1y3wsg2",
 "title": "Manhattan or LIC for someone new to NYC",
@@ -289,7 +354,11 @@
 "topics": [
 {
 "key": "afford",
-"count": 5
+"count": 9
+},
+{
+"key": "family",
+"count": 3
 },
 {
 "key": "commute",
@@ -297,10 +366,6 @@
 },
 {
 "key": "selling",
-"count": 2
-},
-{
-"key": "family",
 "count": 2
 },
 {
@@ -1110,9 +1175,604 @@
 "id": "t3_1y3wqod",
 "t": 1795530507,
 "topics": []
+},
+{
+"id": "t3_1y4fc5g",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4dskk",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4bpzm",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y49oys",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y42uut",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4oqat",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4ell1",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y3yy29",
+"t": 1795573707,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y4huw0",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4ddqk",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y41vyf",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4f5r3",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4sepy",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4jxit",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y43hg6",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y3zy6p",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y40zte",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4nf1m",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y42ufc",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y4qaup",
+"t": 1795573707,
+"topics": []
+},
+{
+"id": "t3_1y3rfjd",
+"t": 1795573714,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y4e7vu",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3seq6",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3q1dy",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3pl4k",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4qzxe",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4myyc",
+"t": 1795573714,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y4kwgf",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3tasg",
+"t": 1795573714,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y4lq1q",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3vjvg",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3kszl",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4o389",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4m47t",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4h6q6",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3xg3f",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3uu08",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y3yxd1",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4jr8q",
+"t": 1795573714,
+"topics": []
+},
+{
+"id": "t3_1y4jo60",
+"t": 1795573714,
+"topics": [
+"afford"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y3rfjd",
+"title": "Flex bedroom apartments?",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3rfjd/flex_bedroom_apartments/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Planning to relocate to NYC with two roommates in early 2027. We are all women in our mid-late 20s. Budget is $6000 total and we are flexible on\u2026"
+},
+{
+"id": "t3_1y3seq6",
+"title": "My landlord wants me to pay the broker's fee for my lease takeover. Advice?",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3seq6/my_landlord_wants_me_to_pay_the_brokers_fee_for/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi y'all \u2014 I've been working on trying to get a lease takeover for my 1br/1b in Crown Heights for about two months. My management company offered ..."
+},
+{
+"id": "t3_1y3q1dy",
+"title": "Looking for Summer Housing",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3q1dy/looking_for_summer_housing/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "I'm a student looking for summer housing in nyc for my internship. Any recommendations for where to look or how to find short-term subleases?"
+},
+{
+"id": "t3_1y3pl4k",
+"title": "Fidi Room for Rent - $2100",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3pl4k/fidi_room_for_rent_2100/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hey everyone! I am searching for a roommate. Ideally looking for a gay male, who is open with casual nudity in the house and around my age (28) ..."
+},
+{
+"id": "t3_1y4qzxe",
+"title": "Subletting: 1 Bed, 1 Home Office, 2 Bath in Fidi/Seaport. Dec 15-Feb 28.",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4qzxe/subletting_1_bed_1_home_office_2_bath_in/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Beautiful large apartment, great natural light. Amazing building, great neighbourhood. I have lived here for 6 years and almost stayed for ..."
+},
+{
+"id": "t3_1y4kwgf",
+"title": "Lease takeover in Greenpoint!",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4kwgf/lease_takeover_in_greenpoint/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "One bed in a three-bedroom apartment available! Two big windows and lots of light. Looking for a woman of similar age\u2014between 28 and 32\u2014who wants ..."
+},
+{
+"id": "t3_1y4lq1q",
+"title": "Looking for lease takeover/Advice",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4lq1q/looking_for_lease_takeoveradvice/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi all! Looking for a 2 bedroom preferably in Forest hills, or astoria. I declared bankruptcy back in February so it's on my record and am ..."
+},
+{
+"id": "t3_1y3vjvg",
+"title": "Room Wanted \u2013 NYC (Manhattan / Astoria / Long Island City)",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3vjvg/room_wanted_nyc_manhattan_astoria_long_island_city/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone! I'm looking for a clean, quiet, and comfortable room in New York City for a long-term stay. My priority is finding a peaceful, ..."
+},
+{
+"id": "t3_1y4o389",
+"title": "child support as income for 40x rent?",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4o389/child_support_as_income_for_40x_rent/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "I'm starting my new life as a single parent with low income, for now. Has anyone used child support payments to help them reach the 40x rent\u2026"
+},
+{
+"id": "t3_1y4h6q6",
+"title": "Sublease 1BR Apartment $2,800 UES DEC 10-JAN 15",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4h6q6/sublease_1br_apartment_2800_ues_dec_10jan_15/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Open to visits this week. Great location and price. 78th and 2nd."
+},
+{
+"id": "t3_1y3xg3f",
+"title": "Ridgewood sublet - Dec 1st",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3xg3f/ridgewood_sublet_dec_1st/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "I'm looking for someone to sublet an unfurnished bedroom in my two-bedroom apartment in Ridgewood, Queens, for the month of December (December ..."
+},
+{
+"id": "t3_1y3uu08",
+"title": "Bed-Stuy Brooklyn sublet ASAP",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3uu08/bedstuy_brooklyn_sublet_asap/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "1596 rent + 60 for utilities from Dec 1st to Jan 14th Female only This is video from back when I moved in, this is not!"
+},
+{
+"id": "t3_1y3yxd1",
+"title": "[Sublet] Furnished 1BR by Riverside Park, UWS, 10 blocks from Columbia | Jan 11 for 1 year",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y3yxd1/sublet_furnished_1br_by_riverside_park_uws_10/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi folks, looking to sublet my UWS my apartment for a year starting January 11 for a year with possibility to renew. The basics: Furnished prewar\u2026"
+},
+{
+"id": "t3_1y4jr8q",
+"title": "ISO Large Studio/1BR/2BR in Brooklyn, $2600 max \u2014 also open to lease takeovers I can renew",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4jr8q/iso_large_studio1br2br_in_brooklyn_2600_max_also/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi! My roommate and I are looking for a place in Brooklyn (open to Manhattan, or Queens only if it's right by Brooklyn with a direct subway in)."
+},
+{
+"id": "t3_1y4jo60",
+"title": "Looking for 2 bed in Morningside Heights/Upper Manhattan ($3300 budget)",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y4jo60/looking_for_2_bed_in_morningside_heightsupper/",
+"t": 1795573714,
+"author": "",
+"lists": [],
+"snippet": "Hi! My roommate and I are having a hellish time finding a 2 bed for a January 1st move in. Anyone have any advice/leads for finding an apt in our\u2026"
+},
+{
+"id": "t3_1y4fc5g",
+"title": "Package theif communipaw",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4fc5g/package_theif_communipaw/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "It's the holidays. Get your packages sent to an Amazon Locker or UPS Access Point, etc etc. Sure, it does take time to get to the location for ..."
+},
+{
+"id": "t3_1y4dskk",
+"title": "There's too much people everywhere especially journal square",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4dskk/theres_too_much_people_everywhere_especially/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Even at 12am there's so many fucking people it's insufferable I can't just take a nice walk outside at night without being constantly surveilled ..."
+},
+{
+"id": "t3_1y4bpzm",
+"title": "Anyone know where this fire is?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4bpzm/anyone_know_where_this_fire_is/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Union at the city center near Morris & Stuyvesant, some stores were burning."
+},
+{
+"id": "t3_1y49oys",
+"title": "team building activities for 14 near our jersey city office, 23 to 61",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y49oys/team_building_activities_for_14_near_our_jersey/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Our office is by Exchange Place and we're 14 people, youngest is 23 and oldest is 61. The last team thing was an escape room that half the older\u2026"
+},
+{
+"id": "t3_1y42uut",
+"title": "What are your favorite takeout restaurants?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y42uut/what_are_your_favorite_takeout_restaurants/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "12 votes, 19 comments. The buffalo chicken Caesar wrap from Bob White always slaps. Also the cheesesteak from no forks given."
+},
+{
+"id": "t3_1y4oqat",
+"title": "JC neighbor here, my chimichurri gift kits just landed at CoolVines Powerhouse!",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4oqat/jc_neighbor_here_my_chimichurri_gift_kits_just/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone! I'm a Downtown JC resident and just launched Mi Chimi, a little DIY chimichurri gift kit. I'm the owner, and I'm excited that it's ..."
+},
+{
+"id": "t3_1y4ell1",
+"title": "JC already has a locked park: A story in pictures",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ell1/jc_already_has_a_locked_park_a_story_in_pictures/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "23 votes, 82 comments. I see a few neighbors who are saying its open \"all the time\". I have quit attempting to come here."
+},
+{
+"id": "t3_1y3yy29",
+"title": "Delaney Hall",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y3yy29/delaney_hall/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "With the holidays approaching. And DH behind in our backyard. Does anyone know of any Christmas gifting opportunities to any kids who have been\u2026"
+},
+{
+"id": "t3_1y4huw0",
+"title": "LOST CAT BERGEN LAFAYETTE, JC",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4huw0/lost_cat_bergen_lafayette_jc/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "61 votes, 13 comments. LOST CAT: This cat has been hanging around our building for a few days and we have him inside presently. Please help find\u2026"
+},
+{
+"id": "t3_1y4ddqk",
+"title": "New Shoprite not as well stocked as old one?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ddqk/new_shoprite_not_as_well_stocked_as_old_one/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "10 votes, 25 comments. I've noticed that a lot of the products I used to buy at the old shoprite next to the BJ's are no longer stocked in the ..."
+},
+{
+"id": "t3_1y41vyf",
+"title": "Anyone else feel like JC is missing a good Lagree studio?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y41vyf/anyone_else_feel_like_jc_is_missing_a_good_lagree/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "I feel like there are SO many workout studios in Jersey City, but somehow they all feel like variations of the same thing?"
+},
+{
+"id": "t3_1y4f5r3",
+"title": "I found your keys",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4f5r3/i_found_your_keys/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "At the corner of Marin and Columbus! Please DM me to coordinate a pickup/drop off situation. No contact options obviously welcome."
+},
+{
+"id": "t3_1y4sepy",
+"title": "Super moon",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4sepy/super_moon/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Today's moon, sighted from Acme on 440."
+},
+{
+"id": "t3_1y4jxit",
+"title": "Package Thief",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4jxit/package_thief/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Stopped a package thief this afternoon from robbing our place along 6th st. If anyone is missing some pants or pair of shoes DM me with the ..."
+},
+{
+"id": "t3_1y43hg6",
+"title": "Street cleaning schedule?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y43hg6/street_cleaning_schedule/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Recently moved into JSQ last few months on Vroom street. Where can I find the street cleaning schedule as I have been ticketed and I am pretty ..."
+},
+{
+"id": "t3_1y3zy6p",
+"title": "Looking for witnesses: pedestrian hit by a right-turning car near Haus25 / 50 Columbus",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y3zy6p/looking_for_witnesses_pedestrian_hit_by_a/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "102 votes, 17 comments. My wife was hit by a car today, at about 4:45pm, while crossing in the crosswalk on the walk signal, between Haus25 and 5\u2026"
+},
+{
+"id": "t3_1y40zte",
+"title": "Row House 70 Hudson, Jersey City Closing",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y40zte/row_house_70_hudson_jersey_city_closing/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Can't wait for some overpriced pilates studio or a crumbl cookies over here."
+},
+{
+"id": "t3_1y4nf1m",
+"title": "Best dinner with heated outdoor seating downtown",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4nf1m/best_dinner_with_heated_outdoor_seating_downtown/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Meeting some friends for dinner and my dog sitter canceled at the last second. Generally, I would leave him home, but now I need to find somewhere ..."
+},
+{
+"id": "t3_1y42ufc",
+"title": "Loud, Strangely Shaped Plane Over Journal Square",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y42ufc/loud_strangely_shaped_plane_over_journal_square/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "Very loud plane(?) (I could hear it over my headphones) flying low around journal square and the heights it seemed to be flying kinda low and is\u2026"
+},
+{
+"id": "t3_1y4qaup",
+"title": "Loose dog",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4qaup/loose_dog/",
+"t": 1795573707,
+"author": "",
+"lists": [],
+"snippet": "I was running near Van Vorst park and saw a dog running west without an owner or leash about 20 mins ago. Tried to keep up with him but he was ..."
+},
 {
 "id": "t3_1y4dmif",
 "title": "Can we finally have a statewide leaf blower ban?",
@@ -3325,6 +3985,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 154,
-"checked_today": 65
+"checked_week": 194,
+"checked_today": 86
 }
