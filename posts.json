@@ -1,5 +1,5 @@
 {
-"checked": 1795598187,
+"checked": 1795599089,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -1444,6 +1444,11 @@
 "id": "https://www.flofootball.com/leagues/12808214-njac-football/videos",
 "t": 1795541790,
 "topics": []
+},
+{
+"id": "t3_1y404ux",
+"t": 1795483383,
+"topics": []
 }
 ],
 "held": [
@@ -2733,6 +2738,17 @@
 "author": "",
 "lists": [],
 "snippet": "Did you know that SOMSD doesn't have district-wide recycling? My daughter has been trying to start a grassroots recycling campaign at SOMS, to no\u2026"
+},
+{
+"id": "t3_1y404ux",
+"title": "32 [M4F] #NYC - Realtor looking to take you on an apartment tour and make it fun for you!",
+"sub": "RandomActsOfMuffDive",
+"where": "r/RandomActsOfMuffDive",
+"url": "https://www.reddit.com/r/RandomActsOfMuffDive/comments/1y404ux/32_m4f_nyc_realtor_looking_to_take_you_on_an/",
+"t": 1795483383,
+"author": "",
+"lists": [],
+"snippet": "32 [M4F] #NYC - Realtor looking to take you on an apartment tour and make it fun for you! \u2642\u2665\u2640 NYC. Hi there! Title is pretty self explanatory\u2026I ..."
 },
 {
 "id": "t3_1y3xrub",
@@ -4363,6 +4379,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 202,
+"checked_week": 203,
 "checked_today": 84
 }
