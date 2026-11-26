@@ -1,5 +1,5 @@
 {
-"checked": 1795648970,
+"checked": 1795654125,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -497,15 +497,15 @@
 "topics": [
 {
 "key": "afford",
-"count": 10
+"count": 11
 },
 {
 "key": "commute",
-"count": 6
+"count": 7
 },
 {
 "key": "family",
-"count": 5
+"count": 6
 },
 {
 "key": "selling",
@@ -1778,9 +1778,1035 @@
 "topics": [
 "coop"
 ]
+},
+{
+"id": "t3_1y5k5d9",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5cyc4",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5mdtp",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4mlig",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y59u8u",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5gs06",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4no4t",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4hcmj",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4pg6a",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5ih6r",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5empt",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4yj1v",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5lx3r",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4pg0p",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4mhgd",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5l7jp",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4w4uf",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5gxwb",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5fqv7",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y5bdbv",
+"t": 1795654080,
+"topics": []
+},
+{
+"id": "t3_1y4ba9g",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4axaf",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4smyo",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4kbmw",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y5kpu3",
+"t": 1795654082,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y4uph9",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4v7wv",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4rpfi",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y5afly",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4tipo",
+"t": 1795654082,
+"topics": []
+},
+{
+"id": "t3_1y4ukbp",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4tekl",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4vmg9",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y509o5",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4u0fy",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4zpim",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5karg",
+"t": 1795654084,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y4v7i7",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y597fl",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4ygex",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4ysrp",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5espn",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5hvpe",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5gct6",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4ydpg",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5cgqm",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y5a62h",
+"t": 1795654084,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y5itjy",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4ve2j",
+"t": 1795654084,
+"topics": []
+},
+{
+"id": "t3_1y4vmya",
+"t": 1795654084,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y4wtcp",
+"title": "Got the keys! Northwest Boston Suburbs, $887k @ 6.875% 30yr",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4wtcp/got_the_keys_northwest_boston_suburbs_887k_6875/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "283 votes, 32 comments. Most exciting thing today was showing our dog his new digs!"
+},
+{
+"id": "t3_1y55nla",
+"title": "Vent",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y55nla/vent/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "After a couple months of searching I decided on a condo. All of my docs have been sent & clear last thing needed is for the condo to send ..."
+},
+{
+"id": "t3_1y57h2w",
+"title": "Buying next to an abandoned house?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y57h2w/buying_next_to_an_abandoned_house/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "I'm a young FTHB and I've been looking at a bunch of different houses with a real estate agent. Recently, I found a house that I fell in love with ..."
+},
+{
+"id": "t3_1y4h754",
+"title": "If you want to buy a property and live in the ADU and rent out the house, can you count 75 ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4h754/if_you_want_to_buy_a_property_and_live_in_the_adu/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "You need 2 years of rental income to show them to be able to count it as income. If you're buying a duplex there is already someone renting one of the ..."
+},
+{
+"id": "t3_1y4umdx",
+"title": "Are condos or mobile homes the new \"starter house?\"",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4umdx/are_condos_or_mobile_homes_the_new_starter_house/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "29 votes, 55 comments. Title is my question. My spouse and I are not actively looking to buy a home, but hopefully in the next few years once we ..."
+},
+{
+"id": "t3_1y4n4sh",
+"title": "When will you be able timo buy a house",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4n4sh/when_will_you_be_able_timo_buy_a_house/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Year = Year of the highest fertility rate after 1936\\ + Life expectancy today* \\*to match with boomer era and also people born before 1936 are\u2026"
+},
+{
+"id": "t3_1y4x227",
+"title": "Three entrances, one first-house budget, trying not to buy three cameras",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4x227/three_entrances_one_firsthouse_budget_trying_not/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "The yard diagram I inherited: front door path, side gate on the driveway, and a pedestrian gate at the fence, all leading to the same house, ..."
+},
+{
+"id": "t3_1y4jhgv",
+"title": "Finally got the keys! Texas, 274k, 7.1%.",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4jhgv/finally_got_the_keys_texas_274k_71/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "I'm in Dallas prob and my property taxes are $6k. I would imagine this would be around 4k. I have some industrial properties in this area so ..."
+},
+{
+"id": "t3_1y4xmia",
+"title": "We did it!!! Idaho, 354k, 5.5%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4xmia/we_did_it_idaho_354k_55/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Worth every penny. He's also been to the Oregon beach, Montana (Glacier national park) and Utah. Next Colorado and then Florida."
+},
+{
+"id": "t3_1y5a3ri",
+"title": "I'm creating a spreadsheet with a bunch of info about difference homebuyer assistance ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5a3ri/im_creating_a_spreadsheet_with_a_bunch_of_info/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Lists like this exist, but I haven't found anything super comprehensive and laid out in spreadsheet form so it's easy to see minimum credit score ..."
+},
+{
+"id": "t3_1y5l4xq",
+"title": "We did it! Texas $280k at 6.6%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5l4xq/we_did_it_texas_280k_at_66/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "160 votes, 18 comments. Finally we did it! And the best part is\u2026 we already live here! After learning, absorbing all we could about home buying ..."
+},
+{
+"id": "t3_1y4ujbt",
+"title": "Pizza time in our 1910 home",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4ujbt/pizza_time_in_our_1910_home/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Congratulations! If you have are in the US, contact your electric company and schedule a home energy audit. Ok_Childhood_9694."
+},
+{
+"id": "t3_1y4p3kd",
+"title": "Approach with delusional sellers in this market",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4p3kd/approach_with_delusional_sellers_in_this_market/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "The process of purchasing our first home has been exhausting dealing with sellers refusing to budge. Would you change anything below with how ..."
+},
+{
+"id": "t3_1y4qiqy",
+"title": "Got the keys Vaudreuil 429,000, 4.2%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4qiqy/got_the_keys_vaudreuil_429000_42/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "268 votes, 35 comments. Vaudreuil, Quebec, Canada 4.2% fixed (4 years) Negotiated for 429,00 from 469000 Minor work to be done (ladies get\u2026"
+},
+{
+"id": "t3_1y4icn8",
+"title": "Bad credit, good Job",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4icn8/bad_credit_good_job/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Is it possible to get a house with bad credit, but good job history? I really want o move out of my apt this coming April but I have those two\u2026"
+},
+{
+"id": "t3_1y5d51g",
+"title": "Current mortgage rates - if you got yours below 7% - where & how?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5d51g/current_mortgage_rates_if_you_got_yours_below_7/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "When I bought I believe rates were around 6.5% but builder bought it down to 3.75% 30 year fixed. Yeah, the price of the house is inflated to offset ..."
+},
+{
+"id": "t3_1y4fnrn",
+"title": "Honest opinion\u2026how willing would you be to buy a house across the street from your ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4fnrn/honest_opinionhow_willing_would_you_be_to_buy_a/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "113 votes, 396 comments. Husband and I are looking at houses, and we have been eyeing several in the area, including one that is literally across ..."
+},
+{
+"id": "t3_1y4si4j",
+"title": "Advise on how to approach seller's counteroffer",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4si4j/advise_on_how_to_approach_sellers_counteroffer/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "The sellers said they were considering options and asked us for our best offer so we said 496k with 5k in concessions. They counteroffered with: 5 day ..."
+},
+{
+"id": "t3_1y4xald",
+"title": "We did it! Vancouver, BC. 793K, 3.99% fixed 5 year",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y4xald/we_did_it_vancouver_bc_793k_399_fixed_5_year/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Unlike the US, where 30-year fixed rate mortgages are common, in Canada mortgage rates are typically fixed for terms of 3 to 5 years, with ..."
+},
+{
+"id": "t3_1y5eufk",
+"title": "inspection found foundation movement, whole-house polybutylene, and a sewer the camera ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5eufk/under_contract_inspection_found_foundation/",
+"t": 1795654088,
+"author": "",
+"lists": [],
+"snippet": "Inspector recommended a structural engineer. The sellers hired their own engineer, who inspected and (per the agents) says repairs are needed \u2014 but ..."
+},
+{
+"id": "t3_1y4ukbp",
+"title": "free shoprite turkey donations",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ukbp/free_shoprite_turkey_donations/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "85 votes, 14 comments. if you have qualified for a free shoprite turkey but don't plan to use it, let me bring it to the hoboken shelter for you!"
+},
+{
+"id": "t3_1y4tekl",
+"title": "FRIENDSGIVING KARAOKE! - THIS SAT NOV 28TH!",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4tekl/friendsgiving_karaoke_this_sat_nov_28th/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Sometimes it's challenging to practice gratitude when circumstances and people around us can suck. Which is a great reason why we should look ..."
+},
+{
+"id": "t3_1y4vmg9",
+"title": "Where can I meet new people?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4vmg9/where_can_i_meet_new_people/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Also want to know. Going to random bars and sitting alone gets old quickly."
+},
+{
+"id": "t3_1y509o5",
+"title": "Cat killed, tortured on cottage",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y509o5/cat_killed_tortured_on_cottage/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "87 votes, 15 comments. It took me a whole day to write this post and I apologize for that but just putting this in writing\u2026ugh it was something I\u2026"
+},
+{
+"id": "t3_1y4u0fy",
+"title": "30s singles bar crawl that ends at 11pm",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4u0fy/30s_singles_bar_crawl_that_ends_at_11pm/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "56 votes, 55 comments. I (33F) am looking for a group of single friends in their 30s to hang out with. It seems like there are 5 of us in JC so I ..."
+},
+{
+"id": "t3_1y4zpim",
+"title": "Trash pickup on Thanksgiving",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4zpim/trash_pickup_on_thanksgiving/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Anecdotally, they never miss a pickup. They will miss their target when tossing trash bags into the truck and tossing cans towards the curb."
+},
+{
+"id": "t3_1y5karg",
+"title": "Macy's Thanksgiving Day Parade postponed due to nor'easter",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5karg/macys_thanksgiving_day_parade_postponed_due_to/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Wow first time in history to be canceled, disappointing but glad it will be on Saturday :) I'm old enough to remember being a kid in 1971 when the ..."
+},
+{
+"id": "t3_1y4v7i7",
+"title": "any awesome guys want awesome new hiking boots?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4v7i7/any_awesome_guys_want_awesome_new_hiking_boots/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Bf ended up not wanting to keep them cause they didn't agree w his feet lol. Receipt is in last picture to prove they're new & proof of price\u2026"
+},
+{
+"id": "t3_1y597fl",
+"title": "The city has a deficit\u2026",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y597fl/the_city_has_a_deficit/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "But also plenty of money for a leaf vacuum in Hamilton park."
+},
+{
+"id": "t3_1y4ygex",
+"title": "doomsday at LSP",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ygex/doomsday_at_lsp/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "189 votes, 25 comments. Did they really leave that much vibranium just laying around unguarded for a holiday weekend? Sounds like a heist movie."
+},
+{
+"id": "t3_1y4ysrp",
+"title": "LEASE TAKEOVER - 255 Warren Street - 1B1B - Jersey City - Exchange place/Paulus Hook",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ysrp/lease_takeover_255_warren_street_1b1b_jersey_city/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Due to an unexpected international move, I need to relocate hence, I am looking for someone to take over my lease for a 1-Bedroom (true 1B1B - 71\u2026"
+},
+{
+"id": "t3_1y5espn",
+"title": "Why do you celeberate consumerism?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5espn/why_do_you_celeberate_consumerism/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Many posts about that Captain America shitshow, who cares? you're normalizing corporate consumerism in your own city!"
+},
+{
+"id": "t3_1y5hvpe",
+"title": "LEASE TAKEOVER | 2 BED / 2 BATH | NORTH BERGEN, NJ | PARKING + LUXURY AMENITIES",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5hvpe/lease_takeover_2_bed_2_bath_north_bergen_nj/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "We're looking for someone to take over our lease in North Bergen, NJ! Flexible move-in: January 15 \u2013 February 1, 2027 Lease through October ..."
+},
+{
+"id": "t3_1y5gct6",
+"title": "$110 Parking Ticket Spree in JSQ area day off Thanksgiving ko",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5gct6/110_parking_ticket_spree_in_jsq_area_day_off/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "JERSEY CITY RESIDENTS, BE AWARE! It's the Wednesday right before Thanksgiving, and apparently the parking ticket authority decided to go on a\u2026"
+},
+{
+"id": "t3_1y4ydpg",
+"title": "please return my aritzia package?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ydpg/please_return_my_aritzia_package/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "total shot in the dark but if you live in everton and you picked up a package from Aritzia and its for unit 1110 can you please return it to me??"
+},
+{
+"id": "t3_1y5cgqm",
+"title": "Staying at Bergen-Lafayette Jersey City(Garfield Ave Light Rail) VS. E. 126st and Madison Harlem",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5cgqm/staying_at_bergenlafayette_jersey_citygarfield/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Going to stay in New York City with my wife and mom for my mom's birthday. I am in between these two locations. How is this specific block?"
+},
+{
+"id": "t3_1y5a62h",
+"title": "Community Garden blocking affordable housing goes awry in NYC (RE: 128 Glenwood)",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5a62h/community_garden_blocking_affordable_housing_goes/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "https://www.curbed.com/article/elizabeth-street-garden-public-park-sixpenny-city-agreement-rules.html."
+},
+{
+"id": "t3_1y5itjy",
+"title": "anything fun happening tonight?",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y5itjy/anything_fun_happening_tonight/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "i know Porta and Boots and Bones have stuff going on tonight but any other recommendations for nightlife tonight? thanks in advance ;)"
+},
+{
+"id": "t3_1y4ve2j",
+"title": "Lost GreenCard",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4ve2j/lost_greencard/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "That is so kind!! I did try to retrace my steps: from Jersey Avenue through Columbus all the way to Wholefoods and back (through Newark Ave Pedestrian ..."
+},
+{
+"id": "t3_1y4vmya",
+"title": "3 bedroom 2 bath Bayonne Apt - No Broker's Fee",
+"sub": "jerseycity",
+"where": "r/jerseycity",
+"url": "https://www.reddit.com/r/jerseycity/comments/1y4vmya/3_bedroom_2_bath_bayonne_apt_no_brokers_fee/",
+"t": 1795654084,
+"author": "",
+"lists": [],
+"snippet": "Back rooms ahh apartment."
+},
+{
+"id": "t3_1y4ba9g",
+"title": "77 Park Avenue",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4ba9g/77_park_avenue/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "23 votes, 11 comments. Heads up for all who are considering living here - with high rents, soon to be constant construction inside of lobby/gym, ..."
+},
+{
+"id": "t3_1y4axaf",
+"title": "Date night ideas for december, hoboken or a quick PATH ride into the city",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4axaf/date_night_ideas_for_december_hoboken_or_a_quick/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "Try Puttery or Swingers(indoor mini Golf with bars and food), Flight Club (very cool dart place in Union Square) or Cellar Dog in West Village\u2026 pool ..."
+},
+{
+"id": "t3_1y4smyo",
+"title": "Parked truck on First and Jackson/Monroe - Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4smyo/parked_truck_on_first_and_jacksonmonroe/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "If you have a white/grey/silver pickup parked on first street around Jackson and Monroe, your front bumper just got smacked by an older man trying ..."
+},
+{
+"id": "t3_1y4kbmw",
+"title": "Breaking lease with applied housing",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4kbmw/breaking_lease_with_applied_housing/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "They've also informed me that they'll be keeping my security deposit as an \u201cadministration fee.\u201d Since I'm breaking the lease toward the end of the ..."
+},
+{
+"id": "t3_1y5kpu3",
+"title": "Temporary NJ Transit Stops Still in Place - Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y5kpu3/temporary_nj_transit_stops_still_in_place/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "They've restored the 14th St stop towards NY but going towards Hoboken, the temporary stops are still in effect."
+},
+{
+"id": "t3_1y4uph9",
+"title": "free shoprite turkey donations",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4uph9/free_shoprite_turkey_donations/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "let me redeem your free shoprite turkey and donate it to the hoboken shelter on your behalf! see details in original post :)"
+},
+{
+"id": "t3_1y4v7wv",
+"title": "any awesome guys want awesome new hiking boots?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4v7wv/any_awesome_guys_want_awesome_new_hiking_boots/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "any awesome guys want awesome new hiking boots? \u00b7 Comments Section."
+},
+{
+"id": "t3_1y4rpfi",
+"title": "Help stop FlyNYON helicopter tours over Hudson County, New Jersey",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4rpfi/help_stop_flynyon_helicopter_tours_over_hudson/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "FlyNYON also Hummingbyrd helicopters, same company different name, South Kearny Heliport, HHI heliport, loud, low flying, nightmarish, tourist\u2026"
+},
+{
+"id": "t3_1y5afly",
+"title": "Lobby Check",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y5afly/lobby_check/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "I had a package delivered to the wrong place. Does anyone recognize this lobby? Possibly around 6th and Monroe."
+},
+{
+"id": "t3_1y4tipo",
+"title": "Silver Necklace",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y4tipo/silver_necklace/",
+"t": 1795654082,
+"author": "",
+"lists": [],
+"snippet": "Found silver necklace at 11 street pier on November 23rd, 2026; if you can describe it correctly, DM me and you can claim it. Thanks."
+},
+{
+"id": "t3_1y5k5d9",
+"title": "Postpone Thanksgiving?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5k5d9/postpone_thanksgiving/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Our family postponed. Poor driving conditions for the elderly, poor cooking conditions with power outages, if there's heavy wind and rain my ..."
+},
+{
+"id": "t3_1y5cyc4",
+"title": "OB gyn recommendations (all women practice) in north jersey?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5cyc4/ob_gyn_recommendations_all_women_practice_in/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Are there any OB practices with female doctors only in the north bergen area? I was previously seeing Dr Langer and her team with my first ..."
+},
+{
+"id": "t3_1y5mdtp",
+"title": "Are you keeping Thanksgiving plans?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5mdtp/are_you_keeping_thanksgiving_plans/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "I live about 45-60 mins away from our family where we are supposed to have Thanksgiving starting around 3. I'm worried about the weather - are any ..."
+},
+{
+"id": "t3_1y4mlig",
+"title": "My movie is coming to New Jersey!",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4mlig/my_movie_is_coming_to_new_jersey/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "166 votes, 16 comments. Hope this is ok to post, but wanted to let people know my indie comedy, CONCESSIONS will be playing at Kevin Smith's\u2026"
+},
+{
+"id": "t3_1y59u8u",
+"title": "Top 12 NJ arts events of the week: Rock the Bells, '2 Pianos 4 Hands,' 'The Nutcracker,' more",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y59u8u/top_12_nj_arts_events_of_the_week_rock_the_bells/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Also 'Giants of Jazz,' 'Jitney,' 'The Debut,' more."
+},
+{
+"id": "t3_1y5gs06",
+"title": "There's a high chance of power outages with tomorrow's storm",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5gs06/theres_a_high_chance_of_power_outages_with/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "121 votes, 31 comments. If you'll be cooking for Thanksgiving, try to finish up before the heavy winds drop a tree on your power line."
+},
+{
+"id": "t3_1y4no4t",
+"title": "Senate Democrats vote on their leader Tues. Dec. 1. NJ's senators haven't said who they're backing.",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4no4t/senate_democrats_vote_on_their_leader_tues_dec_1/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "96 votes, 61 comments. Senate Democrats will pick their leader for the next Congress in a secret-ballot vote on Dec. 1 . Chris Van Hollen (MD) is\u2026"
+},
+{
+"id": "t3_1y4hcmj",
+"title": "Join the New Nationalists of America!",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4hcmj/join_the_new_nationalists_of_america/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Help oppose the Islamization of the state of New Jersey! Arrest Corey Booker, arrest Mikie Sherrill! Newnationalists.org WE are active in NJ!"
+},
+{
+"id": "t3_1y4pg6a",
+"title": "r/newjersey - Rep. Frank Pallone received over 69% of the vote, the highest percentage of ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4pg6a/rep_frank_pallone_received_over_69_of_the_vote/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "63 votes, 14 comments. Two years ago, Donald Trump carried Loch Arbour by 34 percentage points, and Republican congressional candidate Scott ..."
+},
+{
+"id": "t3_1y5ih6r",
+"title": "Gov. Sherrill declares state of emergency ahead of a Thanksgiving storm expected to wallop ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5ih6r/gov_sherrill_declares_state_of_emergency_ahead_of/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "370 votes, 36 comments. Sherrill encouraged people to reach their Thanksgiving destinations on Wednesday."
+},
+{
+"id": "t3_1y5empt",
+"title": "Local food drives holding up West Orange food pantry in difficult year of federal cuts",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5empt/local_food_drives_holding_up_west_orange_food/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "The holiday season is always a busy time at the Holy Trinity Episcopal Church's food pantry, but this week it is especially so."
+},
+{
+"id": "t3_1y4yj1v",
+"title": "Dentist Recommendation",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4yj1v/dentist_recommendation/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Looking for new dentist. Bridgewater area. In network with fepblue dental, preferably but am considering different plan during open season."
+},
+{
+"id": "t3_1y5lx3r",
+"title": "I am thankful for the good people working the catering counter at Stew Leonard's in Clifton",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5lx3r/i_am_thankful_for_the_good_people_working_the/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "They have their sh!t wired, and made this TG not only easy to have, but also easier to not sweat all my guests having to cancel due to the storm\u2026"
+},
+{
+"id": "t3_1y4pg0p",
+"title": "Mystery solved! Purple streak across New Jersey and New York roadways revealed",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4pg0p/mystery_solved_purple_streak_across_new_jersey/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "The New York State Department of Environmental Conservation says a tractor-trailer owned by XPO Logistics leaked a water-soluble organic car wash ..."
+},
+{
+"id": "t3_1y4mhgd",
+"title": "Update: Predator Cop Admits to Lying to Secure a Better Plea Deal; Threatens to Sue Media ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4mhgd/update_predator_cop_admits_to_lying_to_secure_a/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Original Article: Woodbridge Police Officer Prosecuted for Sexual Abuse in Two States Original Post: Former Woodbridge Cop Pleads Guilty to ..."
+},
+{
+"id": "t3_1y5l7jp",
+"title": "North Jersey anyone out tonight?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5l7jp/north_jersey_anyone_out_tonight/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "We are going out tonight to a cigar lounge for some pre Thanksgiving Fun. Looking to meet new people and enjoy good company."
+},
+{
+"id": "t3_1y4w4uf",
+"title": "Will visiting the ER get you into a specialist faster?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y4w4uf/will_visiting_the_er_get_you_into_a_specialist/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Depending on their age and the facility, frequent falls meets admission criteria. It will not get them an appointment with the specialist of their ..."
+},
+{
+"id": "t3_1y5gxwb",
+"title": "The purple splatter hit a Pequannock strip mall",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5gxwb/the_purple_splatter_hit_a_pequannock_strip_mall/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "117 votes, 36 comments. Next-level video content from one of our Instagram followers, who is a huge Young Sheldon fan."
+},
+{
+"id": "t3_1y5fqv7",
+"title": "Subacute rehab facilities south jersey",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5fqv7/subacute_rehab_facilities_south_jersey/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "Hi I am looking for a good Subacute rehab facility in south Jersey. For reference, my mom has brain cancer and recently had a seizure / blood ..."
+},
+{
+"id": "t3_1y5bdbv",
+"title": "Why is the New Jersey MVC so fucking bad?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5bdbv/why_is_the_new_jersey_mvc_so_fucking_bad/",
+"t": 1795654080,
+"author": "",
+"lists": [],
+"snippet": "34 votes, 54 comments. It's 2026, and somehow the NJ MVC still operates like it's 1995. I've lived in Pennsylvania, Washington, and California."
+},
 {
 "id": "t3_1y508ky",
 "title": "Wheelchair transportation",
@@ -2109,7 +3135,7 @@
 "t": 1795582385,
 "author": "",
 "lists": [],
-"snippet": "Trying to picture what life could be like if we don't move because we've been loving it for the baby & toddler phases. e.g. For those of us not in ..."
+"snippet": "Are athletics available for elementary/middle school kids who are mediocre / want to play multiple sports/ activities & not just commit to one team?"
 },
 {
 "id": "https://www.forebet.com/en/basketball/matches/ncaa/james-madison-william--mary/310342",
@@ -2142,7 +3168,7 @@
 "t": 1795577366,
 "author": "",
 "lists": [],
-"snippet": "lol picture showing the one part of town that isn't chain stores."
+"snippet": "Hoboken has plenty of good people but the entitlement of the worst people here is one of the most extreme I've seen...the dog poop might be the ..."
 },
 {
 "id": "https://www.si.com/high-school/stats/texas/football/games/7056965-westfield-vs-longview",
@@ -5104,6 +6130,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 240,
-"checked_today": 82
+"checked_week": 290,
+"checked_today": 131
 }
