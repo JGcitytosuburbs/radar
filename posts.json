@@ -1,8 +1,126 @@
 {
-"checked": 1795688001,
+"checked": 1795688901,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y5cp59",
+"title": "One-Month Special, Steps from Central Park | Upper West Side",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5cp59/room_for_rent_manhattan_private_room_for_just/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Looking for a furnished private room in Manhattan for December without committing to a long-term lease? Here's a special one-month opportunity: a\u2026"
+},
+{
+"id": "t3_1y5sucw",
+"title": "Weird situation - Need to move to nyc on a half month basis 24F",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5sucw/weird_situation_need_to_move_to_nyc_on_a_half/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "My work is based out of Manhattan and I made a \u201cdeal\u201d with my team that I would be able to go to any necessary meetings during the half of the ..."
+},
+{
+"id": "t3_1y5rktz",
+"title": "Moving to NYC, quiet homebody, neighborhood recommendations?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5rktz/moving_to_nyc_quiet_homebody_neighborhood/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc",
+"rent"
+],
+"snippet": "Hi! I landed at a good tech role finally but I will need to relocate to NYC. I'm thinking of what a good location would be."
+},
+{
+"id": "t3_1y5i3dv",
+"title": "Jan 15 - Feb 15",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5i3dv/jan_15_feb_15/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "currently renting this room for for the month of January. The apartment is shared between two other girls. Ideally looking for younger female or\u2026"
+},
+{
+"id": "t3_1y5qqsr",
+"title": "Moving to NYC from CA any suggestions for neighborhoods in queens?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5qqsr/moving_to_nyc_from_ca_any_suggestions_for/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "I'll be working near Bryant park and I should be able to roughly afford $2,000-$2,500 for rent. I'm not a big partier, and enjoy a bit of the quieter ..."
+},
+{
+"id": "t3_1y58lkl",
+"title": "Are people who live in LIC wealthy?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y58lkl/are_people_who_live_in_lic_wealthy/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "But still not that wealthy by overall NYC standards. It's mostly people who were priced out of better neighborhoods in Manhattan or Brooklyn."
+},
+{
+"id": "t3_1y5htza",
+"title": "Winter boots",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5htza/winter_boots/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "I'm moving to nyc and I'm currently looking for a good pair of waterproof boots that are suitable for the harsh nyc winters."
+},
+{
+"id": "t3_1y5pxme",
+"title": "Do you still have a lot of time to see the city even when you work?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5pxme/do_you_still_have_a_lot_of_time_to_see_the_city/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Obviously you can't just be leisurely all day but a stroll down some neighborhood and seeing the sights, food, and vibe after work sounds very ..."
+},
+{
+"id": "t3_1y55os4",
+"title": "Left NYC for the suburbs with young kids. Should I come back?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y55os4/left_nyc_for_the_suburbs_with_young_kids_should_i/",
+"t": 1795688861,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "63 votes, 163 comments. I grew up in Brooklyn (my husband the city too) and lived in the city for years, including with a baby."
+},
 {
 "id": "t3_1y573s6",
 "title": "Best way to approach the process of buying a co-op, condo, or house in the five boroughs ...",
@@ -497,15 +615,15 @@
 "topics": [
 {
 "key": "afford",
-"count": 11
+"count": 12
+},
+{
+"key": "family",
+"count": 7
 },
 {
 "key": "commute",
 "count": 7
-},
-{
-"key": "family",
-"count": 6
 },
 {
 "key": "selling",
@@ -2049,9 +2167,106 @@
 "id": "https://www.maxpreps.com/ca/basketball/girls/game/edgewood-west-covina-vs-montclair/11-30-2026/?c=690b6261-0c42-4608-b240-dee5b8409b00",
 "t": 1795515404,
 "topics": []
+},
+{
+"id": "t3_1y5cp59",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5sucw",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5rktz",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5i3dv",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5sire",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5wu5x",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5qqsr",
+"t": 1795688861,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y58lkl",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y56jfl",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5htza",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y5pxme",
+"t": 1795688861,
+"topics": []
+},
+{
+"id": "t3_1y55os4",
+"t": 1795688861,
+"topics": [
+"family"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y5sire",
+"title": "23M",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5sire/23m/",
+"t": 1795688861,
+"author": "",
+"lists": [],
+"snippet": "Just moved to New York 2 months ago. Trying to meet new friends. Upvote 0. Downvote 1 Go to comments. Share. Comments Section. Plus_Carpenter_5579."
+},
+{
+"id": "t3_1y5wu5x",
+"title": "Other \u201cbest cities in the world\u201d seem to exist!",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y5wu5x/other_best_cities_in_the_world_seem_to_exist/",
+"t": 1795688861,
+"author": "",
+"lists": [],
+"snippet": "Being part of this thread, where nyc is constantly glorified as \u201cthe best city on earth\u201d and its obvious, growing challenges are systematically\u2026"
+},
+{
+"id": "t3_1y56jfl",
+"title": "Average cost of movers DC to NYC?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y56jfl/average_cost_of_movers_dc_to_nyc/",
+"t": 1795688861,
+"author": "",
+"lists": [],
+"snippet": "I asked chat gpt but it is such a piece of shit so who knows if it is a good idea of average Anyone else have averages? 1 bed to 1 bed. Both are\u2026"
+},
 {
 "id": "t3_1y4wtcp",
 "title": "Got the keys! Northwest Boston Suburbs, $887k @ 6.875% 30yr",
@@ -6244,6 +6459,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 293,
-"checked_today": 85
+"checked_week": 305,
+"checked_today": 97
 }
