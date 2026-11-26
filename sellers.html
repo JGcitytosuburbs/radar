@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Likely Sellers · NJ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --ink:#2c3746; --ink-soft:#46505e; --cream:#f6f2eb; --paper:#fbf9f5; --stone:#7b766d;
+  --line:rgba(44,55,70,.14); --brass:#b08d57; --brass-dark:#8f6f3f;
+  --landlord:#b08d57; --moveup:#4f7aa6; --equity:#6b8a55; --longtime:#8a5f8f;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header.top{background:var(--ink);color:var(--cream)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{font-family:"Josefin Sans",var(--sans);letter-spacing:.32em;font-size:13px}
+.private{font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(246,242,235,.35);border-radius:999px;padding:4px 10px}
+.hero{padding:28px 0 10px}
+.kicker{color:var(--brass-dark);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0 0 6px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0 0 10px}
+h1 em{font-style:italic;font-weight:500}
+.lede{color:var(--ink-soft);max-width:680px;margin:0}
+.picker{display:flex;align-items:center;gap:10px;margin:4px 0 14px;max-width:520px}
+.picker label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone)}
+.picker select{flex:1;min-width:0;appearance:none;-webkit-appearance:none;border:1px solid var(--ink);border-radius:10px;padding:12px 40px 12px 14px;font:600 17px var(--sans);color:var(--ink);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232c3746' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center}
+.bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:10px;max-width:420px}
+.bar i{display:block;height:100%;width:0;background:var(--brass);transition:width .3s}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:18px 0 6px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 14px;font:600 14px var(--sans);cursor:pointer;display:flex;align-items:center;gap:8px}
+.chip .n{font-weight:500;color:var(--stone)}
+.chip .dot{width:9px;height:9px;border-radius:50%}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.chip[aria-pressed="true"] .n{color:rgba(246,242,235,.7)}
+.explain{font-size:14px;color:var(--ink-soft);margin:6px 0 14px;min-height:21px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.search{flex:1 1 220px;border:1px solid var(--line);border-radius:10px;padding:11px 14px;font:16px var(--sans);background:#fff;color:var(--ink)}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--cream);border-radius:10px;padding:11px 14px;font:600 14px var(--sans);cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink)}
+.layout{display:grid;grid-template-columns:1fr;gap:16px;padding-bottom:40px}
+@media(min-width:900px){.layout{grid-template-columns:minmax(0,1fr) 440px;align-items:start}#map{position:sticky;top:16px;height:calc(100vh - 32px)!important}.mapcol{order:2}}
+#map{height:300px;border-radius:14px;border:1px solid var(--line);background:#e9e6df;z-index:0}
+.count{font-size:13px;color:var(--stone);margin:0 0 10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;margin-bottom:10px;transition:box-shadow .2s,border-color .2s}
+.card.hl{border-color:var(--brass);box-shadow:0 0 0 3px rgba(176,141,87,.22)}
+.card.done{opacity:.55}
+.row1{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.addr{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.1;margin:0}
+.addr small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--stone);margin-top:4px}
+.badge{flex:0 0 auto;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.b-high{background:var(--ink);color:var(--cream)}
+.b-good{background:#e9e2d4;color:var(--ink)}
+.b-maybe{background:#f1efea;color:var(--stone)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;margin:10px 0 4px}
+.tag .dot{width:8px;height:8px;border-radius:50%}
+.why{margin:0;color:var(--ink-soft);font-size:15px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--stone);margin:10px 0 0}
+.facts b{color:var(--ink);font-weight:600}
+.mail{font-size:13px;background:var(--cream);border-radius:8px;padding:8px 10px;margin-top:10px}
+.mail b{font-weight:600}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.acts a,.acts label{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:7px 10px;display:inline-flex;align-items:center;gap:6px;cursor:pointer;background:#fff}
+.acts input{accent-color:var(--ink);width:16px;height:16px;margin:0}
+.more{display:block;width:100%;margin:6px 0 0}
+.notes{border-top:1px solid var(--line);padding:26px 0 50px}
+.notes h2{font-family:var(--serif);font-size:30px;margin:0 0 10px;font-weight:600}
+.notes ul{margin:0;padding-left:20px;color:var(--ink-soft);max-width:760px}
+.notes li{margin-bottom:8px}
+.leaflet-popup-content{font-family:var(--sans);font-size:13px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="brand">GOODKIN</span><span class="private">Private · for Josh</span></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="kicker"><span id="kTown">Morristown</span>, NJ · Likely sellers</p>
+    <h1>Who's most likely to <em>sell</em> next.</h1>
+    <div class="picker"><label for="town">Town</label>
+      <select id="town"></select></div>
+    <p class="lede" id="lede">Loading…</p>
+  </section>
+
+  <div class="chips" role="group" aria-label="Filter">
+    <button class="chip" data-g="top" aria-pressed="true">Start here <span class="n"></span></button>
+    <button class="chip" data-g="landlord"><span class="dot" style="background:var(--landlord)"></span>Landlords <span class="n"></span></button>
+    <button class="chip" data-g="moveup"><span class="dot" style="background:var(--moveup)"></span>Ready to move up <span class="n"></span></button>
+    <button class="chip" data-g="equity"><span class="dot" style="background:var(--equity)"></span>Lots of equity <span class="n"></span></button>
+    <button class="chip" data-g="longtime"><span class="dot" style="background:var(--longtime)"></span>Long-time owners <span class="n"></span></button>
+    <button class="chip" data-g="all">All <span class="n"></span></button>
+  </div>
+  <p class="explain" id="explain"></p>
+
+  <div class="tools">
+    <input class="search" id="q" type="search" placeholder="Find a street, like James St" autocomplete="off">
+    <label class="btn ghost" style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="hideDone" style="accent-color:var(--ink)"> Hide ones I've done</label>
+    <button class="btn" id="csv">Download list for mailing</button>
+  </div>
+
+  <div class="layout">
+    <div class="mapcol"><div id="map"></div></div>
+    <div>
+      <p class="count" id="count"></p>
+      <div id="list"></div>
+      <button class="btn ghost more" id="more">Show more</button>
+    </div>
+  </div>
+
+  <section class="notes">
+    <h2>Good to know</h2>
+    <ul>
+      <li><b>"Likely," not "for sure."</b> These are owners who fit the patterns of people who tend to sell. It tells Josh where to spend his time, not who is definitely moving.</li>
+      <li><b>Sales are recorded through <span id="thru">the state's latest update</span>.</b> A home that sold after that may still show the old owner, so check the MLS before reaching out. The page pulls the newest public records every time a town is picked.</li>
+      <li><b>No owner names.</b> New Jersey leaves names out of its free public file. For landlords, the mailing address is where their tax bill goes, which is the best place to send a letter or postcard.</li>
+      <li><b>Best uses:</b> postcards and letters to landlords, door hangers on streets with lots of move-up or equity homes, and knowing which doors to knock on around a new listing.</li>
+      <li><b>Phone calls:</b> check the Do Not Call list before calling anyone you don't already know.</li>
+      <li>Works for any town in New Jersey. Needs an internet connection. The checkmarks you tick are saved on this device only.</li>
+      <li>Source: NJ Office of GIS statewide parcels with MOD-IV tax records (public).</li>
+    </ul>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const TOWNS=[["Aberdeen","Monmouth","ABERDEEN TWP","MONMOUTH",6514],["Absecon","Atlantic","ABSECON CITY","ATLANTIC",3262],["Alexandria","Hunterdon","ALEXANDRIA TWP","HUNTERDON",1506],["Allamuchy","Warren","ALLAMUCHY TWP","WARREN",2361],["Allendale","Bergen","ALLENDALE BORO","BERGEN",2161],["Allenhurst","Monmouth","ALLENHURST BORO","MONMOUTH",297],["Allentown","Monmouth","ALLENTOWN BORO","MONMOUTH",588],["Alloway","Salem","ALLOWAY TOWNSHIP","SALEM",1095],["Alpha","Warren","ALPHA BORO","WARREN",801],["Alpine","Bergen","ALPINE BORO","BERGEN",666],["Andover Borough","Sussex","ANDOVER BORO","SUSSEX",182],["Andover Township","Sussex","ANDOVER TWP","SUSSEX",1996],["Asbury Park","Monmouth","ASBURY PARK CITY","MONMOUTH",2179],["Atlantic","Atlantic","ATLANTIC CITY CITY","ATLANTIC",10793],["Atlantic Highlands","Monmouth","ATLANTIC HIGHLANDS BORO","MONMOUTH",1648],["Audubon","Camden","AUDUBON BORO","CAMDEN",2953],["Avalon","Cape May","AVALON BORO","CAPE MAY",5181],["Avon By The Sea","Monmouth","AVON BY THE SEA BORO","MONMOUTH",1004],["Barnegat","Ocean","BARNEGAT TWP","OCEAN",9878],["Barnegat Light","Ocean","BARNEGAT LIGHT BORO","OCEAN",1204],["Barrington","Camden","BARRINGTON BORO","CAMDEN",2016],["Bass River","Burlington","BASS RIVER TWP","BURLINGTON",285],["Bay Head","Ocean","BAY HEAD BORO","OCEAN",975],["Bayonne","Hudson","BAYONNE CITY","HUDSON",11194],["Beach Haven","Ocean","BEACH HAVEN BORO","OCEAN",2350],["Beachwood","Ocean","BEACHWOOD BORO","OCEAN",3778],["Bedminster","Somerset","BEDMINSTER TWP","SOMERSET",4025],["Belleville","Essex","BELLEVILLE TWP","ESSEX",7258],["Bellmawr","Camden","BELLMAWR BORO","CAMDEN",3375],["Belmar","Monmouth","BELMAR BORO","MONMOUTH",2683],["Belvidere","Warren","BELVIDERE TOWN","WARREN",821],["Bergenfield","Bergen","BERGENFIELD BORO","BERGEN",6871],["Berkeley","Ocean","BERKELEY TWP","OCEAN",23550],["Berkeley Heights","Union","BERKELEY HEIGHTS TWP","UNION",4407],["Berlin Borough","Camden","BERLIN BORO","CAMDEN",2531],["Berlin Township","Camden","BERLIN TWP","CAMDEN",2014],["Bernards","Somerset","BERNARDS TWP","SOMERSET",9568],["Bernardsville","Somerset","BERNARDSVILLE BORO","SOMERSET",2484],["Bethlehem","Hunterdon","BETHLEHEM TWP","HUNTERDON",1226],["Beverly","Burlington","BEVERLY CITY","BURLINGTON",849],["Blairstown","Warren","BLAIRSTOWN TWP","WARREN",1856],["Bloomfield","Essex","BLOOMFIELD TWP","ESSEX",10420],["Bloomingdale","Passaic","BLOOMINGDALE BORO","PASSAIC",2442],["Bloomsbury","Hunterdon","BLOOMSBURY BORO","HUNTERDON",318],["Bogota","Bergen","BOGOTA BORO","BERGEN",2022],["Boonton Town","Morris","BOONTON TOWN","MORRIS",2375],["Boonton Township","Morris","BOONTON TWP","MORRIS",1511],["Bordentown City","Burlington","BORDENTOWN CITY","BURLINGTON",1206],["Bordentown Township","Burlington","BORDENTOWN TWP","BURLINGTON",3557],["Bound Brook","Somerset","BOUND BROOK BORO","SOMERSET",2286],["Bradley Beach","Monmouth","BRADLEY BEACH BORO","MONMOUTH",1927],["Branchburg","Somerset","BRANCHBURG TWP","SOMERSET",4856],["Branchville","Sussex","BRANCHVILLE BORO","SUSSEX",278],["Brick","Ocean","BRICK TWP","OCEAN",30763],["Bridgeton","Cumberland","BRIDGETON CITY","CUMBERLAND",4484],["Bridgewater","Somerset","BRIDGEWATER TWP","SOMERSET",14828],["Brielle","Monmouth","BRIELLE BORO","MONMOUTH",1991],["Brigantine","Atlantic","BRIGANTINE CITY","ATLANTIC",8677],["Brooklawn","Camden","BROOKLAWN BORO","CAMDEN",686],["Buena","Atlantic","BUENA BORO","ATLANTIC",1277],["Buena Vista","Atlantic","BUENA VISTA TWP","ATLANTIC",2312],["Burlington City","Burlington","BURLINGTON CITY","BURLINGTON",3150],["Burlington Township","Burlington","BURLINGTON TWP","BURLINGTON",6964],["Butler","Morris","BUTLER BORO","MORRIS",2436],["Byram","Sussex","BYRAM TWP","SUSSEX",3157],["Caldwell","Essex","CALDWELL BORO TWP","ESSEX",1887],["Califon","Hunterdon","CALIFON BORO","HUNTERDON",386],["Camden","Camden","CAMDEN CITY","CAMDEN",18373],["Cape May","Cape May","CAPE MAY CITY","CAPE MAY",3491],["Cape May Point","Cape May","CAPE MAY POINT BORO","CAPE MAY",641],["Carlstadt","Bergen","CARLSTADT BORO","BERGEN",1559],["Carneys Point","Salem","CARNEYS POINT TOWNSHIP","SALEM",2559],["Carteret","Middlesex","CARTERET BORO","MIDDLESEX",5067],["Cedar Grove","Essex","CEDAR GROVE TWP","ESSEX",3806],["Chatham Borough","Morris","CHATHAM BORO","MORRIS",2700],["Chatham Township","Morris","CHATHAM TWP","MORRIS",3784],["Cherry Hill","Camden","CHERRY HILL TWNSHP","CAMDEN",24208],["Chesilhurst","Camden","CHESILHURST BORO","CAMDEN",460],["Chester Borough","Morris","CHESTER BORO","MORRIS",467],["Chester Township","Morris","CHESTER TWP","MORRIS",2533],["Chesterfield","Burlington","CHESTERFIELD TWP","BURLINGTON",1887],["Cinnaminson","Burlington","CINNAMINSON TWP","BURLINGTON",5619],["Clark","Union","CLARK TWP","UNION",4842],["Clayton","Gloucester","CLAYTON BORO","GLOUCESTER",2613],["Clementon","Camden","CLEMENTON BORO","CAMDEN",1644],["Cliffside Park","Bergen","CLIFFSIDE PARK BORO","BERGEN",6874],["Clifton","Passaic","CLIFTON CITY","PASSAIC",21301],["Clinton Town","Hunterdon","CLINTON TOWN","HUNTERDON",854],["Clinton Township","Hunterdon","CLINTON TWP","HUNTERDON",3433],["Closter","Bergen","CLOSTER BORO","BERGEN",2696],["Collingswood","Camden","COLLINGSWOOD BORO","CAMDEN",3970],["Colts Neck","Monmouth","COLTS NECK TOWNSHIP","MONMOUTH",3187],["Commercial","Cumberland","COMMERCIAL TWP","CUMBERLAND",2072],["Corbin","Atlantic","CORBIN CITY CITY","ATLANTIC",216],["Cranbury","Middlesex","CRANBURY TWP","MIDDLESEX",1264],["Cranford","Union","CRANFORD TWP","UNION",7495],["Cresskill","Bergen","CRESSKILL BORO","BERGEN",2809],["Deal","Monmouth","DEAL BORO","MONMOUTH",849],["Deerfield","Cumberland","DEERFIELD TWP","CUMBERLAND",993],["Delanco","Burlington","DELANCO TWP","BURLINGTON",1781],["Delaware","Hunterdon","DELAWARE TWP","HUNTERDON",1381],["Delran","Burlington","DELRAN TWP","BURLINGTON",5224],["Demarest","Bergen","DEMAREST BORO","BERGEN",1676],["Dennis","Cape May","DENNIS TWP","CAPE MAY",3528],["Denville","Morris","DENVILLE TWP","MORRIS",6183],["Deptford","Gloucester","DEPTFORD TWP","GLOUCESTER",10418],["Dover","Morris","DOVER TOWN","MORRIS",3603],["Downe","Cumberland","DOWNE TWP","CUMBERLAND",925],["Dumont","Bergen","DUMONT BORO","BERGEN",4923],["Dunellen","Middlesex","DUNELLEN BORO","MIDDLESEX",1936],["E Rutherford","Bergen","E RUTHERFORD BORO","BERGEN",1940],["Eagleswood","Ocean","EAGLESWOOD TWP","OCEAN",727],["East Amwell","Hunterdon","EAST AMWELL TWP","HUNTERDON",1241],["East Brunswick","Middlesex","EAST BRUNSWICK TWP","MIDDLESEX",15987],["East Greenwich","Gloucester","EAST GREENWICH TWP","GLOUCESTER",3922],["East Hanover","Morris","EAST HANOVER TWP","MORRIS",4218],["East Newark","Hudson","EAST NEWARK BORO","HUDSON",340],["East Orange","Essex","EAST ORANGE CITY","ESSEX",7989],["East Windsor","Mercer","EAST WINDSOR TWP","MERCER",7777],["Eastampton","Burlington","EASTAMPTON TWP","BURLINGTON",2050],["Eatontown","Monmouth","EATONTOWN BORO","MONMOUTH",3086],["Edgewater","Bergen","EDGEWATER BORO","BERGEN",3894],["Edgewater Park","Burlington","EDGEWATER PARK TWP","BURLINGTON",2376],["Edison","Middlesex","EDISON TWP","MIDDLESEX",25445],["Egg Harbor City","Atlantic","EGG HARBOR CITY","ATLANTIC",1184],["Egg Harbor Township","Atlantic","EGG HARBOR TWP","ATLANTIC",15063],["Elizabeth","Union","ELIZABETH CITY","UNION",15259],["Elk","Gloucester","ELK TWP","GLOUCESTER",1467],["Elmer","Salem","ELMER BORO","SALEM",476],["Elmwood Park","Bergen","ELMWOOD PARK BORO","BERGEN",4812],["Elsinboro","Salem","ELSINBORO TWP","SALEM",537],["Emerson","Bergen","EMERSON BORO","BERGEN",2322],["Englewood","Bergen","ENGLEWOOD CITY","BERGEN",6760],["Englewood Cliffs","Bergen","ENGLEWOOD CLIFFS BORO","BERGEN",1900],["Englishtown","Monmouth","ENGLISHTOWN BORO","MONMOUTH",610],["Essex Fells","Essex","ESSEX FELLS TWP","ESSEX",730],["Estell Manor","Atlantic","ESTELL MANOR CITY","ATLANTIC",743],["Evesham","Burlington","EVESHAM TWP","BURLINGTON",15348],["Ewing","Mercer","EWING TWP","MERCER",10679],["Fair Haven","Monmouth","FAIR HAVEN BORO","MONMOUTH",2061],["Fairfield","Cumberland","FAIRFIELD TWP","CUMBERLAND",1569],["Fairfield","Essex","FAIRFIELD TWP","ESSEX",2609],["Fairlawn","Bergen","FAIRLAWN BORO","BERGEN",10358],["Fairview","Bergen","FAIRVIEW BORO","BERGEN",2201],["Fanwood","Union","FANWOOD BORO","UNION",2474],["Far Hills","Somerset","FAR HILLS BORO","SOMERSET",287],["Farmingdale","Monmouth","FARMINGDALE BORO","MONMOUTH",376],["Fieldsboro","Burlington","FIELDSBORO BORO","BURLINGTON",209],["Flemington","Hunterdon","FLEMINGTON BORO","HUNTERDON",806],["Florence","Burlington","FLORENCE TWP","BURLINGTON",4586],["Florham Park","Morris","FLORHAM PARK BORO","MORRIS",3581],["Folsom","Atlantic","FOLSOM BORO","ATLANTIC",661],["Fort Lee","Bergen","FORT LEE BORO","BERGEN",8365],["Frankford","Sussex","FRANKFORD TWP","SUSSEX",2174],["Franklin","Gloucester","FRANKLIN TWP","GLOUCESTER",5610],["Franklin","Hunterdon","FRANKLIN TWP","HUNTERDON",924],["Franklin","Somerset","FRANKLIN TWP","SOMERSET",20316],["Franklin","Sussex","FRANKLIN BORO","SUSSEX",1436],["Franklin","Warren","FRANKLIN TWP","WARREN",948],["Franklin Lakes","Bergen","FRANKLIN LAKES BORO","BERGEN",3726],["Fredon","Sussex","FREDON TWP","SUSSEX",1037],["Freehold Borough","Monmouth","FREEHOLD BORO","MONMOUTH",2972],["Freehold Township","Monmouth","FREEHOLD TWP","MONMOUTH",11584],["Frelinghuysen","Warren","FRELINGHUYSEN TWP","WARREN",606],["Frenchtown","Hunterdon","FRENCHTOWN BORO","HUNTERDON",420],["Galloway","Atlantic","GALLOWAY TWP","ATLANTIC",11868],["Garfield","Bergen","GARFIELD CITY","BERGEN",5679],["Garwood","Union","GARWOOD BORO","UNION",1258],["Gibbsboro","Camden","GIBBSBORO BORO","CAMDEN",786],["Glassboro","Gloucester","GLASSBORO BORO","GLOUCESTER",5207],["Glen Gardner","Hunterdon","GLEN GARDNER BORO","HUNTERDON",694],["Glen Ridge","Essex","GLEN RIDGE BORO","ESSEX",2155],["Glen Rock","Bergen","GLEN ROCK BORO","BERGEN",3872],["Gloucester City","Camden","GLOUCESTER CITY","CAMDEN",3642],["Gloucester Township","Camden","GLOUCESTER TWP","CAMDEN",20222],["Green","Sussex","GREEN TWP","SUSSEX",1156],["Green Brook","Somerset","GREEN BROOK TWP","SOMERSET",2346],["Greenwich","Cumberland","GREENWICH TWP","CUMBERLAND",294],["Greenwich","Gloucester","GREENWICH TWP","GLOUCESTER",1853],["Greenwich","Warren","GREENWICH TWP","WARREN",1746],["Guttenberg","Hudson","GUTTENBERG TOWN","HUDSON",2345],["Hackensack","Bergen","HACKENSACK CITY","BERGEN",8025],["Hackettstown","Warren","HACKETTSTOWN TOWN","WARREN",2364],["Haddon","Camden","HADDON TWP","CAMDEN",4717],["Haddon Heights","Camden","HADDON HEIGHTS BORO","CAMDEN",2596],["Haddonfield","Camden","HADDONFIELD BORO","CAMDEN",4113],["Hainesport","Burlington","HAINESPORT TWP","BURLINGTON",2190],["Haledon","Passaic","HALEDON BORO","PASSAIC",1697],["Hamburg","Sussex","HAMBURG BORO","SUSSEX",1345],["Hamilton","Atlantic","HAMILTON TWP","ATLANTIC",6800],["Hamilton","Mercer","HAMILTON TWP","MERCER",29420],["Hammonton","Atlantic","HAMMONTON TOWN","ATLANTIC",4691],["Hampton","Hunterdon","HAMPTON BORO","HUNTERDON",448],["Hampton","Sussex","HAMPTON TWP","SUSSEX",1895],["Hanover Township","Morris","HANOVER TWP","MORRIS",5089],["Harding","Morris","HARDING TWP","MORRIS",1412],["Hardwick","Warren","HARDWICK TWP","WARREN",440],["Hardyston","Sussex","HARDYSTON TWP","SUSSEX",3793],["Harmony","Warren","HARMONY TWP","WARREN",936],["Harrington Park","Bergen","HARRINGTON PARK BORO","BERGEN",1586],["Harrison","Gloucester","HARRISON TWP","GLOUCESTER",4010],["Harrison","Hudson","HARRISON TOWN","HUDSON",1964],["Harvey Cedars","Ocean","HARVEY CEDARS BORO","OCEAN",1179],["Hasbrouck Hghts","Bergen","HASBROUCK HGHTS BORO","BERGEN",3344],["Haworth","Bergen","HAWORTH BORO","BERGEN",1180],["Hawthorne","Passaic","HAWTHORNE BORO","PASSAIC",5434],["Hazlet","Monmouth","HAZLET TWP","MONMOUTH",6339],["Helmetta","Middlesex","HELMETTA BORO","MIDDLESEX",865],["Hi Nella","Camden","HI NELLA BORO","CAMDEN",124],["High Bridge","Hunterdon","HIGH BRIDGE BORO","HUNTERDON",1319],["Highland Park","Middlesex","HIGHLAND PARK BORO","MIDDLESEX",3183],["Highlands","Monmouth","HIGHLANDS BORO","MONMOUTH",2272],["Hightstown","Mercer","HIGHTSTOWN BORO","MERCER",1480],["Hillsborough","Somerset","HILLSBOROUGH TWP","SOMERSET",13221],["Hillsdale","Bergen","HILLSDALE BORO","BERGEN",3327],["Hillside","Union","HILLSIDE TWP","UNION",5633],["Hoboken","Hudson","HOBOKEN CITY","HUDSON",16122],["Hohokus","Bergen","HOHOKUS BORO","BERGEN",1440],["Holland","Hunterdon","HOLLAND TWP","HUNTERDON",1857],["Holmdel","Monmouth","HOLMDEL TWP","MONMOUTH",5529],["Hopatcong","Sussex","HOPATCONG BORO","SUSSEX",6149],["Hope","Warren","HOPE TWP","WARREN",638],["Hopewell","Cumberland","HOPEWELL TWP","CUMBERLAND",1452],["Hopewell Borough","Mercer","HOPEWELL BORO","MERCER",667],["Hopewell Township","Mercer","HOPEWELL TWP","MERCER",4965],["Howell","Monmouth","HOWELL TWP","MONMOUTH",17707],["Independence","Warren","INDEPENDENCE TWP","WARREN",1893],["Interlaken","Monmouth","INTERLAKEN BORO","MONMOUTH",398],["Irvington","Essex","IRVINGTON TWP","ESSEX",8072],["Island Heights","Ocean","ISLAND HEIGHTS BORO","OCEAN",815],["Jackson","Ocean","JACKSON TWP","OCEAN",18007],["Jamesburg","Middlesex","JAMESBURG BORO","MIDDLESEX",1608],["Jefferson","Morris","JEFFERSON TWP","MORRIS",7598],["Jersey","Hudson","JERSEY CITY CITY","HUDSON",41958],["Keansburg","Monmouth","KEANSBURG BORO","MONMOUTH",2955],["Kearny","Hudson","KEARNY TOWN","HUDSON",7001],["Kenilworth","Union","KENILWORTH BORO","UNION",2522],["Keyport","Monmouth","KEYPORT BORO","MONMOUTH",1997],["Kingwood","Hunterdon","KINGWOOD TWP","HUNTERDON",1178],["Kinnelon","Morris","KINNELON BORO","MORRIS",3400],["Knowlton","Warren","KNOWLTON TWP","WARREN",921],["Lacey","Ocean","LACEY TWP","OCEAN",12165],["Lafayette","Sussex","LAFAYETTE TWP","SUSSEX",709],["Lake Como","Monmouth","LAKE COMO BORO","MONMOUTH",909],["Lakehurst","Ocean","LAKEHURST BORO","OCEAN",681],["Lakewood","Ocean","LAKEWOOD TWP","OCEAN",23512],["Lambertville","Hunterdon","LAMBERTVILLE CITY","HUNTERDON",1598],["Laurel Springs","Camden","LAUREL SPRINGS BORO","CAMDEN",632],["Lavallette","Ocean","LAVALLETTE BORO","OCEAN",2617],["Lawnside","Camden","LAWNSIDE BORO","CAMDEN",977],["Lawrence","Cumberland","LAWRENCE TWP","CUMBERLAND",1104],["Lawrence","Mercer","LAWRENCE TWP","MERCER",10044],["Lebanon Borough","Hunterdon","LEBANON BORO","HUNTERDON",468],["Lebanon Township","Hunterdon","LEBANON TWP","HUNTERDON",2056],["Leonia","Bergen","LEONIA BORO","BERGEN",2429],["Liberty","Warren","LIBERTY TWP","WARREN",1019],["Lincoln Park","Morris","LINCOLN PARK BORO","MORRIS",3507],["Linden","Union","LINDEN CITY","UNION",10172],["Lindenwold","Camden","LINDENWOLD BORO","CAMDEN",3444],["Linwood","Atlantic","LINWOOD CITY","ATLANTIC",2332],["Little Egg Harbor","Ocean","LITTLE EGG HARBOR TWP","OCEAN",10408],["Little Falls","Passaic","LITTLE FALLS TWP","PASSAIC",2920],["Little Ferry","Bergen","LITTLE FERRY BORO","BERGEN",2247],["Little Silver","Monmouth","LITTLE SILVER BORO","MONMOUTH",2336],["Livingston","Essex","LIVINGSTON TWP","ESSEX",10048],["Loch Arbour","Monmouth","LOCH ARBOUR VILLAGE","MONMOUTH",133],["Lodi","Bergen","LODI BORO","BERGEN",4458],["Logan","Gloucester","LOGAN TWP","GLOUCESTER",2086],["Long Beach","Ocean","LONG BEACH TWP","OCEAN",8023],["Long Branch","Monmouth","LONG BRANCH CITY","MONMOUTH",8183],["Long Hill","Morris","LONG HILL TWP","MORRIS",2897],["Longport","Atlantic","LONGPORT BORO","ATLANTIC",1045],["Lopatcong","Warren","LOPATCONG TWP","WARREN",3013],["Lower","Cape May","LOWER TWP","CAPE MAY",13055],["Lower Alloway Creek","Salem","LOWER ALLOWAY CREEK TWP","SALEM",556],["Lumberton","Burlington","LUMBERTON TWP","BURLINGTON",3594],["Lyndhurst","Bergen","LYNDHURST TWP","BERGEN",5111],["Madison","Morris","MADISON BORO","MORRIS",4276],["Magnolia","Camden","MAGNOLIA BORO","CAMDEN",1414],["Mahwah","Bergen","MAHWAH TWP","BERGEN",9365],["Manalapan","Monmouth","MANALAPAN TWP","MONMOUTH",14377],["Manasquan","Monmouth","MANASQUAN BORO","MONMOUTH",2921],["Manchester","Ocean","MANCHESTER TWP","OCEAN",16688],["Mannington","Salem","MANNINGTON TWP","SALEM",413],["Mansfield","Burlington","MANSFIELD TWP","BURLINGTON",3369],["Mansfield","Warren","MANSFIELD TWP","WARREN",1927],["Mantoloking","Ocean","MANTOLOKING BORO","OCEAN",520],["Mantua","Gloucester","MANTUA TWP","GLOUCESTER",5534],["Manville","Somerset","MANVILLE BORO","SOMERSET",3122],["Maple Shade","Burlington","MAPLE SHADE TWP","BURLINGTON",4683],["Maplewood","Essex","MAPLEWOOD TWP","ESSEX",6851],["Margate","Atlantic","MARGATE CITY CITY","ATLANTIC",5119],["Marlboro","Monmouth","MARLBORO TWP","MONMOUTH",13340],["Matawan","Monmouth","MATAWAN BORO","MONMOUTH",2384],["Maurice River","Cumberland","MAURICE RIVER TWP","CUMBERLAND",1339],["Maywood","Bergen","MAYWOOD BORO","BERGEN",2723],["Medford","Burlington","MEDFORD TWP","BURLINGTON",8337],["Medford Lakes","Burlington","MEDFORD LAKES BORO","BURLINGTON",1523],["Mendham Borough","Morris","MENDHAM BORO","MORRIS",1619],["Mendham Township","Morris","MENDHAM TWP","MORRIS",1964],["Merchantville","Camden","MERCHANTVILLE BORO","CAMDEN",1083],["Metuchen","Middlesex","METUCHEN BORO","MIDDLESEX",4582],["Middle","Cape May","MIDDLE TWP","CAPE MAY",8798],["Middlesex","Middlesex","MIDDLESEX BORO","MIDDLESEX",4177],["Middletown","Monmouth","MIDDLETOWN TWP","MONMOUTH",22726],["Midland Park","Bergen","MIDLAND PARK BORO","BERGEN",2187],["Milford","Hunterdon","MILFORD BORO","HUNTERDON",410],["Millburn & Short Hills","Essex","MILLBURN TWP","ESSEX",6219],["Millstone","Monmouth","MILLSTONE TWP","MONMOUTH",3124],["Millstone","Somerset","MILLSTONE BORO","SOMERSET",154],["Milltown","Middlesex","MILLTOWN BORO","MIDDLESEX",2380],["Millville","Cumberland","MILLVILLE CITY","CUMBERLAND",8276],["Mine Hill","Morris","MINE HILL TWP","MORRIS",1378],["Monmouth Beach","Monmouth","MONMOUTH BEACH BORO","MONMOUTH",1995],["Monroe","Gloucester","MONROE TWP","GLOUCESTER",7089],["Monroe","Middlesex","MONROE TWP","MIDDLESEX",21063],["Montague","Sussex","MONTAGUE TWP","SUSSEX",1692],["Montclair","Essex","MONTCLAIR TWP","ESSEX",9588],["Montgomery","Somerset","MONTGOMERY TWP","SOMERSET",6703],["Montvale","Bergen","MONTVALE BORO","BERGEN",2993],["Montville","Morris","MONTVILLE TWP","MORRIS",7141],["Moonachie","Bergen","MOONACHIE BORO","BERGEN",592],["Moorestown","Burlington","MOORESTOWN TWP","BURLINGTON",6437],["Morris Plains","Morris","MORRIS PLAINS BORO","MORRIS",2299],["Morris Township","Morris","MORRIS TWP","MORRIS",7986],["Morristown","Morris","MORRISTOWN TOWN","MORRIS",3481],["Mount Arlington","Morris","MOUNT ARLINGTON BORO","MORRIS",2172],["Mount Ephraim","Camden","MOUNT EPHRAIM BORO","CAMDEN",1621],["Mount Olive","Morris","MOUNT OLIVE TWP","MORRIS",7201],["Mountain Lakes","Morris","MOUNTAIN LAKES BORO","MORRIS",1445],["Mountainside","Union","MOUNTAINSIDE BORO","UNION",2469],["Mt Holly","Burlington","MT HOLLY TWP","BURLINGTON",3000],["Mt Laurel","Burlington","MT LAUREL TWP","BURLINGTON",16764],["Mullica","Atlantic","MULLICA TWP","ATLANTIC",2206],["National Park","Gloucester","NATIONAL PARK BORO","GLOUCESTER",1083],["Neptune City","Monmouth","NEPTUNE CITY BORO","MONMOUTH",1518],["Neptune Township","Monmouth","NEPTUNE TWP","MONMOUTH",9142],["Netcong","Morris","NETCONG BORO","MORRIS",823],["New Brunswick","Middlesex","NEW BRUNSWICK CITY","MIDDLESEX",5855],["New Hanover","Burlington","NEW HANOVER TWP","BURLINGTON",268],["New Milford","Bergen","NEW MILFORD BORO","BERGEN",4126],["New Providence","Union","NEW PROVIDENCE BORO","UNION",3734],["Newark","Essex","NEWARK CITY","ESSEX",28326],["Newfield","Gloucester","NEWFIELD BORO","GLOUCESTER",640],["Newton","Sussex","NEWTON TOWN","SUSSEX",2012],["No Hanover","Burlington","NO HANOVER TWP","BURLINGTON",953],["North Arlington","Bergen","NORTH ARLINGTON BORO","BERGEN",3718],["North Bergen","Hudson","NORTH BERGEN TWP","HUDSON",10849],["North Brunswick","Middlesex","NORTH BRUNSWICK TWP","MIDDLESEX",7891],["North Caldwell","Essex","NORTH CALDWELL TWP","ESSEX",2353],["North Haledon","Passaic","NORTH HALEDON BORO","PASSAIC",2866],["North Plainfield","Somerset","NORTH PLAINFIELD BORO","SOMERSET",4905],["North Wildwood","Cape May","NORTH WILDWOOD CITY","CAPE MAY",2993],["Northfield","Atlantic","NORTHFIELD CITY","ATLANTIC",2862],["Northvale","Bergen","NORTHVALE BORO","BERGEN",1549],["Norwood","Bergen","NORWOOD BORO","BERGEN",1828],["Nutley","Essex","NUTLEY TWP","ESSEX",8197],["Oakland","Bergen","OAKLAND BORO","BERGEN",4379],["Oaklyn","Camden","OAKLYN BORO","CAMDEN",1328],["Ocean","Cape May","OCEAN CITY CITY","CAPE MAY",16901],["Ocean","Monmouth","OCEAN TWP","MONMOUTH",8744],["Ocean","Ocean","OCEAN TWP","OCEAN",4514],["Ocean Gate","Ocean","OCEAN GATE BORO","OCEAN",1056],["Oceanport","Monmouth","OCEANPORT BORO","MONMOUTH",2173],["Ogdensburg","Sussex","OGDENSBURG BORO","SUSSEX",801],["Old Bridge","Middlesex","OLD BRIDGE TWP","MIDDLESEX",18851],["Old Tappan","Bergen","OLD TAPPAN BORO","BERGEN",2057],["Oldmans","Salem","OLDMANS TWP","SALEM",659],["Oradell","Bergen","ORADELL BORO","BERGEN",2639],["Orange","Essex","ORANGE CITY TWP","ESSEX",3978],["Oxford","Warren","OXFORD TWP","WARREN",848],["Palisades Park","Bergen","PALISADES PARK BORO","BERGEN",3875],["Palmyra","Burlington","PALMYRA BORO","BURLINGTON",2731],["Paramus","Bergen","PARAMUS BORO","BERGEN",8135],["Park Ridge","Bergen","PARK RIDGE BORO","BERGEN",2935],["Parsippany-Troy Hills","Morris","PARSIPPANY TR HLS TWP","MORRIS",14363],["Passaic","Passaic","PASSAIC CITY","PASSAIC",5575],["Paterson","Passaic","PATERSON CITY","PASSAIC",17539],["Paulsboro","Gloucester","PAULSBORO BORO","GLOUCESTER",1950],["Peapack Gladstone","Somerset","PEAPACK GLADSTONE BORO","SOMERSET",740],["Pemberton Borough","Burlington","PEMBERTON BORO","BURLINGTON",456],["Pemberton Township","Burlington","PEMBERTON TWP","BURLINGTON",7809],["Pennington","Mercer","PENNINGTON BORO","MERCER",954],["Penns Grove","Salem","PENNS GROVE BORO","SALEM",1205],["Pennsauken","Camden","PENNSAUKEN TWP","CAMDEN",11204],["Pennsville","Salem","PENNSVILLE TWP","SALEM",4572],["Pequannock","Morris","PEQUANNOCK TWP","MORRIS",4722],["Perth Amboy","Middlesex","PERTH AMBOY CITY","MIDDLESEX",7656],["Phillipsburg","Warren","PHILLIPSBURG TOWN","WARREN",4509],["Pilesgrove","Salem","PILESGROVE TWP","SALEM",1207],["Pine Beach","Ocean","PINE BEACH BORO","OCEAN",889],["Pine Hill","Camden","PINE HILL BORO","CAMDEN",3013],["Piscataway","Middlesex","PISCATAWAY TWP","MIDDLESEX",13593],["Pitman","Gloucester","PITMAN BORO","GLOUCESTER",2984],["Pittsgrove","Salem","PITTSGROVE TWP","SALEM",2557],["Plainfield","Union","PLAINFIELD CITY","UNION",9153],["Plainsboro","Middlesex","PLAINSBORO TWP","MIDDLESEX",3572],["Pleasantville","Atlantic","PLEASANTVILLE CITY","ATLANTIC",5100],["Plumsted","Ocean","PLUMSTED TWP","OCEAN",2408],["Pohatcong","Warren","POHATCONG TWP","WARREN",1235],["Point Pleasant","Ocean","POINT PLEASANT BORO","OCEAN",7742],["Pompton Lakes","Passaic","POMPTON LAKES BORO","PASSAIC",3344],["Port Republic","Atlantic","PORT REPUBLIC CITY","ATLANTIC",430],["Princeton","Mercer","PRINCETON","MERCER",6842],["Prospect Park","Passaic","PROSPECT PARK BORO","PASSAIC",1036],["Pt Pleasant Beach","Ocean","PT PLEASANT BEACH BORO","OCEAN",2919],["Quinton","Salem","QUINTON TWP","SALEM",863],["Rahway","Union","RAHWAY CITY","UNION",7312],["Ramsey","Bergen","RAMSEY BORO","BERGEN",5166],["Randolph","Morris","RANDOLPH TWP","MORRIS",7389],["Raritan","Hunterdon","RARITAN TWP","HUNTERDON",7842],["Raritan","Somerset","RARITAN BORO","SOMERSET",1882],["Readington","Hunterdon","READINGTON TWP","HUNTERDON",5713],["Red Bank","Monmouth","RED BANK BORO","MONMOUTH",3395],["Ridgefield","Bergen","RIDGEFIELD BORO","BERGEN",2522],["Ridgefield Park","Bergen","RIDGEFIELD PARK VILLAGE","BERGEN",2845],["Ridgewood","Bergen","RIDGEWOOD VILLAGE","BERGEN",7438],["Ringwood","Passaic","RINGWOOD BORO","PASSAIC",4280],["Riverdale","Morris","RIVERDALE BORO","MORRIS",930],["Riveredge","Bergen","RIVEREDGE BORO","BERGEN",3219],["Riverside","Burlington","RIVERSIDE TWP","BURLINGTON",2452],["Riverton","Burlington","RIVERTON BORO","BURLINGTON",883],["Rivervale","Bergen","RIVERVALE TWP","BERGEN",3498],["Robbinsville","Mercer","ROBBINSVILLE TWP","MERCER",5016],["Rochelle Park","Bergen","ROCHELLE PARK TWP","BERGEN",1798],["Rockaway Borough","Morris","ROCKAWAY BORO","MORRIS",1883],["Rockaway Township","Morris","ROCKAWAY TWP","MORRIS",8865],["Rockleigh","Bergen","ROCKLEIGH BORO","BERGEN",75],["Rocky Hill","Somerset","ROCKY HILL BORO","SOMERSET",249],["Roosevelt","Monmouth","ROOSEVELT BORO","MONMOUTH",305],["Roseland","Essex","ROSELAND BORO","ESSEX",1933],["Roselle","Union","ROSELLE BORO","UNION",5194],["Roselle Park","Union","ROSELLE PARK BORO","UNION",3299],["Roxbury","Morris","ROXBURY TWP","MORRIS",7349],["Rumson","Monmouth","RUMSON BORO","MONMOUTH",2552],["Runnemede","Camden","RUNNEMEDE BORO","CAMDEN",2581],["Rutherford","Bergen","RUTHERFORD BORO","BERGEN",5010],["Saddle Brook","Bergen","SADDLE BROOK TWP","BERGEN",4090],["Saddle River","Bergen","SADDLE RIVER BORO","BERGEN",1285],["Salem","Salem","SALEM CITY","SALEM",1480],["Sandyston","Sussex","SANDYSTON TWP","SUSSEX",801],["Sayreville","Middlesex","SAYREVILLE BORO","MIDDLESEX",12011],["Scotch Plains","Union","SCOTCH PLAINS TWP","UNION",7343],["Sea Bright","Monmouth","SEA BRIGHT BORO","MONMOUTH",1085],["Sea Girt","Monmouth","SEA GIRT BORO","MONMOUTH",1249],["Sea Isle","Cape May","SEA ISLE CITY CITY","CAPE MAY",5788],["Seaside Heights","Ocean","SEASIDE HEIGHTS BORO","OCEAN",1854],["Seaside Park","Ocean","SEASIDE PARK BORO","OCEAN",1932],["Secaucus","Hudson","SECAUCUS TOWN","HUDSON",4798],["Shamong","Burlington","SHAMONG TWP","BURLINGTON",1926],["Shiloh","Cumberland","SHILOH BORO","CUMBERLAND",180],["Ship Bottom","Ocean","SHIP BOTTOM BORO","OCEAN",1895],["Shrewsbury Borough","Monmouth","SHREWSBURY BORO","MONMOUTH",1445],["Shrewsbury Township","Monmouth","SHREWSBURY TWP","MONMOUTH",122],["So Bound Brook","Somerset","SO BOUND BROOK BORO","SOMERSET",1219],["So Hackensack","Bergen","SO HACKENSACK TWP","BERGEN",526],["So Harrison","Gloucester","SO HARRISON TWP","GLOUCESTER",984],["Somerdale","Camden","SOMERDALE BORO","CAMDEN",1821],["Somers Point","Atlantic","SOMERS POINT CITY","ATLANTIC",3486],["Somerville","Somerset","SOMERVILLE BORO","SOMERSET",2655],["South Amboy","Middlesex","SOUTH AMBOY CITY","MIDDLESEX",2385],["South Brunswick","Middlesex","SOUTH BRUNSWICK TWP","MIDDLESEX",13312],["South Orange","Essex","SOUTH ORANGE VILLAGE TW","ESSEX",3984],["South Plainfield","Middlesex","SOUTH PLAINFIELD BORO","MIDDLESEX",6809],["South River","Middlesex","SOUTH RIVER BORO","MIDDLESEX",4308],["South Toms River","Ocean","SOUTH TOMS RIVER BORO","OCEAN",1118],["Southampton","Burlington","SOUTHAMPTON TWP","BURLINGTON",4351],["Sparta","Sussex","SPARTA TWP","SUSSEX",7081],["Spotswood","Middlesex","SPOTSWOOD BORO","MIDDLESEX",2520],["Spring Lake","Monmouth","SPRING LAKE BORO","MONMOUTH",1920],["Spring Lake Heights","Monmouth","SPRING LAKE HEIGHTS BOR","MONMOUTH",2138],["Springfield","Burlington","SPRINGFIELD TWP","BURLINGTON",1012],["Springfield","Union","SPRINGFIELD TWP","UNION",4807],["Stafford","Ocean","STAFFORD TWP","OCEAN",13243],["Stanhope","Sussex","STANHOPE BORO","SUSSEX",1360],["Stillwater","Sussex","STILLWATER TWP","SUSSEX",1657],["Stockton","Hunterdon","STOCKTON BORO","HUNTERDON",200],["Stone Harbor","Cape May","STONE HARBOR BORO","CAPE MAY",2869],["Stow Creek","Cumberland","STOW CREEK TWP","CUMBERLAND",380],["Stratford","Camden","STRATFORD BORO","CAMDEN",2106],["Summit","Union","SUMMIT CITY","UNION",6240],["Surf","Ocean","SURF CITY BORO","OCEAN",2144],["Sussex","Sussex","SUSSEX BORO","SUSSEX",450],["Swedesboro","Gloucester","SWEDESBORO BORO","GLOUCESTER",789],["Tabernacle","Burlington","TABERNACLE TWP","BURLINGTON",2336],["Tavistock","Camden","TAVISTOCK BORO","CAMDEN",3],["Teaneck","Bergen","TEANECK TWP","BERGEN",11069],["Tenafly","Bergen","TENAFLY BORO","BERGEN",4355],["Teterboro","Bergen","TETERBORO BORO","BERGEN",7],["Tewksbury","Hunterdon","TEWKSBURY TWP","HUNTERDON",1938],["Tinton Falls","Monmouth","TINTON FALLS BORO","MONMOUTH",7083],["Toms River","Ocean","TOMS RIVER TWP","OCEAN",38574],["Totowa","Passaic","TOTOWA BORO","PASSAIC",3419],["Trenton","Mercer","TRENTON CITY","MERCER",20861],["Tuckerton","Ocean","TUCKERTON BORO","OCEAN",1591],["Union","Hudson","UNION CITY CITY","HUDSON",6676],["Union","Hunterdon","UNION TWP","HUNTERDON",1732],["Union","Union","UNION TWP","UNION",15730],["Union Beach","Monmouth","UNION BEACH BORO","MONMOUTH",2105],["Upper","Cape May","UPPER TWP","CAPE MAY",5665],["Upper Deerfield","Cumberland","UPPER DEERFIELD TWP","CUMBERLAND",2533],["Upper Freehold","Monmouth","UPPER FREEHOLD TWP","MONMOUTH",2193],["Upper Pittsgrove","Salem","UPPER PITTSGROVE TWP","SALEM",890],["Upper Saddle Riv","Bergen","UPPER SADDLE RIV BORO","BERGEN",2879],["Ventnor","Atlantic","VENTNOR CITY","ATLANTIC",6335],["Vernon","Sussex","VERNON TWP","SUSSEX",10311],["Verona","Essex","VERONA TWP","ESSEX",4868],["Victory Gardens","Morris","VICTORY GARDENS BORO","MORRIS",300],["Vineland","Cumberland","VINELAND CITY","CUMBERLAND",15991],["Voorhees","Camden","VOORHEES TWP","CAMDEN",8669],["Waldwick","Bergen","WALDWICK BORO","BERGEN",3344],["Wall","Monmouth","WALL TWP","MONMOUTH",9387],["Wallington","Bergen","WALLINGTON BORO","BERGEN",2179],["Walpack","Sussex","WALPACK TWP","SUSSEX",7],["Wanaque","Passaic","WANAQUE BORO","PASSAIC",4186],["Wantage","Sussex","WANTAGE TWP","SUSSEX",3528],["Warren","Somerset","WARREN TWP","SOMERSET",5182],["Washington","Bergen","WASHINGTON TWP","BERGEN",3374],["Washington","Burlington","WASHINGTON TWP","BURLINGTON",284],["Washington","Gloucester","WASHINGTON TWP","GLOUCESTER",16309],["Washington Borough","Warren","WASHINGTON BORO","WARREN",1965],["Washington Township","Warren","WASHINGTON TWP","WARREN",2251],["Washington Township (Long Valley)","Morris","WASHINGTON TWP","MORRIS",5680],["Watchung","Somerset","WATCHUNG BORO","SOMERSET",1951],["Waterford","Camden","WATERFORD TWP","CAMDEN",3604],["Wayne","Passaic","WAYNE TWP","PASSAIC",16175],["Weehawken","Hudson","WEEHAWKEN TWP","HUDSON",2991],["Wenonah","Gloucester","WENONAH BORO","GLOUCESTER",809],["West Amwell","Hunterdon","WEST AMWELL TWP","HUNTERDON",914],["West Caldwell","Essex","WEST CALDWELL TWP","ESSEX",3389],["West Cape May","Cape May","WEST CAPE MAY BORO","CAPE MAY",981],["West Deptford","Gloucester","WEST DEPTFORD TWP","GLOUCESTER",6762],["West Long Branch","Monmouth","WEST LONG BRANCH BORO","MONMOUTH",2336],["West Milford","Passaic","WEST MILFORD TWP","PASSAIC",9807],["West New York","Hudson","WEST NEW YORK TOWN","HUDSON",4429],["West Orange","Essex","WEST ORANGE TWP","ESSEX",13323],["West Wildwood","Cape May","WEST WILDWOOD BORO","CAPE MAY",704],["West Windsor","Mercer","WEST WINDSOR TWP","MERCER",8099],["Westampton","Burlington","WESTAMPTON TWP","BURLINGTON",3132],["Westfield","Union","WESTFIELD TOWN","UNION",9208],["Westville","Gloucester","WESTVILLE BORO","GLOUCESTER",1391],["Westwood","Bergen","WESTWOOD BORO","BERGEN",3109],["Weymouth","Atlantic","WEYMOUTH TWP","ATLANTIC",651],["Wharton","Morris","WHARTON BORO","MORRIS",1729],["White","Warren","WHITE TWP","WARREN",1546],["Wildwood","Cape May","WILDWOOD CITY","CAPE MAY",1828],["Wildwood Crest","Cape May","WILDWOOD CREST BORO","CAPE MAY",5060],["Willingboro","Burlington","WILLINGBORO TWP","BURLINGTON",10685],["Winfield","Union","WINFIELD TWP","UNION",698],["Winslow","Camden","WINSLOW TWP","CAMDEN",13062],["Wood Ridge","Bergen","WOOD RIDGE BORO","BERGEN",3087],["Woodbine","Cape May","WOODBINE BORO","CAPE MAY",841],["Woodbridge","Middlesex","WOODBRIDGE TWP","MIDDLESEX",26434],["Woodbury","Gloucester","WOODBURY CITY","GLOUCESTER",2883],["Woodbury Heights","Gloucester","WOODBURY HEIGHTS BORO","GLOUCESTER",1061],["Woodcliff Lake","Bergen","WOODCLIFF LAKE BORO","BERGEN",1939],["Woodland","Burlington","WOODLAND TWP","BURLINGTON",463],["Woodland Park","Passaic","WOODLAND PARK BORO","PASSAIC",3422],["Woodlynne","Camden","WOODLYNNE BORO","CAMDEN",873],["Woodstown","Salem","WOODSTOWN BORO","SALEM",1142],["Woolwich","Gloucester","WOOLWICH TWP","GLOUCESTER",4062],["Wrightstown","Burlington","WRIGHTSTOWN BORO","BURLINGTON",124],["Wyckoff","Bergen","WYCKOFF TWP","BERGEN",5509]];
+const POPULAR=["MORRISTOWN TOWN|MORRIS","MORRIS TWP|MORRIS","MORRIS PLAINS BORO|MORRIS","MADISON BORO|MORRIS","CHATHAM BORO|MORRIS","CHATHAM TWP|MORRIS","FLORHAM PARK BORO|MORRIS","PARSIPPANY TR HLS TWP|MORRIS","RANDOLPH TWP|MORRIS","DENVILLE TWP|MORRIS","MENDHAM BORO|MORRIS","SUMMIT CITY|UNION","MILLBURN TWP|ESSEX","MAPLEWOOD TWP|ESSEX","SOUTH ORANGE VILLAGE TW|ESSEX","MONTCLAIR TWP|ESSEX","WEST ORANGE TWP|ESSEX","WESTFIELD TOWN|UNION"];
+const API="https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0/query";
+const FIELDS="PCLQCODE,PROP_LOC,ST_ADDRESS,CITY_STATE,ZIP_CODE,NET_VALUE,BLDG_DESC,DEED_DATE,SALE_PRICE";
+const G={
+  landlord:{label:"Landlord",color:"#b08d57",explain:"Owners who get their tax bill somewhere else, so they're probably renting the home out. Long-time landlords are often ready to sell, and investors with several homes are great relationships."},
+  moveup:{label:"Ready to move up",color:"#4f7aa6",explain:"Condo and townhouse owners who bought 5 to 9 years ago. This is when many outgrow the space and start looking for a house, so Josh could help them sell and buy."},
+  equity:{label:"Lots of equity",color:"#6b8a55",explain:"House owners who bought 12 to 24 years ago. Prices have climbed a lot since then, so they have room to make a move if they want one."},
+  longtime:{label:"Long-time owner",color:"#8a5f8f",explain:"Same owner for 25 years or more. Many are starting to think about something smaller or simpler."}
+};
+const EXPLAIN={top:"The 50 strongest picks, mixed across all four groups. A good place to start this week.",all:"Every flagged home, strongest first."};
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=n=>n?"$"+n.toLocaleString("en-US"):"";
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- tidy text from the tax records ---------- */
+const SKIP=new Set(["ROAD","RD","DRIVE","DR","AVENUE","AVE","AV","STREET","ST","PLACE","PL","COURT","CT","LANE","LN","TERRACE","TER","BLVD","CIRCLE","CIR","WAY","PARKWAY","PKWY","UNIT","APT","N","S","E","W"]);
+const norm=a=>(a||"").toUpperCase().replace(/[^A-Z0-9 ]/g," ").split(/\s+/).filter(w=>w&&!SKIP.has(w)).slice(0,2).join(" ");
+const STATES="NY|FL|PA|CT|MA|CA|VA|MD|NC|SC|GA|TX|AZ|CO|IL|OH|MI|DE|VT|NH|ME|RI|DC|WA|OR|TN|AL|KY|IN|WI|MN|NV|UT|HI|NJ";
+function titleCase(s){return (s||"").toLowerCase().replace(/\b([a-z])/g,m=>m.toUpperCase()).replace(/(\d)(St|Nd|Rd|Th)\b/g,(m,a,b)=>a+b.toLowerCase())}
+function fixAddr(a){
+  a=titleCase((a||"").replace(/\s+/g," ").trim());
+  a=a.replace(/\b[Nn]\.?\s?[Jj]\b\.*/g,"NJ");
+  a=a.replace(new RegExp("\\b("+STATES+")\\b(?=\\.?\\s*\\d{5}|\\.?\\s*$)","gi"),m=>m.toUpperCase());
+  a=a.replace(/\bPobox\b|\bPo Box\b|\bP\.?O\.? Box\b/gi,"PO Box").replace(/\s*,\s*/g,", ");
+  a=a.replace(new RegExp("([A-Za-z])\\s+("+STATES+")(\\s+\\d{5}|$)"),"$1, $2$3");
+  return a.replace(/,\s*$/,"");
+}
+function kind(r){
+  const b=(r.BLDG_DESC||"").toUpperCase(),loc=(r.PROP_LOC||"").toUpperCase();
+  if(/TOWN\s?H|\bTH\b|TWNHS/.test(b))return"Townhouse";
+  if(/CONDO|\bCE\b|% CE|COAH|\bUNIT\b/.test(b))return"Condo";
+  if(/^TYPE\b|^MODEL\b/.test(b)||/^C\d/.test(r.PCLQCODE||"")||/#|\bUNIT\b|\bAPT\b|\bC\d{4}\b/.test(loc))return"Condo or townhouse";
+  if(/[234]\s?FAM|2S\/B/.test(b))return"Multi-family";
+  return"House";
+}
+function deed(s){if(!s||s.length!==6)return null;let y=+s.slice(0,2);y=y<=40?2000+y:1900+y;const m=+s.slice(2,4);if(!(m>=1&&m<=12))return null;return{y,m,t:y+(m-1)/12}}
+
+/* ---------- the scoring ---------- */
+function score(recs){
+  const now=new Date(),NOW=now.getFullYear()+now.getMonth()/12;
+  const firstTok=a=>norm(a).split(" ")[0];
+  const away=r=>r.ST_ADDRESS&&norm(r.ST_ADDRESS)!==norm(r.PROP_LOC)&&firstTok(r.ST_ADDRESS)!==firstTok(r.PROP_LOC);
+  const port={};recs.forEach(r=>{if(away(r)){const k=norm(r.ST_ADDRESS)+"|"+(r.ZIP_CODE||"");port[k]=(port[k]||0)+1}});
+  let latest=0;const out=[];
+  for(const r of recs){
+    const d=deed(r.DEED_DATE);if(!d||!r.PROP_LOC)continue;
+    if(d.t<=NOW+.1&&d.t>latest)latest=d.t;
+    const yrs=NOW-d.t,k=kind(r),price=r.SALE_PRICE||0,why=[];let g=null,s=0;
+    if(away(r)&&yrs>=8){
+      g="landlord";s=50+Math.min(yrs,30);
+      const where=fixAddr(r.CITY_STATE);const local=TOWN&&where.toUpperCase().includes(TOWN.base.toUpperCase());
+      if(!local)s+=8;
+      why.push((local?"The owner gets tax mail at another local address":`The owner gets tax mail in ${where}`)+", so this is probably a rental."+(yrs>=15?` They've owned it ${Math.floor(yrs)} years, long enough that many landlords are ready to cash out.`:` Owned ${Math.floor(yrs)} years.`));
+      const n=port[norm(r.ST_ADDRESS)+"|"+(r.ZIP_CODE||"")]||0;
+      if(n>=2){s+=Math.min(n,6);why.push(`Same owner gets mail for ${n} homes in town, so this is an investor worth knowing.`)}
+    }else if(k!=="House"&&k!=="Multi-family"&&yrs>=5&&yrs<10){
+      g="moveup";s=55+(price&&price<550000?8:0);
+      const kl=k==="Condo or townhouse"?"condo or townhouse":k.toLowerCase();why.push(`Bought this ${kl} in ${d.y}. Owners often outgrow a ${kl} after 5–10 years and move up to a house.`);
+    }else if(yrs>=12&&yrs<25&&(k==="House"||k==="Multi-family")){
+      g="equity";s=40+yrs;
+      why.push(`Owned since ${d.y}. Prices have risen a lot since then, so they likely have plenty of equity to make a move.`);
+    }else if(yrs>=25){
+      g="longtime";s=45+Math.min(yrs-25,15);
+      why.push(`Same owner since ${d.y} (${Math.floor(yrs)} years). Long-time owners often start thinking about something smaller or simpler.`);
+    }
+    if(!g)continue;
+    if(k==="Multi-family"&&g!=="landlord"&&yrs>=7){s+=5;why.push("Two-family owners who live in one unit often sell to move into a single-family home.")}
+    if(price&&price<=1000)why.push("The last transfer wasn't a regular sale (often a family or estate transfer).");
+    out.push({addr:titleCase(r.PROP_LOC.replace(/\s+/g," ").trim()),type:k,year:d.y,paid:price>1000?price:0,val:r.NET_VALUE||0,
+      mail:g==="landlord"?fixAddr(`${r.ST_ADDRESS}, ${r.CITY_STATE||""} ${r.ZIP_CODE||""}`):"",g,why:why.join(" "),score:Math.round(s),lat:r._lat,lng:r._lng});
+  }
+  out.sort((a,b)=>b.score-a.score);out.forEach((r,i)=>r.i=i);
+  return{rows:out,latest};
+}
+
+/* ---------- loading a town ---------- */
+async function fetchTown(t,onProgress){
+  const where=`MUN_NAME='${t.mun.replace(/'/g,"''")}' AND COUNTY='${t.county}' AND PROP_CLASS='2'`;
+  const all=[];let off=0;
+  for(let guard=0;guard<40;guard++){
+    const u=API+"?"+new URLSearchParams({where,outFields:FIELDS,returnGeometry:"false",returnCentroid:"true",outSR:"4326",resultOffset:off,resultRecordCount:2000,f:"json"});
+    const res=await fetch(u);if(!res.ok)throw new Error("The state's records didn't answer ("+res.status+").");
+    const d=await res.json();if(d.error)throw new Error(d.error.message||"The state's records sent an error.");
+    for(const f of d.features||[]){const a=f.attributes;if(f.centroid){a._lat=+f.centroid.y.toFixed(6);a._lng=+f.centroid.x.toFixed(6)}all.push(a)}
+    onProgress(all.length);
+    if(!d.exceededTransferLimit)break;off+=2000;
+  }
+  return all;
+}
+
+/* ---------- page ---------- */
+let TOWN=null,rows=[],TOP=[],done={},group="top",q="",shown=50,view=[];
+const $=id=>document.getElementById(id);
+const sel=$("town");
+(function fillTowns(){
+  const opt=t=>`<option value="${t[2]}|${t[3]}">${esc(t[0])}</option>`;
+  const byKey={};TOWNS.forEach(t=>byKey[t[2]+"|"+t[3]]=t);
+  let h='<optgroup label="Near Josh">'+POPULAR.filter(k=>byKey[k]).map(k=>opt(byKey[k])).join("")+"</optgroup>";
+  const counties=[...new Set(TOWNS.map(t=>t[1]))].sort();
+  counties.forEach(c=>{h+=`<optgroup label="${esc(c)} County">`+TOWNS.filter(t=>t[1]===c).map(opt).join("")+"</optgroup>"});
+  sel.innerHTML=h;
+  sel.value=store.get("ls-town","MORRISTOWN TOWN|MORRIS");if(!sel.value)sel.value="MORRISTOWN TOWN|MORRIS";
+})();
+
+const HASMAP=!!window.L;let map=null,layer=null;
+if(HASMAP){map=L.map("map",{scrollWheelZoom:false}).setView([40.797,-74.481],13);
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:16,attribution:"Tiles &copy; Esri"}).addTo(map);
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{maxZoom:16}).addTo(map);
+  layer=L.layerGroup().addTo(map);
+}else document.querySelector(".mapcol").style.display="none";
+
+async function loadTown(){
+  const [mun,county]=sel.value.split("|");const t=TOWNS.find(x=>x[2]===mun&&x[3]===county);
+  TOWN={name:t[0],county:t[1],mun,base:t[0].replace(/ (Township|Borough|Town|City|Village)$/,"").replace(/ \(.*\)$/,"").replace(/ & .*/,"")};
+  store.set("ls-town",sel.value);
+  $("kTown").textContent=TOWN.name;document.title="Likely Sellers · "+TOWN.name;
+  $("lede").innerHTML=`Checking every home in ${esc(TOWN.name)} against New Jersey's public property records…<div class="bar"><i id="prog"></i></div>`;
+  $("list").innerHTML="";$("count").textContent="";$("more").style.display="none";if(layer)layer.clearLayers();
+  sel.disabled=true;
+  try{
+    const total=t[4]||1;
+    const recs=await fetchTown({mun,county:t[3]},n=>{const p=$("prog");if(p)p.style.width=Math.min(100,n/total*100)+"%"});
+    const res=score(recs);rows=res.rows;
+    const per={landlord:15,moveup:13,equity:11,longtime:11};TOP=[];
+    for(const g in per)TOP.push(...rows.filter(r=>r.g===g).slice(0,per[g]));TOP.sort((a,b)=>b.score-a.score);
+    if(TOP.length<50)TOP=rows.slice(0,50);
+    done=store.get("ls-done-"+sel.value,{});
+    $("lede").innerHTML=`Every home in ${esc(TOWN.name)}, checked against New Jersey's public property records. <b>${rows.length.toLocaleString()}</b> of ${recs.length.toLocaleString()} homes show a sign that the owner may be ready to move, sorted so the strongest go first.`;
+    if(res.latest){const y=Math.floor(res.latest),m=Math.round((res.latest-y)*12);$("thru").textContent=MONTHS[m]+" "+y}
+    document.querySelectorAll(".chip").forEach(c=>{const g=c.dataset.g;c.querySelector(".n").textContent=(g==="top"?TOP.length:g==="all"?rows.length:rows.filter(r=>r.g===g).length).toLocaleString()});
+    shown=50;render(true);
+  }catch(e){
+    $("lede").innerHTML=`Couldn't load ${esc(TOWN.name)} right now. ${esc(e.message||"")} Check the internet connection and pick the town again.`;
+  }finally{sel.disabled=false}
+}
+
+function badge(s){return s>=80?'<span class="badge b-high">Strong</span>':s>=63?'<span class="badge b-good">Good</span>':'<span class="badge b-maybe">Possible</span>'}
+function card(r){
+  const g=G[r.g],isDone=!!done[r.addr];
+  const gm="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(`${r.addr}, ${TOWN.name.replace(/ \(.*\)/,"")}, NJ`);
+  return `<article class="card${isDone?" done":""}" id="c${r.i}">
+    <div class="row1"><h3 class="addr">${esc(r.addr)}<small>${esc(r.type)} · ${esc(TOWN.name)}</small></h3>${badge(r.score)}</div>
+    <div class="tag"><span class="dot" style="background:${g.color}"></span>${g.label}</div>
+    <p class="why">${esc(r.why)}</p>
+    <div class="facts"><span>Bought <b>${r.year}</b></span>${r.paid?`<span>Paid <b>${fmt(r.paid)}</b></span>`:""}${r.val?`<span>Town's tax value <b>${fmt(r.val)}</b></span>`:""}</div>
+    ${r.mail?`<div class="mail"><b>Mail to owner:</b> ${esc(r.mail)}</div>`:""}
+    <div class="acts"><a href="${gm}" target="_blank" rel="noopener">See it on Google Maps</a>
+      <label><input type="checkbox" data-k="${esc(r.addr)}" ${isDone?"checked":""}> Reached out</label></div>
+  </article>`;
+}
+function filter(){
+  let v=group==="top"?TOP:group==="all"?rows:rows.filter(r=>r.g===group);
+  if(q){const t=q.toLowerCase();v=(group==="top"?rows:v).filter(r=>r.addr.toLowerCase().includes(t))}
+  if($("hideDone").checked)v=v.filter(r=>!done[r.addr]);
+  return v;
+}
+function render(resetMap){
+  view=filter();
+  $("list").innerHTML=view.slice(0,shown).map(card).join("")||'<p class="why">No homes match that search.</p>';
+  $("count").textContent=`${view.length.toLocaleString()} home${view.length===1?"":"s"}${view.length>shown?`, showing the first ${shown}`:""}`;
+  $("more").style.display=view.length>shown?"block":"none";
+  $("explain").textContent=EXPLAIN[group]||G[group].explain;
+  if(!HASMAP)return;
+  layer.clearLayers();const pts=[];
+  const capped=view.length>3000?view.slice(0,3000):view;
+  capped.forEach(r=>{if(!r.lat)return;pts.push([r.lat,r.lng]);
+    L.circleMarker([r.lat,r.lng],{radius:r.score>=80?7:5,color:"#fff",weight:1,fillColor:G[r.g].color,fillOpacity:.9})
+     .bindPopup(`<b>${esc(r.addr)}</b><br>${G[r.g].label}`).on("click",()=>jump(r)).addTo(layer)});
+  if(resetMap&&pts.length)map.fitBounds(pts,{padding:[20,20],maxZoom:16});
+}
+function jump(r){
+  const idx=view.indexOf(r);if(idx>=shown){shown=idx+10;render(false)}
+  const el=$("c"+r.i);if(!el)return;
+  document.querySelectorAll(".card.hl").forEach(c=>c.classList.remove("hl"));
+  el.classList.add("hl");el.scrollIntoView({behavior:"smooth",block:"center"});
+}
+sel.addEventListener("change",()=>{q="";$("q").value="";loadTown()});
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{
+  document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));c.setAttribute("aria-pressed","true");
+  group=c.dataset.g;shown=50;render(true)}));
+let tmr;$("q").addEventListener("input",e=>{clearTimeout(tmr);tmr=setTimeout(()=>{q=e.target.value.trim();shown=50;render(true)},150)});
+$("hideDone").addEventListener("change",()=>render(false));
+$("more").addEventListener("click",()=>{shown+=50;render(false)});
+$("list").addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;
+  if(e.target.checked)done[k]=Date.now();else delete done[k];store.set("ls-done-"+sel.value,done);e.target.closest(".card").classList.toggle("done",e.target.checked)});
+$("csv").addEventListener("click",()=>{
+  if(!rows.length)return;
+  const head=["Property address","Town","Type","Group","Likelihood","Bought","Paid","Tax value","Mail to owner","Why"];
+  const prop=r=>`${r.addr}, ${TOWN.name.replace(/ \(.*\)/,"")}, NJ`;
+  const lines=[head].concat(view.map(r=>[prop(r),TOWN.name,r.type,G[r.g].label,r.score>=80?"Strong":r.score>=63?"Good":"Possible",r.year,r.paid||"",r.val||"",r.mail||prop(r),r.why]));
+  const csv=lines.map(l=>l.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
+  a.download=`${TOWN.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")}-likely-sellers-${group==="top"?"top-50":group}.csv`;a.click();
+});
+loadTown();
+</script>
+</body>
+</html>
