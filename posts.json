@@ -1,8 +1,47 @@
 {
-"checked": 1795739432,
+"checked": 1795740361,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y6ap0z",
+"title": "Do Niche & GreatSchools ratings actually reflect reality at Williamstown Middle & High School?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y6ap0z/williamstown_nj_parents_do_niche_greatschools/",
+"t": 1795740354,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "10K subscribers in the MovingtoNewJersey community. Subreddit for people interested in moving to the Garden State who want to hear from NJ ..."
+},
+{
+"id": "t3_1y5f9s7",
+"title": "Spacious Studio next to 137th St",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5f9s7/spacious_studio_next_to_137th_st/",
+"t": 1795740324,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Looking for someone to take over my studio at 3333 Broadway starting Dec 18 (flexible through Jan 1). You'll sign a new 12-month lease directly ..."
+},
+{
+"id": "t3_1y5rgzb",
+"title": "Looking for a 1\u20132BR Near the L Train \u2013 $3K Budget",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5rgzb/looking_for_a_12br_near_the_l_train_3k_budget/",
+"t": 1795740324,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "I'm a single dad with a 9-year-old daughter looking for a 1\u20132 bedroom apartment for us. Budget is up to $3000/month, looking to move ASAP."
+},
 {
 "id": "t3_1y5ftp8",
 "title": "Looking for a knowledgeable and Reliable real estate agent in rego park/forest hills",
@@ -628,7 +667,7 @@
 "topics": [
 {
 "key": "afford",
-"count": 12
+"count": 15
 },
 {
 "key": "family",
@@ -644,7 +683,7 @@
 },
 {
 "key": "schools",
-"count": 2
+"count": 3
 },
 {
 "key": "towns",
@@ -2249,9 +2288,445 @@
 "id": "t3_1y5ftp8",
 "t": 1795721334,
 "topics": []
+},
+{
+"id": "t3_1y6c2rv",
+"t": 1795740324,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y5f8wq",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5rlpw",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5dner",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5a2cs",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5pifi",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5qmzj",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5jv61",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y65qyt",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y6144j",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5f9s7",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5gikw",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5i65e",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5b69h",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5hfj3",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y6djn6",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y54vte",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5ecwg",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y58k33",
+"t": 1795740324,
+"topics": []
+},
+{
+"id": "t3_1y5rgzb",
+"t": 1795740324,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y5jhzi",
+"t": 1795740354,
+"topics": []
+},
+{
+"id": "t3_1y5nf8n",
+"t": 1795740354,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y6fdm4",
+"t": 1795740354,
+"topics": []
+},
+{
+"id": "t3_1y6ap0z",
+"t": 1795740354,
+"topics": [
+"schools"
+]
 }
 ],
 "held": [
+{
+"id": "t3_1y5jhzi",
+"title": "Why does going into NYC seem like such a chore for people in North Jersey compared to ...",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y5jhzi/why_does_going_into_nyc_seem_like_such_a_chore/",
+"t": 1795740354,
+"author": "",
+"lists": [],
+"snippet": "God forbid I suggest grabbing dinner somewhere in Tribeca instead of the same three restaurants in Bergen County. Suddenly everyone's calculating ..."
+},
+{
+"id": "t3_1y5nf8n",
+"title": "Looking for roommate near Moorestown/Mount Laurel, NJ budget is $1000",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y5nf8n/looking_for_roommate_near_moorestownmount_laurel/",
+"t": 1795740354,
+"author": "",
+"lists": [],
+"snippet": "Hello, Currently working in the moorestown location. Ideally trying to plan to move in next year. About me: Male early 20's Full time Clean and ..."
+},
+{
+"id": "t3_1y6fdm4",
+"title": "Does Fort Lee offer the best of both worlds between NYC and suburban NJ?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y6fdm4/does_fort_lee_offer_the_best_of_both_worlds/",
+"t": 1795740354,
+"author": "",
+"lists": [],
+"snippet": "Been looking into Fort Lee lately and it amazes me at how you can technically walk into Manhattan whenever you feel like it but also have a ..."
+},
+{
+"id": "t3_1y59lmd",
+"title": "Moving from Colorado",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y59lmd/moving_from_colorado/",
+"t": 1795740354,
+"author": "",
+"lists": [],
+"snippet": "Hello, I am moving from Colorado and want to stay close to south jersey for the beach and Philadelphia. What are the best towns for young\u2026"
+},
+{
+"id": "t3_1y5f0wu",
+"title": "How is a leased propane tank supposed to be handled at closing?",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y5f0wu/how_is_a_leased_propane_tank_supposed_to_be/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "doing some reading, it seems this may not have been correct? It seems like the company credits the seller after the sale for what's left in the tank, ..."
+},
+{
+"id": "t3_1y5kiy9",
+"title": "Anyone under 2 years in making a living without a referral network?",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y5kiy9/anyone_under_2_years_in_making_a_living_without_a/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "I got licensed last year and figured I'd be at 2-3 closings a month by now. I did open houses every weekend, cold called expireds, knocked doors ..."
+},
+{
+"id": "t3_1y50jl8",
+"title": "Just a few hours before closing, seller asks for extra money for unused propane in leased ...",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y50jl8/just_a_few_hours_before_closing_seller_asks_for/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "224 votes, 774 comments. Closed on a house this week for way too much money. But right as the deed was being recorded, the seller (not his agent)\u2026"
+},
+{
+"id": "t3_1y69fzx",
+"title": "What do you use to figure out where to buy a house?",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y69fzx/what_do_you_use_to_figure_out_where_to_buy_a_house/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "Im thinking about buying it and renting out a room to help me pay for mortgages, but I can't tell which area would be best for getting renters. Is ..."
+},
+{
+"id": "t3_1y637ng",
+"title": "Selling: What to do with a swingset?",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y637ng/selling_what_to_do_with_a_swingset/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "Listing a one-level home in early 2027. All of my neighbors are older adults and/or retired, so that's my anticipated buyer. I have a 2-year-old\u2026"
+},
+{
+"id": "t3_1y5tli8",
+"title": "Which of these is the better property to buy? Guess which one I signed tonight. I'm not sure if ...",
+"sub": "RealEstate",
+"where": "r/RealEstate",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y5tli8/which_of_these_is_the_better_property_to_buy/",
+"t": 1795740326,
+"author": "",
+"lists": [],
+"snippet": "Both are terrible investments, and I personally wouldn't buy a condo as an investment property. First, HOA fees eat into your cash flow and can ..."
+},
+{
+"id": "t3_1y6c2rv",
+"title": "how come china can build entire ghost cities but new york cant build affordable housing ...",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6c2rv/how_come_china_can_build_entire_ghost_cities_but/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Their ghost cities aren't built in existing cities - they're built in mostly empty places - whichis why ppl don't want to live there."
+},
+{
+"id": "t3_1y5f8wq",
+"title": "Furnished 2BR2BA with River Views on Roosevelt Island | Jan\u2013July 31 | $5300/mo",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5f8wq/furnished_2br2ba_with_river_views_on_roosevelt/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Second year living in this room yet graduated. Looking for someone to take over my fully furnished 2BR/2BA at Manhattan Park on Roosevelt Island\u2026"
+},
+{
+"id": "t3_1y5rlpw",
+"title": "Moving to NYC looking for Queer Freindly Sublet Near Morningside",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5rlpw/moving_to_nyc_looking_for_queer_freindly_sublet/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "I'm a transgender woman 21, moving from Saint Louis Missouri because I was amitted to Columbia GS. I am looking for other queer or trans people\u2026"
+},
+{
+"id": "t3_1y5dner",
+"title": "Downtown Brooklyn, 1 Bed / 1 Bath \u2013 [Entire Apartment] [Fully Furnished]",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5dner/downtown_brooklyn_1_bed_1_bath_entire_apartment/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Move in: December 23, 2026 Move out: January 23, 2027 Rent: $4200/month Security deposit: $3700 (refundable) Utilities: Included Features: Fully\u2026"
+},
+{
+"id": "t3_1y5a2cs",
+"title": "$3000 1 Bedroom Apt in Upper East Side",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5a2cs/3000_1_bedroom_apt_in_upper_east_side/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "We are subletting our large spacious 1 bedroom apartment in the Upper East Side from December 1st to mid-February ( move out date flexible to end ..."
+},
+{
+"id": "t3_1y5pifi",
+"title": "[Listing] Washington Heights, Studio / 1 Bath - [Entire Apartment] [Fully Furnished ...",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5pifi/listing_washington_heights_studio_1_bath_entire/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Separate, fully equipped kitchen with a gas stove, oven, refrigerator, and microwave. Private bathroom with a bathtub and window. Furnished living and ..."
+},
+{
+"id": "t3_1y5qmzj",
+"title": "East New York / Brooklyn \u2014 Private Mini Space ($1,800/mo)",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5qmzj/east_new_york_brooklyn_private_mini_space_1800mo/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Title: [Brooklyn - East New York / Lindenwood] Private mini unit w/ private bath & entrance \u2014 $1800/mo (utilities included) Rent: $1800/month ..."
+},
+{
+"id": "t3_1y5jv61",
+"title": "2BD 1 BA Crown Heights Lease Takeover with massive private backyard $3400",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5jv61/2bd_1_ba_crown_heights_lease_takeover_with/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Hi all I am relocating out of state and am looking for someone to take over my lease. This is a 2 bedroom 1 bath apartment with two equal size ..."
+},
+{
+"id": "t3_1y65qyt",
+"title": "The Fleet: TINY, \"luxury\" building vs. Larger, older building with old building problems",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y65qyt/the_fleet_tiny_luxury_building_vs_larger_older/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "After living in an apartment for over a decade, my partner and I won the housing lottery at The Fleet and are considering moving."
+},
+{
+"id": "t3_1y6144j",
+"title": "Crown Heights Room sublease - December 1 - $1450/mo",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6144j/crown_heights_room_sublease_december_1_1450mo/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Unfurnished Room in Crown/Prospect Heights, on Franklin Ave and Sterling Pl. $1450/month in 2nd floor apartment 3 bed 1 shared bath Washer + dryer ..."
+},
+{
+"id": "t3_1y5gikw",
+"title": "The Rent Freeze Survives the Landlords' Challenge",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5gikw/the_rent_freeze_survives_the_landlords_challenge/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Here's the opinion: https://iapps.courts.state.ny.us/nyscef/ViewDocument?docIndex=DleFpuB2/BIfs_PLUS_DyMNjitw== Here, the judge was a Staten ..."
+},
+{
+"id": "t3_1y5i65e",
+"title": "Jan 15 - Feb 15 (Dates Flexible) Bushwick",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5i65e/jan_15_feb_15_dates_flexible_bushwick/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Off of Hancock st currently renting this room for for the month of January. The apartment is shared between two other girls. Ideally looking for\u2026"
+},
+{
+"id": "t3_1y5b69h",
+"title": "EAST VILLAGE ROOM AVAILABLE \u2014 Sublet Dec 18 - Jan 16, $2k flat",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5b69h/east_village_room_available_sublet_dec_18_jan_16/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "I'm looking to sublet my room in an all-girl apartment while I'm traveling. No earlier than Dec 18th, and you must be out by Jan 16th afternoon."
+},
+{
+"id": "t3_1y5hfj3",
+"title": "Furnished Flatbush/PLG room with en-suite bathroom, dishwasher, gym, and in unit w/d for sublet",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5hfj3/furnished_flatbushplg_room_with_ensuite_bathroom/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Looking to sublet my apartment from Jan 1 thru April (flexible). It's an awesome building, with a rooftop, gym, and mail room."
+},
+{
+"id": "t3_1y6djn6",
+"title": "subleasing LES room Jan-April",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6djn6/subleasing_les_room_janapril/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "There is one bathroom and a solid kitchen and family room space. My roommate and I just moved in so still furnishing the family room. DM if interested ..."
+},
+{
+"id": "t3_1y54vte",
+"title": "$1300 room for rent in crown heights available December 1st",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y54vte/1300_room_for_rent_in_crown_heights_available/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "- Included in the room is a bed/bed frame if needed, closet space across the hall, modern kitchen and bathroom, in unit washer and dryer downstairs, ..."
+},
+{
+"id": "t3_1y5ecwg",
+"title": "1B / 1B with Balcony in LIC (Rent-Stablizied)",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y5ecwg/1b_1b_with_balcony_in_lic_rentstablizied/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "Hello hello! I am looking for someone to take over my current lease for a rent-stablized 1B / 1B in LIC, with a south east facing balcony. The\u2026"
+},
+{
+"id": "t3_1y58k33",
+"title": "1 bedroom available in 3bd 2bath",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y58k33/1_bedroom_available_in_3bd_2bath/",
+"t": 1795740324,
+"author": "",
+"lists": [],
+"snippet": "hi all, We are looking for a roommate in our 3-bed 2-bath apartment in Astoria! Move in is January 15th. Our ideal roommate: Someone in their ..."
+},
 {
 "id": "t3_1y5sire",
 "title": "23M",
@@ -3489,11 +3964,11 @@
 "title": "Is it legal for a listing agent not to disclose he is also the seller?",
 "sub": "RealEstate",
 "where": "r/RealEstate",
-"url": "https://www.reddit.com/r/RealEstate/comments/1y44ew6/is_it_legal_for_a_listing_agent_not_to_disclose/",
+"url": "https://www.reddit.com/r/RealEstate/comments/1y44ew6/is_it_legal_for_a_listing_agent_not_to_disclose/video/",
 "t": 1795574612,
 "author": "",
 "lists": [],
-"snippet": "138 votes, 81 comments. Whenever I'd give an offer to the listing agent while self represented, he would say let me sit down with the sellers and ..."
+"snippet": "160 votes, 94 comments. Whenever I'd give an offer to the listing agent while self represented, he would say let me sit down with the sellers and ..."
 },
 {
 "id": "t3_1y40sq7",
@@ -6477,6 +6952,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 306,
-"checked_today": 63
+"checked_week": 330,
+"checked_today": 87
 }
