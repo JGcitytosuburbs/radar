@@ -1,5 +1,5 @@
 {
-"checked": 1795740361,
+"checked": 1795741262,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -678,11 +678,11 @@
 "count": 7
 },
 {
-"key": "selling",
-"count": 3
+"key": "schools",
+"count": 4
 },
 {
-"key": "schools",
+"key": "selling",
 "count": 3
 },
 {
@@ -2416,9 +2416,582 @@
 "topics": [
 "schools"
 ]
+},
+{
+"id": "t3_1y5vsln",
+"t": 1795741213,
+"topics": []
+},
+{
+"id": "t3_1y5nsph",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6erqa",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y5vjw3",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6912m",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6cia1",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6cajb",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y69jvz",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y691aj",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y5mzc9",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y5nbz5",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6ec9h",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6e1ei",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y60f0s",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y6cco7",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y65wdm",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y645r8",
+"t": 1795741215,
+"topics": [
+"schools"
+]
+},
+{
+"id": "t3_1y6avqb",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y62qhs",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y5n9xq",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "t3_1y5r17s",
+"t": 1795741215,
+"topics": []
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/nj-boys-ice-hockeys-all-time-stat-leaders-entering-the-2026-27-season.html",
+"t": 1795737754,
+"topics": []
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-basketball-points-leaders-in-2026-27.html",
+"t": 1795737754,
+"topics": []
+},
+{
+"id": "https://www.maxpreps.com/ca/basketball/game/montclair-vs-wilson-hacienda-heights/jv/12-2-2026/?c=4d514113-9ad5-4e9e-956b-39dd7b12d5cb",
+"t": 1795688401,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y5w48m",
+"title": "Are we crazy?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5w48m/are_we_crazy/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "It's never about the monthly payment its always about the total price. Knock those prices down and make the house even more affordable, you'll feel ..."
+},
+{
+"id": "t3_1y5q07a",
+"title": "I did it. Georgetown Tx 387k 6.95%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5q07a/i_did_it_georgetown_tx_387k_695/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Yes crazy rate for a new build! I got my first house last year for $410k in Houston area and it was a 1999 build and my rate is 6% flat."
+},
+{
+"id": "t3_1y5tzva",
+"title": "We did it! Northern CA, 988k 6.375%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5tzva/we_did_it_northern_ca_988k_6375/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "1.2K votes, 210 comments. 30 yr fixed VA loan. Closed on 11/23 just in time for Thanksgiving. This is something that I've worked so hard I'm very\u2026"
+},
+{
+"id": "t3_1y5q5go",
+"title": "New build",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5q5go/new_build/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Are new builds ( as in nothing as been built yet so only land) apartments tougher to negotiate? I'm seeing some in my area starting price is ..."
+},
+{
+"id": "t3_1y6aomv",
+"title": "How to select a realtor",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6aomv/how_to_select_a_realtor/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Most of our hunt will be remote with some planned travel to see homes. Our mortgage lender recommended a realtor and we've had some conversations but ..."
+},
+{
+"id": "t3_1y5n2ni",
+"title": "Anxious About Silence",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5n2ni/anxious_about_silence/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Made an offer Monday evening, seller countered and I signed accepting Tuesday around noon. It's now after 7 PM Wednesday and my agent says the ..."
+},
+{
+"id": "t3_1y64v02",
+"title": "Is offering 345K for a 380K home in Dallas area unreasonable?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y64v02/is_offering_345k_for_a_380k_home_in_dallas_area/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "We told our agent we wanted to make an offer of $345K on a home listed at $380K (Dallas area, about 20 minutes southwest)."
+},
+{
+"id": "t3_1y5ujde",
+"title": "First timer in our Paradise aka San Diego",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5ujde/first_timer_in_our_paradise_aka_san_diego/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "It's a condo but under 900k and 6.25% from a credit unit, living within a mile of the beach. We will take the happiness tax \u2764\ufe0f ps I'm now ..."
+},
+{
+"id": "t3_1y5r7wy",
+"title": "Closing fell through due to the bank's lien on the seller. (Ontario,Canada)",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5r7wy/closing_fell_through_due_to_the_banks_lien_on_the/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "My husband is a first-time homebuyer, and the closing date is supposed to be in the first week of this December. Today,the seller's lawyer told ..."
+},
+{
+"id": "t3_1y5ros8",
+"title": "Advice on how to approach inspection findings and submitting BINSR.",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5ros8/advice_on_how_to_approach_inspection_findings_and/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "TLDR; Seller accepted ~20% below asking, found more items during inspection and want to ask for credit to fix plus 2% concessions towards closing\u2026"
+},
+{
+"id": "t3_1y6bre8",
+"title": "Renovation Loan Recommendations Needed",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6bre8/renovation_loan_recommendations_needed/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "I am currently starting the process of purchasing my first home that needs a lot of \u201cminor\u201d repairs, it was owned by a previous indoor smoker."
+},
+{
+"id": "t3_1y5zm9y",
+"title": "Can I as a single person afford a home?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5zm9y/can_i_as_a_single_person_afford_a_home/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "11 votes, 63 comments. I 30F live in MA and earn roughly $126k before taxes and have no debt. Is there any chance I can afford a home on my own?"
+},
+{
+"id": "t3_1y68npx",
+"title": "Buying the nicest house (by far) on the street",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y68npx/buying_the_nicest_house_by_far_on_the_street/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "41 votes, 71 comments. Hi all. My fiancee and I have been home searching for 6 months now. Our ideal house has always been a more updated house in ..."
+},
+{
+"id": "t3_1y5oh0h",
+"title": "Fairly standard or too much?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5oh0h/fairly_standard_or_too_much/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Just had our inspection today. Mostly it was just small things. Then, there is the older (around 10 years) central air AC, deteriorating deck\u2026"
+},
+{
+"id": "t3_1y6fj4e",
+"title": "Got the keys for my first home!",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6fj4e/got_the_keys_for_my_first_home/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "First home!!!! 367k Loan: VA Location: Madison AL Rate: 6.75(bought down from 7.5) Closing cost: 2k(lender and builder credits included)"
+},
+{
+"id": "t3_1y67g1a",
+"title": "I did it!! Chicago, IL $286k 6.999%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y67g1a/i_did_it_chicago_il_286k_6999/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "619 votes, 78 comments. I can't believe it's happened. I started this process last April with a friend who was a realtor on the side."
+},
+{
+"id": "t3_1y6990g",
+"title": "I did it! Seattle, WA 607k 6.5%",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6990g/i_did_it_seattle_wa_607k_65/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "404 votes, 43 comments. Still processing it all, but so excited to make this house a home!"
+},
+{
+"id": "t3_1y5srbj",
+"title": "Thoughts on PITI",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y5srbj/thoughts_on_piti/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Dual income household - we bring in $174k annually with a 4K bonus. A child in daycare at $380/week. With deductions, including retirement and ..."
+},
+{
+"id": "t3_1y60ovp",
+"title": "Condos",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y60ovp/condos/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Is a condo worth buying over renting? I live in Seattle area. There are a lot of condos on the market right now. Is buying one for around $300,00\u2026"
+},
+{
+"id": "t3_1y62ne7",
+"title": "Can I afford to buy a home?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y62ne7/can_i_afford_to_buy_a_home/",
+"t": 1795741224,
+"author": "",
+"lists": [],
+"snippet": "Hello, and thanks in advance for your guidance. I'm 33F living in Chicago looking to buy a home. I make 100k and my bi weekly pay is 2663."
+},
+{
+"id": "t3_1y5nsph",
+"title": "The average first-time homebuyer in NJ is 40 years old.",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5nsph/the_average_firsttime_homebuyer_in_nj_is_40_years/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "135 votes, 28 comments. New Jersey Realtors just posted this on their social media platforms. What are your actual thoughts on this?"
+},
+{
+"id": "t3_1y6erqa",
+"title": "At my parents in Levittown, but power's out at my house in Ewing",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6erqa/at_my_parents_in_levittown_but_powers_out_at_my/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Power went out briefly at 4:31, according to the Ting app, but then went out again at 4:53 pm. Not back yet, and the last text from PSEG says ..."
+},
+{
+"id": "t3_1y5vjw3",
+"title": "What's keeping you awake, New Jerseyans?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5vjw3/whats_keeping_you_awake_new_jerseyans/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "The newborn sleep deprivation era is by FAR the hardest stage of parenting, in my experience. But at 4 months, you're almost through the worst of ..."
+},
+{
+"id": "t3_1y6912m",
+"title": "How's the weather look, Ollie?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6912m/hows_the_weather_look_ollie/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "How's the weather look, Ollie? Severe Weather \ud83c\udf26\ufe0f \u00b7 i.giphy.com. Open. Upvote 2. Downvote 1 Go to comments. Share. Comments Section."
+},
+{
+"id": "t3_1y6cia1",
+"title": "NJ, NY, PA drivers the worst",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6cia1/nj_ny_pa_drivers_the_worst/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Why is it that almost all of the people that drive pick-up trucks or just any kind of truck are massive cunts on the road?"
+},
+{
+"id": "t3_1y6cajb",
+"title": "Cheapest/ way to serve a NJ Superior Court Summons in Hudson County from outside the US?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6cajb/cheapest_way_to_serve_a_nj_superior_court_summons/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone, I need to personally serve a Summons and Complaint on a New Jersey corporation's registered agent in Jersey City (Rule 4:4-4(a)), ..."
+},
+{
+"id": "t3_1y69jvz",
+"title": "287S...@ exit 2A",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y69jvz/287s_exit_2a/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Just went by heading on 287N....NJSP has the entire 287S by 2A stopped....there was 1 car stopped just ahead on the trooper....that car was not ..."
+},
+{
+"id": "t3_1y691aj",
+"title": "Drivers License has not arrived in 2 1/2 months",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y691aj/drivers_license_has_not_arrived_in_2_12_months/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "I passed my road test and they said I should expect it in 2-3 weeks. 1 month in it hadn't come so I emailed them and apparently it got returned ..."
+},
+{
+"id": "t3_1y5mzc9",
+"title": "Building The Garden State 1 To 1 Scale In Minecraft",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5mzc9/building_the_garden_state_1_to_1_scale_in/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Mays Landing MetLife Stadium Waterfront Jersey City Downtown Newark Bayville Garwood Quaker Bridge Mall Lucy The Elephant Pulaski Skyway Goethals\u2026"
+},
+{
+"id": "t3_1y5nbz5",
+"title": "Looking for a Service Dog Trainer in Bergen County, NJ",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5nbz5/looking_for_a_service_dog_trainer_in_bergen/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "We have a two-year-old Golden Retriever that we would like to train as a psychiatric service dog for a family member who struggles with depression, ..."
+},
+{
+"id": "t3_1y6ec9h",
+"title": "queers in north jersey",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6ec9h/queers_in_north_jersey/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "The third place then acts as a social lubricant for people to bond. Once you have that, you and your people can go/do anything you want with the ..."
+},
+{
+"id": "t3_1y6e1ei",
+"title": "Neurologist / memory specialist recommendations in South Jersey?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6e1ei/neurologist_memory_specialist_recommendations_in/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "I'm looking for recommendations for my 73-year-old mother, who has mild cognitive impairment (suspected early-stage Alzheimer's), anxiety, ..."
+},
+{
+"id": "t3_1y60f0s",
+"title": "r/newjersey - Updated Thanksgiving morning weather forecast for this powerful NJ storm",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y60f0s/updated_thanksgiving_morning_weather_forecast_for/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "If you're headed to Thanksgiving dinner at the Jersey Shore, the tide could decide when you get there and when you get home."
+},
+{
+"id": "t3_1y6cco7",
+"title": "Commodore Bary bridge to be closed",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6cco7/commodore_bary_bridge_to_be_closed/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "A vehicle drives through a damaged section of a bridge, with the roof structure severely compromised and debris visible."
+},
+{
+"id": "t3_1y65wdm",
+"title": "r/newjersey on Reddit: I've been invited to a thanksgiving dinner in asbury park - I live about ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y65wdm/ive_been_invited_to_a_thanksgiving_dinner_in/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "Might want to find out if they still have power. My sister lives in AP, but came over last night to avoid traveling today and has been getting ..."
+},
+{
+"id": "t3_1y645r8",
+"title": "What happened to the quality of diner food?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y645r8/what_happened_to_the_quality_of_diner_food/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "49 votes, 131 comments. Going to high school in Jersey, we grew up eating at diners in the 2000's? Now I'm back living in North Jersey I finally ..."
+},
+{
+"id": "t3_1y6avqb",
+"title": "NJ Turkey",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6avqb/nj_turkey/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "I'm from NJ eating NJ shaped turkey in S FL."
+},
+{
+"id": "t3_1y62qhs",
+"title": "I know there have been similar questions here about this storm but is it worth it to drive to Brick today?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y62qhs/i_know_there_have_been_similar_questions_here/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "To be fair manasquan floods everytime a seagull stops to take a piss. But yea its not great here at the Shore right now."
+},
+{
+"id": "t3_1y5n9xq",
+"title": "Gottheimer says that he is losing staffers \u2026.",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5n9xq/gottheimer_says_that_he_is_losing_staffers/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "610 votes, 82 comments. Rep. Gottheimer says that he is losing staffers because of his loyalty to Israel. One of his staffers said that his close\u2026"
+},
+{
+"id": "t3_1y5r17s",
+"title": "Looking for my Grandfathers police badge",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y5r17s/looking_for_my_grandfathers_police_badge/",
+"t": 1795741215,
+"author": "",
+"lists": [],
+"snippet": "I am looking for the original Police officer badge that my grandfather Daniel A. Snowhill wore when he was on the Piscataway, NJ police ..."
+},
+{
+"id": "t3_1y5vsln",
+"title": "Do you know this guy?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y5vsln/do_you_know_this_guy/",
+"t": 1795741213,
+"author": "",
+"lists": [],
+"snippet": "He was homophobic and racist towards me and my friends outside the ivy in Princeton. If he is your friend you should be careful."
+},
 {
 "id": "t3_1y5jhzi",
 "title": "Why does going into NYC seem like such a chore for people in North Jersey compared to ...",
@@ -2728,6 +3301,116 @@
 "snippet": "hi all, We are looking for a roommate in our 3-bed 2-bath apartment in Astoria! Move in is January 15th. Our ideal roommate: Someone in their ..."
 },
 {
+"id": "https://www.nj.com/highschoolsports/2026/11/final-2026-girls-soccer-top-20-undefeated-public-power-ends-year-on-top.html",
+"title": "Final Girls Soccer Top 20, 2026: New No. 1 takes over at end of dramatic, memorable season",
+"sub": "",
+"where": "nj.com",
+"url": "https://www.nj.com/highschoolsports/2026/11/final-2026-girls-soccer-top-20-undefeated-public-power-ends-year-on-top.html",
+"t": 1795737779,
+"author": "",
+"lists": [],
+"snippet": "Westfield vs. Eastern girls soccer in the NJSIAA Group 4 Final at Franklin High School in Somerset, N.J. on Saturday, November 21, 2026. Set as ..."
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/nj-boys-ice-hockeys-all-time-stat-leaders-entering-the-2026-27-season.html",
+"title": "N.J. boys ice hockey's all-time stat leaders entering the 2026-27 season",
+"sub": "",
+"where": "nj.com",
+"url": "https://www.nj.com/highschoolsports/2026/11/nj-boys-ice-hockeys-all-time-stat-leaders-entering-the-2026-27-season.html",
+"t": 1795737754,
+"author": "",
+"lists": [],
+"snippet": "Boys Hockey: NJSIAA Public Final- Ridgewood vs Westfield, March 10, 2025. AJ LoSauro (22) of Ridgewood is fired up after scoring a short handed ..."
+},
+{
+"id": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-basketball-points-leaders-in-2026-27.html",
+"title": "Who are the top returning statewide girls basketball points leaders in 2026-27? - NJ.com",
+"sub": "",
+"where": "nj.com",
+"url": "https://www.nj.com/highschoolsports/2026/11/who-are-the-top-returning-statewide-girls-basketball-points-leaders-in-2026-27.html",
+"t": 1795737754,
+"author": "",
+"lists": [],
+"snippet": "Published: Nov. 26, 2026, 6:59 a.m.. Girls Basketball: NJSIAA Group 4 Final - Westfield vs. Lenape, March 14, El-Anita Joe-Samuel (21) of Lenape ..."
+},
+{
+"id": "https://www.si.com/high-school/stats/california/volleyball/games/7014393-summit-vs-rancho-cucamonga",
+"title": "Summit vs Rancho Cucamonga JV Girls Volleyball - Aug 30, 2027 - High School On SI",
+"sub": "",
+"where": "si.com",
+"url": "https://www.si.com/high-school/stats/california/volleyball/games/7014393-summit-vs-rancho-cucamonga",
+"t": 1795728221,
+"author": "",
+"lists": [],
+"snippet": "View pregame, live and post-game details from the Summit vs Rancho Cucamonga California game on Aug 30, 2027."
+},
+{
+"id": "https://www.insidelacrosse.com/ncaa/game/8cd00e70-c05b-4844-abd2-1f16cbe0f004?section=teamB",
+"title": "James Madison vs. Hofstra, Women's Lacrosse, Mar 17, 2027",
+"sub": "",
+"where": "insidelacrosse.com",
+"url": "https://www.insidelacrosse.com/ncaa/game/8cd00e70-c05b-4844-abd2-1f16cbe0f004?section=teamB",
+"t": 1795711471,
+"author": "",
+"lists": [],
+"snippet": "Box score and stats for James Madison vs. Hofstra, women's college lacrosse, Mar 17, 2027."
+},
+{
+"id": "https://www.insidelacrosse.com/ncaa/game/20387367-7b64-4a88-897f-c8bdea8c38b7",
+"title": "James Madison vs. Virginia Tech, Women's Lacrosse, Feb 10, 2027",
+"sub": "",
+"where": "insidelacrosse.com",
+"url": "https://www.insidelacrosse.com/ncaa/game/20387367-7b64-4a88-897f-c8bdea8c38b7",
+"t": 1795711277,
+"author": "",
+"lists": [],
+"snippet": "Box score and stats for James Madison vs. Virginia Tech, women's college lacrosse, Feb 10, 2027."
+},
+{
+"id": "https://www.secsports.com/scores/33334/live",
+"title": "James Madison vs. Arkansas Nov 25, 2026 - Live Scores - Southeastern Conference",
+"sub": "",
+"where": "secsports.com",
+"url": "https://www.secsports.com/scores/33334/live",
+"t": 1795701846,
+"author": "",
+"lists": [],
+"snippet": "James Madison vs. Arkansas Nov 25, 2026 - Live Scores - Southeastern Conference ; 1*, Maddie Leach, 3, 1-2, 50.0% ; 11*, Bree Robinson, 20, 8-26, 30.8% ..."
+},
+{
+"id": "https://www.secsports.com/boxscore/33334",
+"title": "James Madison vs. Arkansas Nov 25, 2026 - Game Summary - Southeastern Conference",
+"sub": "",
+"where": "secsports.com",
+"url": "https://www.secsports.com/boxscore/33334",
+"t": 1795700074,
+"author": "",
+"lists": [],
+"snippet": "Women's Basketball: James Madison vs Arkansas, 11/25/2026 ; James Madison, 15, 10, 18, 24 ; Arkansas, 18, 21, 24, 12 ..."
+},
+{
+"id": "https://projectsummit.app/compare",
+"title": "Summit comparisons",
+"sub": "",
+"where": "projectsummit.app",
+"url": "https://projectsummit.app/compare",
+"t": 1795698560,
+"author": "",
+"lists": [],
+"snippet": "AI or rules engineSeveral apps call themselves an AI cycling coach; in Summit, with Elite, a rules engine decides. \u00b7 7 adaptive platforms \u00b7 Summit vs ..."
+},
+{
+"id": "https://www.nfhsnetwork.com/events/westfield-high-school-chantilly-va/gama17a1da421?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-05-10aaa5c",
+"title": "Westfield vs Hayfield - Boys Freshman Basketball 12/07/2026 | Live & On Demand - NFHS Network",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/westfield-high-school-chantilly-va/gama17a1da421?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-05-10aaa5c",
+"t": 1795698198,
+"author": "",
+"lists": [],
+"snippet": "Watch the Westfield vs Hayfield - Boys Freshman Basketball 12/07/2026 live and on demand online on the NFHS Network."
+},
+{
 "id": "t3_1y5sire",
 "title": "23M",
 "sub": "movingtoNYC",
@@ -2759,6 +3442,116 @@
 "author": "",
 "lists": [],
 "snippet": "I asked chat gpt but it is such a piece of shit so who knows if it is a good idea of average Anyone else have averages? 1 bed to 1 bed. Both are\u2026"
+},
+{
+"id": "https://www.maxpreps.com/ca/basketball/game/montclair-vs-wilson-hacienda-heights/jv/12-2-2026/?c=4d514113-9ad5-4e9e-956b-39dd7b12d5cb",
+"title": "Montclair vs Wilson | Basketball | 12/02/2026 - MaxPreps",
+"sub": "",
+"where": "maxpreps.com",
+"url": "https://www.maxpreps.com/ca/basketball/game/montclair-vs-wilson-hacienda-heights/jv/12-2-2026/?c=4d514113-9ad5-4e9e-956b-39dd7b12d5cb",
+"t": 1795688401,
+"author": "",
+"lists": [],
+"snippet": "The Montclair JV basketball team has an away tournament game @ Wilson (Hacienda Heights, CA) on Wednesday, December 2 @ 4:55p."
+},
+{
+"id": "https://www.fubo.tv/welcome/matches/e2df38d0-d08c-4fc7-9bde-e6a4ee3a19af",
+"title": "Watch East Tennessee State vs Charleston Southern - Fubo",
+"sub": "",
+"where": "fubo.tv",
+"url": "https://www.fubo.tv/welcome/matches/e2df38d0-d08c-4fc7-9bde-e6a4ee3a19af",
+"t": 1795685298,
+"author": "",
+"lists": [],
+"snippet": "Catch college basketball's top regional rivalries and conference matchups. Read more +. James Madison vs Charleston Southern. On Demand. Aired Tue ..."
+},
+{
+"id": "https://www.vamoseventos.com/event/lovb-madison-vs-lovb-nebraska-7f3a79ce-8c13-496e-8129-8846fa49ba47",
+"title": "LOVB Madison vs. LOVB Nebraska (21 Dec) | Verified Tickets From $30.30 (15% OFF)",
+"sub": "",
+"where": "vamoseventos.com",
+"url": "https://www.vamoseventos.com/event/lovb-madison-vs-lovb-nebraska-7f3a79ce-8c13-496e-8129-8846fa49ba47",
+"t": 1795678163,
+"author": "",
+"lists": [],
+"snippet": "Get tickets, schedule, and venue details for LOVB Madison vs. LOVB Nebraska at Veterans Memorial Coliseum At Alliant Energy Center, 1919 Alliant ..."
+},
+{
+"id": "https://fan.hudl.com/usa/tn/spring-hill/organization/7343/summit-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjA3MDg5ZTk2N2M5NmExODVjYTIwZjc%3D&ot=TEAM&oi=224097",
+"title": "Highlight - Watch - Summit vs Lafayette, GA \u2022 Game Recap \u2022 Nov 23, 2026 - Hudl - Fan",
+"sub": "",
+"where": "fan.hudl.com",
+"url": "https://fan.hudl.com/usa/tn/spring-hill/organization/7343/summit-high-school/watch?hr=SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YjA3MDg5ZTk2N2M5NmExODVjYTIwZjc%3D&ot=TEAM&oi=224097",
+"t": 1795672955,
+"author": "",
+"lists": [],
+"snippet": "Watch - Summit vs Lafayette, GA \u2022 Game Recap \u2022 Nov 23, 2026 on - Mon, Nov 23, 2026 @ 12:30 PM. Located in Spring Hill, TN."
+},
+{
+"id": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16467774",
+"title": "United States Hockey League (USHL) - Videos - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16467774",
+"t": 1795670409,
+"author": "",
+"lists": [],
+"snippet": "Replay: Home - 2026 Tri-City vs Fargo | Nov 25 @ 7 PM ; Replay: Away - 2026 Madison vs Chicago | Nov 25 @ 6 PM. 3:28:24 ; Replay: Home - 2026 Madison vs ..."
+},
+{
+"id": "https://sports.deseret.com/high-school/boys-basketball/game/2027-01-29/south-summit-boys-basketball-vs-gunnison-valley-boys-basketball/278330",
+"title": "South Summit vs. Gunnison Valley - Boys Basketball Game - Deseret News",
+"sub": "",
+"where": "sports.deseret.com",
+"url": "https://sports.deseret.com/high-school/boys-basketball/game/2027-01-29/south-summit-boys-basketball-vs-gunnison-valley-boys-basketball/278330",
+"t": 1795668142,
+"author": "",
+"lists": [],
+"snippet": "Scores and updates from the South Summit vs. Gunnison Valley Boys Basketball game in Utah."
+},
+{
+"id": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16467809",
+"title": "Replay: Home - 2026 Madison vs Chicago | Nov 25 @ 6 PM - FloHockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16467809",
+"t": 1795665862,
+"author": "",
+"lists": [],
+"snippet": "Watch the Home - 2026 Madison vs Chicago replay on FloHockey, where every live and on-demand game is at your fingertips."
+},
+{
+"id": "https://fueledbysports.com/cfb/series/james-madison-vs-massachusetts-football-series/home-games/?from=james-madison",
+"title": "James Madison vs Massachusetts Football Series - Home Games - Fueled by Sports",
+"sub": "",
+"where": "fueledbysports.com",
+"url": "https://fueledbysports.com/cfb/series/james-madison-vs-massachusetts-football-series/home-games/?from=james-madison",
+"t": 1795660274,
+"author": "",
+"lists": [],
+"snippet": "Explore James Madison home games in the James Madison vs Massachusetts football series, with meeting results, scores and historical head-to-head ..."
+},
+{
+"id": "https://www.ncaa.com/game/6652183",
+"title": "James Madison vs Arkansas Basketball Women Game Summary - November 25, 2026",
+"sub": "",
+"where": "ncaa.com",
+"url": "https://www.ncaa.com/game/6652183",
+"t": 1795656545,
+"author": "",
+"lists": [],
+"snippet": "James Madison vs Arkansas Basketball Women Game Summary - November 25, 2026 | NCAA.com. DI Women's Basketball."
+},
+{
+"id": "https://www.scorelab.tech/Bncbasketballleague/match/69cb3c020243a0c96120deb5",
+"title": "\u58fd\u661f\u516c\u91ab\u7642\u7528\u54c1Jr. Summit vs AMBITION | BNC Basketball League - ScoreLab",
+"sub": "",
+"where": "scorelab.tech",
+"url": "https://www.scorelab.tech/Bncbasketballleague/match/69cb3c020243a0c96120deb5",
+"t": 1795654734,
+"author": "",
+"lists": [],
+"snippet": "Live stats and analysis for \u58fd\u661f\u516c\u91ab\u7642\u7528\u54c1Jr. Summit vs AMBITION."
 },
 {
 "id": "t3_1y4wtcp",
@@ -6952,6 +7745,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 330,
-"checked_today": 87
+"checked_week": 354,
+"checked_today": 61
 }
