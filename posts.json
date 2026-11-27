@@ -1,5 +1,5 @@
 {
-"checked": 1795766315,
+"checked": 1795772327,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -671,7 +671,7 @@
 },
 {
 "key": "family",
-"count": 7
+"count": 8
 },
 {
 "key": "commute",
@@ -2548,9 +2548,139 @@
 "id": "t3_1y63423",
 "t": 1795748768,
 "topics": []
+},
+{
+"id": "t3_1y63xco",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y66lvq",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y5p4y2",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y63d15",
+"t": 1795772284,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y6jfrc",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y6c53m",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y6j3dp",
+"t": 1795772284,
+"topics": []
+},
+{
+"id": "t3_1y6hjhg",
+"t": 1795772284,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y63xco",
+"title": "What's open today (Thanksgiving) in Hoboken?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y63xco/whats_open_today_thanksgiving_in_hoboken/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "As a PSA hoping to get a decent list of open bars and restaurants today."
+},
+{
+"id": "t3_1y66lvq",
+"title": "High tide flooding completely submerges Hoboken train tracks",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y66lvq/high_tide_flooding_completely_submerges_hoboken/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "Storms are expected to impact Thanksgiving travel and the Macy's parade is postponed. Follow The Post's live updates for the latest news on weather ..."
+},
+{
+"id": "t3_1y5p4y2",
+"title": "LEASE TAKEOVER | 2 BED / 2 BATH | INCLUDES PARKING + LUXURY AMENITIES",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y5p4y2/lease_takeover_2_bed_2_bath_3700_includes_parking/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "Lease through October 2027, with the option to renew! Monthly rent: $3,775. Apartment Features: \u2728 2 bedrooms & 2 bathrooms \u2728 Private balcony"
+},
+{
+"id": "t3_1y63d15",
+"title": "I'm thankful for Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y63d15/im_thankful_for_hoboken/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "11 years, met my husband here and now expecting our first baby in March. No plans to leave anytime soon!!! TaperTonic. \u2022."
+},
+{
+"id": "t3_1y6jfrc",
+"title": "Barbershop Shaming, what do you think?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y6jfrc/barbershop_shaming_what_do_you_think/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "This is totally classless, another business owner shaming another business, rather than bringing each other up. Does this help them get more clients?"
+},
+{
+"id": "t3_1y6c53m",
+"title": "barbell (1 inch) + weights excellent condition",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y6c53m/barbell_1_inch_weights_excellent_condition/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "No buy and sell posts per the rules numb nuts. Hey MODS, either enfoce the rules or get rid of them. You're all useless."
+},
+{
+"id": "t3_1y6j3dp",
+"title": "r/Hoboken on Reddit: does anyone recognize this apartment? my packages were delivered ...",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y6j3dp/does_anyone_recognize_this_apartment_my_packages/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "does anyone recognize this apartment? my packages were delivered here and I need them for an event saturday. please let me know. thanks in advance!"
+},
+{
+"id": "t3_1y6hjhg",
+"title": "Still no PATH trains into Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y6hjhg/still_no_path_trains_into_hoboken/",
+"t": 1795772284,
+"author": "",
+"lists": [],
+"snippet": "33rd/WTC > Newport > Light Rail to HBK or Uber from the city is your move RN."
+},
 {
 "id": "t3_1y67sv6",
 "title": "Hoboken train tracks submerged by high tide flooding with nor'easter warnings in place",
@@ -7777,6 +7907,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 356,
-"checked_today": 63
+"checked_week": 364,
+"checked_today": 71
 }
