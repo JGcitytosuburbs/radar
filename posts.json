@@ -1,5 +1,5 @@
 {
-"checked": 1795756255,
+"checked": 1795762320,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -2538,9 +2538,41 @@
 "id": "https://www.maxpreps.com/ca/basketball/game/montclair-vs-wilson-hacienda-heights/jv/12-2-2026/?c=4d514113-9ad5-4e9e-956b-39dd7b12d5cb",
 "t": 1795688401,
 "topics": []
+},
+{
+"id": "t3_1y67sv6",
+"t": 1795752469,
+"topics": []
+},
+{
+"id": "t3_1y63423",
+"t": 1795748768,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y67sv6",
+"title": "Hoboken train tracks submerged by high tide flooding with nor'easter warnings in place",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y67sv6/hoboken_train_tracks_submerged_by_high_tide/",
+"t": 1795752469,
+"author": "",
+"lists": [],
+"snippet": "20 votes, 10 comments. The train tracks at Hoboken Terminal have been flooded by high-tide rainwater from the nor'easter on Thursday, ..."
+},
+{
+"id": "t3_1y63423",
+"title": "Hoboken, New Jersey - Nov 26, 2026 - Floodwaters observed",
+"sub": "weather",
+"where": "r/weather",
+"url": "https://www.reddit.com/r/weather/comments/1y63423/hoboken_new_jersey_nov_26_2026_floodwaters/",
+"t": 1795748768,
+"author": "",
+"lists": [],
+"snippet": "Coastal flooding in San Diego, California \u00b7 r/weather - Coastal flooding in San Diego, California. 223 ; Images From the Nor'easter as it moved through ..."
+},
 {
 "id": "t3_1y5w48m",
 "title": "Are we crazy?",
@@ -7745,6 +7777,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 354,
-"checked_today": 61
+"checked_week": 356,
+"checked_today": 63
 }
