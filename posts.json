@@ -1,8 +1,138 @@
 {
-"checked": 1795841868,
+"checked": 1795871088,
 "groups_ok": 30,
 "errors": [],
 "posts": [
+{
+"id": "t3_1y775j4",
+"title": "ISO a studio or 1-bed in Brooklyn, ~$3K",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y775j4/iso_a_studio_or_1bed_in_brooklyn_3k/",
+"t": 1795871050,
+"author": "",
+"lists": [
+"rent"
+],
+"snippet": "Looking to take over a lease in Fort Greene, Clinton Hill, or Prospect Heights. Also open to parts of Crown Heights (close to the park), ..."
+},
+{
+"id": "t3_1y7h4mt",
+"title": "Still thinking about moving to NYC",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y7h4mt/still_thinking_about_moving_to_nyc/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Hello guys, I'm Venezuelan, I did a post like 3 months ago maybe? https://www.reddit.com/r/movingtoNYC/s/Lw2MKF9MwF Anyway, I just want to know ..."
+},
+{
+"id": "t3_1y6x804",
+"title": "23F Moving from Texas with my dog in April",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y6x804/23f_moving_from_texas_with_my_dog_in_april/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Hey everyone! I'm 23 and planning to relocate from Dallas to NYC in late March 2027, ideally Brooklyn. My current lease ends in early April, ..."
+},
+{
+"id": "t3_1y7g0cs",
+"title": "International student moving to NYC",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y7g0cs/international_student_moving_to_nyc/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "A few details: Budget: $1,000\u2013$1,300 per month, including utilities. Commute: Ideally within 30 minutes of NYU Courant, but I'm flexible."
+},
+{
+"id": "t3_1y7dpil",
+"title": "Moving to NYC with a Physical Disability",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y7dpil/moving_to_nyc_with_a_physical_disability/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "On the other hand, privately paying for home health aides throughout the year, on top of NYC rent and the additional costs of finding accessible ..."
+},
+{
+"id": "t3_1y6m4kk",
+"title": "110th and 5th Avenue",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y6m4kk/110th_and_5th_avenue/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "I am a 24F moving to NYC at the end of December for work at Mount Sinai on the UES. I am considering a 1BR at 110th and 5th Ave because it is a ..."
+},
+{
+"id": "t3_1y7bsgp",
+"title": "moving to manhattan as a life long southerner",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y7bsgp/moving_to_manhattan_as_a_life_long_southerner/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "hi alll- I am moving to manhattan as I am seeking a life change after an incredibly hard year. I've lived in the south my entire life (late 20s) ..."
+},
+{
+"id": "t3_1y6f0lt",
+"title": "What's it like living in Weeksville off the A/C line?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y6f0lt/whats_it_like_living_in_weeksville_off_the_ac_line/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "Safe? Sketch? Thanks!"
+},
+{
+"id": "t3_1y70r93",
+"title": "What is New York Office/Work Culture Like?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y70r93/what_is_new_york_officework_culture_like/",
+"t": 1795871046,
+"author": "",
+"lists": [
+"nyc"
+],
+"snippet": "10 votes, 74 comments. I know it can vary by industry but I'm moving from the midwest next spring and am curious what to be aware of generally to ..."
+},
+{
+"id": "t3_1y7f7st",
+"title": "Moving from Northern VA to Jersey City, where is safest for women?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y7f7st/moving_from_northern_va_to_jersey_city_where_is/",
+"t": 1795871037,
+"author": "",
+"lists": [
+"nj"
+],
+"snippet": "My girlfriend and I are graduating college in May and our jobs will be in Jersey City (exchange place) with start dates in late July."
+},
 {
 "id": "t3_1y6ap0z",
 "title": "Do Niche & GreatSchools ratings actually reflect reality at Williamstown Middle & High School?",
@@ -667,15 +797,15 @@
 "topics": [
 {
 "key": "afford",
-"count": 16
+"count": 18
+},
+{
+"key": "commute",
+"count": 9
 },
 {
 "key": "family",
 "count": 8
-},
-{
-"key": "commute",
-"count": 7
 },
 {
 "key": "schools",
@@ -2692,9 +2822,923 @@
 "id": "t3_1y68cg4",
 "t": 1795831032,
 "topics": []
+},
+{
+"id": "t3_1y7f7st",
+"t": 1795871037,
+"topics": []
+},
+{
+"id": "t3_1y75i2a",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y73g5o",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y75r2q",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y74rkp",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y77kot",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y7bpap",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y76900",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y703ep",
+"t": 1795871042,
+"topics": []
+},
+{
+"id": "t3_1y7h4mt",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y6x804",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y74gwj",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y7g0cs",
+"t": 1795871046,
+"topics": [
+"commute",
+"afford"
+]
+},
+{
+"id": "t3_1y78ufv",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y70mf7",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y7dpil",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y6m4kk",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y6g127",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y7bsgp",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y6f0lt",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y70r93",
+"t": 1795871046,
+"topics": []
+},
+{
+"id": "t3_1y775j4",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6kr19",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6yfqe",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6g29x",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6zchi",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6li7r",
+"t": 1795871050,
+"topics": [
+"afford"
+]
+},
+{
+"id": "t3_1y6m0hk",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6x8ap",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y78n9b",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6yhyc",
+"t": 1795871050,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y7ceip",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y7a3us",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y7ab5t",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6skpi",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6ze6n",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y7cpmk",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y7bxex",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y76ahh",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y73hhu",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y73ga1",
+"t": 1795871050,
+"topics": []
+},
+{
+"id": "t3_1y6zy5y",
+"t": 1795829544,
+"topics": []
+},
+{
+"id": "https://www.maxpreps.com/oh/basketball/game/east-knox-howard-vs-ridgewood-west-lafayette/jv/12-4-2026/?c=e0f2a234-686e-4dd5-a541-202cb71bf066",
+"t": 1795857694,
+"topics": []
+},
+{
+"id": "https://www.nfhsnetwork.com/events/montclair-high-school-montclair-nj/gamce24d717a5?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-04-10aaa5f",
+"t": 1795795942,
+"topics": []
+},
+{
+"id": "https://www.maxpreps.com/nj/ice-hockey/game/chatham-vs-randolph/12-3-2026/?c=ba36e499-d559-4546-b1d0-c5dd5e7d3a17",
+"t": 1795793061,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y6kr19",
+"title": "My mental health is suffering",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6kr19/my_mental_health_is_suffering/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "18 votes, 10 comments. I've been in this studio in Queens since July and it's been a battle with roaches almost the entire time."
+},
+{
+"id": "t3_1y6yfqe",
+"title": "[Listing] LEASE TAKEOVER Greenwich Village 2BR/2BA | Jan\u2013June 2027 + Option to Renew",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6yfqe/listing_lease_takeover_greenwich_village_2br2ba/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone! Our family is relocating to California in January for work, so we're looking for someone to take over the lease on our beautiful\u2026"
+},
+{
+"id": "t3_1y6g29x",
+"title": "$2350 Subleasing room for Jan w own bath in Williamsburg",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6g29x/2350_subleasing_room_for_jan_w_own_bath_in/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Subleazing for the month of January, few days before or after flexible. Centrally located between MJL and G trains. Building has laundry on site\u2026"
+},
+{
+"id": "t3_1y6zchi",
+"title": "Seeking 1 (or 2) bedroom in Crown Heights/Bed-Stuy/Prospect Heights",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6zchi/seeking_1_or_2_bedroom_in_crown/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Bed-stuy and Crown Heights might be your best bet for a 1 bedroom under $3k. Check smaller apartment buildings and lease takeovers, too."
+},
+{
+"id": "t3_1y6li7r",
+"title": "Movie in fate Feb 1st",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6li7r/movie_in_fate_feb_1st/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Hello, I am moving February 1 from my current place. My budget is $1000. I am clean, quiet and I won't be spending much time home because of work."
+},
+{
+"id": "t3_1y6m0hk",
+"title": "Room in Washington Heights ($1625)",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6m0hk/room_in_washington_heights_1625/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "3 Beds 1 Bath - Apartment Looking for someone (female) to take over a room in a shared apartment for approximately seven months, with a potential\u2026"
+},
+{
+"id": "t3_1y6x8ap",
+"title": "r/NYCapartments on Reddit: [Lease Takeover] Crown Heights | Studio | In-unit laundry",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6x8ap/lease_takeover_crown_heights_studio_inunit/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "I'm moving out to a rent-stabilized apartment and am looking for someone to take over the remaining ~7 months of my lease. Move-in Date: Flexible\u2026"
+},
+{
+"id": "t3_1y78n9b",
+"title": "Feeling like a stranger in my own city",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y78n9b/feeling_like_a_stranger_in_my_own_city/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Right now, I'm living with roommates; I'm the only woman in a bachelor pad, and honestly, it's a struggle. I keep getting locked out of the apartment ..."
+},
+{
+"id": "t3_1y6yhyc",
+"title": "Lease Takeover - Midtown East Studio $2750",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6yhyc/lease_takeover_midtown_east_studio_2750/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Hi everyone - looking for somebody to takeover my studio apartment! Rent: $2750/month + utilities Location: Midtown East Move in: ASAP 5th floor\u2026"
+},
+{
+"id": "t3_1y7ceip",
+"title": "$1,260 ROOM IN KILLER LOCATION OF GREENPOINT!!! 4 STOP TO MANHATTAN (Greenpoint ...",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y7ceip/1260_room_in_killer_location_of_greenpoint_4_stop/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "India Str, Greenpoint, NY 11222 ALL UTILITIES and WIFI INCLUDED!!! AC in the summer time. The price of the room bases of 4 factors\u2026"
+},
+{
+"id": "t3_1y7a3us",
+"title": "Looking for 5 other roommates for this apartment in Bushwick.",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y7a3us/looking_for_5_other_roommates_for_this_apartment/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Hi! My name is Dave (33) and I've currently got my eye on this 6 bedroom townhouse apartment in Bushwick for at least the next year (I'm planning ..."
+},
+{
+"id": "t3_1y7ab5t",
+"title": "Should I talk to new upstairs neighbor?",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y7ab5t/should_i_talk_to_new_upstairs_neighbor/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "first, I know what I signed up for but I just want some advice or insights. I moved here about 9months ago. I live on the 4th floor of a building\u2026"
+},
+{
+"id": "t3_1y6skpi",
+"title": "LEASE TAKEOVER | Greenwich Village / West Village | 1 Bed, 1 Bath",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6skpi/lease_takeover_greenwich_village_west_village_1/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "108 votes, 49 comments. Hi everyone! I'm looking for someone to take over the lease of our absolutely lovely one-bedroom apartment in Greenwich\u2026"
+},
+{
+"id": "t3_1y6ze6n",
+"title": "Best way to apartment hunt?",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y6ze6n/best_way_to_apartment_hunt/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "I browsed on Zillow and other apartment sites. At the same time I would religiously check NYC Housing Connect for new lottery units. I applied like ..."
+},
+{
+"id": "t3_1y7cpmk",
+"title": "Location is the greatest asset of this apartment! No broker's fee. (Greenpoint, Williamsburg",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y7cpmk/3550_2br_location_is_the_greatest_asset_of_this/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Greenpoint is New York City's most populous borough. Its neighborhoods range from waterfront towers in Williamsburg and Dumbo\u2026"
+},
+{
+"id": "t3_1y7bxex",
+"title": "Bedroom Sublet | Astoria, Queens | Dec 23 \u2013 Jan 23",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y7bxex/bedroom_sublet_astoria_queens_dec_23_jan_23/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Subletting a spacious master bedroom in a 2-bedroom apartment in Astoria over winter break! Female roommates only! Dates: December 23, 2026\u2026"
+},
+{
+"id": "t3_1y76ahh",
+"title": "LAST SUBLET AVAILABLE | DECEMBER 1\u201314 | HELL'S KITCHEN, MANHATTAN \ud83c\udfd9\ufe0f",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y76ahh/last_sublet_available_december_114_hells_kitchen/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "Looking to sublet my room in a beautiful duplex apartment in Hell's Kitchen for two weeks, from December 1st to December 14th!"
+},
+{
+"id": "t3_1y73hhu",
+"title": "2 Bedroom, $3,700 - Flexible Move in! LEASE TAKEOVER!",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y73hhu/2_bedroom_3700_flexible_move_in_lease_takeover/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "A 2 BEDROOM WITH ALL AMENITIES INCLUDED, LESS THAN 4K - Located by Brooklyn Museum - 2 Bed 1 Bath - Dishwasher & Laundry In Unit ~10 Minutes to ..."
+},
+{
+"id": "t3_1y73ga1",
+"title": "r/NYCapartments - Brooklyn Room Sublet | January\u2013April 2027",
+"sub": "NYCapartments",
+"where": "r/NYCapartments",
+"url": "https://www.reddit.com/r/NYCapartments/comments/1y73ga1/brooklyn_room_sublet_januaryapril_2027_1100month/",
+"t": 1795871050,
+"author": "",
+"lists": [],
+"snippet": "I am subletting a room in my three-bedroom apartment in Prospect Lefferts Garden (Nostrand Ave and Hawthorne St) from January 1\u2013April 30, 2027, ..."
+},
+{
+"id": "t3_1y6q0wg",
+"title": "Potential flooding",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6q0wg/potential_flooding/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "We're under contract and set to close on Monday (11/30), but the home is in an area currently being slammed by this Thanksgiving nor'easter."
+},
+{
+"id": "t3_1y6x5un",
+"title": "Found a home with an amazing layout I like in a good location but have hesitations, looking ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6x5un/found_a_home_with_an_amazing_layout_i_like_in_a/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "House was built in 1925, normal for this area. The first couple pics I'm pretty sure is asbestos tape. But it also looks like black mold spots? The ..."
+},
+{
+"id": "t3_1y6yr27",
+"title": "Lack of building regs",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6yr27/lack_of_building_regs/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "We haven't been able to obtain anything from the sellers yet and it's causing a lot of concern. We are already going to have to replace the roof not ..."
+},
+{
+"id": "t3_1y7a1q8",
+"title": "Our appraisal came in $12k below the agreed purchase price, leaving us with an ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y7a1q8/our_appraisal_came_in_12k_below_the_agreed/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "That being said, I'd personally never buy for more than the appraised value for a home. But I still see it done..."
+},
+{
+"id": "t3_1y73sj6",
+"title": "Finally did it :) Ottawa 590k 4.09% 29yo male",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y73sj6/finally_did_it_ottawa_590k_409_29yo_male/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "143 votes, 18 comments. Damn those 4 prices of chicken look so good. Also congrats!!"
+},
+{
+"id": "t3_1y72h3o",
+"title": "Kind of Regret Buying a House",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y72h3o/kind_of_regret_buying_a_house/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "63 votes, 46 comments. 32F, bought a house July 2025 at 6.625% at 550k. Formerly lived with my parents right up until buying."
+},
+{
+"id": "t3_1y74v6h",
+"title": "What are Pros and cons of buying a 500 sq ft tiny house ?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y74v6h/what_are_pros_and_cons_of_buying_a_500_sq_ft_tiny/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "I am a single individual and dont plan on kids or a spouse so honestly just want honest feedback."
+},
+{
+"id": "t3_1y7i1tr",
+"title": "Inspection found signs of old wood destroying insect activity. What should I actually do next?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y7i1tr/inspection_found_signs_of_old_wood_destroying/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "The inspector noted previous activity in the basement framing but no live insects and our seller is offering a year of treatment."
+},
+{
+"id": "t3_1y6slyi",
+"title": "Home Security",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6slyi/home_security/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "I currently use Ring for the townhouse I live in, but since we are moving into a bigger place with about 0.5 acres of land in our backyard and a ..."
+},
+{
+"id": "t3_1y7341x",
+"title": "Is it worth saving 3-400 a month by purchasing a middle unit townhome instead of an end ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y7341x/is_it_worth_saving_3400_a_month_by_purchasing_a/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "I am sort of stuck on getting an end unit townhome because the second floor is wood frame, and I like the privacy of it, but I am conflicted on\u2026"
+},
+{
+"id": "t3_1y7464x",
+"title": "Previous owner wants to buy our house back for 10% more, less than a month after closing ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y7464x/previous_owner_wants_to_buy_our_house_back_for_10/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "Has anyone done a long (8\u20139 month) replacement-home contingency? Are there other motives we should rule out before engaging? Are there creative deal ..."
+},
+{
+"id": "t3_1y6yzbm",
+"title": "I didn't expect to buy a home anytime soon, but then I found one that looks amazing and ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6yzbm/i_didnt_expect_to_buy_a_home_anytime_soon_but/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "I've been browsing Zillow for the past several months. I figured I should get to know the market and what kind of prices I should expect if I wanted ..."
+},
+{
+"id": "t3_1y6ynl7",
+"title": "Mortgages for newly self-employed",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6ynl7/mortgages_for_newly_selfemployed/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "My partner and I are considering buying a home after a bad landlord renting situation. We are very limited on time before having to move out of ..."
+},
+{
+"id": "t3_1y6uhhj",
+"title": "Preparing to buy a home in Maryland",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6uhhj/preparing_to_buy_a_home_in_maryland/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "Joint Gross Income: $130,000/year (~$10,833/month). Current Home: Townhome in MD bought in 2024 on an FHA loan (planning to keep and rent out; ..."
+},
+{
+"id": "t3_1y73l33",
+"title": "Help me choose: Should I buy an existing larger home or a new small home?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y73l33/help_me_choose_should_i_buy_an_existing_larger/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "The two options I see as practical for myself are: Buying some land for 30% of the budget, and buying a small but well-built modular home with the ..."
+},
+{
+"id": "t3_1y71gvj",
+"title": "Would this make you nervous?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y71gvj/would_this_make_you_nervous/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "Hire a structural engineer to examine and produce a quote to mitigate/fix. Everyone is okay with different levels of risk."
+},
+{
+"id": "t3_1y76t5r",
+"title": "My USDA 502 Rural Direct Experience [Northeast USA, 305k, 5.25%]",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y76t5r/my_usda_502_rural_direct_experience_northeast_usa/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "Hi, I wanted to share my USDA 502 Rural Direct home buying experience. Quick facts: Me: ~25-30k self employment gross, ~10-12k part time ..."
+},
+{
+"id": "t3_1y77zjm",
+"title": "Closing on our first home Tuesday! Final walkthrough, closing day and what to prioritize ...",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y77zjm/closing_on_our_first_home_tuesday_final/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "We had a full home inspection done and negotiated a seller credit. One of my first projects will be addressing the original electrical panels and ..."
+},
+{
+"id": "t3_1y7bwt7",
+"title": "We did it!! Scarborough 825K @4.09.",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y7bwt7/we_did_it_scarborough_825k_409/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "Edit: We're on steeles and Brimley. Loving the neighborhood and the school. Ours is a 5yr fixed mortgage."
+},
+{
+"id": "t3_1y6xu86",
+"title": "Where in the US can I buy a house for $250k or less?",
+"sub": "FirstTimeHomeBuyer",
+"where": "r/FirstTimeHomeBuyer",
+"url": "https://www.reddit.com/r/FirstTimeHomeBuyer/comments/1y6xu86/where_in_the_us_can_i_buy_a_house_for_250k_or_less/",
+"t": 1795871048,
+"author": "",
+"lists": [],
+"snippet": "The median price in Indianapolis is around that amount. There's a good variety of neighborhoods depending how flexible you are on commute and ..."
+},
+{
+"id": "t3_1y74gwj",
+"title": "Advice for job certifications.",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y74gwj/advice_for_job_certifications/",
+"t": 1795871046,
+"author": "",
+"lists": [],
+"snippet": "I've been applying to many positions at NYC hospitals for non medicine related positions such as being an office clerk, front desk, custodial, ..."
+},
+{
+"id": "t3_1y78ufv",
+"title": "how do i find a sublet in NYC?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y78ufv/how_do_i_find_a_sublet_in_nyc/",
+"t": 1795871046,
+"author": "",
+"lists": [],
+"snippet": "im moving to nyc to work fulltime and need to find a sublet 20-30 mins away from SoHo asap, but everything I see is crazy expensive."
+},
+{
+"id": "t3_1y70mf7",
+"title": "What is up with all the sh*t in subways nowadays?",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y70mf7/what_is_up_with_all_the_sht_in_subways_nowadays/",
+"t": 1795871046,
+"author": "",
+"lists": [],
+"snippet": "I grew up in the city and moved away for a number of years and just recently moved back. And I can't help but notice the overwhelming amount of ..."
+},
+{
+"id": "t3_1y6g127",
+"title": "$2350 Room W Pvt Bathroom in Williamsburg for month of Jan 2027",
+"sub": "movingtoNYC",
+"where": "r/movingtoNYC",
+"url": "https://www.reddit.com/r/movingtoNYC/comments/1y6g127/2350_room_w_pvt_bathroom_in_williamsburg_for/",
+"t": 1795871046,
+"author": "",
+"lists": [],
+"snippet": "Subleazing for the month of January, few days before or after flexible. Centrally located between MJL and G trains. Building has laundry on site\u2026"
+},
+{
+"id": "t3_1y75i2a",
+"title": "Amelie's 11/24",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y75i2a/amelies_1124/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "We met up, I was late per usual, and you were looking like a smoke show. I couldn't get over your eyes and how piercing they are."
+},
+{
+"id": "t3_1y73g5o",
+"title": "Property Management Companies",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y73g5o/property_management_companies/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "Does anyone have a property management company that they like and does a good job? The one we currently use seems pretty awful but we've heard ..."
+},
+{
+"id": "t3_1y75r2q",
+"title": "community/meetup recommendations in Hoboken",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y75r2q/communitymeetup_recommendations_in_hoboken/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "Hello everyone. I am a 24-year-old Dominican-American working in the tech industry. I recently moved to the area, and I enjoy reading, ..."
+},
+{
+"id": "t3_1y74rkp",
+"title": "After the Storm",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y74rkp/after_the_storm/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "Lots of leaves and garbage piled up on the sidewalks. Everybody do their civil duty and get out there with a broom and clean your section of ..."
+},
+{
+"id": "t3_1y77kot",
+"title": "What was the worst part of finding a room or roommate in Hoboken?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y77kot/what_was_the_worst_part_of_finding_a_room_or/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "Before building more, I want to hear from people who've actually searched here: stale listings, ghosting, broker chaos, or meeting strangers with no ..."
+},
+{
+"id": "t3_1y7bpap",
+"title": "Van Leeuwen Ice cream?",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y7bpap/van_leeuwen_ice_cream/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "So, I'm near the talking stage with this girl I'm really into, and I want to know if I should take her out on a small date to this ice cream place ..."
+},
+{
+"id": "t3_1y76900",
+"title": "I am a hoboken local and built an app to remember the places, meals and things you loved ...",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y76900/i_am_a_hoboken_local_and_built_an_app_to_remember/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "You can save and rate restaurants, meals, recipes, travel destinations, movies, books, podcasts, and even products you've bought. Only friends you add ..."
+},
+{
+"id": "t3_1y703ep",
+"title": "r/Hoboken on Reddit: REMINDER: Helicopters Are Still Disrupting Our Homes, Even During ...",
+"sub": "Hoboken",
+"where": "r/Hoboken",
+"url": "https://www.reddit.com/r/Hoboken/comments/1y703ep/reminder_helicopters_are_still_disrupting_our/",
+"t": 1795871042,
+"author": "",
+"lists": [],
+"snippet": "I live uptown on Washington. I am 0% bothered by helicopters and 1000000% bothered by shrimp-dick losers and their loud-ass farting cars ..."
+},
+{
+"id": "t3_1y774jh",
+"title": "Best options around Englewood!?",
+"sub": "MovingtoNewJersey",
+"where": "r/MovingtoNewJersey",
+"url": "https://www.reddit.com/r/MovingtoNewJersey/comments/1y774jh/best_options_around_englewood/",
+"t": 1795871037,
+"author": "",
+"lists": [],
+"snippet": "Hey everyone, planning on moving from Florida to Jersey in the beginning of the year due to work and trying to figure out which are the best\u2026"
+},
+{
+"id": "https://www.maxpreps.com/oh/basketball/game/east-knox-howard-vs-ridgewood-west-lafayette/jv/12-4-2026/?c=e0f2a234-686e-4dd5-a541-202cb71bf066",
+"title": "Ridgewood vs East Knox | Basketball | 12/04/2026 - MaxPreps",
+"sub": "",
+"where": "maxpreps.com",
+"url": "https://www.maxpreps.com/oh/basketball/game/east-knox-howard-vs-ridgewood-west-lafayette/jv/12-4-2026/?c=e0f2a234-686e-4dd5-a541-202cb71bf066",
+"t": 1795857694,
+"author": "",
+"lists": [],
+"snippet": "View pregame, in-game and post-game details from the Ridgewood (West Lafayette, OH) vs East Knox (Howard, OH) Non-Conference Basketball Game on ..."
+},
+{
+"id": "https://www.fubo.tv/welcome/matches/85fa13fd-fac1-4692-baf8-6d258ee3177a",
+"title": "Watch James Madison vs William & Mary - Fubo",
+"sub": "",
+"where": "fubo.tv",
+"url": "https://www.fubo.tv/welcome/matches/85fa13fd-fac1-4692-baf8-6d258ee3177a",
+"t": 1795856820,
+"author": "",
+"lists": [],
+"snippet": "Watch the James Madison vs William & Mary game on Fubo live. Start your free trial today! Watch your local teams with Regional Sports Networks."
+},
+{
+"id": "https://www.bleachernation.com/how-to-watch/2026/11/27/james-madison-vs-coastal-carolina-free-live-stream-tv-channel-how-to-watch-2/",
+"title": "James Madison vs. Coastal Carolina: Free Live Stream, TV Channel, How to Watch",
+"sub": "",
+"where": "bleachernation.com",
+"url": "https://www.bleachernation.com/how-to-watch/2026/11/27/james-madison-vs-coastal-carolina-free-live-stream-tv-channel-how-to-watch-2/",
+"t": 1795854034,
+"author": "",
+"lists": [],
+"snippet": "Where to watch James Madison vs. Coastal Carolina. The Dukes and Chanticleers will take to the field at Bridgeforth Stadium/Zane Showker Field for ..."
+},
+{
+"id": "https://www.on3.com/college/football/scoreboard/3789/chat/",
+"title": "James Madison vs Old Dominion - College Football Game Chat - On3",
+"sub": "",
+"where": "on3.com",
+"url": "https://www.on3.com/college/football/scoreboard/3789/chat/",
+"t": 1795850923,
+"author": "",
+"lists": [],
+"snippet": "Box score, team stats and play-by-play for James Madison vs Old Dominion."
+},
+{
+"id": "https://prepgirlshoops.com/game/oh/madison-vs-monroe-november-28-2026/",
+"title": "Madison vs Monroe - November 28, 2026 | Prep Girls Hoops",
+"sub": "",
+"where": "prepgirlshoops.com",
+"url": "https://prepgirlshoops.com/game/oh/madison-vs-monroe-november-28-2026/",
+"t": 1795849662,
+"author": "",
+"lists": [],
+"snippet": "... \u2190 All Ohio Scores. Madison vs Monroe \u2013 November 28, 2026. Madison. 0-0. Upcoming. Nov 28. Monroe. 0-1. Monroe. Madison Monroe. \u200b. Close modal."
+},
+{
+"id": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16470407",
+"title": "Replay: Away - 2026 Madison vs Muskegon | Nov 27 @ 6 PM - FloHockey - Hockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16470407",
+"t": 1795842965,
+"author": "",
+"lists": [],
+"snippet": "Watch the Away - 2026 Madison vs Muskegon replay on FloHockey, where every live and on-demand game is at your fingertips."
+},
+{
+"id": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16470663",
+"title": "Replay: Home - 2026 Chicago vs Des Moines | Nov 27 @ 7 PM - FloHockey - Hockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/leagues/10826743-united-states-hockey-league-ushl/videos?playing=16470663",
+"t": 1795842962,
+"author": "",
+"lists": [],
+"snippet": "Replay: Home - 2026 Madison vs Muskegon | Nov 27 @ 6 PM. 3:17:53. Replay: Home - 2026 Madison vs Muskegon | Nov 27 @ 6 PM. Pro \u00b7 2h ago \u00b7 Replay: Away ..."
+},
+{
+"id": "https://www.si.com/high-school/stats/ohio/girls-basketball/games/7065404-madison-vs-notre-damecathedral-latin",
+"title": "Madison vs Notre Dame-Cathedral Latin Girls Basketball - Nov 28, 2026 - High School On SI",
+"sub": "",
+"where": "si.com",
+"url": "https://www.si.com/high-school/stats/ohio/girls-basketball/games/7065404-madison-vs-notre-damecathedral-latin",
+"t": 1795842055,
+"author": "",
+"lists": [],
+"snippet": "View pregame, live and post-game details from the Madison vs Notre Dame-Cathedral Latin Ohio game on Nov 28, 2026."
+},
+{
+"id": "https://www.flohockey.tv/teams/10422761-sarnia-legionnaires/videos?playing=16470498",
+"title": "Replay: Home - 2026 Sarnia vs St. Thomas | Nov 27 @ 7 PM - FloHockey - Hockey",
+"sub": "",
+"where": "flohockey.tv",
+"url": "https://www.flohockey.tv/teams/10422761-sarnia-legionnaires/videos?playing=16470498",
+"t": 1795842000,
+"author": "",
+"lists": [],
+"snippet": "Replay: Home - 2026 Chatham vs Sarnia | Oct 15 @ 6 PM. 2:54:22. Replay: Home - 2026 Chatham vs Sarnia | Oct 15 @ 6 PM. Pro \u00b7 Oct 15. Replay: Home ..."
+},
+{
+"id": "https://www.ownedcore.com/livescore/match/chatham-vs-carshalton-814717",
+"title": "Chatham vs Carshalton - Non League Premier - OwnedCore",
+"sub": "",
+"where": "ownedcore.com",
+"url": "https://www.ownedcore.com/livescore/match/chatham-vs-carshalton-814717",
+"t": 1795841662,
+"author": "",
+"lists": [],
+"snippet": "Live score, stats, lineups, H2H and odds for Chatham vs Carshalton in Non League Premier - Isthmian League Premier Division on 28 Nov 2026."
+},
 {
 "id": "t3_1y78f7r",
 "title": "Confused by home sale contingency? Does it need to be super specific, or are we covered?",
@@ -2727,6 +3771,17 @@
 "author": "",
 "lists": [],
 "snippet": "18 votes, 55 comments. I'm 32. I bought a condo in 2020 for 120k, 3.5 rate. I currently owe about 90k. Payment is 700/month plus 200 for HOA fee\u2026"
+},
+{
+"id": "https://www.nfhsnetwork.com/events/james-madison-high-school-vienna-va/gam57967138fb",
+"title": "Madison vs McLean - Girls Freshman Basketball 11/30/2026 | Live & On Demand",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/james-madison-high-school-vienna-va/gam57967138fb",
+"t": 1795833319,
+"author": "",
+"lists": [],
+"snippet": "Watch the Madison vs McLean - Girls Freshman Basketball 11/30/2026 live and on demand online on the NFHS Network."
 },
 {
 "id": "t3_1y5n396",
@@ -2947,6 +4002,116 @@
 "author": "",
 "lists": [],
 "snippet": "Should make one for when planes land in the Hudson. I'm still annoyed I didn't watch since I was in a meeting."
+},
+{
+"id": "t3_1y6zy5y",
+"title": "Title: Which NYC brokerages actually offer 100% commission for sales person? Real fees?",
+"sub": "realtors",
+"where": "r/realtors",
+"url": "https://www.reddit.com/r/realtors/comments/1y6zy5y/title_which_nyc_brokerages_actually_offer_100/",
+"t": 1795829544,
+"author": "",
+"lists": [],
+"snippet": "Hi all, I'm a NYC real estate salesperson looking for a sponsoring broker that offers a 100% commission plan. I've seen R New York, ..."
+},
+{
+"id": "http://www.nfhsnetwork.com/events/summit-high-school-frisco-co/gam0d6691d81d?maxpreps=maxpreps&utm_campaign=team-schedule-list&utm_medium=referral&utm_source=maxpreps&utm_content=post&ftag=MPM-06-10aaa0j",
+"title": "Summit vs Roaring Fork - Boys Varsity Soccer 09/13/2025 | Live & On Demand - NFHS Network",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "http://www.nfhsnetwork.com/events/summit-high-school-frisco-co/gam0d6691d81d?maxpreps=maxpreps&utm_campaign=team-schedule-list&utm_medium=referral&utm_source=maxpreps&utm_content=post&ftag=MPM-06-10aaa0j",
+"t": 1795822402,
+"author": "",
+"lists": [],
+"snippet": "Watch the Summit vs Roaring Fork - Boys Varsity Soccer 09/13/2025 live and on demand online on the NFHS Network."
+},
+{
+"id": "https://www.nfhsnetwork.com/events/summit-high-school-spring-hill-tn/gam7e34173462?maxpreps=maxpreps&utm_campaign=team-schedule-list&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=YHF4d10a64",
+"title": "Summit vs Centennial - Boys Freshman Basketball 12/10/2026 | Live & On Demand - NFHS Network",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/summit-high-school-spring-hill-tn/gam7e34173462?maxpreps=maxpreps&utm_campaign=team-schedule-list&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=YHF4d10a64",
+"t": 1795810295,
+"author": "",
+"lists": [],
+"snippet": "Watch the Summit vs Centennial - Boys Freshman Basketball 12/10/2026 live and on demand online on the NFHS Network."
+},
+{
+"id": "https://sportschatplace.com/college-football-picks/james-madison-vs-coastal-carolina-prediction-football-picks-today-11-28-26/",
+"title": "James Madison vs Coastal Carolina Prediction Football Picks Today 11/28/26",
+"sub": "",
+"where": "sportschatplace.com",
+"url": "https://sportschatplace.com/college-football-picks/james-madison-vs-coastal-carolina-prediction-football-picks-today-11-28-26/",
+"t": 1795807403,
+"author": "",
+"lists": [],
+"snippet": "James Madison vs Coastal Carolina Prediction. James Madison comes into this matchup after losing three of their last four games and they are coming ..."
+},
+{
+"id": "https://www.nfhsnetwork.com/events/page-high-school-franklin-tn/gam8fbf79ba2d?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-06-10aaa0j",
+"title": "Page vs Summit - Boys Varsity Basketball 02/19/2027 | Live & On Demand - NFHS Network",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/page-high-school-franklin-tn/gam8fbf79ba2d?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-06-10aaa0j",
+"t": 1795803611,
+"author": "",
+"lists": [],
+"snippet": "Summit vs Page. Fri, Feb 19, 2027 \u00b7 7:30 PM CST. Franklin, TN. Unlock this matchup, plus every game from your favorite teams all season. Watch Live."
+},
+{
+"id": "https://www.on3.com/college/football/scoreboard/3768/",
+"title": "James Madison vs Arkansas State - College Football - On3",
+"sub": "",
+"where": "on3.com",
+"url": "https://www.on3.com/college/football/scoreboard/3768/",
+"t": 1795800568,
+"author": "",
+"lists": [],
+"snippet": "Box score, team stats and play-by-play for James Madison vs Arkansas State."
+},
+{
+"id": "https://www.on3.com/high-school/scores/football/texas/game/westfield-vs-longview-2026-11-28-2365464/",
+"title": "Longview At Westfield High School Football - On3",
+"sub": "",
+"where": "on3.com",
+"url": "https://www.on3.com/high-school/scores/football/texas/game/westfield-vs-longview-2026-11-28-2365464/",
+"t": 1795799272,
+"author": "",
+"lists": [],
+"snippet": "Rosters. Rosters come from the On3 recruit database and may not list every player. Coaches and programs can send an updated roster to ..."
+},
+{
+"id": "https://www.nfhsnetwork.com/events/montclair-high-school-montclair-nj/gamce24d717a5?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-04-10aaa5f",
+"title": "Montclair vs North Star - Boys Varsity Basketball 02/13/2027 | Live & On Demand",
+"sub": "",
+"where": "nfhsnetwork.com",
+"url": "https://www.nfhsnetwork.com/events/montclair-high-school-montclair-nj/gamce24d717a5?maxpreps=maxpreps&utm_campaign=team-home-carousel&utm_medium=referral&utm_source=maxpreps&utm_content=pre&ftag=MPM-04-10aaa5f",
+"t": 1795795942,
+"author": "",
+"lists": [],
+"snippet": "Watch the Montclair vs North Star - Boys Varsity Basketball 02/13/2027 live and on demand online on the NFHS Network."
+},
+{
+"id": "https://www.maxpreps.com/nj/ice-hockey/game/chatham-vs-randolph/12-3-2026/?c=ba36e499-d559-4546-b1d0-c5dd5e7d3a17",
+"title": "Chatham vs Randolph | Ice Hockey | 12/03/2026 - MaxPreps",
+"sub": "",
+"where": "maxpreps.com",
+"url": "https://www.maxpreps.com/nj/ice-hockey/game/chatham-vs-randolph/12-3-2026/?c=ba36e499-d559-4546-b1d0-c5dd5e7d3a17",
+"t": 1795793061,
+"author": "",
+"lists": [],
+"snippet": "The Chatham varsity ice hockey team has an away non-conference game @ Randolph (NJ) on Thursday, December 3 @ 4:15p. Matchup. Game Details."
+},
+{
+"id": "https://www.sportshub.com/picks/college-football/james-madison-dukes-vs-coastal-carolina-chanticleers",
+"title": "James Madison vs Coastal Carolina Prediction & Odds (Nov 28) - SportsHub",
+"sub": "",
+"where": "sportshub.com",
+"url": "https://www.sportshub.com/picks/college-football/james-madison-dukes-vs-coastal-carolina-chanticleers",
+"t": 1795792274,
+"author": "",
+"lists": [],
+"snippet": "James Madison vs Coastal Carolina prediction for Nov 28: JMU is a 17-point home favorite on Senior Day. Our analysis, key numbers and why we see ..."
 },
 {
 "id": "t3_1y6o3gl",
@@ -8394,6 +9559,6 @@
 "snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 384,
-"checked_today": 28
+"checked_week": 429,
+"checked_today": 65
 }
