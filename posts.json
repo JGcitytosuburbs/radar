@@ -1,5 +1,5 @@
 {
-"checked": 1795872895,
+"checked": 1795873795,
 "groups_ok": 30,
 "errors": [],
 "posts": [
@@ -801,11 +801,11 @@
 },
 {
 "key": "commute",
-"count": 9
+"count": 10
 },
 {
 "key": "family",
-"count": 8
+"count": 9
 },
 {
 "key": "schools",
@@ -3054,9 +3054,333 @@
 "id": "https://www.maxpreps.com/nj/ice-hockey/game/chatham-vs-randolph/12-3-2026/?c=ba36e499-d559-4546-b1d0-c5dd5e7d3a17",
 "t": 1795793061,
 "topics": []
+},
+{
+"id": "t3_1y6g2ev",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y71sgd",
+"t": 1795873747,
+"topics": [
+"commute"
+]
+},
+{
+"id": "t3_1y7ef3m",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6g0i5",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y7bnta",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y75dgs",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6qlna",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6yo7x",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6oxcy",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y7ag0v",
+"t": 1795873747,
+"topics": [
+"family"
+]
+},
+{
+"id": "t3_1y6j3jk",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y72b1z",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y74pi0",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6uksz",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y76bv0",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6gpgw",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y78ijp",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6j5lu",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y790fb",
+"t": 1795873747,
+"topics": []
+},
+{
+"id": "t3_1y6tbmf",
+"t": 1795873747,
+"topics": []
 }
 ],
 "held": [
+{
+"id": "t3_1y6g2ev",
+"title": "Urgent \u203c\ufe0f drummer wanted for Metal core band (central NJ)",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6g2ev/urgent_drummer_wanted_for_metal_core_band_central/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Hey guys! I am looking for a drummer to join my metal core band as ours left, if you're interested please let me know ASAP."
+},
+{
+"id": "t3_1y71sgd",
+"title": "Do any NJ Transit commuters here wear earplugs or Loop earbuds on the train?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y71sgd/do_any_nj_transit_commuters_here_wear_earplugs_or/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "I'm wondering if anyone who commutes via NJ Transit wears any kind of ear protection and if it helps with how loud Newark and NY Penn are. Loop\u2026"
+},
+{
+"id": "t3_1y7ef3m",
+"title": "Hi 22f just moved here from Cape Cod looking for friends",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y7ef3m/hi_22f_just_moved_here_from_cape_cod_looking_for/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Hello everybody, I just moved to New Jersey for the first time by myself and I would love to meet New Jersey people."
+},
+{
+"id": "t3_1y6g0i5",
+"title": "Here is what's happening in Jersey this weekend \u2013 11/27-11/29 \u2013 Broken out by county",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6g0i5/here_is_whats_happening_in_jersey_this_weekend/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "For upcoming activities across the state check out our atlas: https://rmn.pub/event-atlas Atlantic County Christmas Fantasy with Lights \u2014 Fri Nov ..."
+},
+{
+"id": "t3_1y7bnta",
+"title": "Passaic river proximity and flooding risk",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y7bnta/passaic_river_proximity_and_flooding_risk/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Hey, I'm traveling Fair lawn NJ in January and I'm staying in Essex place at a ground-level accommodation. How significant is the risk of ..."
+},
+{
+"id": "t3_1y75dgs",
+"title": "Christmas Table",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y75dgs/christmas_table/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Put the whole holiday together by county-The Christmas Eve fish, the roast, sides, cookie trays and local wine and cider, with order-by dates and\u2026"
+},
+{
+"id": "t3_1y6qlna",
+"title": "Dentists that take Medicaid for Dentures",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6qlna/dentists_that_take_medicaid_for_dentures/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "I am in Elizabeth, any dentist that does dentures and takes Medicaid."
+},
+{
+"id": "t3_1y6yo7x",
+"title": "Where are you, and do you have power?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6yo7x/where_are_you_and_do_you_have_power/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Trenton, the lights flickered last night but we kept power. Lotta downed trees and street signs though."
+},
+{
+"id": "t3_1y6oxcy",
+"title": "Little Manny wants to know why we didn't have turkey for Thanksgiving!",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6oxcy/little_manny_wants_to_know_why_we_didnt_have/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Livestock is very often infected with Toxoplasma. People are much more likely to catch Toxoplasmosis from undercooked meat than from a litter box. If ..."
+},
+{
+"id": "t3_1y7ag0v",
+"title": "Last Minute Dog Boarding? (Pregnant)",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y7ag0v/last_minute_dog_boarding_pregnant/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Based in North Jersey near Montclair *Planning ahead for a January baby Are there any places we could reasonably drop off our dogs at any hour ..."
+},
+{
+"id": "t3_1y6j3jk",
+"title": "AQI high in Bergen and Lavalette area?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6j3jk/aqi_high_in_bergen_and_lavalette_area/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Anyone have an idea of why? Maybe rain clouds keeping some kind of pollution localized?"
+},
+{
+"id": "t3_1y72b1z",
+"title": "Why have the police seemingly stopped enforcing this?",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y72b1z/why_have_the_police_seemingly_stopped_enforcing/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "662 votes, 121 comments. I'm getting sick and tired of seeing these sketchy cars all over NJ. This car is outfitted with a police package ..."
+},
+{
+"id": "t3_1y74pi0",
+"title": "Tree fell on my parked Honda CR-V",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y74pi0/tree_fell_on_my_parked_honda_crv/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "73 votes, 34 comments. A pretty large tree fell on my family's Honda last night while it was parked. Thankfully, nobody was inside. The tree was\u2026"
+},
+{
+"id": "t3_1y6uksz",
+"title": "r/newjersey on Reddit: It's time people learn borders of actual towns. What are borders ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6uksz/its_time_people_learn_borders_of_actual_towns/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "This is for all parts of NJ so if you have borders that people get wrong, post them. I bring this up so people can learn the correct borders, but\u2026"
+},
+{
+"id": "t3_1y76bv0",
+"title": "Yellow Car, Small weiner energy",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y76bv0/yellow_car_small_weiner_energy/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "To the guy circulating around sussex county on his \"fancy yellow car\", revving up the engine, going back to the same street 5x."
+},
+{
+"id": "t3_1y6gpgw",
+"title": "Any ice cream shops open tonight in north jersey? Yes I know it's thanksgiving but I really ...",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6gpgw/any_ice_cream_shops_open_tonight_in_north_jersey/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Try Wawa or 7/11 if no wawas are in your area those places will be guaranteed to be open."
+},
+{
+"id": "t3_1y78ijp",
+"title": "Stay safe, dont be an asshole.",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y78ijp/stay_safe_dont_be_an_asshole/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "This afternoon I got home, turned around to have a smoke in my driveway before going in, and noticed a tree from my neighbors property had come ..."
+},
+{
+"id": "t3_1y6j5lu",
+"title": "No power since 3pm and not expected to be back before tomorrow noon. Happy Thanksgiving",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6j5lu/no_power_since_3pm_and_not_expected_to_be_back/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "176 votes, 28 comments. But, seriously, good bless those PSEG crew stepping out to get our power back. EDIT: Got the power back on this morning ..."
+},
+{
+"id": "t3_1y790fb",
+"title": "JCP&L how to speak to someone to report an outtage",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y790fb/jcpl_how_to_speak_to_someone_to_report_an_outtage/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "We were hit by the storm last night. We reported the outage, and it was registered. The power was only out on our street, while the intersecting\u2026"
+},
+{
+"id": "t3_1y6tbmf",
+"title": "Local Punk/Alt Rock Show 11/27 (Today!)",
+"sub": "newjersey",
+"where": "r/newjersey",
+"url": "https://www.reddit.com/r/newjersey/comments/1y6tbmf/local_punkalt_rock_show_1127_today/",
+"t": 1795873747,
+"author": "",
+"lists": [],
+"snippet": "Hey yall I'm hosting a show in jersey city tonight. Doors open at 6:30, music starts at 7, and it's 10 dollars to enter. Dm if interested, I will\u2026"
+},
 {
 "id": "t3_1y6kr19",
 "title": "My mental health is suffering",
@@ -9436,129 +9760,8 @@
 "author": "",
 "lists": [],
 "snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 4:30 PM PST. Coastal vs Chilliwack \u00b7 Today \u00b7 4:30 PM PST. Smiths Falls vs Brockville \u00b7 Today \u00b7 4:45 PM PST. Langley vs ..."
-},
-{
-"id": "https://www.nfhsnetwork.com/events/dave-campbells-texas-sports/gamd9e1893cc8?maxpreps=maxpreps&utm_campaign=school-home&utm_medium=referral&utm_source=maxpreps&utm_content=pre",
-"title": "Klein Forest vs Westfield - Boys Varsity Basketball 11/24/2026 | Live & On Demand",
-"sub": "",
-"where": "nfhsnetwork.com",
-"url": "https://www.nfhsnetwork.com/events/dave-campbells-texas-sports/gamd9e1893cc8?maxpreps=maxpreps&utm_campaign=school-home&utm_medium=referral&utm_source=maxpreps&utm_content=pre",
-"t": 1795405071,
-"author": "",
-"lists": [],
-"snippet": "Westfield vs Klein Forest. Tue, Nov 24, 2026 \u00b7 1:00 PM CST. Houston, TX. Unlock this matchup, plus every game from your favorite teams all season ..."
-},
-{
-"id": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457551",
-"title": "Replay: Home - 2026 Henderson vs Ontario | Nov 22 @ 2 PM - FloHockey",
-"sub": "",
-"where": "flohockey.tv",
-"url": "https://www.flohockey.tv/collections/6752010-continue-watching/video?playing=16457551",
-"t": 1795400344,
-"author": "",
-"lists": [],
-"snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 12:30 AM UTC. Coastal vs Chilliwack \u00b7 Today \u00b7 12:45 AM UTC. Langley vs Richmond \u00b7 Today \u00b7 12:30 AM UTC. Smiths Falls ..."
-},
-{
-"id": "https://www.flohockey.tv/teams/10277102-rockland-nationals/videos?playing=16456871",
-"title": "Rockland Nationals - Videos - FloHockey",
-"sub": "",
-"where": "flohockey.tv",
-"url": "https://www.flohockey.tv/teams/10277102-rockland-nationals/videos?playing=16456871",
-"t": 1795399775,
-"author": "",
-"lists": [],
-"snippet": "Chatham vs St. Thomas \u00b7 Today \u00b7 4:00 PM PST. Navan vs Pembroke \u00b7 Today \u00b7 4:30 PM PST. Coastal vs Chilliwack \u00b7 Today \u00b7 4:00 PM PST. Warriors vs Dukes."
-},
-{
-"id": "t3_1y2qios",
-"title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
-"sub": "climatechange",
-"where": "r/climatechange",
-"url": "https://www.reddit.com/r/climatechange/comments/1y2qios/global_climate_summit_collapses_as_countries_fail/",
-"t": 1795398650,
-"author": "",
-"lists": [],
-"snippet": "114 votes, 19 comments. The COP31 climate conference in Antalya, Turkey, collapsed Sunday as countries failed to agree to an overarching deal."
-},
-{
-"id": "t3_1y2zxg3",
-"title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
-"sub": "neoliberal",
-"where": "r/neoliberal",
-"url": "https://www.reddit.com/r/neoliberal/comments/1y2zxg3/global_climate_summit_collapses_as_countries_fail/",
-"t": 1795398486,
-"author": "",
-"lists": [],
-"snippet": "75 votes, 47 comments. The COP31 climate conference in Antalya, Turkey, collapsed Sunday as countries failed to agree to an overarching deal."
-},
-{
-"id": "t3_1y2u6bh",
-"title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
-"sub": "worldnews",
-"where": "r/worldnews",
-"url": "https://www.reddit.com/r/worldnews/comments/1y2u6bh/global_climate_summit_collapses_as_countries_fail/",
-"t": 1795397190,
-"author": "",
-"lists": [],
-"snippet": "Billionaires are standing in the way of essential changes that could create a better world and preserve a livable planet, literally just to protect ..."
-},
-{
-"id": "t3_1y2qigl",
-"title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
-"sub": "climate",
-"where": "r/climate",
-"url": "https://www.reddit.com/r/climate/comments/1y2qigl/global_climate_summit_collapses_as_countries_fail/",
-"t": 1795391368,
-"author": "",
-"lists": [],
-"snippet": "419 votes, 94 comments. The COP31 climate conference in Antalya, Turkey, collapsed Sunday as countries failed to agree to an overarching deal."
-},
-{
-"id": "t3_1y31ncy",
-"title": "Moving from NYC to Bellevue - Where should I live? ($1800\u2013$2000 budget)",
-"sub": "amazonemployees",
-"where": "r/amazonemployees",
-"url": "https://www.reddit.com/r/amazonemployees/comments/1y31ncy/moving_from_nyc_to_bellevue_where_should_i_live/",
-"t": 1795389425,
-"author": "",
-"lists": [],
-"snippet": "Moving from NYC to Bellevue - Where should I live? ($1,800\u2013$2,000 budget). Hi everyone! I'll be relocating from New York to Bellevue for Amazon and ..."
-},
-{
-"id": "t3_1y2uxxf",
-"title": "Free moving boxes and packing paper from move to Maplewood",
-"sub": "Maplewood",
-"where": "r/Maplewood",
-"url": "https://www.reddit.com/r/Maplewood/comments/1y2uxxf/free_moving_boxes_and_packing_paper_from_move_to/",
-"t": 1795375635,
-"author": "",
-"lists": [],
-"snippet": "My family has a ton of movjg boxes and packing paper available free for pick up, just DM me and I can send the address Preference to take as many ..."
-},
-{
-"id": "t3_1y2rjjo",
-"title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
-"sub": "worldnews",
-"where": "r/worldnews",
-"url": "https://www.reddit.com/r/worldnews/comments/1y2rjjo/global_climate_summit_collapses_as_countries_fail/",
-"t": 1795369419,
-"author": "",
-"lists": [],
-"snippet": "Good. Finally we are realising the current actions wont solve anything. We can't let these countries blames EU while they are profiting from ..."
-},
-{
-"id": "t3_1y2g4bl",
-"title": "Selling Nintendo Switch OLED \u2013 White Joy-Con \u2013 Jersey City",
-"sub": "Hoboken",
-"where": "r/Hoboken",
-"url": "https://www.reddit.com/r/Hoboken/comments/1y2g4bl/selling_nintendo_switch_oled_white_joycon_jersey/",
-"t": 1795330843,
-"author": "",
-"lists": [],
-"snippet": "76K subscribers in the Hoboken community. A subreddit for everyday life and topics/discussion on Hoboken, New Jersey - \u201cThe Mile Square City \u201c"
 }
 ],
-"checked_week": 429,
-"checked_today": 65
+"checked_week": 449,
+"checked_today": 85
 }
